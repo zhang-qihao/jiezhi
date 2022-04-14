@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>职位信息（详情页）</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../statics/css/jobinformation.css">
+	</head>
+
+	<body>
+	<header>
+		<div class="head_head">
+			<div class="head_headLeft">
+				<img style="vertical-align: middle;" src="../statics/images/java职位下级页面/u292.svg">
+				<!--选择地方名例如南通站-->
+				<span>南通站</span>
+				<a href="javascript:;">切换城市</a>
+			</div>
+			<!--网页顶端一行右边-->
+			<div class="head_headRigth">
+				<span>欢迎回来</span>
+				<!--鼠标悬浮下拉菜单、二级菜单-->
+				<a href="#"><span id="user">韩梅梅</span><img style="vertical-align: middle;" id="head_headRigth_img" src="../statics/images/head__/u288.svg"></a>
+				<img style="vertical-align: middle;" id="head_headRight2" src="../statics/images/java职位下级页面/u301.svg">
+				<span>400-888-666</span>
+			</div>
+		</div>
+		<!--捷职logo与搜索框-->
+		<div class="head_searchAll">
+			<!-- 捷职招聘-->
+			<div class="head_searchLogo">
+				<span>捷职招聘</span>
+			</div>
+			<div class="head_search">
+				<form action="">
+					<select id="head_select" name="head_select">
+						<option id="allday" value="allday">全职</option>
+						<option id="littleday" value="littleday">实习</option>
+					</select>
+					<input type="text" class="head_searchInput1" placeholder="搜索职位，公司">
+					<input type="button" class="head_searchInput2" value="搜索">
+				</form>
+			</div>
+		</div>
+	</header>
+<!--信息栏-->
+		<div class="jobinformation">
+			<span><p id="title"></p></span>
+			<span><p id="salary"></p></span>
+			<span><p id="address"></p></span>
+			<span><p id="experience"></p></span>
+			<span><p id="nature"></p></span>
+			<span><p id="education"></p></span>
+			<a id="submit" onclick="submitTest()">申请职位</a>
+		</div>
+
+		<div class="jobbody">
+			<div class="column_side1">
+				<h3>职位描述</h3>
+				<img src="../statics/images/职位信息（详情页/u919.svg">
+				<ul class="dowhat">
+				<p>岗位职责：</p>
+					<li><span><p id="responsibilities"></p> </span></li>
+				</ul>
+				<ul class="needwhat">
+				<p>任职要求：</p>
+					<li><span><p id="requirements"></p> </span></li>
+				</ul>
+				<h3>公司介绍</h3>
+				<img src="../statics/images/职位信息（详情页/u919.svg">
+				<div class="cpintroduction">
+				<p id="companyBrief"></p>
+				</div>
+				<h3>公司地址</h3>
+				<img src="../statics/images/职位信息（详情页/u919.svg">
+				<div class="adress">
+				<p id="companyAddress"></p>
+				</div>
+				</br></br></br></br></br></br>
+			</div>
+			<div class="column_side2">
+				<h3>公司信息</h3>
+				<img src="../statics/images/职位信息（详情页/u919.svg">
+				<span class="gray">
+					<p>公司logo：<img src="../statics/images/职位信息（详情页/u929.png"></p></br>
+					<p>公司名称：<span class="black" id="companyName"></span></p></br>
+					<p>公司类型：<span class="black" id="companyType"></span></p></br>
+					<p>公司规模：<span class="black" id="companyScale"></span></p>
+				</span>
+			</div>
+		</div>
+	<script src="../statics/js/jquery-3.6.0.min.js"></script>
+	<script src="../statics/js/readpage.js"></script>
+
+	<script>
+		function getQueryVariable(variable)
+		{
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){return pair[1];}
+			}
+			return(false);
+		}
+		var jid =  getQueryVariable("jid")
+		var cid =  getQueryVariable("cid")
+		console.log(jid)
+		console.log(cid)
+
+		var title  = document.getElementById("title")
+		var salary = document.getElementById("salary")
+		var address = document.getElementById("address")
+		var experience = document.getElementById("experience")
+		var education = document.getElementById("education")
+		var nature = document.getElementById("nature")
+		var companyName = document.getElementById("companyName")
+		var companyType = document.getElementById("companyType")
+		var companyScale = document.getElementById("companyScale")
+		var companyBrief = document.getElementById("companyBrief")
+		var companyAddress = document.getElementById("companyAddress")
+		var responsibilities = document.getElementById("responsibilities")
+		var requirements = document.getElementById("requirements")
+
+		$("overall").ready(function (){
+			$.ajax({
+				type:'post',
+				dataType:'json',
+				data:{
+					"jid":jid,
+					"pid":pid,
+				},
+				url:"/v2/jobinfo",
+				success:function(result){
+					title.innerHTML = result.title;
+					salary.innerHTML = result.salary;
+					address.innerHTML = result.address;
+					experience.innerHTML = result.experience;
+					education.innerHTML = result.education;
+					nature.innerHTML = result.nature;
+					companyName.innerHTML = result.companyName;
+					companyType.innerHTML = result.companyType;
+					companyScale.innerHTML = result.companyScale;
+					companyBrief.innerHTML = result.companyBrief;
+					companyAddress.innerHTML = result.companyAddress
+					responsibilities.innerHTML = result.responsibilities;
+					requirements.innerHTML = result.requirements;
+
+				},
+			})
+		})
+
+		function submitTest(){
+			var submit=document.getElementById("submit").innerHTML
+			$.ajax({
+				type:'post',
+				dataType:'json',
+				data:{
+					"jid":jid,
+					"pid":pid,
+					"submit":submit,
+				},
+				url:"/v2/jobinfo",
+				success:function(result){
+					if (result.msg=="create"){
+						alert("申请成功")
+					}else{
+						alert("你已经申请过")
+					}
+					var new_url = "/v4/home?pid="+pid
+					window.location.href=new_url
+				},
+			})
+		}
+	</script>
+	<script src="../statics/js/mainpage.js"></script>
+	</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../statics/css/manageApply.css">
+    <script src="../statics/js/jquery.js"></script>
+    <script src="../statics/js/company.js"></script>
+    <title>应聘管理界面</title>
+</head>
+<body>
+<div id="overall">
+    <!--左边绿色侧导航栏-->
+    <div id="side">
+        <div id="image_side">
+            <img src="../statics/images/首页_1/u1068.svg">
+        </div>
+        <div id="one_side" onclick=jump1()>
+            <span>首页</span>
+        </div>
+        <div id="two_side" onclick=jump2()>
+            <span>职位发布</span>
+        </div>
+        <div id="three_side" onclick=jump3()>
+            <span>应聘管理</span>
+        </div>
+    </div>
+    <div id="main">
+        <div id="one_main">
+            <h2 id="title">捷职企业端入口</h2>
+            <!--欢迎登录、密码管理和退出登录-->
+            <div id="one_main_right">
+                <span id="welcome">欢迎登录</span>
+                <a href="javascript:show()"><button  id="repassword" onclick="repword()">密码管理</button></a>
+                <a href="#"><button  id="exit" onclick="logout()">退出登录</button></a>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="tab_list">
+                <ul>
+                    <li id="current1" class="current1">全部</li>
+                    <li id="current2" >拒绝</li>
+                    <li id="current3" >待定</li>
+                    <li id="current4" >安排面试</li>
+                </ul>
+            </div>
+            <div class="tab_con">
+                <div class="item" style="display: block;">
+                    <div class="messageTit">
+                        <span class="messageTit1">姓名</span>
+                        <span>职位</span>
+                        <span>发布城市</span>
+                        <span>年龄</span>
+                        <span>工作年限</span>
+                        <span>学历</span>
+                    </div>
+                    <ul id="alllist1">
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="messageTit">
+                        <span class="messageTit1">姓名</span>
+                        <span>职位</span>
+                        <span>发布城市</span>
+                        <span>年龄</span>
+                        <span>工作年限</span>
+                        <span>学历</span>
+                    </div>
+                    <ul id="alllist2">
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="messageTit">
+                        <span class="messageTit1">姓名</span>
+                        <span>职位</span>
+                        <span>发布城市</span>
+                        <span>年龄</span>
+                        <span>工作年限</span>
+                        <span>学历</span>
+                    </div>
+                    <ul id="alllist3">
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="messageTit">
+                        <span class="messageTit1">姓名</span>
+                        <span>职位</span>
+                        <span>发布城市</span>
+                        <span>年龄</span>
+                        <span>工作年限</span>
+                        <span>学历</span>
+                    </div>
+                    <ul id="alllist4">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--页码导航栏-->
+        <div class="pagination-bar">
+            <a href="###">下一页</a>
+            <a href="###" class="choose">1</a>
+            <a href="###">2</a>
+            <a href="###">3</a>
+            <a>......</a>
+            <a href="###">49</a>
+            <a>共49页</a>
+            <a>到第<u>&nbsp;&nbsp;</u>页</a>
+            <a href="###" class="page-next">上一页</a>
+        </div>
+    </div>
+</div>
+<!--复用密码弹出框-->
+<div id="password">
+    <div id="frame">
+        <div id="passwordTitle">
+            <p>密码管理</p>
+            <input type="button" onclick="returnPage()" id="re"  value="×" />
+        </div>
+        <div>
+            <form method="post" id="form1" target="targetIfr">
+                <table id="cen">
+                    <tr>
+                        <td id="targetBar">输入密码：</td>
+                        <td><input type="password" id="InputUserPwd" name="password" placeholder="请输入密码" onblur="cheeckPassword()"/></td>
+                    </tr>
+                    <tr height="25px">
+                        <td></td>
+                        <td id="tips1">密码由6-16位数字，字母组成</td>
+                    </tr>
+                    <tr>
+                        <td>确认密码：</td>
+                        <td><input type="password" id="ConfirmPassword" placeholder="请确认密码" onblur="conPassword()"/></td>
+                    </tr>
+                    <tr height="25px">
+                        <td></td>
+                        <td id="tips2">密码与上面不符，请重新输入</td>
+                    </tr>
+                    <tr>
+                        <td>手机号码：</td>
+                        <td><input type="text" id="InputTelephone" name="telephone" placeholder="请输入绑定的手机号" onblur="checkTel()"/></td>
+                    </tr>
+                    <tr height="25px">
+                        <td></td>
+                        <td id="tips3">手机号码格式错误，请重新输入</td>
+                    </tr>
+                    <tr>
+                        <td>验证码：</td>
+                        <td>
+                            <input type="password" id="InputCode" name="code" placeholder="请输入验证码"/>
+                            <form method="post" target="targetIfr1">
+                                <button id="code" name="codebutton" onclick="CreatCode()">获取验证码</button>
+                                <!--<button id="code" name="codebutton" value="on" onclick="obtainCode()">发送</button>-->
+                            </form>
+                            <iframe name="targetIfr1" style="display: none;"></iframe>
+                        </td>
+                    </tr>
+                    <tr height="25px">
+                        <td></td>
+                        <td id="tips4">验证码错误，请重新输入</td>
+                    </tr>
+                </table>
+
+            </form>
+            <iframe name="targetIfr" style="display: none;"></iframe>
+            <div align="center"><button id="confirm" form="form1" onclick="confirmBtn()">确认</button></div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+    // /*导航栏变色*/
+    current1.addEventListener('click',function () {
+        current1.className = 'current1';
+        current2.className = '';
+        current3.className = '';
+        current4.className = '';
+    })
+    current2.addEventListener('click',function () {
+        current1.className = '';
+        current2.className = 'current2';
+        current3.className = '';
+        current4.className = '';
+    })
+    current3.addEventListener('click',function () {
+        current1.className = '';
+        current2.className = '';
+        current3.className = 'current3';
+        current4.className = '';
+    })
+    current4.addEventListener('click',function () {
+        current1.className = '';
+        current2.className = '';
+        current3.className = '';
+        current4.className = 'current4';
+    })
+    /*导航栏界面转换*/
+    $(function() {
+        // 1.点击上部的li，当前li 添加current类，其余兄弟移除类
+        $(".tab_list li").click(function() {
+            // 链式编程操作
+            // $(this).addClass("current1").siblings().removeClass("current1");
+            // 2.点击的同时，得到当前li 的索引号
+            var index = $(this).index();
+            console.log(index);
+            // 3.让下部里面相应索引号的item显示，其余的item隐藏
+            $(".tab_con .item").eq(index).show().siblings().hide();
+        });
+    })
+
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+    var cid =  getQueryVariable("cid")
+
+    function mergeSting(struct){
+        var str ="<li class=\"li2\">\n" +
+            "<div class=\"managePeopleName\">"+struct.name+"</div>\n" +
+            "<div class=\"manageProject\">"+struct.title+"</div>"+
+            "<div class=\"managePlace\">"+struct.address+"</div>\n" +
+            "<div class=\"manageAge\">"+struct.age+"</div>\n" +
+            "<div class=\"manageWorkTime\">"+struct.experience+"</div>\n" +
+            "<div class=\"manageStudy\">"+struct.education+"</div>\n" +
+            "<img class=\"manageImg\" src=\"../statics/images/应聘管理界面/u1520.svg\">\n" +
+            "<p class=\"manageMoney1\">期望薪资：</p>\n" +
+            "<p class=\"manageMoney2\">"+struct.salary+"</p>\n" +
+            "<button class=\"write4\" onclick='ViewPerson(\""+""+struct.pid+""+"\",\""+""+struct.Jid+""+"\")'>查看</button>"+
+            // "<div class=\"write4\"><span>查看</span></div>\n" +
+            "</li>"
+        return str
+    }
+    function ViewPerson(pid,jid) {
+        console.log("pid=", pid)
+        console.log("cid=", cid)
+        console.log("jid=", jid)
+        var url = "/v3/viewResume?pid=" + pid + "&cid=" + cid + "&jid=" + jid
+        window.location.href = url
+    }
+    function showData(jsonList){
+        var str = ''
+        var jsonList1 = jsonList.rank0
+        for (var i = 0;i<jsonList1.length;i++){
+            str = mergeSting(jsonList1[i])
+            console.log(str)
+            $("#alllist1").append(str);
+        }
+        var jsonList2 = jsonList.rank1
+        for (var i = 0;i<jsonList2.length;i++){
+            str = mergeSting(jsonList2[i])
+            $("#alllist2").append(str);
+        }
+        var jsonList3 = jsonList.rank2
+        for (var i = 0;i<jsonList3.length;i++){
+            str = mergeSting(jsonList3[i])
+            $("#alllist3").append(str);
+        }
+        var jsonList4 = jsonList.rank3
+        for (var i = 0;i<jsonList4.length;i++){
+            str = mergeSting(jsonList4[i])
+            $("#alllist4").append(str);
+        }
+    }
+    $("#main").ready(function (){
+        $.ajax({
+            type:'post',
+            dataType:'json',
+            data:{
+                "cid":cid,
+            },
+            url:"/v3/manageApply",
+            success:function(result){
+                showData(result)
+                console.log(result)
+            },
+        })
+    })
+
+</script>
+</html>

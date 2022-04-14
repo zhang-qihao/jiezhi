@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="../statics/css/main.css">
+</head>
+<body>
+
+<header>
+  <div class="head_head">
+    <div class="head_headLeft">
+      <img style="vertical-align: middle;" src="../statics/images/java职位下级页面/u292.svg">
+
+      <span>南通站</span>
+      <a href="javascript:;">切换城市</a>
+    </div>
+
+    <div class="head_headRigth">
+      <span>欢迎回来</span>
+
+      <a href="#" id="userId"><span id="user"></span><img style="vertical-align: middle;" id="head_headRigth_img" src="../statics/images/head__/u288.svg"></a>
+      <img style="vertical-align: middle;" id="head_headRight2" src="../statics/images/java职位下级页面/u301.svg">
+      <span>400-888-666</span>
+    </div>
+  </div>
+
+  <div class="head_searchAll">
+
+    <div class="head_searchLogo">
+      <span>捷职</span>
+    </div>
+    <div class="head_search">
+      <form action="">
+        <select id="head_select" name="head_select">
+          <option id="allday" value="allday">全职</option>
+          <option id="littleday" value="littleday">实习</option>
+        </select>
+        <input type="text" class="head_searchInput1" placeholder="搜索职位，公司">
+        <input type="button" class="head_searchInput2" value="搜索">
+      </form>
+    </div>
+  </div>
+
+  <div class="head_navigation">
+    <a onclick="jump1()">首页</a>
+    <a onclick="jump2()">南通站</a>
+    <a onclick="jump3()">校园招聘</a>
+    <a onclick="jump4()">社会招聘</a>
+    <a href="javascript:;">职场环游记</a>
+  </div>
+</header>
+
+<div class="nav">
+
+  <div class="nav_left">
+    <ul>
+      <li class="menu_item"><a href="#">开发</a></li>
+      <li class="menu_item"><a href="#">人工智能</a></li>
+      <li class="menu_item"><a href="#">数据</a></li>
+      <li class="menu_item"><a href="#">产品</a></li>
+      <li class="menu_item"><a href="#">运营</a></li>
+      <li class="menu_item"><a href="#">运维/技术支持</a></li>
+      <li class="menu_item"><a href="#">全部职位</a></li>
+    </ul>
+  </div>
+
+  <div class="nav_middle">
+    <a class="ig" href="#"><img src="../statics/images/three.jpg"/></a>
+    <a class="ig" href="#"><img src="../statics/images/four.jpg"/></a>
+    <a class="ig" href="#"><img src="../statics/images/six.jpg"/></a>
+    <div class="btn btn1"><a href="javascript:;">&lt;</a></div>
+    <div class="btn btn2"><a href="javascript:;">></a></div>
+
+    <ul id="tabs">
+      <li class="tab"><a href="javascript:;"></a> </li>
+      <li class="tab"><a href="javascript:;"></a> </li>
+      <li class="tab"><a href="javascript:;"></a> </li>
+    </ul>
+  </div>
+
+  <div class="left_alert">
+    <p>开发</p>
+    <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+    <ul>
+      <li class="left_alert_item"><a href="#">java</a></li>
+      <li class="left_alert_item"><a href="#">python</a></li>
+      <li class="left_alert_item"><a href="#">web前端</a></li>
+      <li class="left_alert_item"><a href="#">php</a></li>
+      <li class="left_alert_item"><a href="#">算法</a></li>
+      <li class="left_alert_item"><a href="#">php</a></li>
+      <li class="left_alert_item"><a href="#">区块链</a></li>
+      <li class="left_alert_item"><a href="#">go</a></li>
+      <li class="left_alert_item"><a href="#">人工智能</a></li>
+      <li class="left_alert_item"><a href="#">架构</a></li>
+    </ul>
+  </div>
+
+  <div class="nav_right">
+    <img class="right_img" src="../statics/images/首页/u505.svg">
+    <a href="#" id="username"></a>
+    <div class="faceinvite">
+      <div class="faceinvite_text">面试邀请</div>
+      <span id="facevalue" value="2">3</span>
+    </div>
+    <a class="nav_right_box1" href="javascript:;" id="myPost"><span>我的投递</span></a>
+    <a class="nav_right_box2" href="javascript:;" id="myResume"><span>我的简历</span></a>
+    <a class="nav_right_box3" href="javascript:;" id="preview"><span>预览简历</span></a>
+  </div>
+</div>
+
+
+<div class="mainbody">
+  <div class="goodchoose"><span>社会招聘</span>
+    <img class="mainbodyimg" src="../statics/images/首页/u526.svg">
+  </div>
+  <ul class="content"  id="content" style="display: block">
+
+  </ul>
+  <div class="goodchoose"><span>校园招聘</span>
+    <img class="mainbodyimg" src="../statics/images/首页/u526.svg">
+  </div>
+
+  <div class="checkbox">
+    <h2 class="hotschool">热门校招</h2>
+    <ul>
+      <a href="javascript:;">
+        <li class="changebox">数据</li>
+      </a>
+      <a href="javascript:;">
+        <li>产品</li>
+      </a>
+    </ul>
+  </div>
+
+  <div class="bodycontent">
+    <ul class="content" style="display: block" id="content1">
+
+    </ul>
+    <ul class="content" id="content2">
+
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div class="footerhead">
+    <img id="solid1" src="../statics/images/首页/u570.svg">
+    <img id="solid2" src="../statics/images/首页/u570.svg">
+    <h1>热门企业</h1>
+  </div>
+  <div class="footerbody">
+    <div class="img1">
+      <div class="img1_text">
+        <h3>广东宏汇通信科技有限公司</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+          laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin
+          sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis
+          orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+      </div>
+      <img src="../statics/images/首页/u572.png">
+    </div>
+    <div class="img2"><img src="../statics/images/首页/u574.png"></div>
+    <div class="img3"></div>
+    <div class="img1"><img src="../statics/images/首页/u572.png"></div>
+    <div class="img2"><img src="../statics/images/首页/u574.png"></div>
+    <div class="img3"></div>
+  </div>
+</footer>
+<script src="../statics/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+  function getQueryVariable(variable)
+  {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+      var pair = vars[i].split("=");
+      if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+  }
+
+  var userId = document.getElementById("userId")
+  userId.addEventListener("click",function () {
+    var ID = getQueryVariable("pid")
+    $.ajax({
+      url:'/v2/resumeModify',
+      type:'post',
+      dataType:"json",
+      data:{
+        "ID":ID,
+      },
+      error:function (returnResult) {
+        var url = '/v2/resumeModify?pid=' + ID
+        window.location.href = url
+      },
+      success:function (returnResult) {
+        var url = '/v2/resumeModify?pid=' + ID
+        window.location.href = url
+      }
+    })
+  })
+
+
+  var username = document.getElementById("username");
+  username.addEventListener("click",function () {
+    var ID = getQueryVariable("pid")
+    $.ajax({
+      url:'/v2/resumeModify',
+      type:'post',
+      dataType:"json",
+      data:{
+        "ID":ID,
+      },
+      error:function (returnResult) {
+        var url = '/v2/resumeModify?pid=' + ID
+        window.location.href = url
+      },
+      success:function (returnResult) {
+        var url = '/v2/resumeModify?pid=' + ID
+        window.location.href = url
+      }
+    })
+  })
+
+  var myResume = document.getElementById("myResume");
+  myResume.addEventListener("click",function () {
+    var ID = getQueryVariable("pid")
+    $.ajax({
+      url:'/v2/resumeModify',
+      type:'post',
+      dataType:"json",
+      data:{
+        "ID":ID,
+      },
+      error:function (returnResult) {
+        var url = '/v2/resumeModify?pid=' + ID
+        window.location.href = url
+      },
+      success:function (returnResult) {
+        var url = '/v2/resumeModify?pid=' + ID
+        window.location.href = url
+      }
+    })
+  })
+
+
+  var preview = document.getElementById("preview")
+  preview.addEventListener("click",function () {
+    var ID = getQueryVariable("pid")
+    $.ajax({
+      url:'/v2/resumePreview',
+      type:'post',
+      dataType:"json",
+      data:{
+        "ID":ID,
+      },
+      error:function (returnResult) {
+        var url = '/v2/resumePreview?pid=' + ID
+        window.location.href = url
+      },
+      success:function (returnResult) {
+        var url = '/v2/resumePreview?pid=' + ID
+        window.location.href = url
+      }
+    })
+  })
+
+</script>
+<script src="../statics/js/mainpage.js"></script>
+</body>
+</html>

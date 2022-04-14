@@ -1,0 +1,672 @@
+body{
+    margin: 0px;
+    background: white;
+}
+/*复用代码如下*/
+#overall{
+    margin:0px auto;
+    width: 1080px;
+    height: 1200px;
+}
+#side{
+    background: #32c3ee;
+    border: none;
+    /*border: 1px solid #40c7a9;*/
+    border:none;
+    width: 160px;
+    height: 100%;
+    float: left;
+    position: fixed;
+}
+#image_side{
+    border: none;
+    margin:10px auto;
+    width: 105px;
+    height: 105px;
+}
+#three_side{
+    background: rgb(50, 195, 238);
+}
+#one_side,#two_side,#three_side{
+    width: 160px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-top: 2px;
+    font-weight: 400;
+}
+#one_side:hover{
+    cursor: pointer;
+    background: rgb(94, 191, 213);
+}
+#two_side:hover{
+    cursor: pointer;
+    background: rgb(94, 191, 213);
+}
+#three_side:hover{
+    cursor: pointer;
+    background: rgb(94, 191, 213);
+}
+
+/*右边简历预览界面*/
+#rigthSide{
+    width: 860px;
+    height: auto;
+    float: left;
+    position: relative;
+    margin-left: 180px;
+}
+/*所有盒子的相同值*/
+.viewBox{
+    width: 860px;
+    height: auto;
+    background-color: #F4F6F9;
+    position: relative;
+    margin-top: 15px;
+}
+/*所有标题*/
+.viewTitle{
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    color: #333333;
+    font-weight: 700;
+    position: relative;
+    margin-top: 5px;
+    margin-left: 15px;
+    /*position: absolute;
+    top: -5px;
+    left: 15px;*/
+}
+/*个人信息*/
+#viewPersonMessage{
+    height: 363px;
+}
+#viewPersonMessage img{
+    width: 118px;
+    height: 116px;
+    position: absolute;
+    top: 70px;
+    left: 350px;
+}
+.viewPeopleName{
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+    position: absolute;
+    top: 190px;
+    left: 392px;
+}
+.viewPersonMessage1{
+    position: absolute;
+    left: 232px;
+    top: 250px;
+    width: 170px;
+    height: 30px;
+}
+.viewPersonMessage1 span{
+    margin-left: 25px;
+    font-size: 14px;
+    color: #333333;
+}
+.viewPersonMessage2{
+    position: absolute;
+    left: 415px;
+    top: 250px;
+    width: 325px;
+    height: 30px;
+}
+.viewPersonMessage2 span{
+    margin-left: 25px;
+    font-size: 14px;
+    color: #333333;
+}
+.viewPersonMessage3{
+    position: absolute;
+    left: 277px;
+    top: 280px;
+    width: 350px;
+    height: 30px;
+}
+.viewPersonMessage3 span{
+    margin-left: 25px;
+    font-size: 12px;
+    color: #333333;
+}
+/*求职意向*/
+#viewSeek{
+    height: auto;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.viewSeek1{
+    position: relative;
+    margin-left: 27px;
+    margin-top: 50px;
+    width: 800px;
+    height: 70px;
+}
+.viewSeek11{
+    width: 700px;
+    height: 20px;
+}
+.viewSeek11 span{
+    margin-left: 5px;
+}
+.viewSeek12{
+    width: 700px;
+    height: 20px;
+    margin-top: 30px;
+}
+.viewSeek12 span{
+    margin-left: 5px;
+}
+/*教育经历*/
+#viewStudy{
+    height: auto;
+    padding-top: 10px;
+}
+.viewStudy1{
+    position: relative;
+    margin-top: 75px;
+    margin-left: 33px;
+}
+.viewStudy1 p{
+    line-height: 15px;
+}
+.viewSchoolTime{
+    color: #AAAAAA;
+    font-size: 14px;
+}
+.viewSchoolName{
+    color: #333333;
+    font-size: 18px;
+}
+.viewSchoolTop{
+    color: #333333;
+    font-size: 14px;
+}
+#viewStudy>:nth-child(3){
+    position: relative;
+    margin-top: 40px;
+}
+#viewStudy>:nth-child(4){
+    position: relative;
+    margin-top: 40px;
+}
+
+/*工作/实习经历*/
+#viewWork{
+    height: auto;
+    padding-top: 10px;
+}
+.viewWork1 span{
+    font-size: 14px;
+    color: #7F7F7F;
+}
+.viewWork1{
+    width: 700px;
+    height: auto;
+    position: relative;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+.viewTitleTime{
+    color: #AAAAAA;
+    font-size: 14px;
+}
+.viewTitleTime span{
+    color: #AAAAAA;
+}
+.companyName{
+    font-size: 18px;
+}
+.viewWorkMoney span{
+    color: #333333;
+}
+.viewTitleIs{
+    position: absolute;
+    top: 96px;
+    left: 400px;
+}
+.viewTitleIs span{
+    color: #333333;
+}
+.viewWorkProName{
+    position: absolute;
+    top: 130px;
+}
+.viewWorkProName span{
+    color: #333333;
+}
+.viewWorkType{
+    position: absolute;
+    top: 130px;
+    left: 400px;
+}
+.viewWorkType span{
+    color: #333333;
+}
+.viewWorkLike1{
+    color: #7F7F7F;
+    font-size: 14px;
+    position: absolute;
+    top: 165px;
+}
+.viewWorkLike1 span{
+    color: #333333;
+}
+.viewWorkLike2{
+    height: auto;
+    width: 550px;
+    color: #7F7F7F;
+    font-size: 14px;
+    margin-left: 80px;
+    margin-top: 45px;
+}
+#viewWork>:nth-child(3){
+    margin-top: 45px;
+}
+#viewWork>:nth-child(4){
+    margin-top: 45px;
+}
+
+/*项目经历*/
+#viewProject{
+    height: auto;
+    padding-top: 10px;
+}
+.viewProject1{
+    width: 700px;
+    height: auto;
+    margin-left: 29px;
+    margin-top: 70px;
+}
+.viewProjectName{
+    color: #333333;
+    font-size: 18px;
+}
+.viewProjectTime{
+    color: #AAAAAA;
+    font-size: 14px;
+}
+.viewProjectLike1{
+    color: #7F7F7F;
+    font-size: 14px;
+}
+.viewProjectLike2{
+    height: auto;
+    width: 550px;
+    color: #7F7F7F;
+    font-size: 14px;
+    margin-left: 70px;
+    margin-top: -18px;
+}
+#viewProject>:nth-child(3){
+    margin-top: 30px;
+}
+#viewProject>:nth-child(4){
+    margin-top: 30px;
+}
+
+/*校内表现*/
+/*奖项*/
+#viewSchoolBehave{
+    height: auto;
+    padding-top: 10px;
+}
+.viewTitle3{
+    font-size: 18px;
+    color: #333333;
+    margin-top: 70px;
+    margin-left: 29px;
+}
+.viewSchoolHonor{
+    width: 600px;
+    height: 20px;
+    position: relative;
+    margin-left: 29px;
+    font-size: 14px;
+    color: #7F7F7F;
+}
+.viewSchoolHonor p{
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.viewSchoolHonor p span{
+    color: #333333;
+}
+#viewSchoolHonor2{
+    margin-top: 10px;
+}
+#viewSchoolHonor3{
+    margin-top: 10px;
+}
+/*校内职务*/
+.viewTitle32{
+    font-size: 18px;
+    color: #333333;
+    margin-top: 20px;
+    margin-left: 29px;
+}
+.viewSchoolPost{
+    width: 700px;
+    height: auto;
+    position: relative;
+    margin-left: 29px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7F7F7F;
+}
+.viewSchoolPost p span{
+    color: #333333;
+}
+.viewSchoolPost div{
+    color: #7F7F7F;
+    width: 650px;
+    height: auto;
+    position: relative;
+    margin-top: -20px;
+    margin-left: 75px;
+}
+#viewSchoolBehave>:nth-child(4){
+    margin-top: 20px;
+}
+#viewSchoolBehave>:nth-child(5){
+    margin-top: 20px;
+}
+
+/*技能特长*/
+#viewSpecial{
+    height: auto;
+    padding-top: 10px;
+}
+#viewSkill{
+    margin-top: 80px;
+}
+.viewSkill{
+    position: relative;
+    margin-left: 29px;
+    font-size: 14px;
+    color: #7F7F7F;
+    height: 20px;
+    width: 700px;
+}
+.viewSkill span{
+    color: #333333;
+}
+.viewSkillName{
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.viewSkillTime{
+    position: absolute;
+    left: 400px;
+    top: -14px;
+}
+#viewSpecial>:nth-child(4){
+    margin-top: 10px;
+}
+#viewSpecial>:nth-child(5){
+    margin-top: 10px;
+}
+
+#viewLanguage{
+    margin-top: 10px;
+}
+.viewLanguage{
+    position: relative;
+    margin-left: 29px;
+    font-size: 14px;
+    color: #7F7F7F;
+    height: 20px;
+    width: 700px;
+}
+.viewLanguage span{
+    color: #333333;
+}
+.viewLanguageName{
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.viewLanguageTime{
+    position: absolute;
+    left: 400px;
+    top: -14px;
+}
+#viewSpecial>:nth-child(9){
+    margin-top: 10px;
+}
+#viewSpecial>:nth-child(10){
+    margin-top: 10px;
+}
+
+.viewTrain{
+    position: relative;
+    margin-left: 29px;
+    font-size: 14px;
+    color: #7F7F7F;
+    height: auto;
+    width: 800px;
+}
+.viewTrainName span{color: #333333;}
+.viewTrainClass{
+    position: absolute;
+    top: 0px;
+    left: 250px;
+}
+.viewTrainClass span{color: #333333;}
+.viewTrainTime{
+    position: absolute;
+    top: 0px;
+    left: 500px;
+}
+.viewTrainTime span{color: #333333;}
+.viewTrainLike1{
+    color: #7F7F7F;
+}
+.viewTrain div{
+    color: #7F7F7F;
+    font-size: 14px;
+    width: 650px;
+    height: auto;
+    margin-left: 80px;
+    margin-top: -17px;
+}
+#viewSpecial>:nth-child(14){
+    margin-top: 20px;
+}
+#viewSpecial>:nth-child(15){
+    margin-top: 20px;
+}
+
+.viewCertificate{
+    position: relative;
+    margin-left: 29px;
+    font-size: 14px;
+    color: #7F7F7F;
+    height: 20px;
+    width: 700px;
+}
+.viewCertificate span{
+    color: #333333;
+}
+.viewCertificateName{
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.viewCertificateTime{
+    position: absolute;
+    left: 400px;
+    top: -14px;
+}
+#viewSpecial>:nth-child(19){
+    margin-top: 10px;
+}
+#viewSpecial>:nth-child(20){
+    margin-top: 10px;
+}
+
+/*自我评价*/
+#viewSelfEvaluation{
+    height: auto;
+    padding-top: 10px;
+}
+.viewTitle2{
+    font-size: 18px;
+    color: #333333;
+    font-weight: 400;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+#viewSelfEvaluation div{
+    color: #7F7F7F;
+    font-size: 14px;
+    width: 650px;
+    height: auto;
+    margin-left: 30px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+/*底部按钮*/
+.viewBtns{
+    width: 860px;
+    height: 40px;
+}
+.viewBtn{
+    width: 177px;
+    height: 40px;
+    background-color: #32c3ee;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    line-height: normal;
+    text-transform: none;
+    border: 0px;
+    border-radius: 5px;
+}
+.viewBtns>:nth-child(1){
+    cursor: pointer;
+    margin-left: 5px;
+}
+.viewBtns>:nth-child(2){
+    margin-left: 155px;
+    cursor: pointer;
+}
+.viewBtns>:nth-child(3){
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+.viewBtn10{
+    background-color: #FF706D;
+    width: 177px;
+    height: 40px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    line-height: normal;
+    text-transform: none;
+    border: 0px;
+    border-radius: 5px;
+}
+.viewBtn20{
+    background-color: #EC8C1B;
+    width: 177px;
+    height: 40px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    line-height: normal;
+    text-transform: none;
+    border: 0px;
+    border-radius: 5px;
+}
+.viewBtn30{
+    background-color: #02A7F0;
+    width: 177px;
+    height: 40px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    line-height: normal;
+    text-transform: none;
+    border: 0px;
+    border-radius: 5px;
+}
+/*面试弹出框*/
+.viewInterview{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#viewWrong{
+    color: #32c3ee;
+    position: absolute;
+    font-size: 18px;
+    top: 20px;
+    right: 50px;
+    cursor: pointer;
+}
+.interview{
+    width: 650px;
+    height: 400px;
+    background-color: #F4F6F9;
+    position: fixed;
+    top: 50%;
+    left: 53%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.interview table tr td{
+    width: 190px;
+    height: 60px;
+}
+.interview p{
+    font-size: 28px;
+    color: #333333;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+.interview table tr td span{
+    font-size: 16px;
+    color: #999999;
+    margin-left: 80px;
+}
+.interview table tr td input{
+    width: 299px;
+    height: 33px;
+    border: #C8C8C8 1px solid;
+}
+input:focus{
+    outline: none;
+}
+input::-webkit-input-placeholder{
+    color: #C8C8C8;
+}
+.interview button{
+    width: 140px;
+    height: 40px;
+    background-color: #32c3ee;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    line-height: normal;
+    text-transform: none;
+    border: 0px;
+    border-radius: 5px;
+    margin-left: 260px;
+    margin-top: 20px;
+    cursor: pointer;
+}

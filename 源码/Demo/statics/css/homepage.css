@@ -1,0 +1,508 @@
+body{
+    margin: 0px;
+    background: white;
+}
+input{
+    outline: none;
+}
+#overall{
+    margin:0px auto;
+    width: 1080px;
+}
+#com_image{cursor: pointer}
+#side{
+    background: #16b9de;
+    border: none;
+    /*border: 1px solid #40c7a9;*/
+    border:none;
+    width: 160px;
+    height: 900px;
+    float: left;
+    position: fixed;
+}
+#image_side{
+    border: none;
+    margin:10px auto;
+    width: 105px;
+    height: 105px;
+}
+#one_side,#two_side,#three_side{
+    width: 160px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-top: 2px;
+    font-weight: 400;
+}
+#one_side{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+#one_side:hover{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+#two_side:hover{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+#three_side:hover{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+.orgside{
+	background:rgba(73, 131, 218, 0.8);
+}
+.resumeside{
+	background: rgba(73, 131, 218, 0.8);
+}
+
+
+
+#main{
+    /*border: 1px solid black;*/
+    width: 900px;
+    height: 800px;
+    float: left;
+    margin-left: 160px;
+    position: absolute;
+}
+
+#one_main{
+    margin-top: 10px;
+    margin-left: 10px;
+    width:860px;
+    height: 60px;
+    background: #F2F2F2;
+    border: black;
+    line-height: 20px;
+}
+#title{
+    float: left;
+    margin-left:20px;
+}
+#one_main_right{
+    width: 280px;
+    height: 60px;
+    float: right;
+    font-size: 13px;
+    /*border: 1px solid black;*/
+    line-height: 60px;
+    position: relative;
+}
+#welcome{
+    margin-left: 40px;
+    margin-right: 10px;
+}
+#repassword{
+    border: none;
+    background: #EC808D;
+    padding:5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 16px;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+}
+#exit{
+    border: none;
+    position: absolute;
+    background: #00BE93;
+    padding:5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 16px;
+    color: white;
+    cursor: pointer;
+}
+#password{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#frame{
+    width: 440px;
+    height: 400px;
+    margin:10% auto;
+    background: white;
+    position: relative;
+}
+#passwordTitle{
+	width: 400px;
+	height: 40px;
+	background: #02C198;
+	line-height: 40px;
+	font-size: 18px;
+	padding-left:40px;
+	color: white;
+}
+#re{
+	position: absolute;
+	margin-top: -50px;
+	margin-left: 360px;
+	color: white;
+	border: none;
+	background: #02C198;
+	font-size: 24px;
+    cursor: pointer;
+}
+#cen{
+	margin-top: 30px;
+	margin-left: 40px;
+	font-size: 14px;
+	text-align: left;
+	font-weight: 400;
+	color: #7F7F7F;
+	border-collapse: collapse;
+}
+#targetBar{
+	width: 70px;
+
+}
+#InputUserPwd,#ConfirmPassword,#InputTelephone,#InputCode{
+	width: 260px;
+	height: 30px;
+	border: 1px solid black;
+}
+#code{
+    width: 120px;
+    position: absolute;
+    right: 70px;
+    bottom: 118px;
+    border: none;
+    background: white;
+    color: #00BE93;
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+}
+
+#confirm{
+	width: 125px;
+	height: 35px;
+	border: none;
+	background: #02C198;
+	color: white;
+	margin-top: 15px;
+    cursor: pointer;
+}
+#tips1,#tips2,#tips3,#tips4{
+	vertical-align: top;
+	font-size: 13px;
+	color: #EC808D;
+	display: none;
+}
+#two_main{
+    width: 860px;
+    /*height: 500px;*/
+    margin-left: 10px;
+    /*border: 1px solid black;*/
+}
+#information_title{
+    height: 30px;
+    line-height: 30px;
+    font-size:28px;
+    font-weight:100;
+    margin-top: 20px;
+    /*border: 1px solid black;*/
+}
+#two_main_information{
+    width:860px;
+    height: 370px;
+    background: #F2F2F2;
+    border: black;
+    line-height: 20px;
+    border-radius: 4px;
+    position: relative;
+}
+#table_information{
+    position: absolute;
+    margin-left: 20px;
+}
+#tr_id1,#tr_id2,#tr_id3,#tr_id4{
+	height: 70px;
+	/*background: bisque;*/
+}
+#specificAddress{
+    width: 235px;
+    height: 35px;
+    border: 1px solid gainsboro;
+    font-size: 13px;
+}
+#td_id1,#td_id2,#td_id3,#td_id4,#td_id5,#td_id6,#td_id7{
+	font-size: 16px;
+	color: #999999;
+	font-weight: 400;
+	width:85px;
+}
+#company_name{
+    width: 235px;
+    height: 35px;
+    border: 1px solid gainsboro;
+    font-size: 13px;
+}
+#company_abbreviation{
+    width: 235px;
+    height: 35px;
+    border: 1px solid gainsboro;
+    font-size: 13px;
+}
+#company_type1,#company_type2,#company_type3{
+	margin-right:5px ;
+	width: 75px;
+	height: 35px;
+	padding:8px 28px;
+	background: white;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+#personal,#naction,#foreign_company{
+	-webkit-appearance: none;
+	position: absolute;
+	margin-left: -56px;
+	margin-top: -8px;
+	width:83px ;
+	height: 35px;
+	cursor: pointer;
+	opacity:0;
+}
+.companyBtn{
+	color: #999999;
+	border: 1px solid gainsboro;
+}
+.resumitBtn{
+	color: #008FE0;
+	border: 1px solid #008FE0;
+}
+#province,#city{
+	width: 77px;
+	height: 31px;
+	margin-right: 5px;
+    cursor: pointer;
+}
+.addressText{
+	border: 1px solid gainsboro;
+}
+.resumitText{
+	color: black;
+	border: 1px solid #008FE0;
+}
+
+/*居住地相关css*/
+#userPlaceAll{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#userPlaceMore{
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color:rgba(255,255,255,1);
+}
+#userPlaceMore1{
+    width:798px;
+    height: 70px;
+    border: black 1px solid;
+}
+#userPlaceMore1 p{
+    padding-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+#userPlaceMore2{
+    width: 150px;
+    height: 375px;
+    float: left;
+    overflow: auto;
+}
+#userPlaceMore2 table{
+    width: 130px;
+    height: 330px;
+    text-align: center;
+}
+#userPlaceMore2 tr{
+    border: 0px;
+}
+#userPlaceMore2 td{
+    border: 0px;
+}
+.userPlaceMoreAll{
+    width: 650px;
+    height: 377px;
+    overflow: auto;
+    float: left;
+}
+.userPlaceMoreAll table{
+    width: 633px;
+    height: 375px;
+    border-collapse:separate;
+    border-spacing:30px 30px;
+    text-align: center;
+}
+.expectIndustryMoreAll{
+    width: 650px;
+    height: 330px;
+    float: left;
+}
+.expectIndustryMoreAll table{
+    width: 600px;
+    height: 330px;
+    border-collapse:separate;
+    border-spacing:30px 30px;
+    text-align: center;
+    border-right: black 1px solid;
+    border-bottom: black 1px solid;
+}
+.userPlaceMoreAll{display: none}
+#userPlaceMore29{
+    display: block;
+}
+/*鼠标悬停变背景色*/
+#userPlacecanPick1 tr td:hover{
+    background-color:#20DDC6;
+    color: white;
+}
+#userPlacecanPick1 .canPickTex{cursor: pointer}
+/*鼠标点击颜色*/
+.canPickTex1{
+    background-color:#20DDC6;
+    color: white;
+}
+.canPick tr td{
+    cursor: pointer;
+}
+.canPick tr td:hover{
+    color: #5ED5C8;
+}
+#company_size::-webkit{
+    color: #C8C8C8;
+    font-size: 20px;
+}
+#company_size{
+	width: 235px;
+    height: 35px;
+    border: 1px solid gainsboro;
+    font-size: 13px;
+    cursor: pointer;
+}
+#company_size option{
+	color: black;
+}
+
+#company_image{
+	width: 100px;
+	height: 100px;
+	background: white;
+	border: 1px solid #999999;
+}
+#click{
+	margin-left: -0.5px;
+}
+#file{
+	position: relative;
+	margin-top: 15px;
+	margin-left: 8px;
+    display: inline-block;
+    background: white;
+    border: 1px solid #C8C8C8;
+    border-radius: 4px;
+    padding: 2px 15px;
+    overflow: hidden;
+    color: #5ED5C8;
+    font-size: 13px;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    cursor: pointer;
+}
+#file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#three_main{
+    width: 280px;
+    height: 520px;
+    margin-left: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /*border: 1px solid black;*/
+}
+#introduction_title{
+    height: 30px;
+    line-height: 30px;
+    font-size:28px;
+    font-weight:100;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+#three_main_introduction{
+	width:860px;
+    height: 290px;
+    background: #F2F2F2;
+    line-height: 30px;
+    border-radius: 4px;
+    font-size:28px;
+    font-weight:100;
+    margin-top: 20px;
+}
+#introduction{
+	margin: 25px 15px;
+	width: 825px;
+	height: 210px;
+	border: 2px solid #DCDCDC;
+	word-wrap: break-word;
+	font-size: 16px;
+    outline: none;
+}
+#more{
+	position: absolute;
+	margin-top: -35px;
+	color: #B3B3B3;
+	margin-left: 760px ;
+}
+
+#submit{
+	position: absolute;
+	width: 140px;
+	height: 40px;
+	color: white;
+	background:  #32c3ee;
+	border-radius: 4px;
+	border: none;
+	margin-top: -150px;
+	margin-left: 400px;
+    cursor: pointer;
+}
+
+#clear{
+    clear: both;
+}

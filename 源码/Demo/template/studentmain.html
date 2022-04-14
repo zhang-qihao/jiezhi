@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>校园招聘</title>
+  <link rel="stylesheet" type="text/css" href="../statics/css/studentmian.css">
+</head>
+<body>
+<header>
+  <div class="head_head">
+    <div class="head_headLeft">
+      <img style="vertical-align: middle;" src="../statics/images/java职位下级页面/u292.svg">
+      <!--选择地方名例如南通站-->
+      <span>南通站</span>
+      <a href="javascript:;">切换城市</a>
+    </div>
+    <!--网页顶端一行右边-->
+    <div class="head_headRigth">
+      <span>欢迎回来</span>
+      <!--鼠标悬浮下拉菜单、二级菜单-->
+      <a href="#" id="userId"><span id="user"></span><img style="vertical-align: middle;" id="head_headRigth_img" src="../statics/images/head__/u288.svg"></a>
+      <img style="vertical-align: middle;" id="head_headRight2" src="../statics/images/java职位下级页面/u301.svg">
+      <span>400-888-666</span>
+    </div>
+  </div>
+  <!--捷职logo与搜索框-->
+  <div class="head_searchAll">
+    <!-- 捷职-->
+    <div class="head_searchLogo">
+      <span>捷职招聘</span>
+    </div>
+    <div class="head_search">
+      <form action="">
+        <select id="head_select" name="head_select">
+          <option id="allday" value="allday">全职</option>
+          <option id="littleday" value="littleday">实习</option>
+        </select>
+        <input type="text" class="head_searchInput1" placeholder="搜索职位，公司">
+        <input type="button" class="head_searchInput2" value="搜索">
+      </form>
+    </div>
+  </div>
+  <!--导航栏-->
+  <div class="head_navigation">
+    <a onclick="jump1()">首页</a>
+    <a onclick="jump2()">南通站</a>
+    <a onclick="jump3()">校园招聘</a>
+    <a onclick="jump4()">社会招聘</a>
+    <a href="javascript:;">职场环游记</a>
+  </div>
+</header>
+<!--中间轮播图-->
+<div class="nav">
+  <!--轮播图左侧部分-->
+  <div class="nav_left">
+    <ul>
+      <li class="menu_item"><a href="#">开发</a></li>
+      <li class="menu_item"><a href="#">智能机器人</a></li>
+      <li class="menu_item"><a href="#">人工智能</a></li>
+      <li class="menu_item"><a href="#">游戏</a></li>
+      <li class="menu_item"><a href="#">测试</a></li>
+      <li class="menu_item"><a href="#">运维/技术支持</a></li>
+      <li class="menu_item"><a href="#">大数据</a></li>
+      <li class="menu_item"><a href="#">产品</a></li>
+      <li class="menu_item"><a href="#">运营</a></li>
+      <li class="menu_item"><a href="#">技术管理</a></li>
+    </ul>
+  </div>
+  <!--中间轮播图-->
+  <div class="nav_middle">
+    <a class="ig" href="#"><img src="../statics/images/校园招聘/u111.jpg"/></a>
+    <a class="ig" href="#"><img src="../statics/images/校园招聘/u112.jpg"/></a>
+    <a class="ig" href="#"><img src="../statics/images/校园招聘/u833.jpg"/></a>
+    <div class="btn btn1"><a href="javascript:;"><</a></div>
+    <div class="btn btn2"><a href="javascript:;">></a></div>
+
+    <ul id="tabs">
+      <li class="tab"><a href="javascript:;"></a> </li>
+      <li class="tab"><a href="javascript:;"></a> </li>
+      <li class="tab"><a href="javascript:;"></a> </li>
+    </ul>
+  </div>
+  <!--    弹出的职位栏-->
+  <div class="hiddenbox">
+    <div class="left_alert" id="exploit">
+      <p>开发</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+
+    <div class="left_alert" id="robot">
+      <p>智能机器人</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+
+    <div class="left_alert" id="ai">
+      <p>人工智能</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+
+    <div class="left_alert" id="game">
+      <p>游戏</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+
+    <div class="left_alert" id="test">
+      <p>测试</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+
+    <div class="left_alert" id="technology">
+      <p>运维/技术支持</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+
+    <div class="left_alert" id="bigdata">
+      <p>大数据</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+
+    <div class="left_alert" id="produce">
+      <p>产品</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+
+    <div class="left_alert" id="operation">
+      <p>运营</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+
+    <div class="left_alert" id="management">
+      <p>技术管理</p>
+      <hr style=" margin-left:20px;margin-right: 20px;margin-top: 20px;
+height:1px;border:none;border-top:1px solid #AAAAAA;" />
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--入口站页面主内容-->
+<div class="cityenterbody">
+  <div class="body_head">
+    <img id="solid1" src="../statics/images/首页/u570.svg">
+    <img id="solid2" src="../statics/images/首页/u570.svg">
+    <h1>热门校招</h1>
+  </div>
+  <!--    职位选择框-->
+  <div class="checkbox">
+    <ul>
+      <a href="javascript:;">
+        <li class="changebox">实习</li>
+      </a>
+      <a href="javascript:;">
+        <li>全职</li>
+      </a>
+    </ul>
+  </div>
+  <!--    职位框-->
+  <div class="bodycontent">
+    <ul class="content" style="display: block">
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+        <button class="look">查看</button>
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+        <button class="look">查看</button>
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+        <button class="look">查看</button>
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+        <button class="look">查看</button>
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+        <button class="look">查看</button>
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+      </li>
+    </ul>
+    <ul class="content">
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+        <button class="look">查看</button>
+      </li>
+      <li>
+        <span>数据分析师</span>
+        <span>8千-2万</span>
+        <span>广州-荔湾区</span>
+        <span>1-3年</span>
+        <span>本科</span>
+        <span>名创优品</span>
+        <span>民营&nbsp;&nbsp;10000人以上</span>
+        <img src="../statics/images/面试邀请（空白/u2042.svg">
+        <button class="look">查看</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--网页尾部-->
+<footer>
+  <div class="footerhead">
+    <img src="../statics/images/首页/u570.svg">
+    <img src="../statics/images/首页/u570.svg">
+    <h1>热门企业</h1>
+  </div>
+  <div class="footerbody">
+    <ul class="footercontent">
+      <li>
+        <img src="../statics/images/校园招聘/u881.png">
+        <div class="footertext"><span value="阿斯利康">阿斯利康</span></div>
+      </li>
+      <li>
+        <img src="../statics/images/校园招聘/u883.png">
+        <div class="footertext"><span value="阿斯利康">欧菲光集团</span></div>
+      </li>
+      <li>
+        <img src="../statics/images/校园招聘/u885.png">
+        <div class="footertext"><span value="美菜网">美菜网</span></div>
+      </li>
+      <li>
+        <img src="../statics/images/校园招聘/u887.png">
+        <div class="footertext"><span value="中国一汽">中国一汽</span></div>
+      </li>
+      <li>
+        <img src="../statics/images/校园招聘/u888.png">
+        <div class="footertext"><span value="天音控股">天音控股</span></div>
+      </li>
+      <li>
+        <img src="../statics/images/校园招聘/u890.png">
+        <div class="footertext"><span value="沃尔玛">沃尔玛</span></div>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script src="../statics/js/jquery-3.6.0.min.js"></script>
+<script src="../statics/js/mainpage.js"></script>
+</body>
+</html>

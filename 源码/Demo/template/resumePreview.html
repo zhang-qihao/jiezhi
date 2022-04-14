@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../statics/css/resumePreview.css">
+    <script src="../statics/js/jquery.js"></script>
+    <title>简历预览</title>
+</head>
+<body>
+<div id="preview_top"></div>
+<div id="previewPeopleAll">
+    <div id="previewPeople">
+        <img src="../statics/images/企业查看简历界面/u1159.png">
+        <!--导入用户手机号-->
+        <div id="previewPeopleTex"><a class="personName"></a></div>
+        <!--导入用户性别-->
+        <span class="personGender"></span>
+        <span>|</span>
+        <!--导入用户年龄-->
+        <span class="personAge"></span>
+        <span>|</span>
+        <!--导入用户地区-->
+        <span class="personArea"></span>
+        <span>|</span>
+        <!--导入用户身份证-->
+        <span class="personIdentity"></span>
+        <div id="previewPeopleTel">
+            <img src="../statics/images/简历预览界面/u1856.svg">
+            <!--导入用户手机号-->
+            <span class="personPhone"></span>
+        </div>
+        <div id="previewPeopleEml">
+            <img src="../statics/images/简历预览界面/u1913.svg">
+            <!--导入用户邮箱地址-->
+            <span class="personEmail"></span>
+        </div>
+    </div>
+</div>
+<div id="previewSeek" class="previewDiv">
+    <p class="previewTit">求职意向</p>
+    <div id="personJob">
+        <p id="viewSeek1" style=""> </p>
+    </div>
+
+    <!--导入期望职位-->
+    <!--<p class="previewTit2"> .expected_occupation1</p>
+    导入期望职位的月薪和城市-->
+    <!--<p class="previewTit3"> .salary_requirements1  |   .expected_city1</p>
+    导入工作性质和到岗时间-->
+    <!--<p class="previewTit3"> .nature_of_work1  |   .arrival_time1</p>
+
+    与上面模板相同-->
+    <!--导入期望职位-->
+    <!--<p class="previewTit2"> .expected_occupation2</p>
+    导入期望职位的月薪和城市-->
+    <!--<p class="previewTit3"> .salary_requirements2  |   .expected_city2</p>
+    导入工作性质和到岗时间
+    <p class="previewTit3"> .nature_of_work2  |   .arrival_time2</p>-->
+    <br>
+</div>
+<div id="previewidStudy" class="previewDiv">
+    <p class="previewTit">教育经历</p>
+    <div id="personEdu">
+        <p id="viewSeek2"> </p>
+    </div>
+
+    <!--导入在校时间
+    <p class="previewTit3">在校时间： .school_time1</p>-->
+    <!--导入学校
+    <p class="previewTit2"> .school_name1</p>-->
+    <!--导入最高学历和专业
+    <p class="previewTit3"> .highest_education1  |  .major_studied1</p>-->
+    <br>
+</div>
+<div id="previewWork" class="previewDiv">
+    <p class="previewTit">工作/实习经历</p>
+    <div id="personWork">
+        <p id="viewSeek3"> </p>
+    </div>
+
+    <!--导入工作时间
+    <p class="previewTit3">工作时间：.time_of_employment1</p>-->
+    <!--导入公司名称
+    <p class="previewTit2">.corporate_name1</p>-->
+    <!--导入职位名称和月薪
+    <span class="previewTit3">.job_title1  |  .current_monthly_salary1元/月</span>-->
+    <!--导入工作类型
+    <span class="previewTit3" id="previewWorkTex">工作类型：.type_of_work1</span>-->
+    <!--导入工作描述
+    <p class="previewTit3">工作描述：.job_description1</p>-->
+    <br>
+</div>
+<div id="previewProject" class="previewDiv">
+    <!--导入项目经历-->
+    <p class="previewTit">项目经历</p>
+    <div id="personItem">
+        <p id="viewSeek4"> </p>
+    </div>
+
+    <!--导入项目名称
+    <p class="previewTit2">.project_name1</p>-->
+    <!--导入项目时间
+    <p class="previewTit3">项目时间：.project_time1</p>-->
+    <!--导入项目描述
+    <p class="previewTit3">项目描述：.project_description1</p>-->
+
+    <!--与上面模板相同-->
+    <!--导入项目经历
+    <p class="previewTit">项目经历</p>-->
+    <!--导入项目名称
+    <p class="previewTit2">.project_name2</p>-->
+    <!--导入项目时间
+    <p class="previewTit3">项目时间：.project_time2</p>-->
+    <!--导入项目描述
+    <p class="previewTit3">项目描述：.project_description2</p>-->
+    <br>
+</div>
+<div id="previewSchool" class="previewDiv">
+    <p class="previewTit">校内表现</p>
+    <p class="previewTit2">校内荣誉</p>
+    <div id="personSch1">
+        <div id="viewSeek5"></div>
+    </div>
+
+    <!--导入奖状名称
+    <p class="previewTit3">奖项：.awards1</p>-->
+
+    <!--与上面模板相同-->
+    <!--导入奖状名称
+    <p class="previewTit3">奖项：.awards2</p>-->
+    <br>
+    <p class="previewTit2">校内职务</p>
+    <div id="personSch2">
+        <div id="viewSeek6"></div>
+    </div>
+
+    <!--导入校内职务名称
+    <p class="previewTit3">职务：.post1</p>-->
+    <!--导入校内职务描述
+    <p class="previewTit3">职务描述：.post_description1</p>-->
+
+    <!--与上面模板相同-->
+    <!--导入校内职务名称
+    <p class="previewTit3">职务：.post2</p>-->
+    <!--导入校内职务描述
+    <p class="previewTit3">职务描述：.post_description2</p>-->
+    <br>
+</div>
+<div id="previewSpecialty" class="previewDiv">
+    <p class="previewTit">技能特长</p>
+    <p class="previewTit2">专业技能：</p>
+    <div id="personSkill">
+        <div id="viewSeek7"></div>
+    </div>
+
+    <!--导入技能名称
+    <p class="previewTit3">技能名称：.skill_name1</p>-->
+    <!--导入习得时长
+    <p class="previewTit3">习得时长.skill_acquisition_time1</p>-->
+    <br>
+    <p class="previewTit2">语言能力：</p>
+    <div id="personLanguage">
+        <div id="viewSeek8"></div>
+    </div>
+
+    <!--导入语种
+    <p class="previewTit3">语种：.language_name1</p>-->
+    <!--导入习得时长
+    <p class="previewTit3">习得时长.language_acquisition_time1</p>-->
+    <br>
+    <p class="previewTit2">培训经历：</p>
+    <div id="personTrain">
+        <div id="viewSeek9"></div>
+    </div>
+
+    <!--导入培训机构名称
+    <span class="previewTit3">培训机构：.training_institution1</span>-->
+    <!--导入培训课程名称
+    <span class="previewTit3"  id="previewSpecialtyTex1">培训课程：.training_courses1</span>-->
+    <!--导入培训时间
+    <span class="previewTit3"  id="previewSpecialtyTex2">培训时间：.training_period1</span>-->
+    <br>
+    <!--导入培训描述
+    <p class="previewTit3">培训描述：.training_description1</p>-->
+    <br>
+    <p class="previewTit2">获得证书：</p>
+    <div id="personCer">
+        <div id="viewSeek10"></div>
+    </div>
+
+    <!--导入获得证书名称
+    <span class="previewTit3">证书名称：.certificate_name1</span>-->
+    <!--导入获得证书日期
+    <span class="previewTit3">获得日期：.acquired_date1</span>-->
+    <br><br><br>
+</div>
+<div id="previewAssess" class="previewDiv">
+    <p class="previewTit" id="previewAssessWord">自我评价</p>
+    <!--导入自我评价-->
+    <p class="previewTit3"></p>
+    <br>
+</div>
+</body>
+<script type="text/javascript">
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+    var pid =  getQueryVariable("pid")
+    $("#previewPeopleAll").ready(function (){
+        $.ajax({
+            type:'post',
+            dataType:'json',
+            data:{
+                "pid":pid,
+            },
+            url:'/v2/resumePreview',
+            success:function(result){
+                showPerson(result)
+                console.log(result)
+            },
+        })
+    })
+
+    function showPerson(result) {
+        // baiscInfo 信息填充
+        var personName = document.querySelector(".personName")
+        personName.innerHTML = result.name
+        var personGender = document.querySelector(".personGender")
+        personGender.innerHTML = result.gender
+        var personAge = document.querySelector(".personAge")
+        personAge.innerHTML = result.birth
+        var personArea = document.querySelector(".personArea")
+        personArea.innerHTML = result.area
+        var personIdentity = document.querySelector(".personIdentity")
+        personIdentity.innerHTML = result.identity
+        var personPhone = document.querySelector(".personPhone")
+        personPhone.innerHTML = result.phone
+        var personEmail = document.querySelector(".personEmail")
+        personEmail.innerHTML = result.email
+        var personSelf = document.querySelector(".previewTit3")
+        personSelf.innerHTML = result.selfEvaluation
+
+        // 求职意向
+        var expectJobList = result.expectJob
+        for (var i = 0;i<expectJobList.length;i++) {
+            var str = "<p><h4>" + expectJobList[i].ExpectedOccupation + "</h4><div class=\"viewSeek11\">\n" +
+                "<span>" + expectJobList[i].SalaryRequirementsMin + "-" + expectJobList[i].SalaryRequirementsMax + "</span>\n" +
+                "<span>|</span>\n" +
+                "<span>" + expectJobList[i].ExpectedCity + "</span><br>\n" +
+                "</div></p>\n" +
+                "<div class=\"viewSeek12\">\n" +
+                "<span>" + expectJobList[i].JobType + "</span>\n" +
+                "<span>|</span>\n" +
+                "<span>" + expectJobList[i].ExpectTime + "</span>\n" +
+                "</div>"
+            $("#viewSeek1").append(str);
+        }
+
+        // 填充教育经历
+        var eductionList = result.educationList
+        for (var i = 0;i<eductionList.length;i++){
+            str="<div class=\"viewStudy1\">\n" +
+                "<p class=\"viewSchoolTime\"><span class=\"views\">在校时间:&nbsp;&nbsp;</span><span>"+eductionList[i].SchoolTimeStart+"&nbsp;至&nbsp;"+eductionList[i].SchoolTimeEnd+"</span></p>\n" +
+                "<p class=\"viewSchoolName\">"+eductionList[i].SchoolName+"</p>\n" +
+                "<p class=\"viewSchoolTop\">"+eductionList[i].HighestEducation+" | <span>"+eductionList[i].MajorStudied+"</span></p>\n" +
+                "</div>"
+            $("#viewSeek2").append(str);
+        }
+
+        // 填充工作/实习经历
+        var workList = result.workList
+        for (var i = 0;i<workList.length;i++){
+            str="<div class=\"viewWork1\">\n" +
+                "<p class=\"viewTitleTime\"><span class=\"views\">工作时间：&nbsp;&nbsp;</span><span>"+workList[i].InTime+"&nbsp;至&nbsp;"+workList[i].EndTime+"</span></p>\n" +
+                "<p class=\"companyName\">"+workList[i].Company+"</p>\n" +
+                workList[i].Job+"</span></span>\n" + "&nbsp;|&nbsp;" + workList[i].CurrentSalary+"元/月</span></p>\n" +
+                "<div class=\"data\"><p class=\"viewTitleIs\"><span class=\"views\">所属行业：&nbsp;&nbsp;</span><span>"+workList[i].Job+"</span></div>"+
+                "<div class=\"later\"><span class=\"viewWorkType\"><span class=\"views\">工作类型：&nbsp;&nbsp;</span><span>"+workList[i].WorkType+"</span></span></div><br>\n" +
+                "</p><div class=\"clear\"></div>\n" +
+
+                "<span class=\"viewWorkLike1\"><span class=\"views\">工作描述：&nbsp;&nbsp;</span></span>\n" + workList[i].Describe+"\n" +
+                "</div>"
+            $("#viewSeek3").append(str);
+        }
+
+        // 填充项目经历
+        var itemList = result.itemList
+        for (var i = 0;i<itemList.length;i++){
+            str="<div class=\"viewProject1\">\n" +
+                "<p class=\"viewProjectName\">"+itemList[i].Title+"</p>\n" +
+                "<p class=\"viewProjectTime\"><span class=\"views\">项目时间：&nbsp;&nbsp;</span><span>"+itemList[i].InTime+"&nbsp;至&nbsp;"+itemList[i].EndTime+"</span></p>\n" +
+                "<span class=\"viewProjectLike1\">项目描述:</span>\n" + itemList[i].Describe+"\n" +
+                "</div>"
+            $("#viewSeek4").append(str);
+        }
+
+        var schoolList = result.schoolList
+        for (var i = 0;i<schoolList.length;i++){
+            str="<div class=\"viewSchoolHonor\">\n" +
+                "<p><span class=\"views\">奖项：&nbsp;&nbsp;</span><span>"+schoolList[i].Award+"</span></p>\n" +
+                "</div>"
+            $("#viewSeek5").append(str);
+            str="<div class=\"viewSchoolPost\">\n" +
+                "<p><span class=\"views\">职务：&nbsp;&nbsp;</span><span>"+schoolList[i].Post+"</span></p>\n" +
+                "<span><span class=\"views\">职务描述：&nbsp;&nbsp;</span></span>\n" + schoolList[i].Describe+"\n" +
+                "</div>"
+            $("#viewSeek6").append(str);
+        }
+        var skillList = result.skillList
+        for (var i = 0;i<skillList.length;i++){
+            str="<div class=\"viewSkill\">\n" +
+                "<div class=\"before\"><span class=\"viewSkillName\"><span class=\"views\">技能名称：&nbsp;&nbsp;</span><span>"+skillList[i].Skill+"</span></span></div>\n" +
+                "<div class=\"later\"><span class=\"viewSkillTime\"><span class=\"views\">习得时长：&nbsp;&nbsp;</span><span>"+skillList[i].InTime+"</span></span></div>\n" +
+                "</div><div class=\"clear\"></div>"
+            $("#viewSeek7").append(str);
+        }
+        var languageList = result.languageList
+        for (var i = 0;i<languageList.length;i++){
+            str="<div class=\"viewLanguage\">\n" +
+                "<div class=\"before\"><span class=\"viewLanguageName\"><span class=\"views\">语种：&nbsp;&nbsp;</span><span>"+languageList[i].LanguageType+"</span></span></div>\n" +
+                "<div id=\"later\"><span class=\"viewLanguageTime\"><span class=\"views\">习得时长：&nbsp;&nbsp;</span><span>"+languageList[i].InTime+"</span></span></div>\n" +
+                "</div><div class=\"clear\"></div>"
+            $("#viewSeek8").append(str);
+        }
+
+        var trainList = result.trainList
+        for (var i = 0;i<trainList.length;i++){
+            str="<div class=\"viewTrain\">\n" +
+                "<div class=\"data1\"><span class=\"viewTrainName\"><span class=\"views\">培训机构：&nbsp;&nbsp;</span><span>"+trainList[i].Organization+"</span></span></div>\n" +
+                "<div class=\"data1\"><span class=\"viewTrainClass\"><span class=\"views\">培训课程：&nbsp;&nbsp;</span><span>"+trainList[i].Course+"</span></span></div>\n" +
+                "<span class=\"viewTrainTime\"><span class=\"views\">培训时间：&nbsp;&nbsp;</span><span>"+trainList[i].Period+"</span></span><div class=\"clear\"></div>\n" +
+                "<p class=\"viewTrainLike1\"><span class=\"views\">培训描述：&nbsp;&nbsp;</span>\n" +trainList[i].Describe+"</p>\n" +
+                "</div>"
+            $("#viewSeek9").append(str);
+        }
+        var certificateList = result.certificateList
+        for (var i=0;i<certificateList.length;i++){
+            str=" <div class=\"viewCertificate\">\n" +
+                "<div class=\"data2\"><span class=\"viewCertificateName\"><span class=\"views\">证书名称：&nbsp;&nbsp;</span><span>"+certificateList[i].CertificateType+"</span></span></div>\n" +
+                "<div class=\"later2\"><span class=\"viewCertificateTime\"><span class=\"views\">获得日期：&nbsp;&nbsp;</span><span>"+certificateList[i].ObtainTime+"</span></span>\n" +
+                "</div><div class=\"clear\"></div>"
+            $("#viewSeek10").append(str);
+        }
+
+    }
+
+
+
+</script>
+</html>

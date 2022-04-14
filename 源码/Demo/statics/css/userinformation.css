@@ -1,0 +1,511 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+button{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+::-webkit-input-placeholder {
+    color: #C8C8C8;
+    font-size: 20px;
+}
+
+/*顶部信息内容*/
+.head_head{
+    position: relative;
+    margin:0 auto;
+    margin-top: 10px;
+    width: 1024px;
+    height: 30px;
+}
+.head_headLeft{
+    float: left;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+}
+.head_headLeft span{
+    font-weight: 40;
+    font-size: 16px;
+}
+.head_headLeft a{
+    color: #008FE0;
+    margin-left: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 40;
+}
+.head_headRigth{
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-left: 440px;
+    font-weight: 40;
+}
+.head_headRigth a{
+    margin-right: 15px;
+}
+#user{
+    margin-right: 10px;
+}
+/*消息字体设置颜色*/
+.head_headRigth span:nth-child(1) a{
+    color: black;
+}
+.head_headRigth span:nth-child(1) a:hover{
+    color: rgb(46,176,252);
+}
+/*客户颜色效果*/
+.head_headRigth a span{
+    margin-left: 12px;
+    font-weight: 400;
+    color: black;
+}
+#head_headRight2{
+    margin-left: 12px;
+    font-weight: 40;
+}
+/*象大logo与搜索框*/
+.head_searchAll{
+    margin: 0 auto;
+    width: 1024px;
+    height: 70px;
+    margin-top: 10px;
+    font-weight: 40;
+}
+.head_searchLogo{
+    float: left;
+    height: 80px;
+    font-size: 48px;
+    margin-left: 18px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.head_search{
+    position: relative;
+    float: left;
+    width: 780px;
+    height: 80px;
+    margin-left: 20px;
+    font-weight: 40;
+}
+/*搜索框中的多选框中的*/
+#head_select{
+    position: absolute;
+    top: 30px;
+    left:2px;
+    border: none;
+    outline: none;
+
+}
+.head_searchInput1{
+    height: 60px;
+    width: 609px;
+    float: left;
+    font-size: 20px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(50, 195, 238);
+    border-right: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 2px 2px 2px rgb(50, 204, 238);
+    padding-left: 52px;
+}
+.head_searchInput2{
+    height: 60px;
+    width: 159px;
+    float: left;
+    font-size: 26px;
+    background-color: rgb(50, 204, 238);
+    font-family: 'Sana', sans-serif;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    font-weight: 400;
+    box-shadow: 2px 2px 2px rgb(50, 204, 238);
+    cursor: pointer;
+}
+/*公司图片的页面*/
+.content{
+    margin: auto;
+    margin-top: 36px;
+    position: relative;
+    width: 1024px;
+}
+.companyimg{
+    position: relative;
+    width: 1024px;
+    height: 207px;
+    margin: auto;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #333333;
+    background-color: rgba(242, 242, 242, 1);
+    border: none;
+    border-radius: 4px;
+}
+.companyimg img{
+    position: absolute;
+    left: 33px;
+    top: 33px;
+    width: 77px;
+    height: 63px;
+}
+.companyimg h2{
+    position: absolute;
+    left: 121px;
+    top: 48px;
+    font-family: 'PingFangSC-Ultralight', 'PingFang SC Ultralight', 'PingFang SC', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 28px;
+}
+.number {
+    position: absolute;
+    left: 754px;
+    top: 33px;
+    font-size: 48px;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #32c3ee;
+    text-align: center;
+    line-height: normal;
+    text-transform: none;
+}
+
+.text{
+    position: absolute;
+    left: 710px;
+    top: 98px;
+    font-size: 48px;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: normal;
+    text-transform: none;
+}
+.kind{
+    position: absolute;
+    left: 33px;
+    top: 114px;
+    color: #89e8fc;
+}
+.size{
+    position: absolute;
+    left: 33px;
+    top: 145px;
+    color: #89e8fc;
+}
+.adress{
+    position: absolute;
+    left: 33px;
+    top: 176px;
+    color: #89e8fc;
+}
+.introduction{
+    margin-top: 28px;
+    width: 780px;
+}
+.introduction h2{
+    font-family: 'PingFangSC-Ultralight', 'PingFang SC Ultralight', 'PingFang SC', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 26px;
+    color: #555555
+}
+.introduction p{
+    margin-top: 24px;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #333333;
+}
+/*招聘职位的数据*/
+.jobinvite{
+    margin-top: 65px;
+}
+.jobinvite h2{
+    font-family: 'PingFangSC-Ultralight', 'PingFang SC Ultralight', 'PingFang SC', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 26px;
+    color: #555555;
+}
+#recruitPosition{
+    width: 780px;
+    height: 1320px;
+    margin-top: 10px;
+}
+#recruitPosition ul li{
+    position: relative;
+    width: 780px;
+    height: 156px;
+    margin-bottom: 10px;
+    background-color: rgba(242, 242, 242, 1);
+    overflow: hidden;
+}
+#recruitPosition ul li:hover{
+    margin-bottom: 5px;
+}
+#recruitPosition ul li:hover .write{
+    display: block;
+}
+/*招聘职位可以套用的格式*/
+.positionName{
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    color: #333333;
+    font-family: 'PingFangSC-Medium', 'PingFang SC Medium', 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+.wages{
+    position: absolute;
+    left: 704px;
+    top: 15px;
+    font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;
+    font-weight: 650;
+    font-style: normal;
+    color: #FF706D;
+}
+.place{
+    position: absolute;
+    left: 18px;
+    top: 53px;
+    font-size: 15px;
+    color: #555555;
+}
+.time{
+    position: absolute;
+    left: 128px;
+    top: 54px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: #555555;
+}
+.education{
+    position: absolute;
+    left: 197px;
+    top: 54px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: #555555;
+}
+.pic{
+    position: absolute;
+    left: 17px;
+    top: 140px;
+    width: 816px;
+    height: 1px;
+}
+.company{
+    position: absolute;
+    left: 18px;
+    top: 78px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.type{
+    position: absolute;
+    left: 18px;
+    top: 108px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+}
+.separate{
+    position: absolute;
+    left: 44px;
+    top: 105px;
+    width: 1px;
+    height: 12px;
+}
+.scale{
+    position: absolute;
+    left: 48px;
+    top: 108px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    color: #555555;
+}
+.write{
+    position: absolute;
+    text-align: center;
+    left: 638px;
+    top: 92px;
+    width: 140px;
+    height: 40px;
+    background-color: rgba(22, 155, 213, 1);
+    border: none;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+.write span{
+    line-height: 40px;
+    font-size: 13px;
+    color: white;
+}
+/*右侧热门职业推荐*/
+.hotjob{
+    position: absolute;
+    left: 790px;
+    top: 234px;
+    width: 238px;
+    height: 772px;
+    background-color: rgba(242, 242, 242, 1);
+
+}
+.hotjob h2{
+    margin-top: 15px;
+    margin-left: 8px;
+    font-size: 18px;
+    display: flex;
+    font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.hotjob ul{
+    margin-top: 15px;
+}
+.hotjob ul li{
+    position: relative;
+    width: 220px;
+    margin-left: 8px;
+    margin-top: 6px;
+    height: 136px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #333333;
+}
+.hotjob ul li span:nth-of-type(1){
+    position: absolute;
+    left: 15px;
+    top: 3px;
+    width: 113px;
+    height: 33px;
+    font-family: 'PingFangSC-Medium', 'PingFang SC Medium', 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+.hotjob ul li span:nth-of-type(2){
+    position: absolute;
+    left: 138px;
+    top: 3px;
+    width: 82px;
+    height: 25px;
+    font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;
+    font-weight: 650;
+    font-style: normal;
+    color: #FF706D;
+}
+.hotjob ul li span:nth-of-type(3){
+    position: absolute;
+    left: 15px;
+    top: 49px;
+    width: 102px;
+    height: 17px;
+    font-size: 12px;
+    color: #555555;
+}
+.hotjob ul li span:nth-of-type(4){
+    position: absolute;
+    left: 117px;
+    top: 49px;
+    width: 32px;
+    height: 17px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #555555;
+}
+.hotjob ul li span:nth-of-type(5){
+    position: absolute;
+    left: 180px;
+    top: 49px;
+    width: 25px;
+    height: 17px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #555555;
+}
+.hotjob ul li span:nth-of-type(6){
+    position: absolute;
+    left: 15px;
+    top: 71px;
+    width: 100px;
+    height: 20px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.hotjob ul li span:nth-of-type(7){
+    position: absolute;
+    left: 15px;
+    top: 108px;
+    height: 14px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+}
+.hotjob ul li img{
+    position: absolute;
+    left: 10px;
+    top: 94px;
+}
+/*底部导航栏*/
+.pagination-bar {
+    font-size: 0px;
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+}
+.pagination-bar a{
+    display: inline-block;
+    padding: 5px 7.5px;
+    text-decoration: none;
+    min-width: 20px;
+    font-size: 13px;
+    color: #333333;
+}
+.pagination-bar u{
+    font-size: 13px;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../statics/css/resumePreview.css">
+  <title>简历预览</title>
+</head>
+<body>
+<div id="preview_top"></div>
+<div id="previewPeopleAll">
+  <div id="previewPeople">
+    <img src="../statics/images/企业查看简历界面/u1159.png">
+    <!--导入用户手机号-->
+    <div id="previewPeopleTex"><a>{{ .name}}</a></div>
+    <!--导入用户性别-->
+    <span>{{ .gender}}</span>
+    <span>|</span>
+    <!--导入用户年龄-->
+    <span>{{ .birth}}</span>
+    <span>|</span>
+    <!--导入用户地区-->
+    <span>{{ .area}}</span>
+    <span>|</span>
+    <!--导入用户身份证-->
+    <span>{{ .identity}}</span>
+    <div id="previewPeopleTel">
+      <img src="../statics/images/简历预览界面/u1856.svg">
+      <!--导入用户手机号-->
+      {{.phone}}
+    </div>
+    <div id="previewPeopleEml">
+      <img src="../statics/images/简历预览界面/u1913.svg">
+      <!--导入用户邮箱地址-->
+      {{.email}}
+    </div>
+  </div>
+</div>
+<div id="previewSeek" class="previewDiv">
+  <p class="previewTit">求职意向</p>
+  <!--导入期望职位-->
+  <p class="previewTit2">{{ .expected_occupation1}}</p>
+  <!--导入期望职位的月薪和城市-->
+  <p class="previewTit3">{{ .salary_requirements1}}  |  {{ .expected_city1}}</p>
+  <!--导入工作性质和到岗时间-->
+  <p class="previewTit3">{{ .nature_of_work1}}  |  {{ .arrival_time1}}</p>
+
+  <!--与上面模板相同-->
+  <!--导入期望职位-->
+  <p class="previewTit2">{{ .expected_occupation2}}</p>
+  <!--导入期望职位的月薪和城市-->
+  <p class="previewTit3">{{ .salary_requirements2}}  |  {{ .expected_city2}}</p>
+  <!--导入工作性质和到岗时间-->
+  <p class="previewTit3">{{ .nature_of_work2}}  |  {{ .arrival_time2}}</p>
+  <br>
+</div>
+<div id="previewidStudy" class="previewDiv">
+  <p class="previewTit">教育经历</p>
+  <!--导入在校时间-->
+  <p class="previewTit3">在校时间：{{ .school_time}}</p>
+  <!--导入学校-->
+  <p class="previewTit2">{{ .school_name}}</p>
+  <!--导入最高学历和专业-->
+  <p class="previewTit3">{{ .highest_education}}  | {{ .major_studied}}</p>
+  <br>
+</div>
+<div id="previewWork" class="previewDiv">
+  <p class="previewTit">工作/实习经历</p>
+  <!--导入工作时间-->
+  <p class="previewTit3">工作时间：{{.time_of_employment}}</p>
+  <!--导入公司名称-->
+  <p class="previewTit2">{{.corporate_name}}</p>
+  <!--导入职位名称和月薪-->
+  <span class="previewTit3">{{.job_title}}  |  {{.current_monthly_salary}}元/月</span>
+  <!--导入工作类型-->
+  <span class="previewTit3" id="previewWorkTex">工作类型：{{.type_of_work}}</span>
+  <!--导入工作描述-->
+  <p class="previewTit3">工作描述：{{.job_description}}</p>
+  <br>
+</div>
+<div id="previewProject" class="previewDiv">
+  <!--导入项目经历-->
+  <p class="previewTit">项目经历</p>
+  <!--导入项目名称-->
+  <p class="previewTit2">{{.project_name1}}</p>
+  <!--导入项目时间-->
+  <p class="previewTit3">项目时间：{{.project_time1}}</p>
+  <!--导入项目描述-->
+  <p class="previewTit3">项目描述：{{.project_description1}}</p>
+
+  <!--与上面模板相同-->
+  <!--导入项目经历-->
+  <p class="previewTit">项目经历</p>
+  <!--导入项目名称-->
+  <p class="previewTit2">{{.project_name2}}</p>
+  <!--导入项目时间-->
+  <p class="previewTit3">项目时间：{{.project_time2}}</p>
+  <!--导入项目描述-->
+  <p class="previewTit3">项目描述：{{.project_description2}}</p>
+  <br>
+</div>
+<div id="previewSchool" class="previewDiv">
+  <p class="previewTit">校内表现</p>
+  <p class="previewTit2">校内荣誉</p>
+  <!--导入奖状名称-->
+  <p class="previewTit3">奖项：{{.awards}}</p>
+
+  <!--与上面模板相同-->
+  <!--导入奖状名称-->
+  <p class="previewTit3">奖项：{{.awards}}</p>
+  <br>
+  <p class="previewTit2">校内职务</p>
+  <!--导入校内职务名称-->
+  <p class="previewTit3">职务：{{.post}}</p>
+  <!--导入校内职务描述-->
+  <p class="previewTit3">职务描述：{{.post_description}}</p>
+
+  <!--与上面模板相同-->
+  <!--导入校内职务名称-->
+  <p class="previewTit3">职务：{{.post}}</p>
+  <!--导入校内职务描述-->
+  <p class="previewTit3">职务描述：{{.post_description}}</p>
+  <br>
+</div>
+<div id="previewSpecialty" class="previewDiv">
+  <p class="previewTit">技能特长</p>
+  <p class="previewTit2">专业技能：</p>
+  <!--导入技能名称-->
+  <p class="previewTit3">技能名称：{{.skill_name}}</p>
+  <!--导入习得时长-->
+  <p class="previewTit3">习得时长{{.skill_acquisition_time}}</p>
+  <br>
+  <p class="previewTit2">语言能力：</p>
+  <!--导入语种-->
+  <p class="previewTit3">语种：{{.language_name}}</p>
+  <!--导入习得时长-->
+  <p class="previewTit3">习得时长{{.language_acquisition_time}}</p>
+  <br>
+  <p class="previewTit2">培训经历：</p>
+  <!--导入培训机构名称-->
+  <span class="previewTit3">培训机构：{{.training_institution}}</span>
+  <!--导入培训课程名称-->
+  <span class="previewTit3"  id="previewSpecialtyTex1">培训课程：{{.training_courses}}</span>
+  <!--导入培训时间-->
+  <span class="previewTit3"  id="previewSpecialtyTex2">培训时间：{{.training_period}}</span>
+  <br>
+  <!--导入培训描述-->
+  <p class="previewTit3">培训描述：{{.training_description}}</p>
+  <br>
+  <p class="previewTit2">获得证书：</p>
+  <!--导入获得证书名称-->
+  <span class="previewTit3">证书名称：{{.certificate_name}}</span>
+  <!--导入获得证书日期-->
+  <span class="previewTit3">获得日期：{{.acquired_date}}</span>
+  <br><br><br>
+</div>
+<div id="previewAssess" class="previewDiv">
+  <p class="previewTit2" id="previewAssessWord">自我评价</p>
+  <!--导入自我评价-->
+  <p class="previewTit3">{{.self_evaluation}}</p>
+  <br>
+</div>
+</body>
+</html>

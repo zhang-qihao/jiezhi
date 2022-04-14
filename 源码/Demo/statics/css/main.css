@@ -1,0 +1,696 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+button{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+::-webkit-input-placeholder {
+    color: #C8C8C8;
+    font-size: 20px;
+}
+
+/*顶部信息内容*/
+.head_head{
+    position: relative;
+    margin:0 auto;
+    margin-top: 10px;
+    width: 1024px;
+    height: 30px;
+}
+.head_headLeft{
+    float: left;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+}
+.head_headLeft span{
+    font-weight: 40;
+    font-size: 16px;
+}
+.head_headLeft a{
+    color: #008FE0;
+    margin-left: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 40;
+}
+.head_headRigth{
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 40;
+}
+.head_headRigth a{
+    margin-right: 15px;
+}
+#user{
+    margin-right: 10px;
+}
+/*消息字体设置颜色*/
+.head_headRigth span:nth-child(1) a{
+    color: black;
+}
+.head_headRigth span:nth-child(1) a:hover{
+    color: rgb(46,176,252);
+}
+/*客户颜色效果*/
+.head_headRigth a span{
+    margin-left: 12px;
+    font-weight: 400;
+    color: black;
+}
+#head_headRight2{
+    margin-left: 12px;
+    font-weight: 40;
+}
+/*象大logo与搜索框*/
+.head_searchAll{
+    margin: 0 auto;
+    width: 1024px;
+    height: 70px;
+    margin-top: 10px;
+    font-weight: 40;
+}
+.head_searchLogo{
+    float: left;
+    height: 80px;
+    font-size: 48px;
+    margin-left: 18px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.head_search{
+    position: relative;
+    float: left;
+    width: 780px;
+    height: 80px;
+    margin-left: 20px;
+    font-weight: 40;
+}
+/*搜索框中的多选框中的*/
+#head_select{
+    position: absolute;
+    top: 30px;
+    left:2px;
+    border: none;
+    outline: none;
+
+}
+.head_searchInput1{
+    height: 60px;
+    width: 609px;
+    float: left;
+    font-size: 20px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(50, 195, 238);
+    border-right: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 2px 2px 2px rgb(50, 195, 238);
+    padding-left: 52px;
+}
+.head_searchInput2{
+    height: 60px;
+    width: 159px;
+    float: left;
+    font-size: 26px;
+    background-color: rgb(50, 195, 238);
+    font-family: 'Sana', sans-serif;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    font-weight: 400;
+    box-shadow: 2px 2px 2px rgb(50, 195, 238);
+    cursor: pointer;
+}
+.head_navigation{
+    margin: 0 auto;
+    height: 44px;
+    width: 1024px;
+    font-size: 24px;
+    margin-top: 42px;
+    font-family: 'STLibianSC-Regular', 'Libian SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #555555;
+    text-align: center;
+}
+.head_navigation a{
+    float: left;
+    display: inline-block;
+    width: 146px;
+    height: 44px;
+    margin-right: 70px;
+    color: #555555;
+    cursor: pointer;
+}
+.head_navigation a:last-child{
+    margin-right: 0px;
+}
+.head_navigation a:hover{
+    color: rgb(46,176,252);
+}
+/*中间轮播图*/
+.nav{
+    width: 1024px;
+    height: 329px;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+}
+/*轮播图左侧浮动效果*/
+.nav_left{
+    float: left;
+    width: 180px;
+    height: 329px;
+}
+.menu_item{
+    width: 180px;
+    height: 47px;
+    background-color: #f2f2f2;
+    text-align: center;
+    line-height: 47px;
+    box-shadow: none;
+}
+.menu_item:hover{
+    background-color: #32c3ee;
+}
+.menu_item:hover a{
+    color: white;
+}
+.menu_item a{
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #333333;
+}
+/*鼠标悬浮时的弹出职位栏*/
+.left_alert{
+    left: 180px;
+    position: absolute;
+    width: 665px;
+    height: 330px;
+    background-color: rgba(242, 242, 242, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(170, 170, 170, 1);
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: none;
+}
+.left_alert p{
+    font-size: 24px;
+    color: #333333;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.left_alert ul {
+    margin: 25px 70px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.left_alert ul::-webkit-scrollbar {
+    display: none;
+}
+.left_alert_item{
+    float: left;
+    background-color: rgba(242, 242, 242, 1);
+    width: 100px;
+    height: 40px;
+    box-shadow: none;
+}
+.left_alert_item a{
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    color: #333333;
+}
+.left_alert_item a:hover{
+    color: #32c3ee;
+}
+/*中间轮播图效果*/
+.nav_middle{
+    position: relative;
+    float: left;
+    width: 665px;
+    height: 330px;
+    background-color: rgba(242, 242, 242, 1);
+}
+.ig{
+    position: absolute;
+}
+.ig img{
+    width: 665px;
+    height: 330px;
+}
+#tabs{
+    position: absolute;
+    left: 245px;
+    bottom: 10px;
+}
+.tab{
+    float: left;
+    width: 44px;
+    height: 11px;
+    margin-left: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #f2f2f2;
+}
+.btn{
+    position: absolute;
+    color: #fff;
+    top: 110px;
+    width: 30px;
+    height: 100px;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.btn a{
+    color: #fff;
+}
+.btn2{
+    position: absolute;
+    right: 0px;
+}
+.btn:hover{
+    background-color: #32c3ee;
+}
+.bg{
+    background-color: rgba(170, 170, 170, 0.7);
+}
+/*轮播图右侧边框*/
+.nav_right{
+    position: relative;
+    float: left;
+    border: 1px solid #333333;
+    width: 179px;
+    height: 329px;
+    background: inherit;
+    box-sizing: border-box;
+    border-radius: 0px;
+}
+.right_img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 13px ;
+    top: 21px;
+}
+#username{
+    position: absolute;
+    left: 77px;
+    top: 37px;
+    width: 81px;
+    height: 22px;
+    display: flex;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #7F7F7F;
+}
+#username:hover{
+    color: #32c3ee;
+}
+.faceinvite{
+    position: absolute;
+    left: 8px;
+    top: 105px;
+    width: 160px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(170, 170, 170, 1);
+    box-shadow: none;
+    cursor: pointer;
+}
+.faceinvite_text{
+    position: absolute;
+    left: 22px;
+    top: 5px;
+    width: 37px;
+    height: 50px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+#facevalue{
+    position: absolute;
+    left: 85px;
+    top: -5px;
+    width: 34px;
+    height: 77px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55px;
+    color: #5ebfd5;
+    text-shadow: 1px 1px 5px rgb(0 0 0.65);
+}
+.nav_right_box1{
+    position: absolute;
+    top: 188px;
+    left: 17px;
+    width: 145px;
+    height: 35px;
+    background-color: rgba(242, 242, 242, 1);
+    border: none;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    line-height: 35px;
+    color: black;
+}
+.nav_right_box2{
+    position: absolute;
+    top: 235px;
+    left: 17px;
+    width: 145px;
+    height: 35px;
+    background-color: rgba(242, 242, 242, 1);
+    border: none;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    line-height: 35px;
+    color: black;
+}
+.nav_right_box3{
+    position: absolute;
+    top: 281px;
+    left: 17px;
+    width: 145px;
+    height: 35px;
+    background-color: rgba(242, 242, 242, 1);
+    border: none;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    line-height: 35px;
+    color: black;
+}
+/*点击变色css*/
+.changebox{
+    background-color: #32c3ee;
+    color: white;
+}
+.nav_right_box1:hover,.nav_right_box2:hover,.nav_right_box3:hover{
+    box-shadow: 2px 2px 2px rgb(0 0 0.34);
+}
+/*为您优选的内容*/
+.mainbody{
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    width: 1024px;
+}
+.goodchoose{
+    margin-top: 10px;
+    position: relative;
+    width: 126px;
+    height: 50px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    letter-spacing: normal;
+    color: #000000;
+    text-align: left;
+    text-transform: none;
+    background-color: transparent;
+}
+.mainbodyimg{
+    position: absolute;
+    top: 38px;
+    left: 0px;
+    width: 102px;
+    height: 7px;
+}
+/*热门校招*/
+.hotschool{
+    position: absolute;
+    left: 469px;
+    top: -20px;
+    width: 97px;
+    height: 33px;
+    font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 33px;
+}
+/*多选框*/
+.checkbox{
+    width: 1024px;
+    height: 41px;
+    margin-top: 15px;
+    position: relative;
+}
+.checkbox .changebox{
+    background-color: #32c3ee;
+    color: white;
+}
+.checkbox ul li{
+    text-align: center;
+    float: left;
+    width: 66px;
+    height: 37px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #555555;
+    line-height: 41px;
+    box-sizing: border-box;
+    border:1px solid rgba(242, 242, 242, 1) ;
+}
+/*工作推荐栏*/
+.content{
+    margin: auto;
+    width: 1024px;
+    display: none;
+    overflow: hidden;
+}
+.bodycontent{
+    width: 1024px;
+    height: 680px;
+}
+.content li{
+    position: relative;
+    float: left;
+    margin-top: 8px;
+    width: 340px;
+    height: 160px;
+    background-color: white;
+    box-shadow: none;
+}
+.content li:hover{
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(242, 242, 242, 1);
+    box-shadow: 2px 2px 2px rgb(170 170 170);
+}
+.content li span:nth-of-type(1){
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    font-family: 'PingFangSC-Medium', 'PingFang SC Medium', 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+.content li span:nth-of-type(2){
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;
+    font-weight: 650;
+    font-style: normal;
+    color: #FF706D;
+}
+.content li span:nth-of-type(3){
+    position: absolute;
+    left: 18px;
+    top: 53px;
+    font-size: 15px;
+    color: #555555;
+}
+.content li span:nth-of-type(4){
+    position: absolute;
+    left: 128px;
+    top: 54px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: #555555;
+}
+.content li span:nth-of-type(5){
+    position: absolute;
+    left: 197px;
+    top: 54px;
+    font-size: 15px;
+    color: #555555;
+}
+.content li span:nth-of-type(6){
+    position: absolute;
+    left: 18px;
+    top: 100px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.content li span:nth-of-type(7){
+    position: absolute;
+    left: 18px;
+    top: 130px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+}
+.content li img{
+    position: absolute;
+    left: 17px;
+    top: 87px;
+    width: 313px;
+    height: 1px;
+}
+/*网页尾部*/
+footer{
+    margin: auto;
+    width: 1024px;
+    margin-top: 20px;
+}
+.footerhead{
+    position: relative;
+    width: 1024px;
+    height: 60px;
+}
+.footerhead img:first-child{
+    position: absolute;
+    top: 29px;
+    left: 345px;
+}
+.footerhead img:nth-child(2){
+    position: absolute;
+    top: 29px;
+    left: 578px;
+}
+.footerhead h1{
+    position: absolute;
+    left: 456px;
+    top: 8px;
+    font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #555555;
+    font-size: 28px;
+}
+.footerbody{
+    width: 1024px;
+}
+.img1{
+    position: relative;
+    float: left;
+    width: 395px;
+    height: 194px;
+    margin-left: 5px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+/*隐藏框内容*/
+.img1_text{
+    position: absolute;
+    width: 395px;
+    height: 194px;
+    color: white;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: normal;
+    text-transform: none;
+    margin-top: 30px;
+    display: none;
+}
+.img1:hover{
+    opacity: 1;
+}
+.img1:hover .img1_text{
+    display: block;
+}
+.img2{
+    position: relative;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 194px;
+    height: 194px;
+}
+.img3{
+    position: relative;
+    float: left;
+    width: 380px;
+    height: 194px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.footerbody img{
+    width: 100%;
+    height: 100%;
+}
+/*职业中的button按钮*/
+.content li button{
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    left: 226px;
+    top: 120px;
+    font-size: 13px;
+    background-color: #32c3ee;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: none;
+    display: none;
+}
+.content li:hover .look{
+    display: block;
+}

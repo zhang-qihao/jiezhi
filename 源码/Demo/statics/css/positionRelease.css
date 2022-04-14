@@ -1,0 +1,468 @@
+body{
+    margin: 0px;
+    background: white;
+}
+input{
+    outline: none;
+}
+/*复用代码如下*/
+#overall{
+    margin:0px auto;
+    width: 1080px;
+}
+#side{
+    background: #5ebfd5;
+    border: none;
+    /*border: 1px solid #40c7a9;*/
+    border:none;
+    width: 160px;
+    height: 100%;
+    float: left;
+    position: fixed;
+}
+#image_side{
+    border: none;
+    margin:10px auto;
+    width: 105px;
+    height: 105px;
+}
+#two_side{
+    background: rgb(50, 195, 238);
+}
+#one_side,#two_side,#three_side{
+    width: 160px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-top: 2px;
+    font-weight: 400;
+}
+#one_side:hover{
+    cursor: pointer;
+    background: rgb(94, 191, 213);
+}
+#two_side:hover{
+    cursor: pointer;
+    background: rgb(94, 191, 213);
+}
+#three_side:hover{
+    cursor: pointer;
+    background: rgb(94, 191, 213);
+}
+#main{
+    /*border: 1px solid black;*/
+    width: 900px;
+    height: auto;
+    float: left;
+    margin-left: 160px;
+    position: absolute;
+}
+#one_main{
+    margin-top: 10px;
+    margin-left: 10px;
+    width:860px;
+    height: 60px;
+    background: #F2F2F2;
+    line-height: 20px;
+}
+#title{
+    float: left;
+    margin-left:20px;
+}
+#one_main_right{
+    width: 280px;
+    height: 60px;
+    float: right;
+    font-size: 13px;
+    /*border: 1px solid black;*/
+    line-height: 60px;
+    position: relative;
+}
+#welcome{
+    margin-left: 40px;
+    margin-right: 10px;
+}
+#repassword{
+    border: none;
+    background: #EC808D;
+    padding:5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 16px;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+}
+#exit{
+    border: none;
+    position: absolute;
+    background: #00BE93;
+    padding:5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 16px;
+    color: white;
+    cursor: pointer;
+}
+/*所有小字体颜色*/
+.companyTextAll{
+    font-size: 13px;
+}
+/*公司资料信息*/
+#companyMessage{
+    width: 860px;
+    height: 207px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #F4F6F9;
+}
+/*公司logo*/
+#companyMessage img{
+    width: 77px;
+    height: 63px;
+    position: relative;
+    margin-top: 35px;
+    margin-left: 40px;
+}
+/*公司名称和类型盒子*/
+#company{
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    top: 45px;
+    left: 130px;
+    color: #333333;
+}
+/*公司名字*/
+#companyName{
+    font-size: 28px;
+    position: relative;
+    margin-top:0px;
+    margin-left: 0px;
+    font-weight: 200;
+    float: left;
+    color: #333333;
+}
+/*公司类型*/
+#compangtype{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 15px;
+    float: left;
+}
+/*民营*/
+#companyType1{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 15px;
+    float: left;
+}
+/*外资*/
+#companyType2{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 15px;
+    float: left;
+    display: none;
+}
+/*国企*/
+#companyType3{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 15px;
+    float: left;
+    display: none;
+}
+/*公司简称、公司规模、公司地址*/
+#companyMessageMore{
+    width: 400px;
+    height: 70px;
+    position: absolute;
+    top: 115px;
+    left: 40px;
+    color: #333333;
+}
+#companyMessageMore span,p{
+    margin-left: 10px;
+}
+/*编辑按钮*/
+.write{
+    width: 44px;
+    height: 25px;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    color: black;
+    text-decoration:none;
+}
+#companyMessageWrite{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+
+/*公司简介部分*/
+/*所有标题样式*/
+.title{
+    font-size: 20px;
+    font-weight: 500;
+    color: #333333;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+}
+.titleNum{
+    color: #D9001B;
+    font-weight: bold;
+    font-size: 35px;
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+#addPosition{
+    float: left;
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    position: absolute;
+    right: 30px;
+    top: 85px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    color: #333333;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+#addPosition span{
+    font-weight:bold;
+}
+/*招聘职位部分*/
+#recruitPosition{
+    width: 860px;
+    height: 1320px;
+    position: relative;
+    margin-top: 70px;
+    margin-left: 10px;
+}
+#recruitPosition ul{
+    list-style-type: none;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+}
+#recruitPosition ul li{
+    width: 860px;
+    height: 158px;
+    position: relative;
+    margin-bottom: 5px;
+    background-color: #f2f2f2;
+}
+#recruitPosition ul li:hover{
+    box-shadow: 2px 2px 2px #A9A9A9;
+    box-shadow-color: #AAAAAA;
+    margin-bottom: 0px;
+}
+#recruitPosition ul li:hover .write{
+    display: block;
+}
+/*招聘职位可以套用的格式*/
+.positionName{
+    font-size: 18px;
+    position: absolute;
+    /*top: 3px;*/
+    left: 5px;
+    color: #333333;
+}
+.wages{
+    position: absolute;
+    right: 70px;
+    top: 3px;
+    color: #FF706D;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+}
+.place{
+    position: absolute;
+    top: 57px;
+    left: 15px;
+    font-size: 15px;
+    color: #555555;
+}
+.time{
+    position: absolute;
+    top: 57px;
+    left: 140px;
+    font-size: 15px;
+    color: #555555;
+}
+.education{
+    position: absolute;
+    top: 57px;
+    left: 220px;
+    font-size: 15px;
+    color: #555555;
+}
+.pic{
+    position: absolute;
+    top: 92px;
+    left: 15px;
+}
+.company{
+    position: absolute;
+    top: 92px;
+    left: 5px;
+    color: #333333;
+    font-size: 14px;
+}
+.type{
+    position: absolute;
+    top: 133px;
+    left: 15px;
+    color: #333333;
+    font-size: 10px;
+}
+.separate{
+    position: absolute;
+    top: 133px;
+    left: 45px;
+    font-size: 10px;
+    color: #333333;
+}
+.scale{
+    position: absolute;
+    top: 133px;
+    left: 53px;
+    color: #555555;
+    font-size: 10px;
+}
+.write{
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 70px;
+    background-color: rgba(22, 155, 213, 1);
+    display: none;
+}
+.write span{
+    text-align: center;
+    line-height: 40px;
+    font-size: 13px;
+    color: white;
+}
+
+/*页码导航栏*/
+.pagination-bar {
+    font-size: 0px;
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+}
+.pagination-bar a{
+    display: inline-block;
+    padding: 5px 7.5px;
+    text-decoration: none;
+    min-width: 20px;
+    font-size: 13px;
+    color: #333333;
+}
+.pagination-bar u{
+    font-size: 13px;
+}
+/*被选中的页数*/
+.choose{
+    background-color: #32c3ee;
+    color: white;
+}
+#pageNum{
+    text-decoration:underline;
+}
+/*密码复用*/
+#password{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#frame{
+    width: 440px;
+    height: 400px;
+    margin:10% auto;
+    background: white;
+    position: relative;
+}
+#passwordTitle{
+    width: 400px;
+    height: 40px;
+    background: #32c3ee;
+    line-height: 40px;
+    font-size: 18px;
+    padding-left:40px;
+    color: white;
+}
+#re{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 360px;
+    color: white;
+    border: none;
+    background: #32c3ee;
+    font-size: 24px;
+    cursor: pointer;
+}
+#cen{
+    margin-top: 30px;
+    margin-left: 40px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+    color: #7F7F7F;
+    border-collapse: collapse;
+}
+#targetBar{
+    width: 70px;
+}
+#InputUserPwd,#ConfirmPassword,#InputTelephone,#InputCode{
+    width: 260px;
+    height: 30px;
+    border: 1px solid black;
+}
+#code{
+    width: 120px;
+    position: absolute;
+    right: 70px;
+    bottom: 118px;
+    border: none;
+    background: white;
+    color: #32c3ee;
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+}
+#confirm{
+    width: 125px;
+    height: 35px;
+    border: none;
+    background: #32c3ee;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+#tips1,#tips2,#tips3,#tips4{
+    vertical-align: top;
+    font-size: 13px;
+    color: #EC808D;
+    display: none;
+}

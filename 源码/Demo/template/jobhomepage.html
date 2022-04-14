@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<title>职位信息（详情页）</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../statics/css/jobinformation.css">
+	</head>
+
+	<body>
+	<header>
+		<div class="head_head">
+			<div class="head_headLeft">
+				<img style="vertical-align: middle;" src="../statics/images/java职位下级页面/u292.svg">
+				<!--选择地方名例如南通站-->
+				<span>南通站</span>
+				<a href="javascript:;">切换城市</a>
+			</div>
+			<!--网页顶端一行右边-->
+			<div class="head_headRigth">
+				<span>欢迎回来</span>
+				<!--鼠标悬浮下拉菜单、二级菜单-->
+				<a href="#"><span id="user">马冬梅</span><img style="vertical-align: middle;" id="head_headRigth_img" src="../statics/images/head__/u288.svg"></a>
+				<img style="vertical-align: middle;" id="head_headRight2" src="../statics/images/java职位下级页面/u301.svg">
+				<span>400-888-666</span>
+			</div>
+		</div>
+		<!--捷职logo与搜索框-->
+		<div class="head_searchAll">
+			<!-- 捷职-->
+			<div class="head_searchLogo">
+				<span>捷职</span>
+			</div>
+			<div class="head_search">
+				<form action="">
+					<select id="head_select" name="head_select">
+						<option id="allday" value="allday">全职</option>
+						<option id="littleday" value="littleday">实习</option>
+					</select>
+					<input type="text" class="head_searchInput1" placeholder="搜索职位，公司">
+					<input type="button" class="head_searchInput2" value="搜索">
+				</form>
+			</div>
+		</div>
+	</header>
+<!--信息栏-->
+		<div class="jobinformation">
+			<span id="title"></span>
+			<span id="salary"></span>
+			<span id="address"></span>
+			<span id="experience"></span>
+			<span id="education"></span>
+			<span id="nature"></span>
+			<span id="shortname"></span>
+			<span id="companytype"></span>
+			<span id="scale"></span>
+			<a id="submit" onclick="submitTest()">申请职位</a>
+		</div>
+
+		<div class="jobbody">
+			<div class="column_side1">
+				<h3>职位职责</h3>
+				<img src="../statics/images/职位信息（详情页/u919.svg">
+				<ul class="dowhat">
+					<li><span id="describe"></span></li>
+				</ul>
+				<ul class="needwhat">
+					<li><span id="require"></span></li>
+				</ul>
+				<h3>公司介绍</h3>
+				<img src="../statics/images/职位信息（详情页/u919.svg">
+				<div class="cpintroduction">
+				<p id="brief"></p>
+				</div>
+				<h3>公司地址</h3>
+				<img src="../statics/images/职位信息（详情页/u919.svg">
+				<div class="adress">
+				<p id="companyaddress"></p>
+				</div>
+			</div>
+			<div class="column_side2">
+				<h3>公司信息</h3>
+				<img src="../statics/images/职位信息（详情页/u919.svg">
+				<span class="gray">
+					<p>公司logo：<img src="../statics/images/职位信息（详情页/u929.png"></p>
+					<p>公司名称：<span class="black" id="shortname1"></span></p>
+					<p>公司规模：<span class="black" id="scale1"></span></p>
+				</span>
+			</div>
+		</div>
+	<script src="../statics/js/jquery-3.6.0.min.js"></script>
+	<script src="../statics/js/readpage.js"></script>
+	<script src="../statics/js/jquery-2.1.4.min.js"> </script>
+	<script type="text/javascript">
+		function getQueryVariable(variable){
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){return pair[1];}
+			}
+			return(false);
+		}
+		var pid = getQueryVariable("pid")
+		var jid = getQueryVariable("jid")
+		console.log(pid)
+		console.log(jid)
+		var companytype = document.querySelector('#companytype');
+		var shortname = document.querySelector('#shortname');
+		var scale = document.querySelector('#scale');
+		var salary = document.querySelector('#salary');
+		var title = document.querySelector('#title');
+		var address = document.querySelector('#address');
+		var experience = document.querySelector('#experience');
+		var education = document.querySelector('#education');
+		var nature = document.querySelector('#nature');
+		var describe = document.querySelector('#describe');
+		var require = document.querySelector('#require');
+		var shortname1 = document.querySelector('#shortname1');
+		var scale1 = document.querySelector('#scale1');
+		var companyaddress = document.querySelector('#companyaddress');
+		var brief = document.querySelector('#brief');
+
+		$("header").ready(function (){
+			$.ajax({
+				type:'post',
+				dataType:'json',
+				data:{
+					"jid":jid,
+					"pid":pid,
+				},
+				url: 'http://127.0.0.1:8080/v6/submit',
+				success:function(result){
+					console.log(result.title)
+					companytype.innerHTML = result.companytype;
+					shortname.innerHTML = result.shortname
+					scale.innerHTML = result.scale;
+					salary.innerHTML = result.salary;
+					title.innerHTML = result.title;
+					address.innerHTML = result.address;
+					experience.innerHTML = result.experience;
+					education.innerHTML = result.education
+					nature.innerHTML = result.nature;
+					describe.innerHTML = result.describe;
+					require.innerHTML = result.require;
+					shortname1.innerHTML = result.shortname1;
+					scale1.innerHTML = result.scale1;
+					companyaddress.innerHTML = result.companyaddress;
+					brief.innerHTML = result.brief;
+				},
+			})
+		})
+
+		var appli = document.querySelector(".button")
+		appli.addEventListener("click", function(){
+			var application = document.getElementById("application").value
+			$.ajax({
+				type:'post',
+				dataType:'json',
+				data:{
+					"jid":jid,
+					"pid":pid,
+					"application":application
+				},
+				url: 'http://127.0.0.1:8080/v6/submit',
+				success:function(res){
+					console.log("application=",application)
+					alert("申请成功")
+					console.log("res=",res)
+					if (res.msg=="申请成功"){
+					}
+				}
+			})
+		})
+
+	</script>
+	</body>
+</html>

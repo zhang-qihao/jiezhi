@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ebb49ef2-26e7-4bf8-b45e-440a0590c2de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u13.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u17.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u34.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u49.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u55.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u56.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u57.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u65.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u69.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u71.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u81.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u91.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u91_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u97.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u98.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u98_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/regen/u98_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1104.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1116.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1120.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1137.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1152.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1158.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1159.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1160.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1168.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1172.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1174.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1184.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1199.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1379.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1391.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1395.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1412.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1427.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1433.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1434.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1435.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1443.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1447.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1449.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1459.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1474.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1477.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1477_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1585.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1597.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1601.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1604.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1616.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1618.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1620.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1633.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1637.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1639.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1640.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1641.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1649.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1652.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1653.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1655.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1658.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1659.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1660.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1665.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1668.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1672.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1674.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1675.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1675_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1684.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1690.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1694.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1694_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/企业查看简历界面/u1699.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u1936.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u1938.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u1940.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u1963.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u1979.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u1981.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u1983.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2004.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2187.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2189.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2191.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2214.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2230.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2232.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2234.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2255.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2371.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2373.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2375.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2383.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2385.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2387.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2398.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2410.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2414.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2416.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2418.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2426.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2428.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2430.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2439.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/修改简历界面/u2451.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1071.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1088.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1098.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1098_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1098_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1313.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1324.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1324_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1324_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1335.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1501.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1520.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/应聘管理界面/u1539.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1016.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1017.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1018.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1018_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1181.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1182.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1183.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1184.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1185.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1194.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1200.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1238.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1239.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1240.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1240_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1343.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1344.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1345.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1346.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1347.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1356.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1362.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1363.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1364.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1365.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1366.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1375.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1381.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1401.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1402.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1402_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1419.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1420.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1421.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u1421_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u959.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u960.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u961.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u962.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u963.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/招聘岗位编辑/u978.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/1_u182.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/1_u185.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/1_u287.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/1_u290.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u163.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u168.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u170.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u170_disabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u170_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u170_selectedDisabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u177.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u190.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u268.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u273.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u275.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u275_disabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u275_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u275_selectedDisabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u282.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/u295.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/求职者登录界面/背景图.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u1005.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u1013.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u1024.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u1032.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u1038.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u1043.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u1057.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u935.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u943.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u954.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/用户端企业信息/u968.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1264.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1264_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1267_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1275.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1278.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1280.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1284.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1287.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1289.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1304.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1324.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1325.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1327.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1328.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1330.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1348.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1352.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1352_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1353_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1354_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1356.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1357.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1359.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1359_disabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1359_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1359_selectedDisabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1375.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1375_disabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1375_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1375_selectedDisabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1508.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1508_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1511_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1519.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1522.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1524.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1528.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1531.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1533.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1539.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1541.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1541_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1546_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1548.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1552.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1560.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1561.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1573.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1574.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1576.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1577.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1579.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1702.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1702_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1705_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1707.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1707_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1710_mouseOver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1713.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1716.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1718.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1721.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1722.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1723.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1725.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1727.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1727.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1730.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1732.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1733.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1735.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1735_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1738.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1740.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1740_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1742.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1745_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1746.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1747.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1751.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1752.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1756.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1757.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1762.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1764.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1766.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1769.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1770.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1772.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1773.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1775.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历界面/u1786.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u1849.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u1850.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u1851.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u1852.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u1853.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u1854.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u1856.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u1913.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2099.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2100.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2101.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2102.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2103.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2104.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2106.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2163.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2283.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2284.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2285.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2286.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2287.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2288.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2290.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2295.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2296.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2297.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2298.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2299.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2300.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2302.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2347.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/简历预览界面/u2359.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/职位信息（详情页/u784.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/职位信息（详情页/u795.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/职位信息（详情页/u863.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/职位信息（详情页/u873.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/职位信息（详情页/u919.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/职位信息（详情页/u929.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/职位信息（详情页/u938.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/职位信息（详情页/u948.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/面试邀请（空白/u2042.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/面试邀请（空白/u2324.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/面试邀请（空白/u2508.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/images/面试邀请（空白/u2520.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/company.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/interview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/interview2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/mainpage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/readpage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/resumeModify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/companyHomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.en.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/JQuery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../../developer/Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+    <option name="urls">
+      <list>
+        <option value="file://$USER_HOME$/developer/go/src" />
+      </list>
+    </option>
+    <option name="useGoPathFromSystemEnvironment" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27dLsweIGDwE1BGHnwK7w6c4GOa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="go.format.on.save.advertiser.fired" value="true" />
+    <property name="go.formatter.settings.were.checked" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="Demo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="Demo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+</project>

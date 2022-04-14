@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户端企业信息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../statics/css/searchdemo.css">
+	</head>
+	<body>
+<!--	表头部页面-->
+    <header>
+        <div class="head_head">
+            <div class="head_headLeft">
+                <img style="vertical-align: middle;" src="../statics/images/java职位下级页面/u292.svg">
+                <!--选择地方名例如南通站-->
+                <span>南通站</span>
+                <a href="javascript:;">切换城市</a>
+            </div>
+            <!--网页顶端一行右边-->
+            <div class="head_headRigth">
+                <span>欢迎回来</span>
+                <!--鼠标悬浮下拉菜单、二级菜单-->
+                <a href="#" id="userId"><span id="user"></span><img style="vertical-align: middle;" id="head_headRigth_img" src="../statics/images/head__/u288.svg"></a>
+                <img style="vertical-align: middle;" id="head_headRight2" src="../statics/images/java职位下级页面/u301.svg">
+                <span>400-888-666</span>
+            </div>
+        </div>
+        <!--捷职logo与搜索框-->
+        <div class="head_searchAll">
+            <!-- 捷职招聘-->
+            <div class="head_searchLogo">
+                <span>捷职招聘</span>
+            </div>
+            <div class="head_search">
+<!--                <form action="">-->
+                    <select id="head_select" name="head_select">
+                        <option value="allday" >全职</option>
+                        <option value="littleday">实习</option>
+                    </select>
+                    <input type="text" class="head_searchInput1" id="head_searchInput1" placeholder="搜索职位">
+                    <input type="button" class="head_searchInput2" value="搜索">
+<!--                </form>-->
+            </div>
+        </div>
+    </header>
+<!--		公司介绍-->
+    <div class="content">
+        <div class="jobinvite">
+            <h2>搜索结果</h2>
+            <div id="recruitPosition">
+                <!--招聘职位排列-->
+                <ul id="jobList">
+                </ul>
+            </div>
+        </div>
+    </div>
+    </body>
+	<script src="../statics/js/jquery-3.6.0.min.js"></script>
+	<script src="../statics/js/readpage.js"></script>
+    <script src="../statics/js/mainpage.js"></script>
+</html>

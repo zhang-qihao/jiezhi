@@ -1,0 +1,500 @@
+body{
+    margin: 0px;
+    background: white;
+}
+input{
+    outline: none;
+}
+/*复用代码如下*/
+#overall{
+    margin:0px auto;
+    width: 1080px;
+}
+#side{
+    background: #32c3ee;
+    border: none;
+    /*border: 1px solid #40c7a9;*/
+    border:none;
+    width: 160px;
+    height: 100%;
+    float: left;
+    position: fixed;
+}
+#image_side{
+    border: none;
+    margin:10px auto;
+    width: 105px;
+    height: 105px;
+}
+#three_side{
+    background: rgba(73, 131, 218, 0.8);
+}
+#one_side,#two_side,#three_side{
+    width: 160px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-top: 2px;
+    font-weight: 400;
+}
+#one_side:hover{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+#two_side:hover{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+#three_side:hover{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+#main{
+    /*border: 1px solid black;*/
+    width: 900px;
+    height: auto;
+    float: left;
+    margin-left: 160px;
+    position: absolute;
+}
+#one_main{
+    margin-top: 10px;
+    margin-left: 10px;
+    width:860px;
+    height: 60px;
+    background: #F2F2F2;
+    line-height: 20px;
+}
+#title{
+    float: left;
+    margin-left:20px;
+}
+#one_main_right{
+    width: 280px;
+    height: 60px;
+    float: right;
+    font-size: 13px;
+    /*border: 1px solid black;*/
+    line-height: 60px;
+    position: relative;
+}
+#welcome{
+    margin-left: 40px;
+    margin-right: 10px;
+}
+#repassword{
+    border: none;
+    background: #EC808D;
+    padding:5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 16px;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+}
+#exit{
+    border: none;
+    position: absolute;
+    background: #3eeaa6;
+    padding:5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 16px;
+    color: white;
+    cursor: pointer;
+}
+/*页码导航栏*/
+.pagination-bar {
+    font-size: 0px;
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+}
+.pagination-bar a{
+    display: inline-block;
+    padding: 5px 7.5px;
+    text-decoration: none;
+    min-width: 20px;
+    font-size: 13px;
+    color: #333333;
+}
+.pagination-bar u{
+    font-size: 13px;
+}
+/*被选中的页数*/
+.choose{
+    background-color: #32c3ee;
+    color: white;
+}
+#pageNum{
+    text-decoration:underline;
+}
+/*密码复用*/
+#password{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#frame{
+    width: 440px;
+    height: 400px;
+    margin:10% auto;
+    background: white;
+    position: relative;
+}
+#passwordTitle{
+    width: 400px;
+    height: 40px;
+    background: #32c3ee;
+    line-height: 40px;
+    font-size: 18px;
+    padding-left:40px;
+    color: white;
+}
+#re{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 360px;
+    color: white;
+    border: none;
+    background: #32c3ee;
+    font-size: 24px;
+    cursor: pointer;
+}
+#cen{
+    margin-top: 30px;
+    margin-left: 40px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+    color: #7F7F7F;
+    border-collapse: collapse;
+}
+#targetBar{
+    width: 70px;
+}
+#InputUserPwd,#ConfirmPassword,#InputTelephone,#InputCode{
+    width: 260px;
+    height: 30px;
+    border: 1px solid black;
+}
+#code{
+    width: 120px;
+    position: absolute;
+    right: 70px;
+    bottom: 118px;
+    border: none;
+    background: white;
+    color: #32c3ee;
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+}
+#confirm{
+    width: 125px;
+    height: 35px;
+    border: none;
+    background: #32c3ee;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+#tips1,#tips2,#tips3,#tips4{
+    vertical-align: top;
+    font-size: 13px;
+    color: #EC808D;
+    display: none;
+}
+
+/*导航栏界面转换*/
+.tab {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 860px;
+    height: auto;
+}
+.tab_list {
+    height: 40px;
+    width: 860px;
+}
+.tab_list ul{
+    padding: 0px;
+    margin-left: 5px;
+}
+.tab_list li {
+    float: left;
+    margin-left: 5px;
+    width: 206px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+    list-style-type: none;
+    background-color: #AAAAAA;
+    color: white;
+    font-size: 10px;
+}
+.tab_list .current1 {
+    background-color: #333333;
+    color: #fff;
+}
+.tab_list .current2 {
+    background-color: #FF706D;
+    color: #fff;
+}
+.tab_list .current3 {
+    background-color: #EC8C1B;
+    color: #fff;
+}
+.tab_list .current4 {
+    background-color: #02A7F0;
+    color: #fff;
+}
+#current1,#current2,#current3,#current4{cursor:pointer;}
+/*.item_info {
+    padding: 20px 0 0 20px;
+}*/
+.tab_con{
+    margin-top: 25px;
+    background-color: #FF706D;
+}
+.item {
+    width: 860px;
+    height: auto;
+    position: relative;
+    background-color: #f2f2f2;
+    display: none;
+}
+/*未处理div*/
+.messageTit{
+    width: 860px;
+    height: 60px;
+    position: relative;
+    background-color: #f2f2f2;
+    border-bottom: #AAAAAA 1px solid;
+}
+.messageTit span{
+    font-size: 16px;
+    margin-left: 83px;
+    margin-top: 20px;
+    display: inline-block;
+}
+/*拒绝div*/
+
+/*待定div*/
+
+/*安排面试div*/
+
+/*可复用的职位格式*/
+.item ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.item ul li{
+    width: 860px;
+    height: 110px;
+    background-color: #f2f2f2;
+    color: #555555;
+    position: relative;
+}
+.managePeopleName{
+    font-size: 18px;
+    position: absolute;
+    left: 59px;
+    top: 12px;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.manageProject{
+    width: 140px;
+    height: 20px;
+    position: absolute;
+    left: 145px;
+    top: 14px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.managePlace{
+    font-size: 15px;
+    position: absolute;
+    left: 298px;
+    top:14px;
+    width: 110px;
+    height: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.manageAge{
+    font-size: 10px;
+    position: absolute;
+    left: 460px;
+    top:16px;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.manageWorkTime{
+    font-size: 15px;
+    position: absolute;
+    left: 595px;
+    top: 12px;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.manageStudy{
+    font-size: 15px;
+    position: absolute;
+    left: 730px;
+    top: 12px;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.manageImg{
+    position: absolute;
+    top: 50px;
+    left: 25px;
+}
+.manageMoney1{
+    font-size: 13px;
+    color: #7F7F7F;
+    position: absolute;
+    top: 52px;
+    left: 30px;
+}
+.manageMoney2{
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF706D;
+    position: absolute;
+    top: 45px;
+    left: 95px;
+}
+/*1未处理弹出*/
+.write1{
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #32c3ee;
+    display: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    cursor:pointer;
+}
+.write1 span{
+    margin-top: 10px;
+    display: inline-block;
+}
+.tab_con ul li:hover .write1{
+    display: block;
+}
+/*2拒绝弹出*/
+.write2{
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #FF706D;
+    display: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    cursor:pointer;
+}
+.write2 span{
+    margin-top: 10px;
+    display: inline-block;
+}
+.tab_con ul li:hover .write2{
+    display: block;
+}
+/*3待定弹出*/
+.write3{
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #EC8C1B;
+    display: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    cursor:pointer;
+}
+.write3 span{
+    margin-top: 10px;
+    display: inline-block;
+}
+.tab_con ul li:hover .write3{
+    display: block;
+}
+/*4安排面试弹出*/
+.write4{
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #07862f;
+    display: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    cursor:pointer;
+}
+.write4 span{
+    margin-top: 10px;
+    display: inline-block;
+}
+.tab_con ul li:hover .write4{
+    display: block;
+}
+
+
+.li2{
+    margin-top: 3px;
+}
+.item ul li:hover{
+    box-shadow: 2px 2px 2px #A9A9A9;
+    box-shadow-color: #AAAAAA;
+    margin-bottom: 8px;
+}

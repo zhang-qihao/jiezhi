@@ -1,0 +1,446 @@
+﻿*{
+    padding: 0;
+    margin: 0;
+}
+button{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+::-webkit-input-placeholder {
+    color: #C8C8C8;
+    font-size: 20px;
+}
+
+/*头部内容*/
+.head_head{
+    position: relative;
+    margin:0 auto;
+    margin-top: 10px;
+    width: 1024px;
+    height: 30px;
+}
+.head_headLeft{
+    float: left;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+}
+.head_headLeft span{
+    font-weight: 40;
+    font-size: 16px;
+}
+.head_headLeft a{
+    color: #008FE0;
+    margin-left: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 40;
+}
+.head_headRigth{
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 40;
+}
+.head_headRigth a{
+    margin-right: 15px;
+}
+#user{
+    margin-right: 10px;
+}
+/*消息字体设置颜色*/
+.head_headRigth span:nth-child(1) a{
+    color: black;
+}
+.head_headRigth span:nth-child(1) a:hover{
+    color: rgb(46,176,252);
+}
+/*客户颜色效果*/
+.head_headRigth a span{
+    margin-left: 12px;
+    font-weight: 400;
+    color: black;
+}
+#head_headRight2{
+    margin-left: 12px;
+    font-weight: 40;
+}
+/*象大logo与搜索框*/
+.head_searchAll{
+    margin: 0 auto;
+    width: 1024px;
+    height: 70px;
+    margin-top: 10px;
+    font-weight: 40;
+}
+.head_searchLogo{
+    float: left;
+    height: 80px;
+    font-size: 48px;
+    margin-left: 18px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.head_search{
+    position: relative;
+    float: left;
+    width: 780px;
+    height: 80px;
+    margin-left: 20px;
+    font-weight: 40;
+}
+/*搜索框中的多选框中的*/
+#head_select{
+    position: absolute;
+    top: 30px;
+    left:2px;
+    border: none;
+    outline: none;
+
+}
+.head_searchInput1{
+    height: 60px;
+    width: 609px;
+    float: left;
+    font-size: 20px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(50, 195, 238);
+    border-right: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 2px 2px 2px rgb(50, 195, 238);
+    padding-left: 52px;
+}
+.head_searchInput2{
+    height: 60px;
+    width: 159px;
+    float: left;
+    font-size: 26px;
+    background-color: rgb(50, 195, 238);
+    font-family: 'Sana', sans-serif;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    font-weight: 400;
+    box-shadow: 2px 2px 2px rgb(50, 195, 238);
+    cursor: pointer;
+}
+.head_navigation{
+    margin: 0 auto;
+    height: 44px;
+    width: 1024px;
+    font-size: 24px;
+    margin-top: 42px;
+    font-family: 'STLibianSC-Regular', 'Libian SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #555555;
+    text-align: center;
+}
+.head_navigation a{
+    float: left;
+    display: inline-block;
+    width: 146px;
+    height: 44px;
+    margin-right: 70px;
+    color: #555555;
+    cursor: pointer;
+}
+.head_navigation a:last-child{
+    margin-right: 0px;
+}
+.head_navigation a:hover{
+    color: rgb(46,176,252);
+}
+/*内容部分*/
+.head_body{
+    position: relative;
+    margin: auto;
+    margin-top: 18px;
+    width: 1000px;
+}
+/*选择框*/
+.head_checkbox{
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    height: 56px;
+    width: 626px;
+    background-color: rgba(242, 242, 242, 1);
+}
+.head_checkbox ul li{
+    float: left;
+    width: 150px;
+    height: 48px;
+    background-color: white;
+    margin-top: 4px;
+    margin-left: 5px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.head_checkbox ul li:hover{
+    background-color: rgb(50, 195, 238);
+    color: white;
+}
+/*选择框中的下拉框样式*/
+/*.skills{*/
+/*    width: 120px;*/
+/*    height: 48px;*/
+/*    outline: none;*/
+/*    padding-left:40px;*/
+/*    font-size: 13px;*/
+/*    border: none;*/
+/*    background: rgba(0,0,0,0);*/
+/*}*/
+/*.skills:hover{*/
+/*    color: white;*/
+/*}*/
+/*.skills option{*/
+/*    color: black;*/
+/*}*/
+.head_checkbox ul li.current{
+    background-color: rgb(50, 195, 238);
+    color: white;
+}
+.head_body1{
+    position: absolute;
+    top: 80px;
+    left: 2px;
+    width: 630px;
+    height: 1630px;
+    background-color: rgba(242, 242, 242, 1);
+}
+/*右边盒子*/
+.head_body2{
+    position: absolute;
+    top: 80px;
+    right: 2px;
+    width: 350px;
+    height: 1630px;
+    background-color: rgba(242, 242, 242, 1);
+}
+.head_body2 h2{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 15px;
+    font-weight: 700;
+}
+.head_body2 ul{
+    margin-top: 15px;
+}
+.head_body2 ul li{
+    position: relative;
+    margin: auto;
+    margin-top: 8px;
+    width: 310px;
+    height: 157px;
+    background-color: white;
+    box-shadow: none;
+    cursor: pointer;
+}
+/*右边盒子内容*/
+.head_body2 ul li span{
+    position: absolute;
+    display: inline-block;
+}
+.head_body2 ul li span:nth-child(1){
+    left: 15px;
+    top: 3px;
+    display: flex;
+    font-family: 'PingFangSC-Medium', 'PingFang SC Medium', 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+.head_body2 ul li span:nth-child(2){
+    left: 240px;
+    top: 9px;
+    font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;
+    font-weight: 650;
+    font-style: normal;
+    color: #FF706D;
+}
+.head_body2 ul li span:nth-child(3){
+    left: 15px;
+    top: 41px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #555555;
+}
+.head_body2 ul li span:nth-child(4){
+    left: 138px;
+    top: 41px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #555555;
+}
+.head_body2 ul li span:nth-child(5){
+    left: 246px;
+    top: 41px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #555555;
+}
+.head_body2 ul li span:nth-child(6){
+    left: 15px;
+    top: 71px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.head_body2 ul li span:nth-child(7){
+    left: 15px;
+    top: 120px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+.head_body2 ul li img{
+    position: absolute;
+    left: 10px;
+    top: 105px;
+    width: 261px;
+    height: 1px;
+}
+/*鼠标进入，盒子显示阴影*/
+.head_body2 ul li:hover{
+    box-shadow: 2px 2px 2px rgba(170, 170, 170, 0.349019607843137);
+    box-sizing:border-box;
+    border-width:1px;
+    border-style:solid;
+    border-color:rgba(242, 242, 242, 1);
+}
+/*左边面试邀请效果*/
+.head_body1_list1{
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    font-size: 12px;
+    color: #AAAAAA;
+    margin-top: 317px;
+    display: none;
+}
+.head_body1_list1 p {
+    margin-top: 15px;
+}
+.head_body1_list1 button{
+    width: 140px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(50, 195, 238);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+/*当存在内容时左边的效果*/
+.head_body1_list2{
+    display: none;
+}
+.head_body1_list2 ul{
+    margin: auto;
+    margin-top: 32px;
+
+}
+.head_body1_list2 ul li{
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    width: 570px;
+    height: 180px;
+    background-color:rgba(255, 255, 255, 1);
+    border-radius: 8px;
+}
+.head_body1_list2 ul li:hover{
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+}
+.head_body1_list2 ul li span:nth-of-type(1){
+    position: absolute;
+    left: 20px;
+    top: 29px;
+    font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+}
+.head_body1_list2 ul li h1{
+    position: absolute;
+    left: 402px;
+    top: 24px;
+    font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgba(217, 0, 27, 0.701960784313725);
+}
+.head_body1_list2 ul li span:nth-of-type(2){
+    position: absolute;
+    left: 30px;
+    top: 75px;
+}
+.head_body1_list2 ul li span:nth-of-type(3){
+    position: absolute;
+    left: 76px;
+    top: 75px;
+}
+.head_body1_list2 ul li span:nth-of-type(4){
+    position: absolute;
+    left: 163px;
+    top: 75px;
+}
+.head_body1_list2 ul li span:nth-of-type(5){
+    position: absolute;
+    left: 435px;
+    top: 75px;
+}
+.head_body1_list2 ul li span:nth-of-type(6){
+    position: absolute;
+    left: 22px;
+    top: 134px;
+}
+.head_body1_list2 ul li span:nth-of-type(7){
+    position: absolute;
+    left: 76px;
+    top: 134px;
+}
+.head_body1_list2 ul li img{
+    position: absolute;
+    left: 20px;
+    top: 98px;
+}
+.head_body1_list2 ul li button{
+    position: absolute;
+    left: 402px;
+    top: 128px;
+    width: 140px;
+    height: 40px;
+    font-size: 13px;
+    background-color: rgba(215, 215, 215, 1);
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: none;
+}
+.head_body1_list2 ul li button:hover{
+    background-color: rgb(50, 195, 238);
+}

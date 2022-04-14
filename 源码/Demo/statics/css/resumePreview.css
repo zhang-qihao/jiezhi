@@ -1,0 +1,170 @@
+﻿#preview_top{
+    width: 1133px;
+    height: 170px;
+    margin:0 auto;
+    background-color: #5ebfd5;
+}
+#previewPeopleAll{
+    width: 1133px;
+    height: 450px;
+    background-color: #F4F6F9;
+    margin:0 auto;
+}
+#previewPeople{
+    width: 430px;
+    height: 300px;
+    position:absolute;
+    margin-left: 350px;
+    top: 250px;
+}
+#previewPeople img{
+    width: 116px;
+    height: 116px;
+    margin-left: 141px;
+    margin-top: 30px;
+}
+#previewPeopleTex{
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 50px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+#previewPeople span{
+    margin-left: 20px;
+}
+#previewPeopleTel{
+    width: 140px;
+    height: 30px;
+    float: left;
+    font-size: 2px;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+#previewPeopleTel img{
+    width: 10px;
+    height: 15px;
+    margin-left: 1px;
+    margin-bottom: -2px;
+}
+
+#previewPeopleEml{
+    width: 200px;
+    height: 30px;
+    float: right;
+    padding-right: 30px;
+    font-size: 2px;
+    margin-top: 12px;
+
+}
+#previewPeopleEml img{
+    width: 14px;
+    height: 10px;
+    margin-left: 1px;
+
+}
+
+
+.previewDiv{
+    background-color: #F4F6F9;
+    width: 1133px;
+    height:auto;
+    margin:0 auto;
+}
+.previewTit{
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+.previewTit2{
+    font-size: 18px;
+    padding-left: 30px;
+}
+.previewTit3{
+    font-size: 14px;
+    padding-left: 30px;
+}
+#previewAssessWord{
+    padding-top: 25px;
+}
+#previewWorkTex{
+    margin-left: 350px;
+}
+#previewSpecialtyTex1{
+    margin-left: 200px;
+}
+#previewSpecialtyTex2{
+    margin-left: 200px;
+}
+
+
+#personJob,#personEdu,#personWork,#personItem,#personSch1,#personSch2,#personSkill,#personLanguage,#personTrain,#personCer{
+    /*border: 1px solid black;*/
+    margin-left: 50px;
+    margin-top:-10px ;
+}
+
+.views{
+    color: #999999;
+}
+.viewSchoolName{
+    margin-top: -10px;
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+.viewWork1,.viewProject1,.viewSchoolPost{
+    margin-bottom: 30px;
+}
+.companyName,.viewProjectName{
+    margin-top: -5px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.data{
+    width: 500px;
+    margin-top: -15px;
+    height: 20px;
+    float: left;
+}
+.data1{
+    width: 350px;
+    padding: 0px;
+    height: 20px;
+    float: left;
+}
+.data2{
+    width: 300px;
+    height: 20px;
+    float: left;
+}
+.clear{
+    clear: both;
+}
+.later{
+    float: left;
+}
+.later2{
+    float: left;
+}
+.before{
+    width: 300px;
+    float: left;
+}
+
+.viewLanguage{
+    margin-top: 20px;
+}
+.viewSkill{
+    margin-top: 20px;
+}
+.viewTrain{
+    margin-top: 30px;
+    height: 60px;
+}
+.viewCertificate{
+    margin-top: 40px;
+}

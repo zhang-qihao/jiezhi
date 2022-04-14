@@ -1,0 +1,387 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+input{
+    outline: none;
+}
+/*登入页头部盒子1代码的实现*/
+.loginbody{
+    position: relative;
+    background: url("../images/two.jpg") no-repeat;
+    background-size: cover;
+    width:1900px;
+    height: 1080px;
+    margin: auto;
+}
+.loginbodybox_1{
+    position: relative;
+    width: 1980px;
+    height: 60px;
+    box-sizing: border-box;
+    background-color: white;
+}
+.loginbodybox_1_text1{
+    position: absolute;
+    left: 101px;
+    top: 9px;
+    width: 200px;
+    height: 40px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+}
+.loginbodybox_1_text1 img{
+    width: 100%;
+    height: 100%;
+}
+.loginbodybox_1_text2{
+    position: absolute;
+    left: 320px;
+    top: 20px;
+    height: 20px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #7F7F7F;
+}
+.loginbodybox_1_button{
+    position: absolute;
+    left: 1407px;
+    top: 10px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ff9933;
+    border-radius: 5px;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+}
+.loginbodybox_1_button:hover{
+    opacity: 0.8;
+}
+.loginbodybox_1_button span{
+    margin: auto;
+    color: white;
+}
+.loginbodybox_1_text3{
+    position: absolute;
+    left: 1656px;
+    top: 20px;
+    height: 20px;
+}
+.loginbodybox_1_text3 a{
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #7F7F7F;
+}
+.loginbodybox_1_text3 a:hover,.loginbodybox_1_text4 a:hover{
+    color: #32c3ee;
+}
+.loginbodybox_1_text4{
+    position: absolute;
+    left: 1763px;
+    top: 20px;
+    height: 20px;
+}
+.loginbodybox_1_text4 a{
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #7F7F7F;
+}
+#loginimg{
+    position: absolute;
+    left: 1741px;
+    top: 10px;
+    width: 1px;
+    height: 42px;
+}
+/*公众号图片*/
+.loginbodybox_3{
+    position: absolute;
+    left: 1755px;
+    top: 59px;
+    display: none;
+}
+/*页面右边登入注册盒子*/
+.loginbodybox_2{
+    position: absolute;
+    left: 1400px;
+    top: 178px;
+    width: 447px;
+    height: 546px;
+    color: #F4F6F9;
+    background-color: #f4f6f9;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(121, 121, 121, 1);
+    border-radius: 0px;
+}
+.loginbodybox_2 h2{
+    position:absolute;
+    left: 173px;
+    top: 28px;
+    font-family: 'STSongti-SC-Light', 'Songti SC Light', 'Songti SC', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 24px;
+    color: #32c3ee;
+}
+.loginbodybox_2_input1{
+    position: absolute;
+    left: 30px;
+    top: 119px;
+    width: 387px;
+    height: 64px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #AAAAAA;
+    text-align: left;
+}
+.loginbodybox_2_input2{
+    position: absolute;
+    left: 30px;
+    top: 223px;
+    width: 387px;
+    height: 64px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #AAAAAA;
+    text-align: left;
+}
+.loginbodybox_2_input3{
+    position: absolute;
+    left: 30px;
+    top: 223px;
+    width: 387px;
+    height: 64px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #AAAAAA;
+    text-align: left;
+    display: none;
+}
+.loginbodybox_2_input1::-webkit-input-placeholder,.loginbodybox_2_input2::-webkit-input-placeholder,.loginbodybox_2_input3::-webkit-input-placeholder{
+    color: #c8c8c8;
+}
+.loginbodybox_2 img{
+    position: absolute;
+    left: 252px;
+    top: 237px;
+    width: 1px;
+    height: 40px;
+}
+.loginbodybox_2_button1{
+    position: absolute;
+    left: 261px;
+    top: 234px;
+    width: 150px;
+    height: 45px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.loginbodybox_2_button1 span{
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #7F7F7F;
+}
+.loginbodybox_2_text1{
+    position: absolute;
+    left: 30px;
+    top: 190px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #EC808D;
+    display: none;
+}
+.loginbodybox_2_text2{
+    position: absolute;
+    left: 30px;
+    top: 295px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #EC808D;
+    display: none;
+}
+.loginbodybox_2_text3{
+    position: absolute;
+    left: 30px;
+    top: 295px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #EC808D;
+    display: none;
+}
+.loginbodybox_2_text4{
+    position: absolute;
+    left: 30px;
+    top: 295px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #EC808D;
+    display: none;
+}
+.loginbodybox_2_button2{
+    position: absolute;
+    left: 30px;
+    top: 329px;
+    display: flex;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #32c3ee;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-bottom: 1px;
+}
+.loginbodybox_2_button3{
+    position: absolute;
+    left: 137px;
+    top: 329px;
+    display: flex;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #32c3ee;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-bottom: 1px;
+}
+.loginbodybox_2_button4{
+    position: absolute;
+    left: 30px;
+    top: 330px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-bottom: 1px;
+}
+.loginbodybox_2_button5{
+    position: absolute;
+    left: 30px;
+    top: 389px;
+    width: 383px;
+    height: 92px;
+    background-color: #32c3ee;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*求职者登录界面*/
+.loginbodybox_1_button1{
+    position: absolute;
+    left: 1407px;
+    top: 10px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ff9933;
+    border-radius: 5px;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+}
+#loginimg1{
+    position: absolute;
+    left: 1510px;
+    top: 10px;
+    width: 1px;
+    height: 42px;
+}
+.loginbodybox_1_button2{
+    position: absolute;
+    left: 1534px;
+    top: 10px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    background: none;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 5px;
+    border: 1px solid rgba(121,121,121,1);
+    cursor: pointer;
+}
+.loginbodybox_1_button1 span{
+    margin: auto;
+    color: white;
+}
+.loginbodybox_1_button2 span{
+    margin: auto;
+    color: black;
+}
+.loginbodybox_2_title{
+    position: absolute;
+    left: 77px;
+    top: 34px;
+    width: 289px;
+    height: 33px;
+    font-family: 'STSongti-SC-Light', 'Songti SC Light', 'Songti SC', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 24px;
+    color: #32c3ee;
+}
+/*企业登录界面*/
+.loginbodybox_2_title1{
+    position: absolute;
+    left: 86px;
+    top: 44px;
+    width: 193px;
+    height: 33px;
+    font-family: 'STSongti-SC-Light', 'Songti SC Light', 'Songti SC', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 24px;
+    color: #32c3ee;
+}
+.changeweight{
+    font-weight: 800;
+}
+.loginbodybox_2_title2{
+    position: absolute;
+    left: 270px;
+    top: 44px;
+    width: 193px;
+    height: 33px;
+    font-family: 'STSongti-SC-Light', 'Songti SC Light', 'Songti SC', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 24px;
+    color: #32c3ee;
+}

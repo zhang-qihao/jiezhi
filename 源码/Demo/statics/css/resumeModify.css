@@ -1,0 +1,2464 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+button{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/*头部内容*/
+.head_head{
+    position: relative;
+    margin:0 auto;
+    margin-top: 10px;
+    width: 1024px;
+    height: 30px;
+}
+.head_headLeft{
+    float: left;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+}
+.head_headLeft span{
+    font-size: 16px;
+}
+.head_headLeft a{
+    color: #3eeaa6;
+    margin-left: 10px;
+    font-size: 13px;
+    text-decoration: none;
+}
+.head_headRigth{
+    width: 370px;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-left: 260px;
+}
+.head_headRigth a{
+    margin-right: 15px;
+}
+#user{
+    margin-right: 10px;
+}
+/*消息字体设置颜色*/
+.head_headRigth span:nth-child(1) a{
+    color: black;
+}
+.head_headRigth span:nth-child(1) a:hover{
+    color: rgb(62, 234, 166);
+}
+/*客户颜色效果*/
+.head_headRigth a span{
+    margin-left: 12px;
+    font-weight: 400;
+    color: black;
+}
+#head_headRight2{
+    margin-left: 12px;
+}
+/*象大logo与搜索框*/
+.head_searchAll{
+    margin: 0 auto;
+    width: 1024px;
+    height: 70px;
+    margin-top: 10px;
+}
+.head_searchLogo{
+    float: left;
+    height: 80px;
+    font-size: 48px;
+    margin-left: 18px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.head_search{
+    position: relative;
+    float: left;
+    width: 780px;
+    height: 80px;
+    margin-left: 20px;
+}
+/*搜索框中的多选框中的*/
+#head_select{
+    position: absolute;
+    top: 30px;
+    left:2px;
+    border: none;
+    outline: none;
+
+}
+.head_searchInput1{
+    height: 60px;
+    width: 609px;
+    float: left;
+    font-size: 20px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(50, 195, 238);
+    border-right: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 2px 2px 2px rgb(50, 195, 238);
+    padding-left: 52px;
+}
+.head_searchInput2{
+    height: 60px;
+    width: 159px;
+    float: left;
+    font-size: 26px;
+    background-color: rgb(50, 195, 238);
+    font-family: 'Sana', sans-serif;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    font-weight: 400;
+    box-shadow: 2px 2px 2px rgb(50, 195, 238);
+    cursor: pointer;
+}
+/*页面内容重复部分*/
+/*所有编辑*/
+.modifyPeopleWrite{
+    width: 44px;
+    height: 25px;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    color: black;
+    text-decoration:none;
+    display: none;
+    border: none;
+}
+/*编辑1——个人信息*/
+#modifyPeopleWrite1{
+    float: left;
+    position: absolute;
+    right: 60px;
+    top: 55px;
+}
+/*编辑2——求职意向*/
+#modifyPeopleWrite2{
+    position: absolute;
+    right: 200px;
+    top: 5px;
+}
+/*编辑3——教育经历*/
+#modifyPeopleWrite3{
+    position: absolute;
+    right: 200px;
+}
+#modifyPeopleWrite32{
+    position: absolute;
+    right: 200px;
+}
+#modifyPeopleWrite33{
+    position: absolute;
+    right: 200px;
+}
+/*编辑4——工作/实习经历*/
+#modifyPeopleWrite4{
+    position: absolute;
+    right: 200px;
+    top: 5px;
+}
+#modifyPeopleWrite42{
+    position: absolute;
+    right: 200px;
+    top: 5px;
+}
+#modifyPeopleWrite43{
+    position: absolute;
+    right: 200px;
+    top: 5px;
+}
+/*编辑51——项目经历编辑1*/
+#modifyPeopleWrite51{
+    position: absolute;
+    right: 270px;
+    top: 5px;
+}
+#modifyPeopleWrite52{
+    position: absolute;
+    right: 270px;
+    top: 5px;
+}
+#modifyPeopleWrite53{
+    position: absolute;
+    right: 270px;
+    top: 5px;
+}
+/*编辑61——校内表现编辑1*/
+#modifyPeopleWrite61{
+    position: relative;
+    margin-left: 570px;
+}
+#modifyPeopleWrite612{
+    position: relative;
+    margin-left: 570px;
+}
+#modifyPeopleWrite613{
+    position: relative;
+    margin-left: 570px;
+}
+/*编辑62——校内表现编辑2*/
+#modifyPeopleWrite62{
+    position: absolute;
+    left: 570px;
+    top: 0px;
+}
+#modifyPeopleWrite622{
+    position: absolute;
+    left: 570px;
+    top: 0px;
+}
+#modifyPeopleWrite623{
+    position: absolute;
+    left: 570px;
+    top: 0px;
+}
+/*编辑63——校内表现编辑3*/
+#modifyPeopleWrite63{
+    position: absolute;
+    right: 270px;
+    top: 360px;
+}
+/*编辑71——技能特长编辑1*/
+#modifyPeopleWrite711{
+    position: absolute;
+    right: 315px;
+}
+#modifyPeopleWrite712{
+    position: absolute;
+    right: 315px;
+}
+#modifyPeopleWrite713{
+    position: absolute;
+    right: 315px;
+}
+/*编辑72——技能特长编辑2*/
+#modifyPeopleWrite72{
+    position: absolute;
+    right: 315px;
+}
+#modifyPeopleWrite722{
+    position: absolute;
+    right: 315px;
+}
+#modifyPeopleWrite723{
+    position: absolute;
+    right: 315px;
+}
+/*编辑73——技能特长编辑3*/
+#modifyPeopleWrite73{
+    position: absolute;
+    right: 270px;
+    top: 25px;
+}
+#modifyPeopleWrite732{
+    position: absolute;
+    right: 270px;
+    top: 25px;
+}
+#modifyPeopleWrite733{
+    position: absolute;
+    right: 270px;
+    top: 25px;
+}
+/*编辑74——技能特长编辑4*/
+#modifyPeopleWrite74{
+    position: absolute;
+    right: 315px;
+}
+#modifyPeopleWrite742{
+    position: absolute;
+    right: 315px;
+}
+#modifyPeopleWrite743{
+    position: absolute;
+    right: 315px;
+}
+/*编辑8——自我评价编辑*/
+#modifyPeopleWrite8{
+    position: absolute;
+    right: 120px;
+    top: 5px;
+}
+/*年月日*/
+.modifyTime1{
+    font-size: 12px;
+    color: #999999;
+    position: absolute;
+    right: 130px;
+    top: 5px;
+}
+.modifyTime2{
+    font-size: 12px;
+    color: #999999;
+    position: absolute;
+    right: 130px;
+    top: 5px;
+}
+.modifyTime3{
+    font-size: 12px;
+    color: #999999;
+    position: absolute;
+    right: 130px;
+    top: 5px;
+}
+.modifyDiv{
+    width: 880px;
+}
+/*所有大标签*/
+.modifyTit{
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    margin-left: 120px;
+    width: 200px;
+}
+/*所有中等标签*/
+.modifyTit2{
+    font-size: 18px;
+    position: relative;
+    margin-left: 120px;
+    width: 400px;
+}
+/*左边所有小标签*/
+.modifyTit3Left{
+    font-size: 14px;
+    position: absolute;
+    left: 120px;
+    color: #7F7F7F;
+    width: 400px;
+}
+.modifyTit3Left span{color: black;}
+/*右边所有小标签*/
+.modifyTit3Right{
+    font-size: 14px;
+    position: absolute;
+    left: 570px;
+    color: #7F7F7F;
+}
+.modifyTit3Right span{color: black;}
+/*所有按钮被点击后的样式*/
+.resumeBtn{
+    background:white;
+    border: 1px solid #5ed5c8;
+    color: #5ed5c8;
+}
+.resumeBtn1{
+    background:white;
+    border: 1px solid #5ed5c8;
+    color: #5ed5c8;
+}
+
+/*所有必填图标*/
+.modifyTips{
+    width: 35px;
+    height: 20px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    border: black 1px solid;
+    border-radius: 12px;
+    background-color: rgba(255,108,86,0.75);
+}
+/*必填1——求职意向*/
+#modifyTip1{
+    position: absolute;
+    left: 220px;
+    top: 5px;
+}
+/*必填2——教育经历*/
+#modifyTip2{
+    position: absolute;
+    left: 220px;
+    top: 5px;
+}
+/*必填3——工作/实习经历*/
+#modifyTip3{
+    position: absolute;
+    left: 280px;
+    top: 5px;
+}
+/*所有添加按钮*/
+.addAll{
+    width: 102px;
+    height: 20px;
+    border-radius:60px;
+    border: #7F7F7F 1px solid;
+    color: #32c3ee;
+    background-color: white;
+    position: absolute;
+    right: 130px;
+    top: 6px;
+}
+/*增加校内荣誉*/
+.addAll1{
+    width: 102px;
+    height: 20px;
+    border-radius:60px;
+    border: #7F7F7F 1px solid;
+    color: #32c3ee;
+    background-color: white;
+    position: absolute;
+    right: 130px;
+    /*margin-top: 100px;*/
+}
+
+
+/*增加校内职务*/
+.addAll2{
+    width: 102px;
+    height: 20px;
+    border-radius:60px;
+    border: #7F7F7F 1px solid;
+    color: #32c3ee;
+    background-color: white;
+    position: absolute;
+    right: 130px;
+    /*margin-top: 100px;*/
+}
+
+/*所有input输入框样式*/
+.userMessage{
+    background:white;
+    border-width: 0px;
+    outline-color: #07862f;
+}
+/*整个页面的灰色圆角盒子*/
+#resumeModifyAll{
+    width: 880px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius:60px;
+    background-color: #F4F6F9;
+}
+
+/*用户信息*/
+#modifyPeopleMessage{
+    position: relative;
+    width: 880px;
+    height: 180px;
+}
+/*用户照片*/
+#modifyPeoplePic{
+    width: 116px;
+    height: 116px;
+    position: absolute;
+    top: 25px;
+    left: 120px;
+}
+/*姓名身份那一行*/
+#modifyPeopleTex{
+    position: absolute;
+    width: 600px;
+    height: 50px;
+    top: 30px;
+    left: 260px;
+}
+/*用户姓名*/
+#modifyPeopleName{
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+}
+/*用户身份是学生还是在职人*/
+#modifyPeopleIdentity{
+    width: 70px;
+    height: 20px;
+    font-size: 15px;
+    border: #3eeaa6 1px solid;
+    color: #3eeaa6;
+    /* position: absolute;
+     left: 115px;
+     top: 15px;*/
+    position: relative;
+    margin-left: 10px;
+    margin-top: 15px;
+    float: left;
+    text-align: center;
+    background-color: white;
+}
+#modifyWorker{
+    display: none;
+}
+/*更新时间*/
+#modifyPeopleTex p{
+    font-size: 10px;
+    color: #D7D7D7;
+    position: relative;
+    /* top: 22px;
+     left: 198px;*/
+    margin-top: 22px;
+    margin-left: 230px;
+}
+/*性别年龄地区*/
+#modifyPeopleTex2{
+    width: 300px;
+    height: 22px;
+    font-size: 14px;
+    position: absolute;
+    top: 85px;
+    left: 260px;
+}
+#modifyPeopleTex2 span{
+    margin-left: 10px;
+}
+/*电话*/
+#modifyPeopleTel{
+    width: 160px;
+    height: 30px;
+    position: absolute;
+    left: 270px;
+    top: 115px;
+}
+#modifyPeopleTel span{
+    font-size: 13px;
+    margin-top: 0px;
+    margin-left: 30px;
+}
+/*电话图片*/
+#modifyPeopleTel img{
+    width: 13px;
+    height: 22px;
+    position: absolute;
+    left: 1px;
+}
+/*电子邮箱*/
+#modifyPeopleEml{
+    width: 200px;
+    height: 30px;
+    font-size: 13px;
+    position: absolute;
+    left:440px;
+    top: 118px;
+}
+/*信封图片*/
+#modifyPeopleEml img{
+    width: 18px;
+    height: 12px;
+    position: absolute;
+    left: 1px;
+    top: 3px;
+}
+/*带输入的邮箱*/
+#modifyPeopleEml span{
+    margin-left: 35px;
+    margin-top: 50px;
+}
+
+/*求职意向等内容框*/
+/*每个盒子的样式为居中，长度自适应*/
+/*求职意向盒子*/
+#modifySeek{
+    height: auto;
+    position: relative;
+    margin-top: 5px;
+}
+#seek{
+    width: 880px;
+    height: 180px;
+    position: relative;
+    margin-top: 20px;
+}
+/*求职意向盒子里的五项填空位置*/
+#modifyTit3Left11{
+    position: absolute;
+    top: 55px;
+}
+#modifyTit3Left12{
+    position: absolute;
+    top: 90px;
+}
+#modifyTit3Left13{
+    position: absolute;
+    top: 125px;
+}
+#modifyTit3Right11{
+    position: absolute;
+    top: 55px;
+}
+#modifyTit3Right12{
+    position: absolute;
+    top: 90px;
+}
+
+/*教育经历盒子*/
+#modifyStudy{
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#study{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#study1{
+    width: 880px;
+    height: 35px;
+    position: relative;
+    margin-top: 30px;
+}
+#study2{
+    width: 880px;
+    height: 35px;
+    position: relative;
+}
+#study3{
+    width: 880px;
+    height: 35px;
+    position: relative;
+}
+#schoolName{
+    font-size: 14px;
+    position: absolute;
+    left: 120px;
+}
+#schoolMessage{
+    font-size: 14px;
+    position: absolute;
+    left: 320px;
+}
+#schoolName2{
+    font-size: 14px;
+    position: absolute;
+    left: 120px;
+}
+#schoolMessage2{
+    font-size: 14px;
+    position: absolute;
+    left: 320px;
+}
+#schoolName3{
+    font-size: 14px;
+    position: absolute;
+    left: 120px;
+}
+#schoolMessage3{
+    font-size: 14px;
+    position: absolute;
+    left: 320px;
+}
+/*工作/实习经历盒子*/
+#modifyWork{
+    height: auto;
+    position: relative;
+}
+#work{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#work1{
+    width: 880px;
+    height: 190px;
+    position: relative;
+    margin-top: 30px;
+}
+#work2{
+    width: 880px;
+    height: 190px;
+    position: relative;
+}
+#work3{
+    width: 880px;
+    height: 190px;
+    position: relative;
+}
+/*工作/实习经历盒子里的五项填空位置*/
+/*职位薪水*/
+#modifyTit3Left31{
+    position: absolute;
+    top: 35px;
+}
+#modifyTit3Left312{
+    position: absolute;
+    top: 35px;
+}
+#modifyTit3Left313{
+    position: absolute;
+    top: 35px;
+}
+/*职位名称*/
+#modifyTit3Left32{
+    position: absolute;
+    top: 70px;
+}
+#modifyTit3Left322{
+    position: absolute;
+    top: 70px;
+}
+#modifyTit3Left323{
+    position: absolute;
+    top: 70px;
+}
+/*工作描述*/
+#modifyTit3Left33{
+    position: absolute;
+    top: 110px;
+}
+#modifyTit3Left332{
+    position: absolute;
+    top: 110px;
+}
+#modifyTit3Left333{
+    position: absolute;
+    top: 110px;
+}
+#modifyTit3Left33 span{
+    width: 500px;
+    height: 70px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    overflow:auto;
+}
+#modifyTit3Left332 span{
+    width: 500px;
+    height: 70px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    overflow:auto;
+}
+#modifyTit3Left333 span{
+    width: 500px;
+    height: 70px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    overflow:auto;
+}
+/*所属行业*/
+#modifyTit3Right31{
+    position: absolute;
+    top: 35px;
+}
+#modifyTit3Right312{
+    position: absolute;
+    top: 35px;
+}
+#modifyTit3Right313{
+    position: absolute;
+    top: 35px;
+}
+/*工作类型*/
+#modifyTit3Right32{
+    position: absolute;
+    top: 70px;
+}
+#modifyTit3Right322{
+    position: absolute;
+    top: 70px;
+}
+#modifyTit3Right323{
+    position: absolute;
+    top: 70px;
+}
+
+/*项目经历盒子*/
+#modifyProject{
+    height: auto;
+    position: relative;
+}
+#project{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#project1{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 30px;
+}
+#project2{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#project3{
+    width: 880px;
+    height: auto;
+    margin-top: 20px;
+    position: relative;
+}
+#projectName1{
+    position: relative;
+}
+#projectName2{
+    position: relative;
+}
+#projectName3{
+    position: relative;
+}
+#modifyTit3Left41{
+    position: relative;
+    margin-top: 15px;
+    width: 640px;
+}
+#modifyTit3Left42{
+    position: relative;
+    margin-top: 15px;
+    width: 640px;
+}
+#modifyTit3Left43{
+    position: relative;
+    margin-top: 15px;
+    width: 640px;
+}
+
+/*校内表现盒子*/
+#modifySchoolBehave{
+    position: relative;
+    margin-top: 20px;
+    width: 880px;
+    height: auto;
+}
+#schoolBehave{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#schoolHonor{
+    position: relative;
+    margin-top: 35px;
+}
+#honor1{
+    width: 880px;
+    height: 25px;
+    position: relative;
+    margin-top: 30px;
+}
+#honor2{
+    width: 880px;
+    height: 25px;
+    position: relative;
+}
+#honor3{
+    width: 880px;
+    height: 25px;
+    position: relative;
+}
+#modifyTit3Left61{
+    position: absolute;
+    width: 400px;
+}
+#modifyTit3Left62{
+    position: absolute;
+    width: 400px;
+}
+#modifyTit3Left621{
+    position: absolute;
+    width: 400px;
+}
+#schoolWork{
+    position: relative;
+    margin-top: 40px;
+}
+#schoolwork11{
+    width: 800px;
+    height: auto;
+    position: relative;
+    margin-top: 30px;
+}
+#schoolwork12{
+    width: 800px;
+    height: auto;
+    margin-top: 20px;
+    position: relative;
+}
+#schoolwork13{
+    width: 800px;
+    height: auto;
+    margin-top: 20px;
+    position: relative;
+}
+#modifyTit3Left63{
+    position: relative;
+    width: 400px;
+}
+#modifyTit3Left64{
+    position: relative;
+    margin-top: 20px;
+    width: 400px;
+}
+#modifyTit3Left64 span{
+    position: relative;
+    width: 550px;
+    height: auto;
+    display: block;
+    margin-left: 70px;
+    margin-top: -15px;
+}
+#modifyTit3Left65{
+    position: relative;
+    width: 400px;
+}
+#modifyTit3Left66 span{
+    position: relative;
+    width: 550px;
+    height: auto;
+    display: block;
+    margin-left: 70px;
+    margin-top: -15px;
+}
+#modifyTit3Left66{
+    position: relative;
+    margin-top: 20px;
+    width: 600px;
+}
+#modifyTit3Left68 span{
+    position: relative;
+    width: 550px;
+    height: auto;
+    display: block;
+    margin-left: 70px;
+    margin-top: -15px;
+}
+#modifyTit3Left67{
+    position: relative;
+    width: 600px;
+}
+#modifyTit3Left68{
+    position: relative;
+    margin-top: 20px;
+    width: 600px;
+}
+
+
+/*增加校内荣誉*/
+#schoolH{
+    /*background: #00BE93;*/
+}
+
+/*增加校内职务*/
+#schoolPost{
+    /*background: #00BE93;*/
+}
+
+/*特长技能盒子*/
+#modifySpecial{
+    position: relative;
+    height: auto;
+}
+#modifySpecialTop{
+    width: 880px;
+    height: 40px;
+    position: relative;
+    margin-top: 20px;
+    font-size: 24px;
+}
+#specialSkillAll{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#skill1{
+    height: 30px;
+    width: 880px;
+    position: relative;
+    margin-top: 20px;
+}
+#skill2{
+    height: 30px;
+    width: 880px;
+    position: relative;
+}
+#skill3{
+    height: 30px;
+    width: 880px;
+    position: relative;
+}
+#skillName13{
+    position: absolute;
+}
+#languageAbilityAll{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#language1{
+    width: 880px;
+    height: 30px;
+    position: relative;
+    margin-top: 20px;
+}
+#language2{
+    width: 880px;
+    height: 30px;
+    position: relative;
+}
+#language3{
+    width: 880px;
+    height: 30px;
+    position: relative;
+}
+#languageType{
+    position: absolute;
+}
+#languageType22{
+    position: absolute;
+}
+#languageType23{
+    position: absolute;
+}
+#trainExperienceAll{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#train1{
+    width: 880px;
+    height: 140px;
+    position: relative;
+    margin-top: 20px;
+}
+#train2{
+    width: 880px;
+    height: 140px;
+    margin-top: 20px;
+    position: relative;
+}
+#train3{
+    width: 880px;
+    height: 140px;
+    position: relative;
+}
+#trainCompany{
+    position: absolute;
+}
+#trainCompany32{
+    position: absolute;
+}
+#trainCompany33{
+    position: absolute;
+}
+#trainClass33{
+    position: absolute;
+    top: 40px;
+    left: 300px;
+}
+#trainClass{
+    position: absolute;
+    left: 570px;
+    top: 0px;
+}
+#trainClass32{
+    position: absolute;
+    left: 570px;
+    top: 0px;
+}
+#trainClass33{
+    position: absolute;
+    left: 570px;
+    top: 0px;
+}
+#trainDescribe{
+    position: absolute;
+    top: 30px;
+}
+#trainDescribe32{
+    position: absolute;
+    top: 30px;
+}
+#trainDescribe32 span{
+    width: 370px;
+    height: 100px;
+    display: block;
+    overflow: auto;
+    position: relative;
+    margin-top: -15px;
+    margin-left: 70px;
+}
+#trainDescribe33{
+    position: absolute;
+    top: 30px;
+}
+#trainDescribe33 span{
+    width: 370px;
+    height: 100px;
+    display: block;
+    overflow: auto;
+    position: relative;
+    margin-top: -15px;
+    margin-left: 70px;
+}
+#trainDescribe span{
+    width: 370px;
+    height: 100px;
+    display: block;
+    overflow: auto;
+    position: relative;
+    margin-top: -15px;
+    margin-left: 70px;
+}
+#certificateAll{
+    width: 880px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+#certificate1{
+    width: 880px;
+    height: 30px;
+    position: relative;
+    margin-top: 20px;
+}
+#certificate2{
+    width: 880px;
+    height: 30px;
+    position: relative;
+}
+#certificate3{
+    width: 880px;
+    height: 30px;
+    position: relative;
+}
+
+#addSpecialSkill{
+    position: absolute;
+    top: 5px;
+}
+#modifyPicBox{
+    position: relative;
+    margin-top: 20px;
+    width: 880px;
+    height: 50px;
+}
+#modifyPic{
+    position: absolute;
+    width: 650px;
+    top: 15px;
+    left: 120px;
+}
+
+/*自我评价盒子*/
+#selfEvaluation{
+    height: auto;
+    position: relative;
+}
+#evaluation{
+    width: 630px;
+    height: auto;
+    display: block;
+    font-size: 10px;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 120px;
+}
+
+/*底部两个按钮盒子*/
+#modifyBtn{
+    width: 310px;
+    height: 80px;
+    position: relative;
+    margin-left: 280px;
+    margin-top: 35px;
+}
+/*底部两个按钮*/
+.modifyBtns{
+    width: 140px;
+    height: 40px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: #32c3ee;
+    cursor: pointer;
+}
+/*div制作的假按钮样式*/
+.modifyBtnsDiv{
+    width: 140px;
+    height: 40px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: #32c3ee;
+    font-size: 14px;
+    cursor: pointer;
+}
+#modifyLook span{
+    position: absolute;
+    top: 10px;
+    left: 42px;
+}
+#modifyLook{
+    position: absolute;
+    left: 165px;
+    top: 0px;
+}
+
+#modifyWhide{
+    position: relative;
+    background-color: white;
+    height: 30px;
+}
+
+/*个人信息弹出框*/
+#personMessage{
+    width: 660px;
+    height: 540px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#personMessage span{
+    color: #999999;
+    font-size: 16px;
+}
+#personMessage table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#personMessage td{
+    width: 100px;
+    height: 60px;
+}
+#userName{
+    width: 485px;
+    height: 34px;
+}
+#userSex1{
+    width: 90px;
+    height: 38px;
+    float: left;
+    display:block;
+    text-align: center;
+    line-height:30px;
+}
+#userSex2{
+    width: 90px;
+    height: 38px;
+    display:block;
+    float: left;
+    text-align: center;
+    line-height:30px;
+    margin-left: 15px;
+}
+#userIdent1{
+    width: 90px;
+    height: 38px;
+    float: left;
+    display:block;
+    text-align: center;
+    line-height:30px;
+}
+#userIdent2{
+    width: 90px;
+    height: 38px;
+    display:block;
+    float: left;
+    text-align: center;
+    line-height:30px;
+    margin-left: 15px;
+}
+#userPlace{
+    width: 485px;
+    height: 34px;
+}
+#userTel{
+    width: 485px;
+    height: 34px;
+}
+#userEmail{
+    width: 485px;
+    height: 34px;
+}
+#userBirth{
+    width: 120px;
+    height: 34px;
+}
+#tipTel{
+    color: #EC808D;
+    font-size: 14px;
+    position: absolute;
+    top: 379px;
+    left: 134px;
+    display: none;
+}
+#tipEml{
+    color: #EC808D;
+    font-size: 14px;
+    position: absolute;
+    top: 440px;
+    left: 134px;
+    display: none;
+}
+
+
+#personOk{
+    position: absolute;
+    bottom: 20px;
+    left: 160px;
+}
+#personNo{
+    position: absolute;
+    bottom: 20px;
+    left: 325px;
+}
+#personNo span{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 10px;
+    left: 52px;
+}
+/*求职意向弹出框*/
+#popupTit{
+    width: 660px;
+    height: 420px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupTit span{
+    color: #999999;
+    font-size: 16px;
+}
+#popupTit table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#popupTit td{
+    width: 100px;
+    height: 60px;
+}
+/*#cityName{
+    width: 485px;
+    height: 34px;
+}*/
+#expectCity{
+    width: 485px;
+    height: 34px;
+}
+#jobName{
+    width: 485px;
+    height: 34px;
+}
+#jobMoney1{
+    width: 120px;
+    height: 34px;
+}
+#jobMoney2{
+    width: 120px;
+    height: 34px;
+}
+#jobTime2{
+    width: 120px;
+    height: 34px;
+}
+/*所有按钮样式*/
+.userMessageBtn{
+    background:white;
+    color: #999999;
+    border-width: 0px;
+}
+.userMessageBtn1{
+    background:white;
+    color: #999999;
+    border-width: 0px;
+}
+#jobType1{
+    width: 90px;
+    height: 38px;
+    float: left;
+    display:block;
+    text-align: center;
+    line-height:30px;
+}
+#jobType2{
+    width: 90px;
+    height: 38px;
+    display:block;
+    float: left;
+    text-align: center;
+    line-height:30px;
+    margin-left: 15px;
+}
+#jobType3{
+    width: 90px;
+    height: 38px;
+    display:block;
+    float: left;
+    text-align: center;
+    line-height:30px;
+    margin-left: 15px;
+}
+#jobOk{
+    position: absolute;
+    bottom: 20px;
+    left: 160px;
+}
+#jobNo{
+    position: absolute;
+    bottom: 20px;
+    left: 325px;
+}
+#jobNo span{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 10px;
+    left: 52px;
+}
+/*教育经历弹出框*/
+#popupStudy{
+    width: 660px;
+    height: 350px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupStudy span{
+    color: #999999;
+    font-size: 16px;
+}
+#popupStudy table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#popupStudy td{
+    width: 100px;
+    height: 60px;
+}
+#studySchoolName{
+    width: 485px;
+    height: 34px;
+}
+#studyType{
+    width: 485px;
+    height: 34px;
+}
+#stydyTime1{
+    width: 135px;
+    height: 34px;
+}
+#studyTime2{
+    width: 135px;
+    height: 34px;
+}
+#topEducation{
+    width: 130px;
+    height: 34px;
+}
+#studyCheck1{
+    position: absolute;
+    right: 200px;
+    top: 228px;
+}
+#studyCheck2{
+    position: absolute;
+    right: 168px;
+    top: 225px;
+    font-size: 13px;
+    color: #999999;
+}
+#studyOk{
+    position: absolute;
+    bottom: 20px;
+    left: 160px;
+}
+#studyNo{
+    position: absolute;
+    bottom: 20px;
+    left: 325px;
+}
+#studyNo span{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 10px;
+    left: 52px;
+}
+/*工作/实习经历弹出修改框*/
+#popupWorek{
+    width: 660px;
+    height: 580px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupWorek span{
+    color: #999999;
+    font-size: 16px;
+}
+#popupWorek table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#popupWorek td{
+    width: 100px;
+    height: 60px;
+}
+#workCompanyName{
+    width: 485px;
+    height: 34px;
+}
+#workName{
+    width: 485px;
+    height: 34px;
+}
+#workMoney{
+    width: 485px;
+    height: 34px;
+}
+#workTime1{
+    width: 120px;
+    height: 34px;
+}
+#workTime2{
+    width: 120px;
+    height: 34px;
+}
+#workCheck1{
+    position: absolute;
+    right: 220px;
+    top: 164px;
+}
+#workCheck2{
+    position: absolute;
+    right: 188px;
+    top: 161px;
+    font-size: 13px;
+    color: #999999;
+}
+#workType1{
+    width: 90px;
+    height: 38px;
+    float: left;
+    display:block;
+    text-align: center;
+    line-height:30px;
+}
+#workType2{
+    width: 90px;
+    height: 38px;
+    display:block;
+    float: left;
+    text-align: center;
+    line-height:30px;
+    margin-left: 15px;
+}
+#workType3{
+    width: 90px;
+    height: 38px;
+    display:block;
+    float: left;
+    text-align: center;
+    line-height:30px;
+    margin-left: 15px;
+}
+#workWrong{
+    position: absolute;
+    top: 330px;
+}
+#workLike{
+    resize: none;
+    outline: none;
+    overflow-y:visible;
+    width: 485px;
+    height: 160px;
+    background-color: white;
+    border: #D7D7D7 1px solid;
+}
+#popupTips1{
+    color: #B3B3B3;
+    font-size: 13px;
+    position: absolute;
+    right: 38px;
+    bottom: 75px;
+}
+#workOk{
+    position: absolute;
+    bottom: 20px;
+    left: 160px;
+}
+#workNo{
+    position: absolute;
+    bottom: 20px;
+    left: 325px;
+}
+#workNo span{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 10px;
+    left: 52px;
+}
+#workTip{
+    position: absolute;
+    right: 130px;
+    bottom: 73px;
+}
+/*项目经历弹出框*/
+#popupProject{
+    width: 660px;
+    height: 460px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupProject span{
+    color: #999999;
+    font-size: 16px;
+}
+#popupProject table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#popupProject td{
+    width: 100px;
+    height: 60px;
+}
+#projectName{
+    width: 485px;
+    height: 34px;
+}
+#projectTime1{
+    width: 120px;
+    height: 34px;
+}
+#projectTime2{
+    width: 120px;
+    height: 34px;
+}
+#projectConpany{
+    width: 485px;
+    height: 34px;
+}
+#projectLike{
+    resize: none;
+    outline: none;
+    overflow-y:visible;
+    width: 485px;
+    height: 160px;
+    background-color: white;
+    border: #D7D7D7 1px solid;
+}
+#popupTips2{
+    color: #B3B3B3;
+    font-size: 13px;
+    position: absolute;
+    right: 38px;
+    bottom: 75px;
+}
+#projectWrong{
+    position: absolute;
+    top: 200px;
+}
+#projectOk{
+    position: absolute;
+    bottom: 20px;
+    left: 160px;
+}
+#projectNo{
+    position: absolute;
+    bottom: 20px;
+    left: 325px;
+}
+#projectNo span{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 10px;
+    left: 52px;
+}
+#projectCheck1{
+    position: absolute;
+    right: 220px;
+    top: 104px;
+}
+#projectCheck2{
+    position: absolute;
+    right: 188px;
+    top: 101px;
+    font-size: 13px;
+    color: #999999;
+}
+#projectTip{
+    position: absolute;
+    right: 130px;
+    bottom: 75px;
+}
+/*校内表现弹出框*/
+#popupSchoolBehave{
+    width: 660px;
+    height: 440px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupSchoolBehave span{
+    color: #999999;
+    font-size: 16px;
+}
+#popupSchoolBehave table{
+    margin-left: 30px;
+    padding-top: 25px;
+}
+#popupSchoolBehave td{
+    width: 100px;
+    height: 80px;
+}
+#schoolHonor2{
+    width: 485px;
+    height: 34px;
+}
+#schoolWork2{
+    width: 485px;
+    height: 34px;
+}
+#schoolWorkLike{
+    resize: none;
+    outline: none;
+    overflow-y:visible;
+    width: 485px;
+    height: 160px;
+    background-color: white;
+    border: #D7D7D7 1px solid;
+}
+#popupTips3{
+    color: #B3B3B3;
+    font-size: 13px;
+    position: absolute;
+    right: 38px;
+    bottom: 65px;
+}
+#schoolWorkWrong{
+    position: absolute;
+    top: 190px;
+}
+#schoolBehaveOk{
+    position: absolute;
+    bottom: 20px;
+    left: 160px;
+}
+#schoolBehaveNo{
+    position: absolute;
+    bottom: 20px;
+    left: 325px;
+}
+#schoolBehaveNo span{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 10px;
+    left: 52px;
+}
+.schoolBehaveTit{
+    color: #999999;
+    font-size: 20px;
+}
+#schoolHonor1{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+#schoolWork1{
+    position: absolute;
+    left: 20px;
+    top: 90px;
+}
+/*专业技能弹出框*/
+#popupSpecialSkillAll{
+    width: 660px;
+    height: 210px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupSpecialSkillAll span{
+    color: #999999;
+    font-size: 16px;
+}
+#popupSpecialSkillAll table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#popupSpecialSkillAll td{
+    width: 100px;
+    height: 60px;
+}
+#skillName2{
+    width: 485px;
+    height: 34px;
+}
+#skillTime2{
+    width: 130px;
+    height: 34px;
+}
+#specialSkillOk{
+    position: absolute;
+    bottom: 20px;
+    left: 260px;
+}
+/*语言能力弹出框*/
+#popupLanguageAbilityAll{
+    width: 660px;
+    height: 210px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupLanguageAbilityAll span{
+    color: #999999;
+    font-size: 16px;
+}
+#popupLanguageAbilityAll table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#popupLanguageAbilityAll td{
+    width: 100px;
+    height: 60px;
+}
+#languageType2{
+    width: 485px;
+    height: 34px;
+}
+#languageTime2{
+    width: 130px;
+    height: 34px;
+}
+#languageAbilityOk{
+    position: absolute;
+    bottom: 20px;
+    left: 260px;
+}
+
+/*培训经历弹出框*/
+#popupTrainExperience{
+    width: 660px;
+    height: 450px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupTrainExperience span{
+    color: #999999;
+    font-size: 16px;
+}
+#popupTrainExperience table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#popupTrainExperience td{
+    width: 100px;
+    height: 60px;
+}
+#trainCompany2{
+    width: 485px;
+    height: 34px;
+}
+#trainClass2{
+    width: 485px;
+    height: 34px;
+}
+#trainTime{
+    width: 130px;
+    height: 34px;
+}
+#trainDescribe2{
+    resize: none;
+    outline: none;
+    overflow-y:visible;
+    width: 485px;
+    height: 160px;
+    background-color: white;
+    border: #D7D7D7 1px solid;
+}
+#popupTips4{
+    color: #B3B3B3;
+    font-size: 13px;
+    position: absolute;
+    right: 38px;
+    bottom: 65px;
+}
+#trainDescribeWrong{
+    position: absolute;
+    top: 205px;
+}
+#trainExperienceOk{
+    position: absolute;
+    bottom: 20px;
+    left: 260px;
+}
+
+/*获得证书弹出框*/
+#popupCertificate{
+    width: 660px;
+    height: 210px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupCertificate span{
+    color: #999999;
+    font-size: 16px;
+}
+#popupCertificate table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#popupCertificate td{
+    width: 100px;
+    height: 60px;
+}
+#certificateName2{
+    width: 485px;
+    height: 34px;
+}
+#certificateTime2{
+    width: 130px;
+    height: 34px;
+}
+#certificateOk{
+    position: absolute;
+    bottom: 20px;
+    left: 260px;
+}
+
+/*自我评价弹出框*/
+#popupSelfEvaluation{
+    width: 660px;
+    height: 280px;
+    background-color: #EAEAEA;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 120px;
+    border: rgba(215, 215, 215, 1) 1px solid;
+    display: none;
+}
+#popupSelfEvaluation span{
+    float: left;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    font-size: 16px;
+    color: #999999;
+}
+/*文本框*/
+#TxtSelfEvaluation{
+    width: 500px;
+    height: 160px;
+    position: absolute;
+    left: 120px;
+    top: 30px;
+    background-color: white;
+    border: #D7D7D7 1px solid;
+    resize: none;
+    outline: none;
+    overflow-y:visible;
+}
+/*自我评价保存并更新按钮*/
+#popupSelfEvaluationOk{
+    position: absolute;
+    bottom: 20px;
+    left: 160px;
+}
+/*自我评价取消按钮*/
+#popupSelfEvaluationNo{
+    position: absolute;
+    bottom: 20px;
+    left: 325px;
+}
+#popupSelfEvaluationNo span{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 10px;
+    left: 52px;
+}
+/*最多500字提示*/
+#popupTips5{
+    color: #B3B3B3;
+    font-size: 13px;
+    position: absolute;
+    right: 38px;
+    bottom: 65px;
+}
+
+
+
+
+/*假按钮的值获取*/
+#gender1{
+    -webkit-appearance: none;
+    width: 90px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    left: 133px;
+    opacity:0;
+}
+#gender2{
+    -webkit-appearance: none;
+    width: 90px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    left: 240px;
+    opacity:0;
+}
+#identity1{
+    -webkit-appearance: none;
+    width: 90px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 150px;
+    left: 133px;
+    opacity:0;
+}
+#identity2{
+    -webkit-appearance: none;
+    width: 90px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 150px;
+    left: 240px;
+    opacity:0;
+}
+#nature_of_job1{
+    -webkit-appearance: none;
+    width: 88px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 215px;
+    left: 135px;
+    opacity:0;
+}
+#nature_of_job2{
+    -webkit-appearance: none;
+    width: 88px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 215px;
+    left: 240px;
+    opacity:0;
+}
+#nature_of_job3{
+    -webkit-appearance: none;
+    width: 88px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 215px;
+    left: 345px;
+    opacity:0;
+}
+#nature_of_work1{
+    -webkit-appearance: none;
+    width: 88px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 275px;
+    left: 135px;
+    opacity:0;
+}
+#nature_of_work2{
+    -webkit-appearance: none;
+    width: 88px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 275px;
+    left: 240px;
+    opacity:0;
+}
+#nature_of_work3{
+    -webkit-appearance: none;
+    width: 88px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 275px;
+    left: 345px;
+    opacity:0;
+}
+
+/*个人信息中所居住城市的弹出界面*/
+#userPlaceAll{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#userPlaceMore{
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color:rgba(255,255,255,1);
+}
+#userPlaceMore1{
+    width:798px;
+    height: 70px;
+    border: black 1px solid;
+}
+#userPlaceMore1 p{
+    padding-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#userPlaceMore2{
+    width: 150px;
+    height: 375px;
+    float: left;
+    overflow: auto;
+}
+#userPlaceMore2 table{
+    width: 130px;
+    height: 330px;
+    text-align: center;
+}
+#userPlaceMore2 tr{
+    border: 0px;
+}
+#userPlaceMore2 td{
+    border: 0px;
+}
+.expectIndustryMoreAll{
+    width: 650px;
+    height: 377px;
+    overflow: auto;
+    float: left;
+}
+.expectIndustryMoreAll table{
+    width: 633px;
+    height: 375px;
+    border-collapse:separate;
+    border-spacing:30px 30px;
+    text-align: center;
+}
+#userPlaceMore31{
+    display: block;
+}
+
+.expectIndustryMoreAll{display: none}
+/*鼠标悬停变背景色*/
+#userPlacecanPick1 tr td:hover{
+    background-color: #32c3ee;
+    color: white;
+}
+/*鼠标点击颜色*/
+.canPickTex1{
+    background-color: #32c3ee;
+    color: white;
+}
+.canPick tr td{
+    cursor: pointer;
+}
+.canPick tr td:hover{
+    color: #32c3ee;
+}
+
+/*希望居住城市*/
+#expectCityAll{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#expectCityMore{
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color:rgba(255,255,255,1);
+}
+#expectCityMore1{
+    width:798px;
+    height: 70px;
+    border: black 1px solid;
+}
+#expectCityMore1 p{
+    padding-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#expectCityMore2{
+    width: 150px;
+    height: 375px;
+    float: left;
+    overflow: auto;
+}
+#expectCityMore2 table{
+    width: 130px;
+    height: 330px;
+    text-align: center;
+}
+#expectCityMore2 tr{
+    border: 0px;
+}
+#expectCityMore2 td{
+    border: 0px;
+}
+.expectCityMoreAll{
+    width: 650px;
+    height: 377px;
+    overflow: auto;
+    float: left;
+}
+.expectCityMoreAll table{
+    width: 633px;
+    height: 375px;
+    border-collapse:separate;
+    border-spacing:30px 30px;
+    text-align: center;
+}
+#expectCityMore31{
+    display: block;
+}
+
+/*鼠标悬停变背景色*/
+#expectCitycanPick1 tr td:hover{
+    background-color: #32c3ee;
+    color: white;
+}
+/*鼠标点击颜色*/
+.canPickTex1{
+    background-color: #32c3ee;
+    color: white;
+}
+.canPick tr td{
+    cursor: pointer;
+}
+.canPick tr td:hover{
+    color: #32c3ee;
+}
+/*鼠标悬停变背景色*/
+#canPick1 tr td:hover{
+    background-color: #32c3ee;
+    color: white;
+}
+/*求职意向中期望职业的弹出界面*/
+#expectIndustryAll{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#expectIndustryMore{
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color:rgba(255,255,255,1);
+}
+#expectIndustryMore1{
+    width:800px;
+    height: 70px;
+    border: black 1px solid;
+}
+#expectIndustryMore1 p{
+    padding-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#expectIndustryMore2{
+    width: 150px;
+    height: 330px;
+    float: left;
+    overflow: auto;
+}
+#expectIndustryMore2 table{
+    width: 150px;
+    height: 330px;
+    text-align: center;
+    border-left: black 1px solid;
+    border-right: black 1px solid;
+    border-bottom: black 1px solid;
+}
+#expectIndustryMore2 tr{
+    border: 0px;
+}
+#expectIndustryMore2 td{
+    border: 0px;
+}
+#expectIndustryMore31{
+    display: block;
+}
+#addTit,#addSchoolHonor,#addProject,#addSpecialSkill,#addLanguageAbility,#addTrainExperience,#addCertificate,#addSchoolWork,#addTit1{
+    cursor: pointer;
+}
+#expectIndustryMore .expectIndustryMoreAll{
+    height: 325px;
+}
+#PeopleWrite3,#PeopleWrite4,#PeopleWrite5,#PeopleWrite6,#PeopleWrite71,#PeopleWrite72,#PeopleWrite73,#PeopleWrite74{
+    -webkit-appearance: none;
+    width: 45px;
+    height: 25px;
+    /*padding: 0;*/
+    /*background-color: goldenrod;*/
+    border-radius: 20%;
+    outline: none;
+    /*border: 1px solid black;*/
+    margin-left: -35px;
+    margin-top: -3px;
+    cursor: pointer;
+    position: absolute;
+    opacity:0;
+}
+
+
+.resumeWrong{
+    color: #32c3ee;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职位修改界面</title>
+    <link rel="stylesheet" type="text/css" href="../statics/css/jobEdit.css">
+    <script src="../statics/js/jquery.js"></script>
+    <script src="../statics/js/company.js"></script>
+</head>
+<body>
+<div id="overall">
+    <div id="side">
+        <div id="image_side">
+            <img src="../statics/images/首页_1/u1068.svg">
+        </div>
+        <div id="one_side" onclick="jump1()">
+            <span>首页</span>
+        </div>
+        <div id="two_side" onclick="jump2()">
+            <span>职位发布</span>
+        </div>
+        <div id="three_side" onclick="jump3()">
+            <span>应聘管理</span>
+        </div>
+    </div>
+    <div id="main">
+        <div id="one_main">
+            <h2 id="title">捷职招聘企业端入口</h2>
+            <div id="one_main_right">
+                <span id="welcome">欢迎登录</span>
+                <a href="javascript:show()"><button  id="repassword" onclick="repword()">密码管理</button></a>
+                <a href="#"><button  id="exit" onclick="logout()">退出登录</button></a>
+            </div>
+        </div>
+        <!--职位描述-->
+        <div id="description">
+            <p id="allPosition"></p>
+            <p id="allSalary"></p>
+            <p id="allCity"></p>
+            <span id="allExperience">工作经验：<span class="allExperience"></span></span>
+            <span id="allEducation">学历要求：<span class="allEducation"></span></span>
+            <span id="allType">工作类型：<span class="allType"></span></span><br>
+            <span id="allPlace">办公地点：<span class="allPlace"></span></span>
+            <a id="allWrite1" class="allWrite" href="###">编辑</a>
+        </div>
+        <!--职位描述弹出框-->
+        <div id="two_main">
+            <div id="jobDescription">
+                <table id="tableJob">
+                    <tr id="tr_id1">
+                        <td id="td_id1">职位名称</td>
+                        <td><input id="positionName" type="text" placeholder="请选择职位名称" name="positionName"></td>
+                    </tr>
+                    <tr id="tr_id2">
+                        <td id="td_id2">办公地点</td>
+                        <td>
+                            <input id="officeLocation" type="text" placeholder="请选择办公地点" name="officeLocation">
+                            <input id="address" type="text" placeholder="请输入详细地址" onfocus="this.placeholder=''" onmouseout="this.placeholder='请输入详细地址'" name="address">
+                        </td>
+                    </tr>
+                    <tr id="tr_id3">
+                        <td id="td_id3">月薪</td>
+                        <td>
+                            <input type="text" placeholder="最低" id="lowest" onfocus="this.placeholder=''" onmouseout="this.placeholder='最低'" name="lowest">
+                            <img src="../statics/images/招聘岗位编辑/u1346.svg" id="o_o">
+                            <input type="text" placeholder="最高" id="highest" onfocus="this.placeholder=''" onmouseout="this.placeholder='最高'" name="highest">
+                        </td>
+                    </tr>
+                    <tr id="tr_id4">
+                        <td id="td_id4">工作经验</td>
+                        <td>
+<!--                            <input id="workExperience" type="text" placeholder="请选择工作经验">-->
+                            <select id="workExperience" name="workExperience">
+                                <option id="worksize0">请选择工作经验</option>
+                                <option >1-3年</option>
+                                <option>3-5年</option>
+                                <option>5-10年</option>
+                                <option>10年以上</option>
+                                <option>不限制</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="tr_id5">
+                        <td id="td_id5">学历要求</td>
+                        <td>
+<!--                            <input id="academicRequirements" type="text" placeholder="请选择学历要求">-->
+                            <select id="academicRequirements" name="academicRequirements">
+                                <option id="academicsize0">请选择学历要求</option>
+                                <option>初中以下</option>
+                                <option>中专</option>
+                                <option>高中</option>
+                                <option>大专</option>
+                                <option>本科</option>
+                                <option>研究生</option>
+                                <option>MBA/EMBA</option>
+                                <option>博士</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="tr_id6">
+                        <td id="td_id6">工作类型</td>
+                        <td>
+                            <select id="jobType" name="jobType">
+                                <option id="jobsize0">请选择工作类型</option>
+                                <option>全职</option>
+                                <option>兼职</option>
+                                <option>实习</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <!--按钮-->
+                <input class="save" id="descriptionBtn1" type="button" value="保存并更新">
+                <div class="cancel" id="descriptionBtn2"><p class="can1">取消</p></div>
+            </div>
+        </div>
+        <!--岗位职责-->
+        <div id="duty">
+            <p class="allTitle">岗位职责：</p>
+            <div id="dutyMessage">
+                <br>
+                <p class="describe"></p>
+                <a id="allWrite2" class="allWrite" href="###">编辑</a>
+            </div>
+        </div>
+        <!--岗位职责弹出框-->
+        <div id="three_main">
+            <div id="jobResponsibilities">
+                <textarea id="responsibilities" onblur="responText()" placeholder="请对岗位职责进行描述" onfocus="this.placeholder=''" onmouseout="this.placeholder='请对岗位职责进行描述'" name="responsibilities"></textarea>
+                <!--按钮-->
+                <input class="save" id="jobBtn1" type="button" value="保存并更新">
+                <div class="cancel" id="jobBtn2"><p class="can1">取消</p></div>
+                <span id="threemore">最多1000字</span>
+                <span id="threeBeyond">超出字数限制！</span>
+            </div>
+        </div>
+        <!--岗位任职要求-->
+        <div id="requirement">
+            <p class="allTitle">任职要求：</p>
+            <div id="requireMessage">
+                <br>
+                <p class="request"></p>
+                <br>
+                <a id="allWrite3" class="allWrite" href="###">编辑</a>
+            </div>
+        </div>
+        <!--岗位要求弹出框-->
+        <div id="four_main">
+            <div id="jobRequirements">
+                <textarea id="requirements" onblur="requireText()" placeholder="请对岗位要求进行描述" onfocus="this.placeholder=''" onmouseout="this.placeholder='请对岗位要求进行描述'" name="requirements"></textarea>
+            </div>
+            <input class="save" id="requireBtn1" type="button" value="保存并更新">
+            <div class="cancel" id="requireBtn2"><p class="can1">取消</p></div>
+            <span id="fourBeyond">超出字数限制！</span>
+            <span id="fourmore" >最多1000字</span>
+        </div>
+        <!--保存并更新和取消的div-->
+        <div class="five_main">
+            <div class="twobtn">
+                <input id="allsave" class="save" type="button" value="保存并更新" onclick="saveBtn()">
+                <div class="cancel" onclick="cancelDiv()">
+                    <p class="can" onclick="jumpRelease()">撤销发布</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="clear"></div>
+</div>
+
+
+<!--职位名称-->
+<div id="expectIndustryAll">
+    <div id="expectIndustryMore">
+        <div id="expectIndustryMore1"><p>请选择期望职业：</p></div>
+        <div id="expectIndustryMore2">
+            <table class="canPick" id="canPick1">
+                <tr><td class="canPickTex" id="canPickTex1">后端开发</td></tr>
+                <tr><td class="canPickTex" id="canPickTex2">移动开发</td></tr>
+                <tr><td class="canPickTex" id="canPickTex3">前端开发</td></tr>
+                <tr><td class="canPickTex" id="canPickTex4">人工智能</td></tr>
+                <tr><td class="canPickTex" id="canPickTex5">游戏</td></tr>
+                <tr><td class="canPickTex" id="canPickTex6">测试</td></tr>
+                <tr><td class="canPickTex" id="canPickTex7">运维/技术支持</td></tr>
+                <tr><td class="canPickTex" id="canPickTex8">数据</td></tr>
+            </table>
+        </div>
+        <div id="expectIndustryMore31" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick21">
+                <tr>
+                    <td class="canPickClick" onClick="changeExpectJob('Java开发工程师')">Java开发工程师</td>
+                    <td onClick="changeExpectJob('PHP开发工程师')">PHP开发工程师</td>
+                    <td onClick="changeExpectJob('C/C开发工程师')">C/C开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Python开发工程师')">Python开发工程师</td>
+                    <td onClick="changeExpectJob('NET开发工程师')">NET开发工程师</td>
+                    <td onClick="changeExpectJob('C#开发工程师')">C#开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Ruby开发工程师')">Ruby开发工程师</td>
+                    <td onClick="changeExpectJob('Go开发工程师')">Go开发工程师</td>
+                    <td onClick="changeExpectJob('大数据开发工程师')">大数据开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Hadoop开发工程师')">Hadoop开发工程师</td>
+                    <td onClick="changeExpectJob('爬虫开发工程师')">爬虫开发工程师</td>
+                    <td onClick="changeExpectJob('脚本开发工程师')">脚本开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+            </table>
+        </div>
+        <div id="expectIndustryMore32" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick22">
+                <tr>
+                    <td onClick="changeExpectJob('Java开发工程师')">Java开发工程师</td>
+                    <td onClick="changeExpectJob('PHP开发工程师')">PHP开发工程师</td>
+                    <td onClick="changeExpectJob('C/C开发工程师')">C/C开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Python开发工程师')">Python开发工程师</td>
+                    <td onClick="changeExpectJob('NET开发工程师')">NET开发工程师</td>
+                    <td onClick="changeExpectJob('C#开发工程师')">C#开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Ruby开发工程师')">Ruby开发工程师</td>
+                    <td onClick="changeExpectJob('Go开发工程师')">Go开发工程师</td>
+                    <td onClick="changeExpectJob('大数据开发工程师')">大数据开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Hadoop开发工程师')">Hadoop开发工程师</td>
+                    <td onClick="changeExpectJob('爬虫开发工程师')">爬虫开发工程师</td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+            </table>
+        </div>
+        <div id="expectIndustryMore33" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick23">
+                <tr>
+                    <td onClick="changeExpectJob('Java开发工程师')">Java开发工程师</td>
+                    <td onClick="changeExpectJob('PHP开发工程师')">PHP开发工程师</td>
+                    <td onClick="changeExpectJob('C/C开发工程师')">C/C开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Python开发工程师')">Python开发工程师</td>
+                    <td onClick="changeExpectJob('NET开发工程师')">NET开发工程师</td>
+                    <td onClick="changeExpectJob('C#开发工程师')">C#开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Ruby开发工程师')">Ruby开发工程师</td>
+                    <td onClick="changeExpectJob('Go开发工程师')">Go开发工程师</td>
+                    <td onClick="changeExpectJob('大数据开发工程师')">大数据开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Hadoop开发工程师')">Hadoop开发工程师</td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+            </table>
+        </div>
+        <div id="expectIndustryMore34" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick24">
+                <tr>
+                    <td onClick="changeExpectJob('Java开发工程师')">Java开发工程师</td>
+                    <td onClick="changeExpectJob('PHP开发工程师')">PHP开发工程师</td>
+                    <td onClick="changeExpectJob('C/C开发工程师')">C/C开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Python开发工程师')">Python开发工程师</td>
+                    <td onClick="changeExpectJob('NET开发工程师')">NET开发工程师</td>
+                    <td onClick="changeExpectJob('C#开发工程师')">C#开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Ruby开发工程师')">Ruby开发工程师</td>
+                    <td onClick="changeExpectJob('Go开发工程师')">Go开发工程师</td>
+                    <td onClick="changeExpectJob('大数据开发工程师')">大数据开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+            </table>
+        </div>
+        <div id="expectIndustryMore35" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick25">
+                <tr>
+                    <td onClick="changeExpectJob('Java开发工程师')">Java开发工程师</td>
+                    <td onClick="changeExpectJob('PHP开发工程师')">PHP开发工程师</td>
+                    <td onClick="changeExpectJob('C/C开发工程师')">C/C开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Python开发工程师')">Python开发工程师</td>
+                    <td onClick="changeExpectJob('NET开发工程师')">NET开发工程师</td>
+                    <td onClick="changeExpectJob('C#开发工程师')">C#开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Ruby开发工程师')">Ruby开发工程师</td>
+                    <td onClick="changeExpectJob('Go开发工程师')">Go开发工程师</td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+            </table>
+        </div>
+        <div id="expectIndustryMore36" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick26">
+                <tr>
+                    <td onClick="changeExpectJob('Java开发工程师')">Java开发工程师</td>
+                    <td onClick="changeExpectJob('PHP开发工程师')">PHP开发工程师</td>
+                    <td onClick="changeExpectJob('C/C开发工程师')">C/C开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Python开发工程师')">Python开发工程师</td>
+                    <td onClick="changeExpectJob('NET开发工程师')">NET开发工程师</td>
+                    <td onClick="changeExpectJob('C#开发工程师')">C#开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Ruby开发工程师')">Ruby开发工程师</td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+            </table>
+        </div>
+        <div id="expectIndustryMore37" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick27">
+                <tr>
+                    <td onClick="changeExpectJob('Java开发工程师')">Java开发工程师</td>
+                    <td onClick="changeExpectJob('PHP开发工程师')">PHP开发工程师</td>
+                    <td onClick="changeExpectJob('C/C开发工程师')">C/C开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Python开发工程师')">Python开发工程师</td>
+                    <td onClick="changeExpectJob('NET开发工程师')">NET开发工程师</td>
+                    <td onClick="changeExpectJob('C#开发工程师')">C#开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+            </table>
+        </div>
+        <div id="expectIndustryMore38" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick28">
+                <tr>
+                    <td onClick="changeExpectJob('Java开发工程师')">Java开发工程师</td>
+                    <td onClick="changeExpectJob('PHP开发工程师')">PHP开发工程师</td>
+                    <td onClick="changeExpectJob('C/C开发工程师')">C/C开发工程师</td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('Python开发工程师')">Python开发工程师</td>
+                    <td onClick="changeExpectJob('NET开发工程师')">NET开发工程师</td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+                <tr>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                    <td onClick="changeExpectJob('')"> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--办公地点-->
+<div id="userPlaceAll">
+    <div id="userPlaceMore">
+        <div id="userPlaceMore1"><p>请选择居住地：</p></div>
+        <div id="userPlaceMore2">
+            <table class="canPick" id="userPlacecanPick1">
+                <tr><td class="canPickTex" id="canPickUser1">青海</td></tr>
+                <tr><td class="canPickTex" id="canPickUser2">北京</td></tr>
+                <tr><td class="canPickTex" id="canPickUser3">上海</td></tr>
+                <tr><td class="canPickTex" id="canPickUser4">广东</td></tr>
+                <tr><td class="canPickTex" id="canPickUser5">深圳</td></tr>
+                <tr><td class="canPickTex" id="canPickUser6">江苏</td></tr>
+                <tr><td class="canPickTex" id="canPickUser7">吉林</td></tr>
+                <tr><td class="canPickTex" id="canPickUser8">浙江</td></tr>
+            </table>
+        </div>
+        <div id="userPlaceMore31" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser21">
+                <tr>
+                    <td class="canPickClick" onClick="changeUserPlace('西宁市')">西宁市</td>
+                    <td class="canPickClick"onClick="changeUserPlace('海东市')">海东市</td>
+                    <td onClick="changeUserPlace('铜仁市')">铜仁市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('玉树市')">玉树市</td>
+                    <td onClick="changeUserPlace('格尔木市')">格尔木市</td>
+                    <td onClick="changeUserPlace('德令哈市')">德令哈市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('茫崖市')">茫崖市</td>
+                    <td onClick="changeUserPlace(' ')"></td>
+                    <td onClick="changeUserPlace(' ')"></td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace(' ')"></td>
+                    <td onClick="changeUserPlace(' ')"></td>
+                    <td onClick="changeUserPlace(' ')"></td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="userPlaceMore32" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser22">
+                <tr>
+                    <td onClick="changeUserPlace('东城区')">东城区</td>
+                    <td onClick="changeUserPlace('西城区')">西城区</td>
+                    <td onClick="changeUserPlace('朝阳区')">朝阳区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('丰台区')">丰台区</td>
+                    <td onClick="changeUserPlace('石景山区')">石景山区</td>
+                    <td onClick="changeUserPlace('海淀区')">海淀区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('顺义区')">顺义区</td>
+                    <td onClick="changeUserPlace('通州区')">通州区</td>
+                    <td onClick="changeUserPlace('大兴区')">大兴区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('房山区')">房山区</td>
+                    <td onClick="changeUserPlace('门头沟区')">门头沟区</td>
+                    <td onClick="changeUserPlace('昌平区')">昌平区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('平谷区')">平谷区</td>
+                    <td onClick="changeUserPlace('密云区')">密云区</td>
+                    <td onClick="changeUserPlace('怀柔区')">怀柔区</td>
+                </tr>
+            </table>
+        </div>
+        <div id="userPlaceMore33" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser23">
+                <tr>
+                    <td onClick="changeUserPlace('黄浦区')">黄浦区</td>
+                    <td onClick="changeUserPlace('徐汇区')">徐汇区</td>
+                    <td onClick="changeUserPlace('长宁区')">长宁区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('静安区')">静安区</td>
+                    <td onClick="changeUserPlace('普陀区')">普陀区</td>
+                    <td onClick="changeUserPlace('虹口区')">虹口区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('杨浦区')">杨浦区</td>
+                    <td onClick="changeUserPlace('宝山区')">宝山区</td>
+                    <td onClick="changeUserPlace('嘉定区')">嘉定区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('浦东新区')">浦东新区</td>
+                    <td onClick="changeUserPlace('金山区')">金山区</td>
+                    <td onClick="changeUserPlace('松江区')">松江区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('')"> </td>
+                    <td onClick="changeUserPlace('')"> </td>
+                    <td onClick="changeUserPlace('')"> </td>
+                </tr>
+            </table>
+        </div>
+        <div id="userPlaceMore34" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser24">
+                <tr>
+                    <td onClick="changeUserPlace('广州市')">广州市</td>
+                    <td onClick="changeUserPlace('珠海市')">珠海市</td>
+                    <td onClick="changeUserPlace('汕头市')">汕头市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('佛山市')">佛山市</td>
+                    <td onClick="changeUserPlace('韶关市')">韶关市</td>
+                    <td onClick="changeUserPlace('湛江市')">湛江市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('肇庆市')">肇庆市</td>
+                    <td onClick="changeUserPlace('江门市')">江门市</td>
+                    <td onClick="changeUserPlace('茂名市')">茂名市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('惠州市')">惠州市</td>
+                    <td onClick="changeUserPlace('梅州市')">梅州市</td>
+                    <td onClick="changeUserPlace('汕尾市')">汕尾市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('河源市')">河源市</td>
+                    <td onClick="changeUserPlace('阳江市')">阳江市</td>
+                    <td onClick="changeUserPlace('清远市')">清远市</td>
+                </tr>
+            </table>
+        </div>
+        <div id="userPlaceMore35" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser25">
+                <tr>
+                    <td onClick="changeUserPlace('龙岗区')">龙岗区</td>
+                    <td onClick="changeUserPlace('盐田区')">盐田区</td>
+                    <td onClick="changeUserPlace('坪山区')">坪山区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('大鹏新区')">大鹏新区</td>
+                    <td onClick="changeUserPlace('宝安区')">宝安区</td>
+                    <td onClick="changeUserPlace('光明区')">光明区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('南山区')">南山区</td>
+                    <td onClick="changeUserPlace('龙华区')">龙华区</td>
+                    <td onClick="changeUserPlace('福田区')">福田区</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('罗湖区')">罗湖区</td>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="userPlaceMore36" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser26">
+                <tr>
+                    <td onClick="changeUserPlace('南京市')">南京市</td>
+                    <td onClick="changeUserPlace('无锡市')">无锡市</td>
+                    <td onClick="changeUserPlace('徐州市')">徐州市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('苏州市')">苏州市</td>
+                    <td onClick="changeUserPlace('南通市')">南通市</td>
+                    <td onClick="changeUserPlace('连云港市')">连云港市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('淮安市')">淮安市</td>
+                    <td onClick="changeUserPlace('盐城市')">盐城市</td>
+                    <td onClick="changeUserPlace('扬州市')">扬州市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('镇江市')">镇江市</td>
+                    <td onClick="changeUserPlace('泰州市')">泰州市</td>
+                    <td onClick="changeUserPlace('宿迁市')">宿迁市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="userPlaceMore37" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser27">
+                <tr>
+                    <td onClick="changeUserPlace('长春市')">长春市</td>
+                    <td onClick="changeUserPlace('吉林市')">吉林市</td>
+                    <td onClick="changeUserPlace('四平市')">四平市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('通化市')">通化市</td>
+                    <td onClick="changeUserPlace('白山市')">白山市</td>
+                    <td onClick="changeUserPlace('辽源市')">辽源市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('白城市')">白城市</td>
+                    <td onClick="changeUserPlace('松原市')">松原市</td>
+                    <td onClick="changeUserPlace('')"></td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="userPlaceMore38" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser28">
+                <tr>
+                    <td onClick="changeUserPlace('杭州市')">杭州市</td>
+                    <td onClick="changeUserPlace('宁波市')">宁波市</td>
+                    <td onClick="changeUserPlace('温州市')">温州市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('嘉兴市')">嘉兴市</td>
+                    <td onClick="changeUserPlace('湖州市')">湖州市</td>
+                    <td onClick="changeUserPlace('绍兴市')">绍兴市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('金华市')">金华市</td>
+                    <td onClick="changeUserPlace('舟山市')">舟山市</td>
+                    <td onClick="changeUserPlace('台州市')">台州市</td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('丽水市')">丽水市</td>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                </tr>
+                <tr>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                    <td onClick="changeUserPlace('')"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--密码页面-->
+<div id="password">
+    <div id="frame">
+        <div id="passwordTitle">
+            <p>密码管理</p>
+            <input type="button" onclick="returnPage()" id="re"  value="×" />
+        </div>
+        <div>
+            <form method="post" id="form1" target="targetIfr">
+                <table id="cen">
+                    <tr>
+                        <td id="targetBar">输入密码：</td>
+                        <td><input type="password" id="InputUserPwd" name="password" placeholder="请输入密码" onblur="cheeckPassword()"/></td>
+                    </tr>
+                    <tr height="25px">
+                        <td></td>
+                        <td id="tips1">密码由6-16位数字，字母组成</td>
+                    </tr>
+                    <tr>
+                        <td>确认密码：</td>
+                        <td><input type="password" id="ConfirmPassword" placeholder="请确认密码" onblur="conPassword()"/></td>
+                    </tr>
+                    <tr height="25px">
+                        <td></td>
+                        <td id="tips2">密码与上面不符，请重新输入</td>
+                    </tr>
+                    <tr>
+                        <td>手机号码：</td>
+                        <td><input type="text" id="InputTelephone" name="telephone" placeholder="请输入绑定的手机号" onblur="checkTel()"/></td>
+                    </tr>
+                    <tr height="25px">
+                        <td></td>
+                        <td id="tips3">手机号码格式错误，请重新输入</td>
+                    </tr>
+                    <tr>
+                        <td>验证码：</td>
+                        <td>
+                            <input type="password" id="InputCode" name="code" placeholder="请输入验证码"/>
+                            <form method="post" target="targetIfr1">
+                                <button id="code" name="codebutton"  onblur="obtainCode()">获取验证码</button>
+                                <!--<button id="code" name="codebutton" value="on" onclick="obtainCode()">发送</button>-->
+                            </form>
+                            <iframe name="targetIfr1" style="display: none;"></iframe>
+                        </td>
+                    </tr>
+                    <tr height="25px">
+                        <td></td>
+                        <td id="tips4">验证码错误，请重新输入</td>
+                    </tr>
+                </table>
+            </form>
+            <iframe name="targetIfr" style="display: none;"></iframe>
+            <div align="center"><button id="confirm" form="form1" onclick="confirmBtn()">确认</button></div>
+        </div>
+    </div>
+</div>
+<script>
+
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+    var jid =  getQueryVariable("jid")
+    var cid =  getQueryVariable("cid")
+    console.log(jid)
+    console.log(cid)
+    /*模块的显示与隐藏*/
+    allWrite1.addEventListener('click',function () {
+        two_main.style.display = 'block';
+    })
+    allWrite2.addEventListener('click',function () {
+        three_main.style.display = 'block';
+    })
+    allWrite3.addEventListener('click',function () {
+        four_main.style.display = 'block';
+    })
+    /*职位描述保存和取消*/
+    descriptionBtn1.addEventListener('click',function () {
+        if (positionName.value != ''){
+            if (officeLocation.value != ''){
+                if (address.value != ''){
+                    if (lowest.value != ''){
+                        if (highest.value != ''){
+                            if (workExperience.value != '请选择工作经验'){
+                                if (academicRequirements.value != '请选择学历要求'){
+                                    if (jobType.value != '请选择工作类型'){
+                                        two_main.style.display = 'none';
+                                        var url = "http://127.0.0.1:8080/v9/recruitEditorAll"
+                                        url = "?" + "jid=" + jid +"&" + "cid=" +cid
+                                        window.location.href= url
+                                    }else {
+                                        alert('工作类型不能为空');
+                                    }
+                                }else {
+                                    alert('学历要求不能为空');
+                                }
+                            }else {
+                                alert('工作经验不能为空');
+                            }
+                        }else {
+                            alert('最高月薪不能为空');
+                        }
+                    }else {
+                        alert('最低月薪不能为空');
+                    }
+                }else {
+                    alert('详细地址不能为空');
+                }
+            }else {
+                alert('办公地点不能为空');
+            }
+        }else {
+            alert('职位名称不能为空');
+        }
+    })
+    descriptionBtn2.addEventListener('click',function () {
+        two_main.style.display = 'none';
+    })
+    /*岗位职责保存和取消*/
+    jobBtn1.addEventListener('click',function () {
+        if (responsibilities.value != ''){
+            three_main.style.display = 'none';
+            alert('更新成功')
+            var url = "http://127.0.0.1:8080/v9/recruitEditorAll"
+            url = "?" + "jid=" + jid +"&" + "cid=" +cid
+            window.location.href= url
+        }else {
+            alert('内容不能为空')
+        }
+    })
+    jobBtn2.addEventListener('click',function () {
+        three_main.style.display = 'none';
+    })
+    /*岗位要求保存和取消*/
+    requireBtn1.addEventListener('click',function () {
+        if (requirements.value.trim() != ''){
+            four_main.style.display = 'none';
+            alert('更新成功')
+            var url = "http://127.0.0.1:8080/v9/recruitEditorAll"
+            url = "?" + "jid=" + jid +"&" + "cid=" +cid
+            window.location.href= url
+        }else {
+            alert('内容不能为空')
+        }
+    })
+    requireBtn2.addEventListener('click',function () {
+        four_main.style.display = 'none';
+    })
+    //边  三选一
+	one_side.addEventListener('click',function(){
+		one_side.className = 'resumeside';
+		two_side.className = 'orgside';
+		three_side.className = 'orgside';
+	})
+	two_side.addEventListener('click',function(){
+		two_side.className = 'resumeside';
+		one_side.className = 'orgside';
+		three_side.className = 'orgside';
+	})
+	three_side.addEventListener('click',function(){
+		three_side.className = 'resumeside';
+		two_side.className = 'orgside';
+		one_side.className = 'orgside';
+	})
+
+    //跳出期望职业界面
+    positionName.addEventListener('click', function () {
+        if (expectIndustryAll.style.display = 'none') {
+            expectIndustryAll.style.display = 'block';
+        }
+    })
+    //期望职业弹出框点击变色与跳转界面
+    var tds = document.querySelectorAll(".canPickTex");
+    var divs = document.querySelectorAll(".expectIndustryMoreAll")
+    for (var i = 0; i < tds.length; i++) {
+        tds[i].setAttribute('index', i);
+        tds[i].onclick = function () {
+
+            for (var i = 0; i < tds.length; i++) {
+                tds[i].className = ' ';
+            }
+            // 留下我自己
+            this.className = 'canPickTex1';
+            // 2. 下面的显示内容模块
+            var index = this.getAttribute('index');
+            // 干掉所有人 让其余的item 这些div 隐藏
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.display = 'none';
+            }
+            // 留下我自己 让对应的item 显示出来
+            divs[index].style.display = 'block';
+        }
+    }
+    //获取期望职业选择并且关闭弹出界面
+    function changeExpectJob(value){
+        console.log('ok')
+        console.log(value)
+        expectIndustryAll.style.display = 'none';
+        document.getElementById('positionName').value = value;
+    }
+
+
+    //跳出居住城市界面
+    officeLocation.addEventListener('click', function () {
+        if (userPlaceAll.style.display = 'none') {
+            userPlaceAll.style.display = 'block';
+        }
+    })
+    //居住城市弹出框点击变色与跳转界面
+    var tds = document.querySelectorAll(".canPickTex");
+    var divs = document.querySelectorAll(".expectIndustryMoreAll")
+    for (var i = 0; i < tds.length; i++) {
+        tds[i].setAttribute('index', i);
+        tds[i].onclick = function () {
+
+            for (var i = 0; i < tds.length; i++) {
+                tds[i].className = ' ';
+            }
+            // 留下我自己
+            this.className = 'canPickTex1';
+            // 2. 下面的显示内容模块
+            var index = this.getAttribute('index');
+            // 干掉所有人 让其余的item 这些div 隐藏
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.display = 'none';
+            }
+            // 留下我自己 让对应的item 显示出来
+            divs[index].style.display = 'block';
+        }
+    }
+    //获取居住城市选择并且关闭弹出界面
+    function changeUserPlace(value){
+        console.log('ok')
+        console.log(value)
+        userPlaceAll.style.display = 'none';
+        document.getElementById('officeLocation').value = value;
+    }
+
+    var mySelect=$("#workExperience option");
+    var num="请选择工作经验";//某个值
+    mySelect.each(function (i,el) {
+        if($(el).text()==num){
+            $(this).hide();
+        }
+    })
+    var mySelect=$("#academicRequirements option");
+    var num="请选择学历要求";//某个值
+    mySelect.each(function (i,el) {
+        if($(el).text()==num){
+            $(this).hide();
+        }
+    })
+    var mySelect=$("#jobType option");
+    var num="请选择工作类型";//某个值
+    mySelect.each(function (i,el) {
+        if($(el).text()==num){
+            $(this).hide();
+        }
+    })
+
+    function  responText() {
+        var maxl = 1000
+        var s = document.getElementById("responsibilities").value.length;
+        if (s > maxl){
+            document.getElementById('threeBeyond').style.display='block';
+            return false;
+        }else {
+            document.getElementById('threeBeyond').style.display='none';
+            return true;
+        }
+    }
+
+    function  requireText() {
+        var maxl = 1000
+        var s = document.getElementById("requirements").value.length;
+        if (s > maxl){
+            document.getElementById('fourBeyond').style.display='block';
+            return false;
+        }else {
+            document.getElementById('fourBeyond').style.display='none';
+            return true;
+        }
+    }
+    jobBtn2.addEventListener('click',function () {
+        three_main.style.display = 'none'
+    })
+    //保存
+    function saveBtn() {
+        if (positionName.value != ''){
+            if (officeLocation.value != ''){
+                if (address.value != ''){
+                    if (lowest.value != ''){
+                        if (highest.value != ''){
+                            if (workExperience.value != '请选择工作经验'){
+                                if (academicRequirements.value != '请选择学历要求'){
+                                    if (jobType.value != '请选择工作类型'){
+                                        if (responsibilities.value != '' && responText() == true){
+                                            if (requirements.value != '' && requireText() == true){
+                                                alert("职位发布成功！");
+                                                window.location.href = "positionRelease.html";
+                                            }else {
+                                                alert("请对岗位要求进行描述!");
+                                            }
+                                        }else {
+                                            alert("请对岗位职责进行描述!");
+                                        }
+                                    }else {
+                                        alert("请选择工作类型!");
+                                    }
+                                }else {
+                                    alert("请选择学历要求!");
+                                }
+                            }else {
+                                alert("请选择工作经验!");
+                            }
+                        }else {
+                            alert("请输入最高月薪!");
+                        }
+                    }else {
+                        alert("请输入最低月薪!");
+                    }
+                }else {
+                    alert("请输入详细地址！");
+                }
+            }else {
+                alert("请选择办公地点！");
+            }
+        }else {
+            alert("请选择职位名称！");
+        }
+    }
+    //取消发布
+    function  cancelDiv() {
+        $("#positionName").val("");
+        $("#officeLocation").val("");
+        $("#address").val("");
+        $("#lowest").val("");
+        $("#highest").val("");
+        $("#workExperience").val("请选择工作经验");
+        $("#academicRequirements").val("请选择学历要求");
+        $("#jobType").val("请选择工作类型");
+        $("#responsibilities").val("");
+        $("#requirements").val("");
+        document.getElementById('threeBeyond').style.display='none';
+        document.getElementById('fourmore').style.display='none';
+    }
+
+    //进入密码管理
+    function repword(){
+        document.getElementById('password').style.display='block';
+    }
+    //清空input
+    function returnPage(){
+        document.getElementById('password').style.display='none';
+        $("#cen input").val("");
+        document.getElementById('tips1').style.display='none';
+        document.getElementById('tips2').style.display='none';
+        document.getElementById('tips3').style.display='none';
+        document.getElementById('tips4').style.display='none';
+    }
+
+    //密码格式
+    function cheeckPassword(){
+        var _password = $("#InputUserPwd").val();
+        if(!(/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/.test(_password))){
+            document.getElementById('tips1').style.display='block';
+            return false;
+        }else{
+            document.getElementById('tips1').style.display='none';
+            return true;
+        }
+
+    }
+    //确认密码
+    function conPassword(){
+        var pass1 = document.getElementById("InputUserPwd").value;
+        var pass2 = document.getElementById("ConfirmPassword").value;
+        console.log(pass1);
+        console.log(pass2);
+        if(pass1 == pass2){
+            document.getElementById('tips2').style.display='none';
+            return true;
+        }else{
+            document.getElementById('tips2').style.display='block';
+            return false;
+        }
+    }
+    //确认手机号
+    function checkTel(){
+        var _phone = $("#InputTelephone").val();
+        if(!(/^1[3|5|6|7|8|9][0-9]\d{8}$/.test(_phone))){
+            document.getElementById('tips3').style.display='block';
+            return false;
+        }else{
+            document.getElementById('tips3').style.display='none';
+            return true;
+        }
+    }
+    //获取验证码
+    var btn = document.querySelector('#code');
+    btn.addEventListener('click', function() {
+        var time = 60;
+        var timer = null;
+        timer = setInterval(function(){
+            btn.disabled = true;
+            btn.innerText = time + "秒后重新发送";
+            time--;
+            if(time == 0 ){
+                btn.innerText = '重新发送验证码';
+                btn.disabled = false;
+                clearInterval(timer);
+            }
+
+        },1000)
+
+    })
+    //确认验证码
+    //确认
+    function confirmBtn(){
+        if(cheeckPassword() == true){
+            if(conPassword() == true){
+                if(checkTel() == true){
+                    if(InputCode.value != ''){
+                        alert('修改密码成功');
+                    }else{
+                        document.getElementById('tips4').style.display='block';
+                    }
+                }else{
+                    document.getElementById('tips3').style.display='block';
+                }
+            }else{
+                document.getElementById('tips2').style.display='block';
+            }
+        }else{
+            document.getElementById('tips1').style.display='block';
+        }
+    }
+    var allPositio = document.querySelector('#allPosition');
+    var allSalary = document.querySelector('#allSalary');
+    var allCity = document.querySelector('#allCity');
+    var allExperience = document.querySelector('.allExperience');
+    var allEducation = document.querySelector('.allEducation');
+    var allType = document.querySelector('.allType');
+    var allPlace = document.querySelector('.allPlace');
+    var allTitle = document.querySelector('.describe');
+    var requireMessage = document.querySelector('.request');
+    $("overall").ready(function (){
+        $.ajax({
+            type:'post',
+            dataType:'json',
+            data:{
+                "jid":jid,
+                "cid":cid
+            },
+            url:"/v3/jobEdit",
+            success:function(result){
+                console.log(result.title)
+                allPositio.innerHTML = result.title;
+                allSalary.innerHTML = result.salary;
+                allCity.innerHTML = result.address;
+                allExperience.innerHTML = result.experience;
+                allEducation.innerHTML = result.education;
+                allType.innerHTML = result.nature;
+                allPlace.innerHTML = result.fulladdress;
+                allTitle.innerHTML = result.describe;
+                requireMessage.innerHTML = result.request;
+            },
+        })
+    })
+
+    var SubmitCompanyInfo = document.getElementById("descriptionBtn1");   //获取提交信息按钮
+    SubmitCompanyInfo.addEventListener('click',function () {
+
+        // companyType = document.getElementsByName("companyType").value       //公司类型
+        var companyType = $("input[name='companyType']:checked").val();
+        console.log(companyType);
+        positionName = document.getElementById("positionName").value    //职位
+        officeLocation = document.getElementById("officeLocation").value //地址
+        address  = document.getElementById("address").value    //工作具体地址
+        lowest  = document.getElementById("lowest").value       //最低薪资
+        highest  = document.getElementById("highest").value      //最高薪资
+        workExperience  = document.getElementById("workExperience").value //要求经验
+        academicRequirements  = document.getElementById("academicRequirements").value     //学历要求
+        jobType  = document.getElementById("jobType").value          //工作类型
+
+        if (positionName == "" || officeLocation == ""){
+        }else {
+            $.ajax({
+                url:"/v3/jobEdit",
+                type: "POST",
+                dataType: "json",
+                data: {
+                    "ButtonType": "SaveJob",
+                    "positionName": positionName,
+                    "officeLocation": officeLocation,
+                    "address": address,
+                    "lowest": lowest,
+                    "highest": highest,
+                    "workExperience": workExperience,
+                    "academicRequirements": academicRequirements,
+                    "jobType": jobType,
+                    "jid":jid,
+                    "cid":cid,
+
+                    // "responsibilities": responsibilities,
+                    // "requirements": requirements,
+                },
+                success: function (returnPoint) {
+                    console.log("SUCCESS:向后端传输信息成功")
+                    if (returnPoint.msg == "上传成功"){
+                    }
+                },
+                error: function () {
+                    console.log("ERROR:向后端传输信息失败")
+                }
+
+            })
+        }
+    })
+    var SubmitCompanyInfo1 = document.getElementById("jobBtn1");   //获取提交信息按钮
+    SubmitCompanyInfo1.addEventListener('click',function () {
+        responsibilities  = document.getElementById("responsibilities").value
+        $.ajax({
+            url:"/v3/jobEdit",
+            type: "POST",
+            dataType: "json",
+            data: {
+                "responsibilities": responsibilities,
+                "jid":jid,
+                "cid":cid,
+            },
+            success: function (returnPoint) {
+                console.log("SUCCESS:向后端传输信息成功")
+                if (returnPoint.msg == "上传成功"){
+                }
+            },
+            error: function () {
+                console.log("ERROR:向后端传输信息失败")
+            }
+
+        })
+    })
+    var SubmitCompanyInfo2 = document.getElementById("requireBtn1");   //获取提交信息按钮
+    SubmitCompanyInfo2.addEventListener('click',function () {
+        requirements  = document.getElementById("requirements").value
+        $.ajax({
+            url:"/v3/jobEdit",
+            type: "POST",
+            dataType: "json",
+            data: {
+                 "requirements": requirements,
+                "jid":jid,
+                "cid":cid,
+            },
+            success: function (returnPoint) {
+                console.log("SUCCESS:向后端传输信息成功")
+                if (returnPoint.msg == "上传成功"){
+                }
+            },
+            error: function () {
+                console.log("ERROR:向后端传输信息失败")
+            }
+
+        })
+    })
+    function jumpRelease(){
+        var url = "/v3/positionRelease?cid="+cid
+        window.location.href=url
+    }
+</script>
+</body>
+</html>

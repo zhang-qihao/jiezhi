@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../statics/css/head2.css">
+</head>
+<body>
+<!--网页顶端一行-->
+<header>
+    <div class="head_head">
+        <div class="head_headLeft">
+            <img style="vertical-align: middle;" src="../statics/images/java职位下级页面/u292.svg">
+            <!--选择地方名例如南通站-->
+            <span>南通站</span>
+            <a href="javascript:;">切换城市</a>
+        </div>
+        <!--网页顶端一行右边-->
+        <div class="head_headRigth">
+            <span>欢迎回来</span>
+            <!--鼠标悬浮下拉菜单、二级菜单-->
+            <a href="#" id="userId"><span id="user"></span><img style="vertical-align: middle;" id="head_headRigth_img" src="../statics/images/head__/u288.svg"></a>
+            <img style="vertical-align: middle;" id="head_headRight2" src="../statics/images/java职位下级页面/u301.svg">
+            <span>400-888-666</span>
+        </div>
+    </div>
+    <!--捷职logo与搜索框-->
+    <div class="head_searchAll">
+        <!-- 捷职招聘-->
+        <div class="head_searchLogo">
+            <span>捷职招聘</span>
+        </div>
+        <div class="head_search">
+            <form action="">
+                <select id="head_select" name="head_select">
+                    <option id="allday" value="allday">全职</option>
+                    <option id="littleday" value="littleday">实习</option>
+                </select>
+                <input type="text" class="head_searchInput1" placeholder="搜索职位">
+                <input type="button" class="head_searchInput2" value="搜索">
+            </form>
+        </div>
+    </div>
+    <!--导航栏-->
+    <div class="head_navigation">
+        <a onclick="jump1()">首页</a>
+        <a onclick="jump2()">南通站</a>
+        <a onclick="jump3()">校园招聘</a>
+        <a onclick="jump4()">社会招聘</a>
+        <a href="javascript:;">职场环游记</a>
+    </div>
+</header>
+<div class="head_body">
+    <!--选择框-->
+    <div class="head_checkbox">
+        <ul>
+            <a>
+                <li class="current" id="test5 test6">投递成功</li>
+            </a>
+            <a>
+                <li id="test7">未查看</li>
+            </a>
+            <a>
+                <li id="test8">待定中</li>
+            </a>
+            <a>
+                <li id="test9">邀面试</li>
+            </a>
+            <a>
+                <li id="test10">已拒绝</li>
+            </a>
+        </ul>
+    </div>
+
+
+    <!--    无数据时-->
+    <div class="head_body1">
+        <div class="head_body1_list1" style="display: none">
+            <p>暂无面试邀请</p>
+            <p>已为您精选出职位，快去好好挑选吧</p>
+            <button>去看看</button>
+        </div>
+        <div class="head_body1_list1">
+            <p>暂无面试邀请</p>
+        </div>
+        <div class="head_body1_list1">
+            <p>暂无面试邀请</p>
+        </div>
+        <div class="head_body1_list1">
+            <p>暂无面试邀请</p>
+        </div>
+        <!--        有数据时-->
+        <div class="head_body1_list2" style="display: block">
+            <ul id="alllist5">
+            </ul>
+        </div>
+        <div class="head_body1_list2">
+            <ul id="alllist6">
+            </ul>
+        </div>
+        <div class="head_body1_list2">
+            <ul id="alllist7">
+                </ul>
+        </div>
+        <div class="head_body1_list2">
+            <ul id="alllist8">
+            </ul>
+        </div>
+        <div class="head_body1_list2">
+            <ul id="alllist9">
+            </ul>
+        </div>
+    </div>
+    <div class="head_body2">
+        <h2>为你优选</h2>
+        <ul>
+            <li>
+                <span>数据分析师</span>
+                <span>8千-2万</span>
+                <span>广州-荔湾区</span>
+                <span>1-3年</span>
+                <span>本科</span>
+                <span>名创优品</span>
+                <span>民营&nbsp10000人以上</span>
+                <img src="../statics/images/面试邀请（空白/u2042.svg">
+            </li>
+            <li>
+                <span>Java工程师</span>
+                <span>8千-2万</span>
+                <span>广州-荔湾区</span>
+                <span>1-3年</span>
+                <span>本科</span>
+                <span>名创优品</span>
+                <span>民营&nbsp10000人以上</span>
+                <img src="../statics/images/面试邀请（空白/u2042.svg">
+            </li>
+            <li>
+                <span>数据分析师</span>
+                <span>8千-2万</span>
+                <span>广州-荔湾区</span>
+                <span>1-3年</span>
+                <span>本科</span>
+                <span>名创优品</span>
+                <span>民营&nbsp10000人以上</span>
+                <img src="../statics/images/面试邀请（空白/u2042.svg">
+            </li>
+            <li>
+                <span>UI界面设计师</span>
+                <span>8千-2万</span>
+                <span>广州-荔湾区</span>
+                <span>1-3年</span>
+                <span>本科</span>
+                <span>名创优品</span>
+                <span>民营&nbsp10000人以上</span>
+                <img src="../statics/images/面试邀请（空白/u2042.svg">
+            </li>
+        </ul>
+
+    </div>
+</div>
+<script src="../statics/js/jquery-3.6.0.min.js"></script>
+<script src="../statics/js/interview2.js"></script>
+<script src="../statics/js/mainpage.js"></script>
+</body>
+</html>

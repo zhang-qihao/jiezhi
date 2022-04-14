@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="../statics/css/companyHomePage.css" type="text/css" rel="stylesheet">
+  <title>企业入口首页</title>
+</head>
+<body>
+<div id="overall">
+  <!--左边蓝色侧导航栏-->
+  <div id="side">
+    <div id="image_side">
+      <img src="../statics/images/首页_1/u1068.svg">
+    </div>
+    <div id="one_side" onclick=jump1()>
+      <span>首页</span>
+    </div>
+    <div id="two_side" onclick=jump2()>
+      <span>职位发布</span>
+    </div>
+    <div id="three_side" onclick=jump3()>
+      <span>应聘管理</span>
+    </div>
+  </div>
+  <div id="main">
+    <div id="one_main">
+      <h2 id="title">捷职招聘企业端入口</h2>
+      <!--欢迎登录、密码管理和退出登录-->
+      <div id="one_main_right">
+        <span id="welcome">欢迎登录</span>
+        <a href="javascript:show()"><button  id="repassword" onclick="repword()">密码管理</button></a>
+        <a href="#"><button  id="exit" onclick="logout()">退出登录</button></a>
+      </div>
+    </div>
+    <!--公司资料信息-->
+    <div id="companyMessage">
+      <img src="../statics/images/用户端企业信息/u1024.svg">
+      <!--公司名称和类型-->
+      <div id="company">
+        <p id="companyName"></p>
+        <span id="compangtype" class="companyTextAll">公司类型 </span>
+        <span id="companyType1" class="companyTextAll"></span>
+        <span id="companyType2" class="companyTextAll">外资</span>
+        <span id="companyType3" class="companyTextAll">国企</span>
+      </div>
+      <!--公司简称、公司规模、公司地址-->
+      <div id="companyMessageMore">
+        <span class="companyTextAll" id="shortname"></span>
+        <span>|</span>
+        <span class="companyTextAll" id="scale"></span>
+        <p class="companyTextAll">公司地址：<span class="companyTextAll" id="address"></span></p>
+      </div>
+      <a id="write" onclick="companyjump()">编辑</a>
+    </div>
+    <!--公司简介-->
+    <p class="title">公司简介</p>
+    <div id="briefIntroduction">
+      <div id="introduction">
+        <p id="brief"></p>
+        <!--第一段-->
+        <!--
+       <p>
+           。。。。。。
+       </p>
+       -->
+        <!--第二段-->
+        <!--
+        <p>
+           。。。。。。
+        </p>
+        -->
+        <!--第三段-->
+        <!--
+        <P>
+           。。。。。。
+        </P>
+        -->
+        <!--第四段-->
+        <!--
+        <p>
+          。。。。。。。
+        -->
+      </div>
+    </div>
+    <!--招聘职位-->
+    <p class="title">招聘职位</p>
+    <div id="recruitPosition">
+      <!--招聘职位排列-->
+      <ul>
+        <li>
+          <p class="positionName">数据分析师</p>
+          <p class="wages">8千-2万</p>
+          <span class="place">广州-荔湾区</span>
+          <span class="time">1-3年</span>
+          <span class="education">本科</span>
+          <img class="pic" src="../statics/images/首页_1/u1082.svg">
+          <p class="company">名创优品</p>
+          <span class="type">民营</span>
+          <span class="separate">|</span>
+          <span class="scale">10000人以上</span>
+          <div class="write"><span>编辑</span></div>
+        </li>
+        <li>
+          <p class="positionName">UI界面设计师</p>
+          <p class="wages">8千-2万</p>
+          <span class="place">广州-荔湾区</span>
+          <span class="time">1-3年</span>
+          <span class="education">本科</span>
+          <img class="pic" src="../statics/images/首页_1/u1082.svg">
+          <p class="company">名创优品</p>
+          <span class="type">民营</span>
+          <span class="separate">|</span>
+          <span class="scale">10000人以上</span>
+          <div class="write"><span>编辑</span></div>
+        </li>
+        <li>
+          <p class="positionName">JAVA工程师</p>
+          <p class="wages">8千-2万</p>
+          <span class="place">广州-荔湾区</span>
+          <span class="time">1-3年</span>
+          <span class="education">本科</span>
+          <img class="pic" src="../statics/images/首页_1/u1082.svg">
+          <p class="company">名创优品</p>
+          <span class="type">民营</span>
+          <span class="separate">|</span>
+          <span class="scale">10000人以上</span>
+          <div class="write"><span>编辑</span></div>
+        </li>
+        <li>
+          <p class="positionName">Web前端开发设计师</p>
+          <p class="wages">8千-2万</p>
+          <span class="place">广州-荔湾区</span>
+          <span class="time">1-3年</span>
+          <span class="education">本科</span>
+          <img class="pic" src="../statics/images/首页_1/u1082.svg">
+          <p class="company">名创优品</p>
+          <span class="type">民营</span>
+          <span class="separate">|</span>
+          <span class="scale">10000人以上</span>
+          <div class="write"><span>编辑</span></div>
+        </li>
+        <li>
+          <p class="positionName">数据分析师</p>
+          <p class="wages">8千-2万</p>
+          <span class="place">广州-荔湾区</span>
+          <span class="time">1-3年</span>
+          <span class="education">本科</span>
+          <img class="pic" src="../statics/images/首页_1/u1082.svg">
+          <p class="company">名创优品</p>
+          <span class="type">民营</span>
+          <span class="separate">|</span>
+          <span class="scale">10000人以上</span>
+          <div class="write"><span>编辑</span></div>
+        </li>
+        <li>
+          <p class="positionName">数据分析师</p>
+          <p class="wages">8千-2万</p>
+          <span class="place">广州-荔湾区</span>
+          <span class="time">1-3年</span>
+          <span class="education">本科</span>
+          <img class="pic" src="../statics/images/首页_1/u1082.svg">
+          <p class="company">名创优品</p>
+          <span class="type">民营</span>
+          <span class="separate">|</span>
+          <span class="scale">10000人以上</span>
+          <div class="write"><span>编辑</span></div>
+        </li>
+        <li>
+          <p class="positionName">数据分析师</p>
+          <p class="wages">8千-2万</p>
+          <span class="place">广州-荔湾区</span>
+          <span class="time">1-3年</span>
+          <span class="education">本科</span>
+          <img class="pic" src="../statics/images/首页_1/u1082.svg">
+          <p class="company">名创优品</p>
+          <span class="type">民营</span>
+          <span class="separate">|</span>
+          <span class="scale">10000人以上</span>
+          <div class="write"><span>编辑</span></div>
+        </li>
+        <li>
+          <p class="positionName">数据分析师</p>
+          <p class="wages">8千-2万</p>
+          <span class="place">广州-荔湾区</span>
+          <span class="time">1-3年</span>
+          <span class="education">本科</span>
+          <img class="pic" src="../statics/images/首页_1/u1082.svg">
+          <p class="company">名创优品</p>
+          <span class="type">民营</span>
+          <span class="separate">|</span>
+          <span class="scale">10000人以上</span>
+          <div class="write"><span>编辑</span></div>
+        </li>
+      </ul>
+    </div>
+    <!--页码导航栏-->
+    <div class="pagination-bar">
+      <a href="###">下一页</a>
+      <a href="###" class="choose">1</a>
+      <a href="###">2</a>
+      <a href="###">3</a>
+      <a>......</a>
+      <a href="###">49</a>
+      <a>共49页</a>
+      <a>到第<u>&nbsp;&nbsp;</u>页</a>
+      <a href="###" class="page-next">上一页</a>
+    </div>
+  </div>
+</div>
+</div>
+<!--复用密码弹出框-->
+<div id="password">
+  <div id="frame">
+    <div id="passwordTitle">
+      <p>密码管理</p>
+      <input type="button" onclick="returnPage()" id="re"  value="×" />
+    </div>
+    <div>
+      <form method="post" id="form1" target="targetIfr">
+        <table id="cen">
+          <tr>
+            <td id="targetBar">输入密码：</td>
+            <td><input type="password" id="InputUserPwd" name="password" placeholder="请输入密码" onblur="cheeckPassword()"/></td>
+          </tr>
+          <tr height="25px">
+            <td></td>
+            <td id="tips1">密码由6-16位数字，字母组成</td>
+          </tr>
+          <tr>
+            <td>确认密码：</td>
+            <td><input type="password" id="ConfirmPassword" placeholder="请确认密码" onblur="conPassword()"/></td>
+          </tr>
+          <tr height="25px">
+            <td></td>
+            <td id="tips2">密码与上面不符，请重新输入</td>
+          </tr>
+          <tr>
+            <td>手机号码：</td>
+            <td><input type="text" id="InputTelephone" name="telephone" placeholder="请输入绑定的手机号" onblur="checkTel()"/></td>
+          </tr>
+          <tr height="25px">
+            <td></td>
+            <td id="tips3">手机号码格式错误，请重新输入</td>
+          </tr>
+          <tr>
+            <td>验证码：</td>
+            <td>
+              <input type="password" id="InputCode" name="code" placeholder="请输入验证码"/>
+              <form method="post" target="targetIfr1">
+                <button id="code" name="codebutton" onclick="CreatCode()">获取验证码</button>
+                <!--<button id="code" name="codebutton" value="on" onclick="obtainCode()">发送</button>-->
+              </form>
+              <iframe name="targetIfr1" style="display: none;"></iframe>
+            </td>
+          </tr>
+          <tr height="25px">
+            <td></td>
+            <td id="tips4">验证码错误，请重新输入</td>
+          </tr>
+        </table>
+
+      </form>
+      <iframe name="targetIfr" style="display: none;"></iframe>
+      <div align="center"><button id="confirm" form="form1" onclick="confirmBtn()">确认</button></div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="../statics/js/jquery.js"></script>
+<script src="../statics/js/company.js"></script>
+</html>

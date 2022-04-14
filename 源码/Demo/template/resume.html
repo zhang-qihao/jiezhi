@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../statics/css/resume.css">
+    <script src="../statics/js/jquery.js"></script>
+    <title>简历</title>
+</head>
+<div>
+    <img id="resumeAllBack" src="../statics/images/five.jpg">
+    <div id="resumeAll">
+        <p id="resumeTit1">个人信息</p>
+        <!--<form method="post" target="targetIfr1" id="form1">-->
+        <div id="resumeSection1">
+            <table>
+                <tr>
+                    <td>
+                        <label for="userName" >姓名：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="userName" class="userMessage" placeholder="请输入真实姓名" onfocus="this.placeholder=''" onmouseout="this.placeholder='请输入真实姓名'" name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userSex1">性别：</label>
+                    </td>
+                    <td id="getUserSex" name="gender">
+                        <!--<span id="userSex1" class="userMessageBtn" style="cursor: pointer" name="gender" onClick="getUserSex.value='男'">男</span>
+
+                        <span id="userSex2" class="userMessageBtn" style="cursor: pointer" name="gender" onClick="getUserSex.value='女'">女</span>-->
+                        <span id="userSex1" class="userMessageBtn" style="cursor: pointer">男<input type="radio" id="gender" value="男" name="gender" ></span>
+                        <span id="userSex2" class="userMessageBtn" style="cursor: pointer">女<input type="radio" id="gender"  value="女" name="gender"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userIdent1">当前身份：</label>
+                    </td>
+                    <td id="getUserIdent" name="identity">
+                        <span id="userIdent1" class="userMessageBtn" style="cursor: pointer" name="identity">职场人<input type="radio" id="identity" value="职场人" name="identity"></span>
+                        <span id="userIdent2" class="userMessageBtn" style="cursor: pointer" name="identity">学生<input type="radio" id="identity" value="学生" name="identity" ></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userBirth">出生年月：</label>
+                    </td>
+                    <td>
+                        <input type="month" id="userBirth" class="userMessage" placeholder="请选择出生年月，如1970年10月" name="birth">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userPlace">现居住地：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="userPlace" class="userMessage" placeholder="请输入现居住地，如北京" onfocus="this.placeholder=''" onmouseout="this.placeholder='请输入现居住地，如北京'" name="area">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userTel">电话号码：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="userTel" class="userMessage" placeholder="请输入手机号码，用于联系" onfocus="this.placeholder=''" onmouseout="this.placeholder='请输入手机号码，用于联系'" maxlength="11"  onblur="checkMobile()" name="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userEmail">电子邮箱：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="userEmail" class="userMessage" placeholder="请输入电子邮箱，用于联系" onfocus="this.placeholder=''" onmouseout="this.placeholder='请输入电子邮箱，用于联系'" onblur="checkEmail()"  name="email">
+                    </td>
+                </tr>
+                <div class="resumeBot1">
+                    <img src="../statics/images/简历界面/u1751.svg">
+                    <img src="../statics/images/简历界面/u1752.svg">
+                    <img src="../statics/images/简历界面/u1752.svg">
+                </div>
+                <div id="resumeBotInput">
+                    <button id="userBut1" style="cursor: pointer" onclick="submitform();return false;"><a>下一步</a></button>
+                    <!--<input type="submit" id="userBut1" checked="checked" value="下一步">-->
+                </div>
+            </table>
+        </div>
+        <!--</form>-->
+        <!--<iframe name="targetIfr1" style="display: none"></iframe>-->
+        <!--第二个界面-->
+        <p id="resumeTit2">求职意向:</p>
+        <!--<form method="post" target="targetIfr2" id="form2">-->
+        <div id="resumeSection2" >
+            <table>
+                <tr>
+                    <td>
+                        <label for="expectJob">期望职业：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="expectJob" class="userMessage" placeholder="请选择期望职业"  name="expected_occupation">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="expectCity">期望城市：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="expectCity" class="userMessage" placeholder="请选择期望城市" name="expected_city">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="expectSalary1">薪资要求：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="expectSalary1" class="userMessage" placeholder="最低" onfocus="this.placeholder=''" onmouseout="this.placeholder='最低'" name="salary_requirements_min">
+                        <!--工资下拉框-->
+                        <!-- <select>
+                            <option>3千</option>
+                            <option>4千</option>
+                        </select>-->
+                        <span>—</span>
+                        <input type="text" id="expectSalary2" class="userMessage" placeholder="最高" onfocus="this.placeholder=''" onmouseout="this.placeholder='最高'" name="salary_requirements_max">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="workType1">工作性质：</label>
+                    </td>
+                    <td>
+                        <span id="workType1" class="userMessageBtn" style="cursor: pointer" name="nature_of_work">全职<input type="checkbox" name="nature_of_works" value="全职" id="nature_work"></span>
+                        <span id="workType2" class="userMessageBtn" style="cursor: pointer" name="nature_of_work">实习<input type="checkbox" name="nature_of_works" value="实习" id="nature_work"></span>
+                        <span id="workType3" class="userMessageBtn" style="cursor: pointer" name="nature_of_work">兼职<input type="checkbox" name="nature_of_works" value="兼职" id="nature_work"></span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="workTime">到岗时间：</label>
+                    </td>
+                    <td>
+                        <!--<input type="text" id="workTime" class="userMessage" placeholder="请选择到岗时间" name="arrival_time" style="display: none">-->
+                        <select id="workTime1" class="userMessage" name="arrival_time">
+                            <option>一周内</option>
+                            <option>一个月内</option>
+                            <option>待定</option>
+                        </select>
+                    </td>
+                </tr>
+                <div class="resumeBot2">
+                    <img src="../statics/images/简历界面/u1752.svg">
+                    <img src="../statics/images/简历界面/u1751.svg">
+                    <img src="../statics/images/简历界面/u1752.svg">
+                </div>
+                <div id="resumeBotInput2">
+                    <button id="userBut21" style="cursor: pointer" onclick="submitform();return false;" ><a>上一步</a></button>
+                    <button id="userBut22" style="cursor: pointer" onclick="submitform();return false;" ><a>下一步</a></button>
+                </div>
+            </table>
+        </div>
+        <!--</form>-->
+        <!--<iframe name="targetIfr2" style="display: none"></iframe>-->
+        <!--第三个界面-->
+        <p id="resumeTit3">教育经历:</p>
+        <div id="resumeSection3">
+            <table>
+                <tr>
+                    <td>
+                        <label for="school">学校名称：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="school" class="userMessage" placeholder="请输入学校名称" onfocus="this.placeholder=''" onmouseout="this.placeholder='请输入学校名称'" name="school_name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="topEducation">最高学历：</label>
+                    </td>
+                    <td>
+                        <!--<input type="text" id="" class="userMessage" placeholder="请选择最高学历">-->
+                        <select id="topEducation" class="userMessage" name="highest_education">
+                            <option>初中以下</option>
+                            <option>中专</option>
+                            <option>高中</option>
+                            <option>大专</option>
+                            <option>本科</option>
+                            <option>研究生</option>
+                            <option>MBA/EMBA</option>
+                            <option>博士</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="majorStudy">所学专业：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="majorStudy" class="userMessage" placeholder="请输入所学专业" onfocus="this.placeholder=''" onmouseout="this.placeholder='请输入所学专业'" name="major_studied">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="schoolTime1">在校时间：</label>
+                    </td>
+                    <td>
+                        <input type="month" id="schoolTime1" class="userMessage" placeholder="入学年份" name="school_time_start">
+                        <span>—</span>
+                        <input type="month" id="schoolTime2" class="userMessage" placeholder="毕业年份" name="school_time_start_end">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="certificate1" id="nothing">学位证书：</label>
+                    </td>
+                    <td>
+                        <span id="certificate1" class="userMessageBtn" style="cursor: pointer" name="certificate_of_academic_degree">有<input type="checkbox" id="certificate_of_academic_degree" value="有" name="certificate_of_academic_degree" ></span>
+                        <span id="certificate2" class="userMessageBtn" style="cursor: pointer" name="certificate_of_academic_degree">无<input type="checkbox" id="certificate_of_academic_degree" value="无" name="certificate_of_academic_degree" ></span>
+                    </td>
+                </tr>
+                <div class="resumeBot3">
+                    <img src="../statics/images/简历界面/u1752.svg">
+                    <img src="../statics/images/简历界面/u1752.svg">
+                    <img src="../statics/images/简历界面/u1751.svg">
+                </div>
+                <div id="resumeBotInput3">
+                    <button id="userBut31" style="cursor: pointer;" onclick="submitform();return false;" ><a>上一步</a></button>
+                    <button id="userBut32" style="cursor: pointer"><a>完成</a></button>
+                    <button id="userBut33" style="cursor: pointer"><a>完善简历</a></button>
+                    <!--<iframe name="targetIfr3" style="display: none"></iframe>-->
+                </div>
+            </table>
+        </div>
+    </div>
+</div>
+<!--现居住地选择-->
+<div id="userPlaceAll">
+    <div id="userPlaceMore">
+        <div id="userPlaceMore1"><p>请选择居住地：</p></div>
+        <div id="userPlaceMore2">
+            <table class="canPick" id="userPlacecanPick1">
+            </table>
+        </div>
+        <div id="userPlaceMore31" class="expectIndustryMoreAll"  style="display: block">
+            <table class="canPick" id="canPickUser21">
+            </table>
+        </div>
+        <div id="userPlaceMore32" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser22">
+            </table>
+        </div>
+        <div id="userPlaceMore33" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser23">
+            </table>
+        </div>
+        <div id="userPlaceMore34" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser24">
+
+            </table>
+        </div>
+        <div id="userPlaceMore35" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser25">
+
+            </table>
+        </div>
+        <div id="userPlaceMore36" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser26">
+
+            </table>
+        </div>
+        <div id="userPlaceMore37" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser27">
+
+            </table>
+        </div>
+        <div id="userPlaceMore38" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser28">
+
+            </table>
+        </div>
+        <div id="userPlaceMore39" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser29">
+
+            </table>
+        </div>
+        <div id="userPlaceMore40" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser30">
+
+            </table>
+        </div>
+        <div id="userPlaceMore41" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser31">
+
+            </table>
+        </div>
+        <div id="userPlaceMore42" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser32">
+            </table>
+        </div>
+        <div id="userPlaceMore43" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser33">
+            </table>
+        </div>
+        <div id="userPlaceMore44" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser34">
+            </table>
+        </div>
+        <div id="userPlaceMore45" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser35">
+            </table>
+        </div>
+        <div id="userPlaceMore46" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser36">
+            </table>
+        </div>
+        <div id="userPlaceMore47" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser37">
+            </table>
+        </div>
+        <div id="userPlaceMore48" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser38">
+            </table>
+        </div>
+        <div id="userPlaceMore49" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser39">
+            </table>
+        </div>
+        <div id="userPlaceMore50" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser40">
+            </table>
+        </div>
+        <div id="userPlaceMore51" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser41">
+            </table>
+        </div>
+        <div id="userPlaceMore52" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser42">
+            </table>
+        </div>
+        <div id="userPlaceMore53" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser43">
+            </table>
+        </div>
+        <div id="userPlaceMore54" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser44">
+            </table>
+        </div>
+        <div id="userPlaceMore55" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser45">
+            </table>
+        </div>
+        <div id="userPlaceMore56" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser46">
+            </table>
+        </div>
+        <div id="userPlaceMore57" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser47">
+            </table>
+        </div>
+        <div id="userPlaceMore58" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser48">
+            </table>
+        </div>
+        <div id="userPlaceMore59" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser49">
+            </table>
+        </div>
+        <div id="userPlaceMore60" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser50">
+            </table>
+        </div>
+        <div id="userPlaceMore61" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser51">
+            </table>
+        </div>
+    </div>
+</div>
+<!--求职意向中期望职业的弹出界面-->
+<div id="expectIndustryAll">
+    <div id="expectIndustryMore">
+        <div id="expectIndustryMore1"><p>请选择期望职业：</p></div>
+        <div id="expectIndustryMore2">
+            <table class="canPick" id="canPick1">
+            </table>
+        </div>
+        <div id="expectIndustryMore31" class="expectIndustryMoreAll"  style="display: block">
+            <table class="canPick" id="canPick21">
+            </table>
+        </div>
+        <div id="expectIndustryMore32" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick22">
+            </table>
+        </div>
+        <div id="expectIndustryMore33" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick23">
+            </table>
+        </div>
+        <div id="expectIndustryMore34" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick24">
+            </table>
+        </div>
+        <div id="expectIndustryMore35" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick25">
+            </table>
+        </div>
+        <div id="expectIndustryMore36" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick26">
+            </table>
+        </div>
+        <div id="expectIndustryMore37" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick27">
+            </table>
+        </div>
+        <div id="expectIndustryMore38" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick28">
+            </table>
+        </div>
+        <div id="expectIndustryMore39" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick29">
+            </table>
+        </div>
+        <div id="expectIndustryMore40" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick30">
+            </table>
+        </div>
+    </div>
+</div>
+<!--期望城市选择-->
+<div id="expectCityAll">
+    <div id="expectCityMore">
+        <div id="expectCityMore1"><p>请选择期望城市：</p></div>
+        <div id="expectCityMore2">
+            <table class="canPick" id="expectCitycanPick1">
+            </table>
+        </div>
+        <div id="expectCityMore31" class="expectIndustryMoreAll" style="display: block">
+            <table class="canPick" id="canPickCity21">
+            </table>
+        </div>
+        <div id="expectCityMore32" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity22">
+            </table>
+        </div>
+        <div id="expectCityMore33" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity23">
+            </table>
+        </div>
+        <div id="expectCityMore34" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity24">
+            </table>
+        </div>
+        <div id="expectCityMore35" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity25">
+            </table>
+        </div>
+        <div id="expectCityMore36" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity26">
+            </table>
+        </div>
+        <div id="expectCityMore37" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity27">
+            </table>
+        </div>
+        <div id="expectCityMore38" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity28">
+            </table>
+        </div>
+        <div id="expectCityMore39" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity29">
+            </table>
+        </div>
+        <div id="expectCityMore40" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity30">
+            </table>
+        </div>
+        <div id="expectCityMore41" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity31">
+            </table>
+        </div>
+        <div id="expectCityMore42" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity32">
+            </table>
+        </div>
+        <div id="expectCityMore43" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity33">
+            </table>
+        </div>
+        <div id="expectCityMore44" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity34">
+            </table>
+        </div>
+        <div id="expectCityMore45" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity35">
+            </table>
+        </div>
+        <div id="expectCityMore46" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity36">
+            </table>
+        </div>
+        <div id="expectCityMore47" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity37">
+            </table>
+        </div>
+        <div id="expectCityMore48" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity38">
+            </table>
+        </div>
+        <div id="expectCityMore49" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity39">
+            </table>
+        </div>
+        <div id="expectCityMore50" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity40">
+            </table>
+        </div>
+        <div id="expectCityMore51" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity41">
+            </table>
+        </div>
+        <div id="expectCityMore52" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity42">
+            </table>
+        </div>
+        <div id="expectCityMore53" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity43">
+            </table>
+        </div>
+        <div id="expectCityMore54" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity44">
+            </table>
+        </div>
+        <div id="expectCityMore55" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity45">
+            </table>
+        </div>
+        <div id="expectCityMore56" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity46">
+            </table>
+        </div>
+        <div id="expectCityMore57" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity47">
+            </table>
+        </div>
+        <div id="expectCityMore58" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity48">
+            </table>
+        </div>
+        <div id="expectCityMore59" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity49">
+            </table>
+        </div>
+        <div id="expectCityMore60" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity50">
+            </table>
+        </div>
+        <div id="expectCityMore61" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity51">
+            </table>
+        </div>
+    </div>
+</div>
+<!--求职意向中期望城市的弹出界面-->
+
+</body>
+<script type="text/javascript">
+
+    function submitform(){}
+    //按钮点击变色功能
+    btns = document.querySelectorAll(".userMessageBtn");
+    for (let index = 0; index < btns.length; index++){
+        const btn = btns[index];
+        btn.onclick = () => {
+
+            if (btn.className == 'userMessageBtn'){
+                btn.className = 'resumeBtn';
+            }
+            else {
+                btn.className = 'userMessageBtn';
+            }
+        }
+    }
+
+    //手机号码验证
+    function checkMobile(){
+        var _phone = $("#userTel").val();
+        if(!(/^1[3|5|6|7|8|9][0-9]\d{8}$/.test(_phone))){
+            alert("电话号码填写有误，请重新填写");
+            window.location.history();
+            return false;
+        }
+    }
+
+    //邮箱验证
+    function checkEmail(){
+        var _email = $("#userEmail").val();
+        if(!(/^[a-zA-Z\d]+\@[a-zA-Z\d]{1,10}\.(com|cn|net)$/.test(_email))){
+            alert("电子邮箱填写有误，请重新填写");
+            window.location.history();
+            return false;
+        }
+    }
+
+    //第一个界面的内容
+    //按钮只能选一个
+    userSex1.addEventListener('click',function () {
+        userSex1.className = 'resumeBtn';
+        userSex2.className = 'userMessageBtn';
+        getUserSex.value = '男';
+    })
+    userSex2.addEventListener('click',function () {
+        userSex2.className = 'resumeBtn';
+        userSex1.className = 'userMessageBtn';
+        getUserSex.value = '女';
+    })
+    userIdent1.addEventListener('click',function () {
+        userIdent1.className = 'resumeBtn';
+        userIdent2.className = 'userMessageBtn';
+        getUserIdent.value = '职场人'
+    })
+    userIdent2.addEventListener('click',function () {
+        userIdent2.className = 'resumeBtn';
+        userIdent1.className = 'userMessageBtn';
+        getUserIdent.value = '学生'
+    })
+    certificate1.addEventListener('click',function () {
+        certificate1.className = 'resumeBtn';
+        certificate2.className = 'userMessageBtn';
+        getCertificate.value = '有';
+    })
+    certificate2.addEventListener('click',function () {
+        certificate2.className = 'resumeBtn';
+        certificate1.className = 'userMessageBtn';
+        getCertificate.value = '无';
+    })
+
+    //跳出居住城市界面
+    userPlace.addEventListener('click', function () {
+        if (userPlaceAll.style.display = 'none') {
+            userPlaceAll.style.display = 'block';
+        }
+    })
+    //跳出期望城市界面
+    expectCity.addEventListener('click', function () {
+        if (expectCityAll.style.display = 'none') {
+            expectCityAll.style.display = 'block';
+        }
+    })
+    var citys = ["北京","天津","河北省","山西省","内蒙古自治区","辽宁省","吉林省","黑龙江省","上海","江苏省","浙江省","安徽省","福建省","江西省","山东省","河南省","湖北省","湖南省","广东省","广西壮族自治区","海南省","重庆","四川省","贵州省","云南省","西藏自治区","陕西省","甘肃省","青海省","宁夏回族自治区","新疆维吾尔自治区"]
+    var str1 = ""
+    for (var i = 0; i < citys.length; i++){
+        str1 = "<tr><td class=\"canPickTex\" value="+citys[i]+">"+citys[i]+"</td></tr>"
+        $("#userPlacecanPick1").append(str1);
+    }
+    // 居住城市中的值
+    var Beijing = ["东城区","西城区","朝阳区","丰台区","石景山区","海淀区","门头沟区","房山区", "通州区","顺义区","昌平区"
+        ,"大兴区", "怀柔区","平谷区", "密云区","延庆区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Beijing.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Beijing[3*i]+"')\">"+Beijing[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Beijing[3*i+1]+"')\">"+Beijing[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Beijing[3*i+2]+"')\">"+Beijing[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser21").append(str);
+    }
+    var Tianjin = ["和平区","河东区","河西区","南开区","河北区","红桥区","东丽区","西青区", "津南区","北辰区","武清区","宝坻区", "滨海新区","宁河区", "静海区","蓟州区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Tianjin.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Tianjin[3*i]+"')\">"+Tianjin[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Tianjin[3*i+1]+"')\">"+Tianjin[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Tianjin[3*i+2]+"')\">"+Tianjin[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser22").append(str);
+    }
+    var Hebei = ["石家庄市","唐山市","秦皇岛市","邯郸市","邢台市","保定市","张家口市","承德市", "沧州市","廊坊市","衡水市",""]
+    var str = ""
+    for(var i = 0 ;i < Hebei.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Hebei[3*i]+"')\">"+Hebei[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hebei[3*i+1]+"')\">"+Hebei[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hebei[3*i+2]+"')\">"+Hebei[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser23").append(str);
+    }
+    var Shanxi = ["太原市","大同市","阳泉市","长治市","晋城市","朔州市","晋中市","运城市","忻州市","临汾市","吕梁市",""]
+    var str = ""
+    for(var i = 0 ;i < Hebei.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Shanxi[3*i]+"')\">"+Shanxi[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shanxi[3*i+1]+"')\">"+Shanxi[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shanxi[3*i+2]+"')\">"+Shanxi[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser24").append(str);
+    }
+    var Neimenggu = ["呼和浩特市","包头市","乌海市","赤峰市","通辽市","鄂尔多斯市","呼伦贝尔市","巴彦淖尔市", "乌兰察布市","兴安盟","锡林郭勒盟"
+        ,"阿拉善盟"]
+    var str = ""
+    for(var i = 0 ;i < Neimenggu.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Neimenggu[3*i]+"')\">"+Neimenggu[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Neimenggu[3*i+1]+"')\">"+Neimenggu[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Neimenggu[3*i+2]+"')\">"+Neimenggu[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser25").append(str);
+    }
+    var Liaoning = ["沈阳市","大连市","鞍山市","抚顺市","本溪市","丹东市","锦州市","营口市", "阜新市","辽阳市","盘锦市","铁岭市", "朝阳市","葫芦岛市",""]
+    var str = ""
+    for(var i = 0 ;i < Liaoning.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Liaoning[3*i]+"')\">"+Liaoning[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Liaoning[3*i+1]+"')\">"+Liaoning[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Liaoning[3*i+2]+"')\">"+Liaoning[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser26").append(str);
+    }
+
+    var Jilin = ["长春市","吉林市","四平市","辽源市","通化市","白山市","松原市","白城市", "延边朝鲜族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Jilin.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Jilin[3*i]+"')\">"+Jilin[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jilin[3*i+1]+"')\">"+Jilin[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jilin[3*i+2]+"')\">"+Jilin[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser27").append(str);
+    }
+    var Heilongjiang = ["哈尔滨市","齐齐哈尔市","鸡西市","鹤岗市","双鸭山市","大庆市","伊春市","佳木斯市", "七台河市","牡丹江市","黑河市","绥化市", "大兴安岭地区","",""]
+    var str = ""
+    for(var i = 0 ;i < Heilongjiang.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Heilongjiang[3*i]+"')\">"+Heilongjiang[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Heilongjiang[3*i+1]+"')\">"+Heilongjiang[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Heilongjiang[3*i+2]+"')\">"+Heilongjiang[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser28").append(str);
+    }
+    var Shanghai = ["黄浦区","徐汇区","长宁区","静安区","普陀区","虹口区","杨浦区","闵行区", "宝山区","嘉定区","浦东新区","金山区", "松江区","青浦区", "奉贤区","崇明区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Shanghai.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Shanghai[3*i]+"')\">"+Shanghai[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shanghai[3*i+1]+"')\">"+Shanghai[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shanghai[3*i+2]+"')\">"+Shanghai[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser29").append(str);
+    }
+    var Jiangsu = ["南京市","无锡市","徐州市","常州市","苏州市","南通市","连云港市","淮安市","盐城市","扬州市","镇江市","泰州市","宿迁市","",""]
+    var str = ""
+    for(var i = 0 ;i < Jiangsu.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Jiangsu[3*i]+"')\">"+Jiangsu[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jiangsu[3*i+1]+"')\">"+Jiangsu[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jiangsu[3*i+2]+"')\">"+Jiangsu[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser30").append(str);
+    }
+    var Zhejiang = ["杭州市","宁波市","温州市","嘉兴市","湖州市","绍兴市","金华市","衢州市", "舟山市","台州市","丽水市",""]
+    var str = ""
+    for(var i = 0 ;i < Zhejiang.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Zhejiang[3*i]+"')\">"+Zhejiang[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Zhejiang[3*i+1]+"')\">"+Zhejiang[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Zhejiang[3*i+2]+"')\">"+Zhejiang[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser31").append(str);
+    }
+    var Anhui = ["合肥市","芜湖市","蚌埠市","淮南市","马鞍山市","淮北市","铜陵市","安庆市", "黄山市","滁州市","阜阳市","宿州市", "六安市","亳州市", "池州市","宣城市","",""]
+    var str = ""
+    for(var i = 0 ;i < Anhui.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Anhui[3*i]+"')\">"+Anhui[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Anhui[3*i+1]+"')\">"+Anhui[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Anhui[3*i+2]+"')\">"+Anhui[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser32").append(str);
+    }
+    var Fujian = ["福州市","厦门市",  "莆田市","三明市","泉州市","漳州市","南平市","龙岩市","宁德市"]
+    var str = ""
+    for(var i = 0 ;i < Fujian.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Fujian[3*i]+"')\">"+Fujian[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Fujian[3*i+1]+"')\">"+Fujian[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Fujian[3*i+2]+"')\">"+Fujian[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser33").append(str);
+    }
+    var Jiangxi = ["南昌市","景德镇市","萍乡市","九江市","新余市","鹰潭市","赣州市","吉安市","宜春市","抚州市","上饶市",""]
+    var str = ""
+    for(var i = 0 ;i < Jiangxi.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Jiangxi[3*i]+"')\">"+Jiangxi[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jiangxi[3*i+1]+"')\">"+Jiangxi[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jiangxi[3*i+2]+"')\">"+Jiangxi[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser34").append(str);
+    }
+    var Shandong = ["济南市","青岛市","淄博市","枣庄市","东营市","烟台市","潍坊市","济宁市","泰安市","威海市","日照市","临沂市","德州市","聊城市","滨州市","菏泽市","",""]
+    var str = ""
+    for(var i = 0 ;i < Shandong.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Shandong[3*i]+"')\">"+Shandong[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shandong[3*i+1]+"')\">"+Shandong[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shandong[3*i+2]+"')\">"+Shandong[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser35").append(str);
+    }
+    var Henan = ["郑州市","开封市","洛阳市","平顶山市","安阳市","鹤壁市","新乡市","焦作市","济源市","濮阳市","许昌市","漯河市","三门峡市", "南阳市","商丘市","信阳市","周口市","驻马店市"]
+    var str = ""
+    for(var i = 0 ;i < Henan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Henan[3*i]+"')\">"+Henan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Henan[3*i+1]+"')\">"+Henan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Henan[3*i+2]+"')\">"+Henan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser36").append(str);
+    }
+    var Hubei = ["武汉市","黄石市",  "十堰市","宜昌市","襄阳市","鄂州市","荆门市","孝感市","荆州市","黄冈市","咸宁市",  "随州市","恩施土家族苗族自治州","仙桃市","潜江市",  "天门市","神农架林区",""]
+    var str = ""
+    for(var i = 0 ;i < Hubei.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Hubei[3*i]+"')\">"+Hubei[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hubei[3*i+1]+"')\">"+Hubei[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hubei[3*i+2]+"')\">"+Hubei[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser37").append(str);
+    }
+    var Hunan = ["长沙市","株洲市",  "湘潭市","衡阳市","邵阳市","岳阳市","常德市","张家界市",  "益阳市","郴州市","永州市",  "怀化市","娄底市","湘西土家族苗族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Hunan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Hunan[3*i]+"')\">"+Hunan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hunan[3*i+1]+"')\">"+Hunan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hunan[3*i+2]+"')\">"+Hunan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser38").append(str);
+    }
+    var Guangdong = ["广州市","韶关市","深圳市","珠海市","汕头市","佛山市","江门市","湛江市","茂名市","肇庆市","惠州市","梅州市","汕尾市","河源市","阳江市","清远市","东莞市","中山市","东沙群岛","潮州市","揭阳市","云浮市","",""]
+    var str = ""
+    for(var i = 0 ;i < Guangdong.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Guangdong[3*i]+"')\">"+Guangdong[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guangdong[3*i+1]+"')\">"+Guangdong[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guangdong[3*i+2]+"')\">"+Guangdong[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser39").append(str);
+    }
+    var Guangxi = ["南宁市","柳州市","桂林市","梧州市","北海市","防城港市","钦州市","贵港市","玉林市","百色市","贺州市","河池市","来宾市","崇左市",""]
+    var str = ""
+    for(var i = 0 ;i < Guangxi.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Guangxi[3*i]+"')\">"+Guangxi[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guangxi[3*i+1]+"')\">"+Guangxi[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guangxi[3*i+2]+"')\">"+Guangxi[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser40").append(str);
+    }
+    var Hainan = ["海口市","三亚市","三沙市","五指山市","琼海市","儋州市","文昌市","万宁市","东方市","定安县","屯昌县","澄迈县","临高县","白沙黎族自治县","昌江黎族自治县","乐东黎族自治县","陵水黎族自治县","保亭黎族苗族自治县","琼中黎族苗族自治县","",""]
+    var str = ""
+    for(var i = 0 ;i < Hainan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Hainan[3*i]+"')\">"+Hainan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hainan[3*i+1]+"')\">"+Hainan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hainan[3*i+2]+"')\">"+Hainan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser41").append(str);
+    }
+    var Chongqing = ["万州区","涪陵区","渝中区","大渡口区","江北区","沙坪坝区","九龙坡区","南岸区","北碚区","渝北区","巴南区","黔江区","长寿区","綦江区","潼南区","铜梁区","大足区","荣昌区","璧山区","梁平区","城口县","丰都县","垫江县","武隆区","忠县","开州区","云阳县","奉节县","巫山县","巫溪县","石柱土家族自治县","秀山土家族苗族自治县","酉阳土家族苗族自治县","彭水苗族土家族自治县","江津区","合川区","永川区","南川区","其它区"]
+    var str = ""
+    for(var i = 0 ;i < Chongqing.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Chongqing[3*i]+"')\">"+Chongqing[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Chongqing[3*i+1]+"')\">"+Chongqing[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Chongqing[3*i+2]+"')\">"+Chongqing[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser42").append(str);
+    }
+    var Sichuan = ["成都市","自贡市","攀枝花市","泸州市","德阳市","绵阳市","广元市","遂宁市","内江市","乐山市","南充市","眉山市","宜宾市","广安市","达州市","雅安市","巴中市","资阳市","阿坝藏族羌族自治州","甘孜藏族自治州","凉山彝族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Sichuan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Sichuan[3*i]+"')\">"+Sichuan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Sichuan[3*i+1]+"')\">"+Sichuan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Sichuan[3*i+2]+"')\">"+Sichuan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser43").append(str);
+    }
+    var Guizhou = ["贵阳市","六盘水市","遵义市","安顺市","铜仁市","黔西南布依族苗族自治州","毕节市","黔东南苗族侗族自治州","黔南布依族苗族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Guizhou.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Guizhou[3*i]+"')\">"+Guizhou[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guizhou[3*i+1]+"')\">"+Guizhou[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guizhou[3*i+2]+"')\">"+Guizhou[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser44").append(str);
+    }
+    var Yunnan = ["昆明市","曲靖市","玉溪市","保山市","昭通市","丽江市","普洱市","临沧市","楚雄彝族自治州","红河哈尼族彝族自治州","文山壮族苗族自治州","西双版纳傣族自治州","大理白族自治州","德宏傣族景颇族自治州","怒江傈僳族自治州","迪庆藏族自治州","",""]
+    var str = ""
+    for(var i = 0 ;i < Yunnan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Yunnan[3*i]+"')\">"+Yunnan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Yunnan[3*i+1]+"')\">"+Yunnan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Yunnan[3*i+2]+"')\">"+Yunnan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser45").append(str);
+    }
+    var Xizang = ["拉萨市","昌都市","山南市","日喀则市","那曲市","阿里地区","林芝市","",""]
+    var str = ""
+    for(var i = 0 ;i < Xizang.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Xizang[3*i]+"')\">"+Xizang[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Xizang[3*i+1]+"')\">"+Xizang[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Xizang[3*i+2]+"')\">"+Xizang[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser46").append(str);
+    }
+    var shanxi2 = ["西安市","铜川市","宝鸡市","咸阳市","渭南市","延安市","汉中市","榆林市","安康市","商洛市","",""]
+    var str = ""
+    for(var i = 0 ;i < shanxi2.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+shanxi2[3*i]+"')\">"+shanxi2[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+shanxi2[3*i+1]+"')\">"+shanxi2[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+shanxi2[3*i+2]+"')\">"+shanxi2[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser47").append(str);
+    }
+    var Gansu = ["兰州市","嘉峪关市","金昌市","白银市","天水市","武威市","张掖市",  "平凉市","酒泉市","庆阳市","定西市","陇南市","临夏回族自治州","甘南藏族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Gansu.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Gansu[3*i]+"')\">"+Gansu[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Gansu[3*i+1]+"')\">"+Gansu[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Gansu[3*i+2]+"')\">"+Gansu[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser48").append(str);
+    }
+    var Qinghai = ["西宁市","海东市","海北藏族自治州","黄南藏族自治州","海南藏族自治州","果洛藏族自治州","玉树藏族自治州","海西蒙古族藏族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Qinghai.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Qinghai[3*i]+"')\">"+Qinghai[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Qinghai[3*i+1]+"')\">"+Qinghai[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Qinghai[3*i+2]+"')\">"+Qinghai[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser49").append(str);
+    }
+    var Ningxia = ["银川市","石嘴山市","吴忠市","固原市","中卫市",""]
+    var str = ""
+    for(var i = 0 ;i < Ningxia.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Ningxia[3*i]+"')\">"+Ningxia[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Ningxia[3*i+1]+"')\">"+Ningxia[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Ningxia[3*i+2]+"')\">"+Ningxia[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser50").append(str);
+    }
+    var Xinjiang = ["乌鲁木齐市","克拉玛依市","吐鲁番市","哈密市","昌吉回族自治州","博尔塔拉蒙古自治州","巴音郭楞蒙古自治州","阿克苏地区","克孜勒苏柯尔克孜自治州","喀什地区","和田地区","伊犁哈萨克自治州","塔城地区","阿勒泰地区","可克达拉市","石河子市","阿拉尔市","图木舒克市","五家渠市","北屯市","铁门关市","双河市","昆玉市",""]
+    var str = ""
+    for(var i = 0 ;i < Xinjiang.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Xinjiang[3*i]+"')\">"+Xinjiang[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Xinjiang[3*i+1]+"')\">"+Xinjiang[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Xinjiang[3*i+2]+"')\">"+Xinjiang[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser51").append(str);
+    }
+    //居住城市弹出框点击变色与跳转界面
+    var tds = document.querySelectorAll(".canPickTex");
+    var divs = document.querySelectorAll(".userPlaceMoreAll")
+    for (var i = 0; i < tds.length; i++) {
+        tds[i].setAttribute('index', i);
+        tds[i].onclick = function () {
+
+            for (var i = 0; i < tds.length; i++) {
+                tds[i].className = ' ';
+            }
+            // 留下我自己
+            this.className = 'canPickTex1';
+            // 2. 下面的显示内容模块
+            var index = this.getAttribute('index');
+            // 干掉所有人 让其余的item 这些div 隐藏
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.display = 'none';
+            }
+            // 留下我自己 让对应的item 显示出来
+            divs[index].style.display = 'block';
+        }
+    }
+    var citys2 = ["北京","天津","河北省","山西省","内蒙古自治区","辽宁省","吉林省","黑龙江省","上海","江苏省","浙江省","安徽省","福建省","江西省","山东省","河南省","湖北省","湖南省","广东省","广西壮族自治区","海南省","重庆","四川省","贵州省","云南省","西藏自治区","陕西省","甘肃省","青海省","宁夏回族自治区","新疆维吾尔自治区"]
+    var str2 = ""
+    for (var i = 0; i < citys2.length; i++){
+        str2 = "<tr><td class=\"canPickTex\" value="+citys2[i]+">"+citys2[i]+"</td></tr>"
+        $("#expectCitycanPick1").append(str2);
+    }
+    // 居住城市中的值
+    var Beijing1 = ["东城区","西城区","朝阳区","丰台区","石景山区","海淀区","门头沟区","房山区", "通州区","顺义区","昌平区"
+        ,"大兴区", "怀柔区","平谷区", "密云区","延庆区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Beijing.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Beijing1[3*i]+"')\">"+Beijing1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Beijing1[3*i+1]+"')\">"+Beijing1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Beijing1[3*i+2]+"')\">"+Beijing1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity21").append(str);
+    }
+    var Tianjin1 = ["和平区","河东区","河西区","南开区","河北区","红桥区","东丽区","西青区", "津南区","北辰区","武清区","宝坻区", "滨海新区","宁河区", "静海区","蓟州区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Tianjin1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Tianjin1[3*i]+"')\">"+Tianjin1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Tianjin1[3*i+1]+"')\">"+Tianjin1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Tianjin1[3*i+2]+"')\">"+Tianjin1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity22").append(str);
+    }
+    var Hebei1 = ["石家庄市","唐山市","秦皇岛市","邯郸市","邢台市","保定市","张家口市","承德市", "沧州市","廊坊市","衡水市",""]
+    var str = ""
+    for(var i = 0 ;i < Hebei1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Hebei1[3*i]+"')\">"+Hebei1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hebei1[3*i+1]+"')\">"+Hebei1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hebei1[3*i+2]+"')\">"+Hebei1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity23").append(str);
+    }
+    var Shanxi1 = ["太原市","大同市","阳泉市","长治市","晋城市","朔州市","晋中市","运城市","忻州市","临汾市","吕梁市",""]
+    var str = ""
+    for(var i = 0 ;i < Hebei1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Shanxi1[3*i]+"')\">"+Shanxi1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanxi1[3*i+1]+"')\">"+Shanxi1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanxi1[3*i+2]+"')\">"+Shanxi1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity24").append(str);
+    }
+    var Neimenggu1 = ["呼和浩特市","包头市","乌海市","赤峰市","通辽市","鄂尔多斯市","呼伦贝尔市","巴彦淖尔市", "乌兰察布市","兴安盟","锡林郭勒盟"
+        ,"阿拉善盟"]
+    var str = ""
+    for(var i = 0 ;i < Neimenggu1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Neimenggu1[3*i]+"')\">"+Neimenggu1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Neimenggu1[3*i+1]+"')\">"+Neimenggu1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Neimenggu1[3*i+2]+"')\">"+Neimenggu1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity25").append(str);
+    }
+    var Liaoning1 = ["沈阳市","大连市","鞍山市","抚顺市","本溪市","丹东市","锦州市","营口市", "阜新市","辽阳市","盘锦市","铁岭市", "朝阳市","葫芦岛市",""]
+    var str = ""
+    for(var i = 0 ;i < Liaoning1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Liaoning1[3*i]+"')\">"+Liaoning1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Liaoning1[3*i+1]+"')\">"+Liaoning1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Liaoning1[3*i+2]+"')\">"+Liaoning1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity26").append(str);
+    }
+
+    var Jilin11 = ["长春市","吉林市","四平市","辽源市","通化市","白山市","松原市","白城市", "延边朝鲜族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Jilin11.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Jilin11[3*i]+"')\">"+Jilin11[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jilin11[3*i+1]+"')\">"+Jilin11[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jilin11[3*i+2]+"')\">"+Jilin11[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity27").append(str);
+    }
+    var Heilongjiang1 = ["哈尔滨市","齐齐哈尔市","鸡西市","鹤岗市","双鸭山市","大庆市","伊春市","佳木斯市", "七台河市","牡丹江市","黑河市","绥化市", "大兴安岭地区","",""]
+    var str = ""
+    for(var i = 0 ;i < Heilongjiang1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Heilongjiang1[3*i]+"')\">"+Heilongjiang1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Heilongjiang1[3*i+1]+"')\">"+Heilongjiang1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Heilongjiang1[3*i+2]+"')\">"+Heilongjiang1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity28").append(str);
+    }
+    var Shanghai1 = ["黄浦区","徐汇区","长宁区","静安区","普陀区","虹口区","杨浦区","闵行区", "宝山区","嘉定区","浦东新区","金山区", "松江区","青浦区", "奉贤区","崇明区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Shanghai1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Shanghai1[3*i]+"')\">"+Shanghai1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanghai1[3*i+1]+"')\">"+Shanghai1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanghai1[3*i+2]+"')\">"+Shanghai1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity29").append(str);
+    }
+    var Jiangsu1 = ["南京市","无锡市","徐州市","常州市","苏州市","南通市","连云港市","淮安市","盐城市","扬州市","镇江市","泰州市","宿迁市","",""]
+    var str = ""
+    for(var i = 0 ;i < Jiangsu1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Jiangsu1[3*i]+"')\">"+Jiangsu1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jiangsu1[3*i+1]+"')\">"+Jiangsu1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jiangsu1[3*i+2]+"')\">"+Jiangsu1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity30").append(str);
+    }
+    var Zhejiang1 = ["杭州市","宁波市","温州市","嘉兴市","湖州市","绍兴市","金华市","衢州市", "舟山市","台州市","丽水市",""]
+    var str = ""
+    for(var i = 0 ;i < Zhejiang1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Zhejiang1[3*i]+"')\">"+Zhejiang1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Zhejiang1[3*i+1]+"')\">"+Zhejiang1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Zhejiang1[3*i+2]+"')\">"+Zhejiang1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity31").append(str);
+    }
+    var Anhui1 = ["合肥市","芜湖市","蚌埠市","淮南市","马鞍山市","淮北市","铜陵市","安庆市", "黄山市","滁州市","阜阳市","宿州市", "六安市","亳州市", "池州市","宣城市","",""]
+    var str = ""
+    for(var i = 0 ;i < Anhui1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Anhui1[3*i]+"')\">"+Anhui1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Anhui1[3*i+1]+"')\">"+Anhui1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Anhui1[3*i+2]+"')\">"+Anhui1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity32").append(str);
+    }
+    var Fujian1 = ["福州市","厦门市",  "莆田市","三明市","泉州市","漳州市","南平市","龙岩市","宁德市"]
+    var str = ""
+    for(var i = 0 ;i < Fujian1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Fujian1[3*i]+"')\">"+Fujian1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Fujian1[3*i+1]+"')\">"+Fujian1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Fujian1[3*i+2]+"')\">"+Fujian1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity33").append(str);
+    }
+    var Jiangxi1 = ["南昌市","景德镇市","萍乡市","九江市","新余市","鹰潭市","赣州市","吉安市","宜春市","抚州市","上饶市",""]
+    var str = ""
+    for(var i = 0 ;i < Jiangxi1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Jiangxi1[3*i]+"')\">"+Jiangxi1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jiangxi1[3*i+1]+"')\">"+Jiangxi1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jiangxi1[3*i+2]+"')\">"+Jiangxi1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity34").append(str);
+    }
+    var Shandong1 = ["济南市","青岛市","淄博市","枣庄市","东营市","烟台市","潍坊市","济宁市","泰安市","威海市","日照市","临沂市","德州市","聊城市","滨州市","菏泽市","",""]
+    var str = ""
+    for(var i = 0 ;i < Shandong1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Shandong1[3*i]+"')\">"+Shandong1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shandong1[3*i+1]+"')\">"+Shandong1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shandong1[3*i+2]+"')\">"+Shandong1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity35").append(str);
+    }
+    var Henan1 = ["郑州市","开封市","洛阳市","平顶山市","安阳市","鹤壁市","新乡市","焦作市","济源市","濮阳市","许昌市","漯河市","三门峡市", "南阳市","商丘市","信阳市","周口市","驻马店市"]
+    var str = ""
+    for(var i = 0 ;i < Henan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Henan1[3*i]+"')\">"+Henan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Henan1[3*i+1]+"')\">"+Henan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Henan1[3*i+2]+"')\">"+Henan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity36").append(str);
+    }
+    var Hubei1 = ["武汉市","黄石市",  "十堰市","宜昌市","襄阳市","鄂州市","荆门市","孝感市","荆州市","黄冈市","咸宁市",  "随州市","恩施土家族苗族自治州","仙桃市","潜江市",  "天门市","神农架林区",""]
+    var str = ""
+    for(var i = 0 ;i < Hubei1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Hubei1[3*i]+"')\">"+Hubei1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hubei1[3*i+1]+"')\">"+Hubei1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hubei1[3*i+2]+"')\">"+Hubei1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity37").append(str);
+    }
+    var Hunan1 = ["长沙市","株洲市",  "湘潭市","衡阳市","邵阳市","岳阳市","常德市","张家界市",  "益阳市","郴州市","永州市",  "怀化市","娄底市","湘西土家族苗族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Hunan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Hunan1[3*i]+"')\">"+Hunan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hunan1[3*i+1]+"')\">"+Hunan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hunan1[3*i+2]+"')\">"+Hunan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity38").append(str);
+    }
+    var Guangdong1 = ["广州市","韶关市","深圳市","珠海市","汕头市","佛山市","江门市","湛江市","茂名市","肇庆市","惠州市","梅州市","汕尾市","河源市","阳江市","清远市","东莞市","中山市","东沙群岛","潮州市","揭阳市","云浮市","",""]
+    var str = ""
+    for(var i = 0 ;i < Guangdong1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Guangdong1[3*i]+"')\">"+Guangdong1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guangdong1[3*i+1]+"')\">"+Guangdong1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guangdong1[3*i+2]+"')\">"+Guangdong1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity39").append(str);
+    }
+    var Guangxi1 = ["南宁市","柳州市","桂林市","梧州市","北海市","防城港市","钦州市","贵港市","玉林市","百色市","贺州市","河池市","来宾市","崇左市",""]
+    var str = ""
+    for(var i = 0 ;i < Guangxi1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Guangxi1[3*i]+"')\">"+Guangxi1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guangxi1[3*i+1]+"')\">"+Guangxi1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guangxi1[3*i+2]+"')\">"+Guangxi1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity40").append(str);
+    }
+    var Hainan1 = ["海口市","三亚市","三沙市","五指山市","琼海市","儋州市","文昌市","万宁市","东方市","定安县","屯昌县","澄迈县","临高县","白沙黎族自治县","昌江黎族自治县","乐东黎族自治县","陵水黎族自治县","保亭黎族苗族自治县","琼中黎族苗族自治县","",""]
+    var str = ""
+    for(var i = 0 ;i < Hainan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Hainan1[3*i]+"')\">"+Hainan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hainan1[3*i+1]+"')\">"+Hainan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hainan1[3*i+2]+"')\">"+Hainan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity41").append(str);
+    }
+    var Chongqing1 = ["万州区","涪陵区","渝中区","大渡口区","江北区","沙坪坝区","九龙坡区","南岸区","北碚区","渝北区","巴南区","黔江区","长寿区","綦江区","潼南区","铜梁区","大足区","荣昌区","璧山区","梁平区","城口县","丰都县","垫江县","武隆区","忠县","开州区","云阳县","奉节县","巫山县","巫溪县","石柱土家族自治县","秀山土家族苗族自治县","酉阳土家族苗族自治县","彭水苗族土家族自治县","江津区","合川区","永川区","南川区","其它区"]
+    var str = ""
+    for(var i = 0 ;i < Chongqing1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Chongqing1[3*i]+"')\">"+Chongqing1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Chongqing1[3*i+1]+"')\">"+Chongqing1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Chongqing1[3*i+2]+"')\">"+Chongqing1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity42").append(str);
+    }
+    var Sichuan1 = ["成都市","自贡市","攀枝花市","泸州市","德阳市","绵阳市","广元市","遂宁市","内江市","乐山市","南充市","眉山市","宜宾市","广安市","达州市","雅安市","巴中市","资阳市","阿坝藏族羌族自治州","甘孜藏族自治州","凉山彝族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Sichuan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Sichuan1[3*i]+"')\">"+Sichuan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Sichuan1[3*i+1]+"')\">"+Sichuan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Sichuan1[3*i+2]+"')\">"+Sichuan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity43").append(str);
+    }
+    var Guizhou1 = ["贵阳市","六盘水市","遵义市","安顺市","铜仁市","黔西南布依族苗族自治州","毕节市","黔东南苗族侗族自治州","黔南布依族苗族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Guizhou1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Guizhou1[3*i]+"')\">"+Guizhou1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guizhou1[3*i+1]+"')\">"+Guizhou1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guizhou1[3*i+2]+"')\">"+Guizhou1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity44").append(str);
+    }
+    var Yunnan1 = ["昆明市","曲靖市","玉溪市","保山市","昭通市","丽江市","普洱市","临沧市","楚雄彝族自治州","红河哈尼族彝族自治州","文山壮族苗族自治州","西双版纳傣族自治州","大理白族自治州","德宏傣族景颇族自治州","怒江傈僳族自治州","迪庆藏族自治州","",""]
+    var str = ""
+    for(var i = 0 ;i < Yunnan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Yunnan1[3*i]+"')\">"+Yunnan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Yunnan1[3*i+1]+"')\">"+Yunnan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Yunnan1[3*i+2]+"')\">"+Yunnan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity45").append(str);
+    }
+    var Xizang1 = ["拉萨市","昌都市","山南市","日喀则市","那曲市","阿里地区","林芝市","",""]
+    var str = ""
+    for(var i = 0 ;i < Xizang1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Xizang1[3*i]+"')\">"+Xizang1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Xizang1[3*i+1]+"')\">"+Xizang1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Xizang1[3*i+2]+"')\">"+Xizang1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity46").append(str);
+    }
+    var Shanxi12 = ["西安市","铜川市","宝鸡市","咸阳市","渭南市","延安市","汉中市","榆林市","安康市","商洛市","",""]
+    var str = ""
+    for(var i = 0 ;i < Shanxi12.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Shanxi12[3*i]+"')\">"+Shanxi12[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanxi12[3*i+1]+"')\">"+Shanxi12[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanxi12[3*i+2]+"')\">"+Shanxi12[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity47").append(str);
+    }
+    var Gansu1 = ["兰州市","嘉峪关市","金昌市","白银市","天水市","武威市","张掖市",  "平凉市","酒泉市","庆阳市","定西市","陇南市","临夏回族自治州","甘南藏族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Gansu1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Gansu1[3*i]+"')\">"+Gansu1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Gansu1[3*i+1]+"')\">"+Gansu1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Gansu1[3*i+2]+"')\">"+Gansu1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity48").append(str);
+    }
+    var Qinghai1 = ["西宁市","海东市","海北藏族自治州","黄南藏族自治州","海南藏族自治州","果洛藏族自治州","玉树藏族自治州","海西蒙古族藏族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Qinghai1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Qinghai1[3*i]+"')\">"+Qinghai1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Qinghai1[3*i+1]+"')\">"+Qinghai1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Qinghai1[3*i+2]+"')\">"+Qinghai1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity49").append(str);
+    }
+    var Ningxia1 = ["银川市","石嘴山市","吴忠市","固原市","中卫市",""]
+    var str = ""
+    for(var i = 0 ;i < Ningxia1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Ningxia1[3*i]+"')\">"+Ningxia1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Ningxia1[3*i+1]+"')\">"+Ningxia1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Ningxia1[3*i+2]+"')\">"+Ningxia1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity50").append(str);
+    }
+    var Xinjiang1 = ["乌鲁木齐市","克拉玛依市","吐鲁番市","哈密市","昌吉回族自治州","博尔塔拉蒙古自治州","巴音郭楞蒙古自治州","阿克苏地区","克孜勒苏柯尔克孜自治州","喀什地区","和田地区","伊犁哈萨克自治州","塔城地区","阿勒泰地区","可克达拉市","石河子市","阿拉尔市","图木舒克市","五家渠市","北屯市","铁门关市","双河市","昆玉市",""]
+    var str = ""
+    for(var i = 0 ;i < Xinjiang1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Xinjiang1[3*i]+"')\">"+Xinjiang1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Xinjiang1[3*i+1]+"')\">"+Xinjiang1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Xinjiang1[3*i+2]+"')\">"+Xinjiang1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity51").append(str);
+    }
+    //期望城市弹出框点击变色与跳转界面
+    var tds1 = document.querySelectorAll(".canPickTex");
+    var divs1 = document.querySelectorAll(".expectCityMoreAll")
+    for (var i = 0; i < tds1.length; i++) {
+        tds1[i].setAttribute('index', i);
+        tds1[i].onclick = function () {
+
+            for (var i = 0; i < tds1.length; i++) {
+                tds1[i].className = ' ';
+            }
+            // 留下我自己
+            this.className = 'canPickTex1';
+            // 2. 下面的显示内容模块
+            var index = this.getAttribute('index');
+            // 干掉所有人 让其余的item 这些div 隐藏
+            for (var i = 0; i < divs1.length; i++) {
+                divs1[i].style.display = 'none';
+            }
+            // 留下我自己 让对应的item 显示出来
+            divs1[index].style.display = 'block';
+        }
+    }
+    //获取期望城市选择并且关闭弹出界面
+    function changeExpectCity(value){
+        console.log('ok')
+        console.log(value)
+        expectCityAll.style.display = 'none';
+        document.getElementById('expectCity').value = value;
+    }
+    //获取居住城市选择并且关闭弹出界面
+    function changeUserPlace(value){
+        console.log('ok')
+        console.log(value)
+        userPlaceAll.style.display = 'none';
+        document.getElementById('userPlace').value = value;
+    }
+    //第二个界面的内容
+
+    //到岗时间下拉框
+    /* workTime.addEventListener('click', function () {
+         workTime.style.display = 'none';
+         workTime1.style.display = 'block';
+     })
+ */
+    //跳出期望职业界面
+    expectJob.addEventListener('click', function () {
+        if (expectIndustryAll.style.display = 'none') {
+            expectIndustryAll.style.display = 'block';
+        }
+    })
+    var jobs = ["开发","智能机器人","人工智能","游戏","测试","运维/技术支持","大数据","产品","运营","技术管理"]
+    var str4 = ""
+    for (var i = 0; i < jobs.length; i++){
+        str4 = "<tr><td class=\"canPickTex\" value="+jobs[i]+">"+jobs[i]+"</td></tr>"
+        $("#canPick1").append(str4);
+    }
+    // 期望职位中的值
+    var exploit = ["Java开发工程师","PHP开发工程师","C/C++开发工程师", "Python开发工程师",".NET开发工程师","C#开发工程师", "Ruby开发工程师","Go开发工程师","大数据开发工程师","Hadoop工程师","爬虫开发工程师","脚本开发工程师","多媒体开发工程师","GIS工程师","全栈工程师", "ERP技术开发","区块链开发","高级软件工程师","软件工程师","系统架构设计师", "系统分析员", "技术文员/助理","技术文档工程师", "Android开发工程师","iOS开发工程师","小程序开发工程师","移动开发工程师","Web前端开发","HTML5开发工程师","其他"]
+    var str5 = ""
+    for(var i = 0 ;i < exploit.length/3;i++){
+        str5 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+exploit[3*i]+"')\">"+exploit[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+exploit[3*i+1]+"')\">"+exploit[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+exploit[3*i+2]+"')\">"+exploit[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick21").append(str5);
+    }
+    var robot = ["自动化测试工程师","硬件测试工程师","项目经理","SLAM定位导航高级算法工程师","云端UE4高级算法工程师","云端UE4高级建模工程师", "机械臂控制算法工程师","视觉算法工程师","结构工程师","IQC来料检验工程师","UE4高级3D建模工程师","高级机器人项目策划","私域增长专家","生产信息化系统工程师","BOM工程师", "IQC检验员","NPI测试工程师","工厂信息化技术","工厂产业自动化","",""]
+    var str6 = ""
+    for(var i = 0 ;i < robot.length/3;i++){
+        str6 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+robot[3*i]+"')\">"+robot[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+robot[3*i+1]+"')\">"+robot[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+robot[3*i+2]+"')\">"+robot[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick22").append(str6);
+    }
+    var ai = ["机器学习工程师","深度学习工程师","图像算法工程师","图像处理工程师","图像识别工程师","语音识别工程师","机器视觉工程师","自然语言处理(NLP)","算法工程师","推荐算法工程师","搜索算法工程师","其他"]
+    var str7 = ""
+    for(var i = 0 ;i < ai.length/3;i++){
+        str7 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+ai[3*i]+"')\">"+ai[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+ai[3*i+1]+"')\">"+ai[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+ai[3*i+2]+"')\">"+ai[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick23").append(str7);
+    }
+    var game = ["游戏策划师","游戏系统策划","游戏数值策划","游戏关卡策划","游戏文案策划/剧情策划","游戏界面设计师","游戏角色设计师","游戏特效设计师","UE4特效师","游戏动作设计师","游戏场景设计师","游戏原画师","游戏动画师","游戏开发工程师","Cocos2d-x开发工程师","Unity3d开发工程师","UE4开发工程师","游戏客户端开发工程师","游戏服务端开发工程师","游戏测试",  "游戏运营","电子竞技运营","其他",""]
+    var str8 = ""
+    for(var i = 0 ;i < game.length/3;i++){
+        str8 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+game[3*i]+"')\">"+game[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+game[3*i+1]+"')\">"+game[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+game[3*i+2]+"')\">"+game[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick24").append(str8);
+    }
+    var test = ["软件测试工程师","功能测试","性能测试","安全测试","自动化测试","移动端测试", "测试开发","测试总监","测试经理","测试主管","系统测试","标准化工程师","测试工程师","其他",""]
+    var str9 = ""
+    for(var i = 0 ;i < test.length/3;i++){
+        str9 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+test[3*i]+"')\">"+test[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+test[3*i+1]+"')\">"+test[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+test[3*i+2]+"')\">"+test[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick25").append(str9);
+    }
+    var technology = ["运维工程师","自动化运维工程师","系统工程师", "数据库工程师(DBA)","系统集成工程师","ERP实施顾问", "网络安全工程师","运维开发","网站维护工程师","技术支持/维护经理","技术支持/维护工程师","配置管理工程师","IT经理/IT主管","网络工程师(IT工程师)","网络管理(Helpdesk)","网络维修","手机维修","电脑维修","其他","",""]
+    var str10 = ""
+    for(var i = 0 ;i < technology.length/3;i++){
+        str10 = "<tr>"+
+            "<td onClick=\"technology('"+test[3*i]+"')\">"+technology[3*i]+"</td>\n" +
+            "<td onClick=\"technology('"+test[3*i+1]+"')\">"+technology[3*i+1]+"</td>\n" +
+            "<td onClick=\"technology('"+test[3*i+2]+"')\">"+technology[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick26").append(str10);
+    }
+    var bigdata = ["数据分析经理/主管","数据分析师","ETL开发工程师", "BI工程师","数据仓库工程师","数据采集工程师","数据建模工程师","数据治理工程师","数据标注师","密码技术应用员","电子数据取证分析师","其他"]
+    var str11 = ""
+    for(var i = 0 ;i < bigdata.length/3;i++){
+        str11 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+bigdata[3*i]+"')\">"+bigdata[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+bigdata[3*i+1]+"')\">"+bigdata[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+bigdata[3*i+2]+"')\">"+bigdata[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick27").append(str11);
+    }
+    var produce = ["产品总监","产品经理/主管","互联网产品经理","移动产品经理","用户产品经理","电商产品经理","产品专员","产品助理","需求工程师","其他","",""]
+    var str12 = ""
+    for(var i = 0 ;i < produce.length/3;i++){
+        str12 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+produce[3*i]+"')\">"+produce[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+produce[3*i+1]+"')\">"+produce[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+produce[3*i+2]+"')\">"+produce[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick28").append(str12);
+    }
+    var operation = ["运营总监","运营经理","运营主管","运营专员","运营助理","网站运营总监","网站运营经理/主管","网站运营专员","网络推广总监","网络推广经理/主管","网络推广专员","SEO/SEM","信息流优化师","新媒体运营","直播运营","微信运营","微博运营","用户运营","社区/社群运营","活动运营","内容运营","品类运营","数据运营","线下运营", "产品运营","网站编辑"   ,"内容审核","网站策划","其他",""]
+    var str13 = ""
+    for(var i = 0 ;i < operation.length/3;i++){
+        str13 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+operation[3*i]+"')\">"+operation[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+operation[3*i+1]+"')\">"+operation[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+operation[3*i+2]+"')\">"+operation[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick29").append(str13);
+    }
+    var management = ["首席技术执行官CTO","首席信息官CIO","技术总监/经理","项目总监","项目经理","项目主管","项目执行/协调人员","项目助理","其他"]
+    var str14 = ""
+    for(var i = 0 ;i < management.length/3;i++){
+        str14 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+management[3*i]+"')\">"+management[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+management[3*i+1]+"')\">"+management[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+management[3*i+2]+"')\">"+management[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick30").append(str14);
+    }
+    //期望职业弹出框点击变色与跳转界面
+    var tds = document.querySelectorAll(".canPickTex");
+    var divs = document.querySelectorAll(".expectIndustryMoreAll")
+    for (var i = 0; i < tds.length; i++) {
+        tds[i].setAttribute('index', i);
+        tds[i].onclick = function () {
+
+            for (var i = 0; i < tds.length; i++) {
+                tds[i].className = ' ';
+            }
+            // 留下我自己
+            this.className = 'canPickTex1';
+            // 2. 下面的显示内容模块
+            var index = this.getAttribute('index');
+            // 干掉所有人 让其余的item 这些div 隐藏
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.display = 'none';
+            }
+            // 留下我自己 让对应的item 显示出来
+            divs[index].style.display = 'block';
+        }
+    }
+    //获取期望职业选择并且关闭弹出界面
+    function changeExpectJob(value){
+        console.log('ok')
+        console.log(value)
+        expectIndustryAll.style.display = 'none';
+        document.getElementById('expectJob').value = value;
+    }
+    //点击文本框提示消失
+    userName.addEventListener('click', function () {
+        userName.placeholder = '';
+    })
+
+
+
+    //判断页面的表格不为空去下一步
+    userBut1.addEventListener('click',function () {
+        if (userName.value != '') {
+            if (getUserSex.value != ''){
+                if (getUserIdent.value !=''){
+                    if (userBirth.value != '') {
+                        if (userPlace.value != '') {
+                            if (userTel.value != '') {
+                                if (userEmail.value != '') {
+                                    resumeSection1.style.display = 'none';
+                                    resumeTit1.style.display = 'none';
+                                    resumeSection2.style.display = 'block';
+                                    resumeTit2.style.display = 'block';
+                                } else {
+                                    alert('电子邮箱不能为空');
+                                }
+                            } else {
+                                alert('电话号码不能为空');
+                            }
+                        } else {
+                            alert('现居住地不能为空');
+                        }
+                    } else {
+                        alert('出生年月不能为空');
+                    }
+                }else {
+                    alert('当前身份不能为空');
+                }
+            }else {
+                alert('性别不能为空');
+            }
+        }else {
+            alert('用户名不能为空');
+        }
+    })
+
+    userBut22.addEventListener('click',function () {
+        if (expectJob.value != '') {
+            if (expectCity.value != '') {
+                if (expectSalary1.value != '') {
+                    if (expectSalary2.value != '') {
+                        resumeSection2.style.display = 'none';
+                        resumeTit2.style.display = 'none';
+                        resumeSection3.style.display = 'block';
+                        resumeTit3.style.display = 'block';
+                    } else {
+                        alert('最高薪资要求不能为空');
+                    }
+                } else {
+                    alert('最低薪资要求不能为空');
+                }
+            } else {
+                alert('期望城市不能为空');
+            }
+        }else {
+            alert('期望职业不能为空');
+        }
+    })
+
+
+    userBut33.addEventListener('click',function (){
+        alert('添加成功');
+    })
+
+
+
+    userBut32.addEventListener('click',function () {
+        var userName = document.getElementById("userName").value
+        var gender = $("input[name='gender']:checked").val()
+        var identity = $("input[name='identity']:checked").val()
+        var userBirth = document.getElementById("userBirth").value
+        var userPlace = document.getElementById("userPlace").value
+        var userTel = document.getElementById("userTel").value
+        var userEmail = document.getElementById("userEmail").value
+        var expectJob = document.getElementById("expectJob").value
+        var expectCity = document.getElementById("expectCity").value
+        var expectSalary1 = document.getElementById("expectSalary1").value
+        var expectSalary2 = document.getElementById("expectSalary2").value
+        var nature_of_works = '';
+        $("input[name='nature_of_works']:checked").each(function(i) {
+            nature_of_works += $(this).val()+'/';
+        })
+        nature_of_works = nature_of_works.slice(0,nature_of_works.length-1)
+        var workTime1 = document.getElementById("workTime1").value
+        var school = document.getElementById("school").value
+        var topEducation = document.getElementById("topEducation").value
+        var majorStudy = document.getElementById("majorStudy").value
+        var schoolTime1 = document.getElementById("schoolTime1").value
+        var schoolTime2 = document.getElementById("schoolTime2").value
+        if (school.value != '') {
+            if (majorStudy.value != '') {
+                if (schoolTime1.value != '') {
+                    if (schoolTime2.value != '') {
+                        $.ajax({
+                            url: "/v2/recruit",
+                            type: "POST",
+                            dataType: "json",
+                            data: {
+                                "userName": userName,
+                                "gender": gender,
+                                "identity": identity,
+                                "userBirth": userBirth,
+                                "userPlace": userPlace,
+                                "userTel": userTel,
+                                "userEmail": userEmail,
+                                "expectJob": expectJob,
+                                "expectCity": expectCity,
+                                "expectSalary1": expectSalary1,
+                                "expectSalary2": expectSalary2,
+                                "nature_of_works": nature_of_works,
+                                "workTime1": workTime1,
+                                "school": school,
+                                "topEducation": topEducation,
+                                "majorStudy": majorStudy,
+                                "schoolTime1": schoolTime1,
+                                "schoolTime2": schoolTime2,
+                            },
+                            success:function (returnResult){
+                                alert('添加成功');
+                                var url = "/v4/home?pid=" + returnResult.ID
+                                window.location.href = url
+                            },
+                            error:function (){
+                                console.log("后端未传值")
+                            }
+                        })
+                    } else {
+                        alert('在校时间不能为空');
+                    }
+                } else {
+                    alert('在校时间不能为空');
+                }
+            } else {
+                alert('所学专业不能为空');
+            }
+        }else {
+            alert('学校名称不能为空');
+        }
+    })
+
+    userBut21.addEventListener('click',function () {
+        resumeSection2.style.display = 'none';
+        resumeTit2.style.display = 'none';
+        resumeSection1.style.display = 'block';
+        resumeTit1.style.display = 'block';
+    })
+    userBut31.addEventListener('click',function () {
+        resumeSection3.style.display = 'none';
+        resumeTit3.style.display = 'none';
+        resumeSection2.style.display = 'block';
+        resumeTit2.style.display = 'block';
+    })
+</script>
+</html>

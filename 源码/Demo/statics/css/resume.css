@@ -1,0 +1,696 @@
+﻿body{
+    background-color: #ffffff;
+}
+input{
+    outline: none;
+}
+#resumeAllBack{
+    width: 1100px;
+    height: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 30%;
+}
+#resumeAll{
+    width: 800px;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#resumeTit1,#resumeTit2,#resumeTit3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    color: #333333;
+}
+/*所有input输入框样式*/
+.userMessage{
+    background:white;
+    border-width: 0px;
+    outline-color: #008FE0;
+}
+
+/*.userMessage :focus{
+    background:white;
+    border: 1px solid #008FE0;
+}*/
+/*.userMessage.active{
+    background:white;
+    border: 1px solid #008FE0;
+}*/
+/*所有按钮样式*/
+.userMessageBtn{
+    background:white;
+    color: #999999;
+    border-width: 0px;
+}
+/*所有按钮被点击后的样式*/
+.resumeBtn{
+    background:white;
+    border: 1px solid #008FE0;
+    color: #008FE0;
+}
+
+/*#userBut1,userBut21,userBut22,userBut31,userBut32,userBut33 a{
+    text-decoration:none
+}*/
+#resumeSection1,#resumeTit1{
+    display: block;
+}
+#resumeSection2,#resumeTit2{
+    display: none;
+}
+#resumeSection3,#resumeTit3{
+    display: none;
+}
+/*取消input中type=month的样式没成功*/
+/*input[type=month]::-webkit-inner-spin-button{visibility: hidden;}*/
+
+/*以下是跳转的第一个界面的css样式*/
+#resumeSection1{
+    width: 700px;
+    height: 580px;
+    margin:0 auto;
+    background-color: rgba(248, 248, 248, 0.6);
+    border-radius: 50px;
+    box-shadow: none;
+    color: #999999;
+}
+#resumeSection1 table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#resumeSection1 td{
+    width: 120px;
+    height: 60px;
+}
+#userName{
+    width: 231px;
+    height: 34px;
+}
+.userBtn{
+    border:1px  solid;
+    color: #008FE0;
+}
+#userSex1{
+    width: 75px;
+    height: 34px;
+    display:block;
+    text-align: center;
+    float: left;
+    line-height:30px;
+}
+#userSex2{
+    width: 75px;
+    height: 34px;
+    margin-left: 15px;
+    display:block;
+    text-align: center;
+    float: left;
+    line-height:30px;
+}
+#userIdent1{
+    width: 75px;
+    height: 34px;
+    display:block;
+    text-align: center;
+    float: left;
+    line-height:30px;
+}
+#userIdent2{
+    width: 75px;
+    height: 34px;
+    display:block;
+    text-align: center;
+    margin-left: 15px;
+    float: left;
+    line-height:30px;
+}
+#userBirth{
+    width: 231px;
+    height: 34px;
+}
+#userPlace{
+    width: 407px;
+    height: 34px;
+}
+#userTel{
+    width: 306px;
+    height: 34px;
+}
+#userEmail{
+    width: 306px;
+    height: 34px;
+}
+#userBut1{
+    width: 140px;
+    height: 40px;
+    background: #32c3ee;
+    border-width: 0px;
+    border-radius: 5px;
+}
+#userBut1 a{
+    color: white;
+}
+.resumeBot1{
+    position:absolute;
+    bottom:80px;
+    left: 370px;
+}
+#resumeBotInput{
+    position:absolute;
+    bottom:20px;
+    left: 318px;
+}
+/*个人信息中所居住城市的弹出界面*/
+#userPlaceAll{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#userPlaceMore{
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color:rgba(255,255,255,1);
+}
+#userPlaceMore1{
+    width:798px;
+    height: 70px;
+    border: black 1px solid;
+}
+#userPlaceMore1 p{
+    padding-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#userPlaceMore2{
+    width: 150px;
+    height: 375px;
+    float: left;
+    overflow: auto;
+}
+#userPlaceMore2 table{
+    width: 130px;
+    height: 330px;
+    text-align: center;
+}
+#userPlaceMore2 tr{
+    border: 0px;
+}
+#userPlaceMore2 td{
+    border: 0px;
+}
+.expectIndustryMoreAll{
+    width: 650px;
+    height: 377px;
+    overflow: auto;
+    float: left;
+}
+.expectIndustryMoreAll table{
+    width: 633px;
+    height: 375px;
+    border-collapse:separate;
+    border-spacing:30px 30px;
+    text-align: center;
+}
+#userPlaceMore31{
+    display: block;
+}
+
+.expectIndustryMoreAll{display: none}
+/*鼠标悬停变背景色*/
+#userPlacecanPick1 tr td:hover{
+    background-color: #32c3ee;
+    color: white;
+}
+/*鼠标点击颜色*/
+.canPickTex1{
+    background-color: #32c3ee;
+    color: white;
+}
+.canPick tr td{
+    cursor: pointer;
+}
+.canPick tr td:hover{
+    color: #32c3ee;
+}
+
+/*以下是跳转的第二个界面的css样式*/
+#resumeSection2{
+    width: 700px;
+    height: 460px;
+    margin:0 auto;
+    background-color: rgba(248, 248, 248, 0.6);
+    border-radius: 50px;
+    box-shadow: none;
+    color: #999999;
+}
+#resumeSection2 table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#resumeSection2 td{
+    width: 120px;
+    height: 60px;
+}
+#expectJob{
+    width: 416px;
+    height: 34px;
+}
+#expectCity{
+    width: 416px;
+    height: 34px;
+}
+#expectSalary1{
+    width: 100px;
+    height: 34px;
+}
+#expectSalary2{
+    width: 100px;
+    height: 34px;
+}
+#workType1{
+    width: 90px;
+    height: 38px;
+    float: left;
+    display:block;
+    text-align: center;
+    line-height:30px;
+}
+#workType2{
+    width: 90px;
+    height: 38px;
+    display:block;
+    float: left;
+    text-align: center;
+    line-height:30px;
+    margin-left: 15px;
+}
+#workType3{
+    width: 90px;
+    height: 38px;
+    display:block;
+    float: left;
+    text-align: center;
+    line-height:30px;
+    margin-left: 15px;
+}
+#workTime{
+    width: 177px;
+    height: 34px;
+}
+#workTime1{
+    width: 177px;
+    height: 34px;
+}
+#resumeBotInput2{
+    position:absolute;
+    bottom:140px;
+    left: 220px;
+}
+#userBut21{
+    width: 140px;
+    height: 40px;
+    background: #32c3ee;
+    border-width: 0px;
+    color: white;
+    border-radius: 5px;
+}
+#userBut21 a{
+    color: white;
+}
+#userBut22{
+    width: 140px;
+    height: 40px;
+    background: #32c3ee;
+    border-width: 0px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 60px;
+}
+#userBut22 a{
+    color: white;
+}
+/*求职意向中期望职业的弹出界面*/
+#expectIndustryAll{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#expectIndustryMore{
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color:rgba(255,255,255,1);
+}
+#expectIndustryMore1{
+    width:800px;
+    height: 70px;
+    border: black 1px solid;
+}
+#expectIndustryMore1 p{
+    padding-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#expectIndustryMore2{
+    width: 150px;
+    height: 330px;
+    float: left;
+    overflow: auto;
+}
+#expectIndustryMore2 table{
+    width: 150px;
+    height: 330px;
+    text-align: center;
+    border-left: black 1px solid;
+    border-right: black 1px solid;
+    border-bottom: black 1px solid;
+}
+#expectIndustryMore2 tr{
+    border: 0px;
+}
+#expectIndustryMore2 td{
+    border: 0px;
+}
+#expectIndustryMore31{
+    display: block;
+}
+#expectIndustryMore .expectIndustryMoreAll{
+    height: 325px;
+}
+/*个人信息中期望居住城市的弹出界面*/
+#expectCityAll{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#expectCityMore{
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color:rgba(255,255,255,1);
+}
+#expectCityMore1{
+    width:798px;
+    height: 70px;
+    border: black 1px solid;
+}
+#expectCityMore1 p{
+    padding-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#expectCityMore2{
+    width: 150px;
+    height: 375px;
+    float: left;
+    overflow: auto;
+}
+#expectCityMore2 table{
+    width: 130px;
+    height: 330px;
+    text-align: center;
+}
+#expectCityMore2 tr{
+    border: 0px;
+}
+#expectCityMore2 td{
+    border: 0px;
+}
+.expectCityMoreAll{
+    width: 650px;
+    height: 377px;
+    overflow: auto;
+    float: left;
+}
+.expectCityMoreAll table{
+    width: 633px;
+    height: 375px;
+    border-collapse:separate;
+    border-spacing:30px 30px;
+    text-align: center;
+}
+#expectCityMore31{
+    display: block;
+}
+
+
+/*鼠标悬停变背景色*/
+#expectCitycanPick1 tr td:hover{
+    background-color:#20DDC6;
+    color: white;
+}
+/*鼠标点击颜色*/
+.canPickTex1{
+    background-color:#20DDC6;
+    color: white;
+}
+.canPick tr td{
+    cursor: pointer;
+}
+.canPick tr td:hover{
+    color: #5ED5C8;
+}
+/*鼠标悬停变背景色*/
+#canPick1 tr td:hover{
+    background-color:#20DDC6;
+    color: white;
+}
+/*鼠标点击颜色*/
+.canPickTex1{
+    background-color:#20DDC6;
+    color: white;
+}
+.canPick tr td{
+    cursor: pointer;
+}
+.canPick tr td:hover{
+    color: #5ED5C8;
+}
+/*以下是跳转的第三个界面的css样式*/
+#resumeSection3{
+    width: 700px;
+    height: 400px;
+    margin:0 auto;
+    background-color: rgba(248, 248, 248, 0.6);
+    border-radius: 50px;
+    box-shadow: none;
+    color: #999999;
+}
+#resumeSection3 table{
+    margin-left: 30px;
+    padding-top: 15px;
+}
+#resumeSection3 td{
+    width: 120px;
+    height: 60px;
+}
+#school{
+    width: 416px;
+    height: 34px;
+}
+#topEducation{
+    width: 200px;
+    height: 34px;
+}
+#majorStudy{
+    width: 416px;
+    height: 34px;
+}
+#schoolTime1{
+    width: 120px;
+    height: 34px;
+}
+#schoolTime2{
+    width: 120px;
+    height: 34px;
+}
+/*#certificate1{
+    width: 75px;
+    height: 36px;
+    display:block;
+    text-align: center;
+    float: left;
+    line-height:30px;
+}
+#certificate2{
+    width: 75px;
+    height: 36px;
+    display:block;
+    text-align: center;
+    margin-left: 15px;
+    float: left;
+    line-height:30px;
+}*/
+.resumeBot2{
+    position:absolute;
+    bottom:200px;
+    left: 370px;
+}
+.resumeBot3{
+    position:absolute;
+    bottom:260px;
+    left: 370px;
+}
+#resumeBotInput3{
+    position:absolute;
+    bottom:200px;
+    left: 135px;
+}
+#userBut31{
+    width: 140px;
+    height: 40px;
+    background: #5ED5C8;
+    border-width: 0px;
+    color: white;
+    border-radius: 5px;
+}
+#userBut31 a{
+    color: white;
+}
+#userBut32{
+    width: 140px;
+    height: 40px;
+    background: #5ED5C8;
+    border-width: 0px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 40px;
+}
+#userBut32 a{
+    color: white;
+}
+#userBut33{
+    width: 140px;
+    height: 40px;
+    background: #5ED5C8;
+    border-width: 0px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 40px;
+}
+#userBut33 a{
+    color: white;
+}
+
+/*span中加入按钮*/
+#gender{
+    -webkit-appearance: none;
+    width: 70px;
+    height: 30px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: relative;
+    top: -30px;
+    left: -3px;
+    opacity:0;
+}
+#identity{
+    -webkit-appearance: none;
+    width: 70px;
+    height: 30px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: relative;
+    top: -30px;
+    left: -3px;
+    opacity:0;
+}
+#nature_work{
+    -webkit-appearance: none;
+    width: 85px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: relative;
+    top: -35px;
+    left: 0px;
+    opacity:0;
+}
+/*#certificate_of_academic_degree{
+    -webkit-appearance: none;
+    width: 75px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    margin-right: 22px;
+    cursor: pointer;
+    position: relative;
+    top: -35px;
+    left: -4px;
+    opacity:0;
+}*/
+#nothing {display: none}
+#certificate1{display: none}
+#certificate2{display: none}

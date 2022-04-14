@@ -1,0 +1,451 @@
+body{
+    margin: 0px;
+    background: white;
+}
+input{
+    outline: none;
+}
+#overall{
+    margin:0px auto;
+    width: 1080px;
+}
+#side{
+    background: #16b9de;
+    border: none;
+    /*border: 1px solid #40c7a9;*/
+    border:none;
+    width: 160px;
+    height: 100%;
+    float: left;
+    position: fixed;
+}
+#image_side{
+    border: none;
+    margin:10px auto;
+    width: 105px;
+    height: 105px;
+}
+#two_side{
+    background: rgba(73, 131, 218, 0.8);
+}
+#one_side,#two_side,#three_side{
+    width: 160px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-top: 2px;
+    font-weight: 400;
+}
+
+#one_side:hover{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+#two_side:hover{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+#three_side:hover{
+    cursor: pointer;
+    background: rgba(73, 131, 218, 0.8);
+}
+.orgside{
+	background: rgba(73, 131, 218, 0.8);
+}
+.resumeside{
+	background: rgba(73, 131, 218, 0.8);
+}
+
+
+
+#main{
+    /*border: 1px solid black;*/
+    width: 900px;
+    height: 800px;
+    float: left;
+    margin-left: 160px;
+    position: absolute;
+}
+
+#one_main{
+    margin-top: 10px;
+    margin-left: 10px;
+    width:860px;
+    height: 60px;
+    background: #F2F2F2;
+    line-height: 20px;
+}
+#title{
+    float: left;
+    margin-left:20px;
+}
+#one_main_right{
+    width: 280px;
+    height: 60px;
+    float: right;
+    font-size: 13px;
+    /*border: 1px solid black;*/
+    line-height: 60px;
+    position: relative;
+}
+#welcome{
+    margin-left: 40px;
+    margin-right: 10px;
+}
+#repassword{
+    border: none;
+    background: #EC808D;
+    padding:5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 16px;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+}
+#exit{
+    border: none;
+    position: absolute;
+    background: #02C198;
+    padding:5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+#password{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#frame{
+    width: 440px;
+    height: 400px;
+    margin:10% auto;
+    background: white;
+    position: relative;
+}
+#passwordTitle{
+    width: 400px;
+    height: 40px;
+    background: #32c3ee;
+    line-height: 40px;
+    font-size: 18px;
+    padding-left:40px;
+    color: white;
+}
+#re{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 360px;
+    color: white;
+    border: none;
+    background: rgba(73, 131, 218, 0.8);
+    font-size: 24px;
+    cursor: pointer;
+}
+#cen{
+    margin-top: 30px;
+    margin-left: 40px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+    color: #7F7F7F;
+    border-collapse: collapse;
+}
+#targetBar{
+    width: 70px;
+
+}
+#InputUserPwd,#ConfirmPassword,#InputTelephone,#InputCode{
+    width: 260px;
+    height: 30px;
+    border: 1px solid black;
+}
+#code{
+    width: 120px;
+    position: absolute;
+    right: 70px;
+    bottom: 118px;
+    border: none;
+    background: white;
+    color: rgba(73, 131, 218, 0.8);
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+}
+
+#confirm{
+    width: 125px;
+    height: 35px;
+    border: none;
+    background: rgba(73, 131, 218, 0.8);
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+#tips1,#tips2,#tips3,#tips4{
+    vertical-align: top;
+    font-size: 13px;
+    color: #EC808D;
+    display: none;
+}
+#two_main,#three_main,#four_main,#five_main{
+    margin-top: 10px;
+    margin-left: 10px;
+    width:860px;
+    /*border:1px solid black;*/
+    line-height: 20px;
+
+}
+#three_main{
+    margin-top: 50px;
+}
+#four_main{
+    height: 330px;
+}
+#five_main{
+    height: 120px;
+}
+#two_title,#three_title,#four_title{
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 25px;
+    color: rgba(73, 131, 218, 0.8);
+}
+#two_bottom,#three_bottom,#four_bottom{
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 20px;
+}
+#jobDescription{
+    width: 860px;
+    height: 440px;
+    background: #F2F2F2;
+    border: none;
+}
+#tableJob{
+    position: absolute;
+    margin-top: 30px;
+    /*margin-left: 10px;*/
+}
+
+#tr_id1,#tr_id2,#tr_id3,#tr_id4,#tr_id5,#tr_id6{
+    border: none;
+    /*background: antiquewhite;*/
+}
+#td_id1,#td_id2,#td_id3,#td_id4,#td_id5,#td_id6{
+    width: 80px;
+    height: 60px;
+    color: #333333;
+    text-align: right;
+    /*background: antiquewhite;*/
+}
+#positionName,#officeLocation{
+    margin-left: 30px;
+    width: 130px;
+    height: 35px;
+    border: 1px solid gainsboro;
+}
+#address{
+    margin-left: 15px;
+    width:290px ;
+    height: 35px;
+    border: 1px solid gainsboro;
+}
+#workExperience,#academicRequirements,#jobType{
+    margin-left: 30px;
+    width:290px ;
+    height: 35px;
+    border: 1px solid gainsboro;
+}
+#lowest{
+    margin-left: 30px;
+}
+#highest{
+    margin-left: 15px;
+}
+#lowest,#highest{
+    width: 100px;
+    height: 35px;
+    border: 1px solid gainsboro;
+}
+#o_o{
+    position: absolute;
+    margin-top: 17px;
+}
+
+#jobResponsibilities,#jobRequirements{
+    width:860px;
+    height: 260px;
+    background: #F2F2F2;
+    line-height: 30px;
+    border-radius: 4px;
+    font-size:28px;
+    font-weight:100;
+    margin-top: 20px;
+}
+#responsibilities,#requirements{
+    margin: 40px 40px;
+    width: 760px;
+    height: 170px;
+    border: 2px solid #DCDCDC;
+    word-wrap: break-word;
+    font-size: 14px;
+    resize: none;
+}
+
+#threemore,#fourmore{
+    position: absolute;
+    margin-top: -35px;
+    color: #B3B3B3;
+    font-size: 14px;
+    margin-left: 710px ;
+}
+#threeBeyond,#fourBeyond{
+    position: absolute;
+    color: #D9001B;
+    font-size: 14px;
+    margin-top: -35px;
+    margin-left: 580px ;
+    display: none;
+}
+#twobtn{
+    width: 310px;
+    margin: auto;
+}
+#save{
+    width: 140px;
+    height: 40px;
+    color: white;
+    background: #16b9de;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+#save{
+    position: absolute;
+}
+#cancel{
+    width: 140px;
+    font-size: 14px;
+    height: 40px;
+    color: white;
+    background: #16b9de;
+    border-radius: 4px;
+    border: none;
+    margin-left: 160px;
+    position: absolute;
+    line-height: 10px;
+}
+#can{
+    margin-left: 45px;
+    cursor: pointer;
+}
+#clear{
+    clear: both;
+}
+
+/*地点*/
+#userPlaceAll{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    /*opacity: 0.8;*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#userPlaceMore{
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color:rgba(255,255,255,1);
+}
+#userPlaceMore1{
+    width:798px;
+    height: 70px;
+    border: black 1px solid;
+}
+#userPlaceMore1 p{
+    padding-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#userPlaceMore2{
+    width: 150px;
+    height: 375px;
+    float: left;
+    overflow: auto;
+}
+#userPlaceMore2 table{
+    width: 130px;
+    height: 330px;
+    text-align: center;
+}
+#userPlaceMore2 tr{
+    border: 0px;
+}
+#userPlaceMore2 td{
+    border: 0px;
+}
+.expectIndustryMoreAll{
+    width: 650px;
+    height: 377px;
+    overflow: auto;
+    float: left;
+}
+.expectIndustryMoreAll table{
+    width: 633px;
+    height: 375px;
+    border-collapse:separate;
+    border-spacing:30px 30px;
+    text-align: center;
+}
+#userPlaceMore31{
+    display: block;
+}
+
+.expectIndustryMoreAll{display: none}
+/*鼠标悬停变背景色*/
+#userPlacecanPick1 tr td:hover{
+    background-color:#16b9de;
+    color: white;
+}
+/*鼠标点击颜色*/
+.canPickTex1{
+    background-color:#16b9de;
+    color: white;
+}
+.canPick tr td{
+    cursor: pointer;
+}
+.canPick tr td:hover{
+    color: #16b9de;
+}
+
+
+
+
+
+
+

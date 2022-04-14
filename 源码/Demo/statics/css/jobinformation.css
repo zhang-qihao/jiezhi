@@ -1,0 +1,313 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+button{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+::-webkit-input-placeholder {
+    color: #C8C8C8;
+    font-size: 20px;
+}
+
+/*顶部信息内容*/
+.head_head{
+    position: relative;
+    margin:0 auto;
+    margin-top: 10px;
+    width: 1024px;
+    height: 30px;
+}
+.head_headLeft{
+    float: left;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+}
+.head_headLeft span{
+    font-weight: 40;
+    font-size: 16px;
+}
+.head_headLeft a{
+    color: #008FE0;
+    margin-left: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 40;
+}
+.head_headRigth{
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-left: 440px;
+    font-weight: 40;
+}
+.head_headRigth a{
+    margin-right: 15px;
+}
+#user{
+    margin-right: 10px;
+}
+/*消息字体设置颜色*/
+.head_headRigth span:nth-child(1) a{
+    color: black;
+}
+.head_headRigth span:nth-child(1) a:hover{
+    color: rgb(46,176,252);
+}
+/*客户颜色效果*/
+.head_headRigth a span{
+    margin-left: 12px;
+    font-weight: 400;
+    color: black;
+}
+#head_headRight2{
+    margin-left: 12px;
+    font-weight: 40;
+}
+/*捷职logo与搜索框*/
+.head_searchAll{
+    margin: 0 auto;
+    width: 1024px;
+    height: 70px;
+    margin-top: 10px;
+    font-weight: 40;
+}
+.head_searchLogo{
+    float: left;
+    height: 80px;
+    font-size: 48px;
+    margin-left: 18px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.head_search{
+    position: relative;
+    float: left;
+    width: 780px;
+    height: 80px;
+    margin-left: 20px;
+    font-weight: 40;
+}
+/*搜索框中的多选框中的*/
+#head_select{
+    position: absolute;
+    top: 30px;
+    left:2px;
+    border: none;
+    outline: none;
+
+}
+.head_searchInput1{
+    height: 60px;
+    width: 609px;
+    float: left;
+    font-size: 20px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(50, 195, 238);
+    border-right: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 2px 2px 2px rgb(50, 195, 238);
+    padding-left: 52px;
+}
+.head_searchInput2{
+    height: 60px;
+    width: 159px;
+    float: left;
+    font-size: 26px;
+    background-color: rgb(50, 204, 238);
+    font-family: 'Sana', sans-serif;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    font-weight: 400;
+    box-shadow: 2px 2px 2px rgb(50, 204, 238);
+    cursor: pointer;
+}
+/*职位显示框*/
+.jobinformation{
+    position: relative;
+    width: 943px;
+    height: 168px;
+    margin: auto;
+    margin-top: 22px;
+    background: inherit;
+    background-color: rgba(244, 246, 249, 1);
+    border: none;
+    border-radius: 0px;
+    color: #AAAAAA;
+}
+/*职位框内容*/
+.jobinformation span:nth-of-type(1){
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    font-size: 28px;
+    color: #32c3ee;
+}
+.jobinformation span:nth-of-type(2){
+    position: absolute;
+    left: 827px;
+    top: 7px;
+    font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;
+    font-weight: 650;
+    font-style: normal;
+    color: #FF706D;
+}
+.jobinformation span:nth-of-type(3){
+    position: absolute;
+    left: 18px;
+    top: 65px;
+    font-size: 15px;
+    color: #555555;
+}
+.jobinformation span:nth-of-type(4){
+    position: absolute;
+    left: 128px;
+    top: 65px;
+    font-size: 15px;
+    color: #555555;
+}
+.jobinformation span:nth-of-type(5){
+    position: absolute;
+    left: 197px;
+    top: 65px;
+    font-size: 15px;
+    color: #555555;
+}
+.jobinformation span:nth-of-type(6){
+    position: absolute;
+    left: 260px;
+    top: 65px;
+    font-size: 15px;
+    color: #555555;
+}
+.jobinformation span:nth-of-type(7){
+    position: absolute;
+    left: 18px;
+    top: 99px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.jobinformation span:nth-of-type(8){
+    position: absolute;
+    left: 18px;
+    top: 134px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+}
+.jobinformation span:nth-of-type(9){
+    position: absolute;
+    left: 50px;
+    top: 135px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    color: #555555;
+}
+/*按钮的样式设置*/
+.jobinformation a{
+    position: absolute;
+    display: inline-block;
+    left: 787px;
+    top: 110px;
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    background-color: rgb(50, 195, 238);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*页面下边部分的样式*/
+.jobbody{
+    margin: auto;
+    width: 943px;
+}
+/*两个标题的样式*/
+.jobbody h3{
+    margin-top: 40px;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: normal;
+    color: #333333;
+}
+.column_side1{
+    float: left;
+    width: 550px;
+}
+.column_side1 p{
+    margin-top: 15px;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #333333;
+    line-height: normal;
+    text-transform: none;
+}
+.dowhat li{
+    margin-top: 12px;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #333333;
+    line-height: normal;
+}
+.needwhat li{
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #333333;
+    line-height: 25px;
+}
+.column_side2{
+    float: right;
+    width:300px ;
+    height: 300px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #999999;
+}
+.gray img{
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.gray p{
+    margin-top: 12px;
+}
+.cpintroduction p{
+    line-height: 25px;
+}

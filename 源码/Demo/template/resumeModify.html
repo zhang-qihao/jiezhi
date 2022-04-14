@@ -1,0 +1,3763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../statics/css/resumeModify.css">
+    <script src="../statics/js/jquery.js"></script>
+    <title>简历</title>
+</head>
+<body>
+<!--网页头部-->
+<div class="head_head">
+    <div class="head_headLeft">
+        <img style="vertical-align: middle;" src="../statics/images/java职位下级页面/u292.svg">
+        <!--选择地方名例如南通站-->
+        <span>南通站</span>
+        <a href="javascript:;">切换城市</a>
+    </div>
+    <!--网页顶端一行右边-->
+    <div class="head_headRigth">
+        <span>欢迎回来</span>
+        <!--鼠标悬浮下拉菜单、二级菜单-->
+        <a href="#"><span id="user">{{.name}}</span><img style="vertical-align: middle;" id="head_headRigth_img" src="../statics/images/head__/u288.svg"></a>
+        <img style="vertical-align: middle;" id="head_headRight2" src="../statics/images/java职位下级页面/u301.svg">
+        <span>400-888-666</span>
+    </div>
+</div>
+<!--捷职logo与搜索框-->
+<div class="head_searchAll">
+    <!-- 捷职招聘-->
+    <div class="head_searchLogo">
+        <span>捷职招聘</span>
+    </div>
+    <div class="head_search">
+        <form action="">
+            <select id="head_select" name="head_select">
+                <option id="allday" value="allday">全职</option>
+                <option id="littleday" value="littleday">实习</option>
+            </select>
+            <input type="text" class="head_searchInput1" placeholder="搜索职位，公司">
+            <input type="button" class="head_searchInput2" value="搜索">
+        </form>
+    </div>
+</div>
+
+
+<!--整个网页盒子-->
+<div id="resumeModifyAll">
+    <!--个人信息-->
+    <div id="modifyPeopleMessage">
+        <img id="modifyPeoplePic" src="../statics/images/企业查看简历界面/u1159.png">
+        <!--姓名那一行-->
+        <div id="modifyPeopleTex">
+            <a id="modifyPeopleName">{{.name}}</a>
+            <div id="modifyPeopleIdentity">
+                <!--选择是用户身份是学生还是在职人-->
+                <span id="modifyStudent">{{.identity}}</span>
+                <!--<span id="modifyWorker">在职人</span>-->
+            </div>
+            <!--导入更新时间-->
+            <p> 更新时间：{{.changeTime}}</p>
+            <!--点击编辑跳转-->
+
+            <a id="modifyPeopleWrite1" class="modifyPeopleWrite" href="###">编辑</a>
+        </div>
+
+        <div id="modifyPeopleTex2">
+            <!--导入用户性别-->
+            <span>{{.gender}}</span>
+            <span>|</span>
+            <!--导入用户年龄-->
+            <span>{{.birth}}</span>
+            <span>|</span>
+            <!--导入用户地区-->
+            <span>{{.area}}</span>
+        </div>
+        <!--手机号码-->
+        <div id="modifyPeopleTel">
+            <img src="../statics/images/修改简历界面/u1936.svg">
+            <!--导入用户手机号-->
+            <span>{{.phone}}</span>
+        </div>
+        <!--电子邮箱-->
+        <div id="modifyPeopleEml">
+            <img src="../statics/images/修改简历界面/u1938.svg">
+            <!--导入用户邮箱地址-->
+            <span>{{.email}}</span>
+        </div>
+    </div>
+    <!--个人信息弹出框-->
+    <div id="personMessage" class="modifyDiv">
+        <table>
+            <tr>
+                <td>
+                    <span>姓名：</span>
+                </td>
+                <td>
+                    <input type="text" id="userName" class="userMessage" placeholder={{.name}} onfocus="this.placeholder=''" onmouseout="this.placeholder={{.name}}" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>性别：</span>
+                </td>
+                <td>
+                    <p id="userSex1" class="userMessageBtn" style="cursor: pointer" onclick="className = 'resumeBtn' ;userSex2.className = 'userMessageBtn'"><input type="radio" id="gender1" value="男" name="gender" >男</p>
+                    <p id="userSex2" class="userMessageBtn" style="cursor: pointer" onclick="className = 'resumeBtn' ;userSex1.className = 'userMessageBtn'"><input type="radio" id="gender2"  value="女" name="gender">女</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>当前身份：</span>
+                </td>
+                <td>
+                    <p id="userIdent1" class="userMessageBtn" style="cursor: pointer" onclick="className = 'resumeBtn' ;userIdent2.className = 'userMessageBtn'"><input type="radio" id="identity1" value="职场人" name="identity">职场人</p>
+                    <p id="userIdent2" class="userMessageBtn" style="cursor: pointer" onclick="className = 'resumeBtn' ;userIdent1.className = 'userMessageBtn'"><input type="radio" id="identity2" value="学生" name="identity" >学生</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>出生年月：</span>
+                </td>
+                <td>
+                    <input type="month" id="userBirth" class="userMessage" placeholder="请选择出生年月，如1970年10月" name="birth">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>现居住地：</span>
+                </td>
+                <td>
+                    <input type="text" id="userPlace" class="userMessage" placeholder={{.area}} onfocus="this.placeholder=''" onmouseout="this.placeholder={{.area}}" onclick="userPlaceAll.style.display = 'block'" name="area">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>电话号码：</span>
+                </td>
+                <td>
+                    <input type="text" id="userTel" class="userMessage" placeholder={{.phone}} onfocus="this.placeholder=''" onmouseout="this.placeholder={{.phone}}" maxlength="11"  onblur="checkMobile()" name="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>电子邮箱：</span>
+                </td>
+                <td>
+                    <input type="text" id="userEmail" class="userMessage" placeholder={{.email}} onfocus="this.placeholder=''" onmouseout="this.placeholder={{.email}}" onblur="checkEmail()" name="email">
+                </td>
+            </tr>
+        </table>
+        <p id="tipTel">请输入正确的电话号码</p>
+        <p id="tipEml">请输入正确的电话号码</p>
+        <button id="personOk" class="modifyBtns">保存并更新</button>
+        <div id="personNo" class="modifyBtnsDiv"><span>取消</span></div>
+    </div>
+    <!--求职意向-->
+    <div id="modifySeek" class="modifyDiv">
+        <div id="seek">
+            <p class="modifyTit">求职意向</p>
+            <div class="modifyTips" id="modifyTip1">必填</div>
+            <a id="modifyPeopleWrite2" class="modifyPeopleWrite" href="###">编辑</a>
+            <p class="modifyTit3Left" id="modifyTit3Left11">薪资要求：<span>{{.salary_requirements_min1}}元-{{.salary_requirements_max1}}元/月</span></p>
+            <p class="modifyTit3Right" id="modifyTit3Right11">期望城市：<span>{{.expected_city1}}</span></p>
+            <p class="modifyTit3Left" id="modifyTit3Left12">工作性质：<span>{{.nature_of_work1}}</span></p>
+            <p class="modifyTit3Right" id="modifyTit3Right12">期望职业：<span>{{.expected_occupation1}}</span></p>
+            <p class="modifyTit3Left" id="modifyTit3Left13">当前月薪：<span>{{.salary_requirements_min1}}元-{{.salary_requirements_max1}}元/月</span></p>
+        </div>
+        <!--求职意向弹出修改框-->
+
+        <div id="popupTit" class="modifyDiv">
+            <table>
+                <tr>
+                    <td>
+                        <span>期望职业：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="jobName" class="userMessage" placeholder={{.expected_occupation1}} onfocus="this.placeholder=''" onmouseout="this.placeholder={{.expected_occupation1}}" name="expected_occupation">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>期望城市：</span>
+                    </td>
+                    <td>
+                        <!-- <input type="text" id="cityName" class="userMessage" placeholder="请选择期望城市" onfocus="this.placeholder=''" onmouseout="this.placeholder='请选择期望城市'">-->
+                        <input type="text" id="expectCity" class="userMessage" placeholder={{.expected_city1}} onfocus="this.placeholder=''" onmouseout="this.placeholder={{.expected_city1}}" name="expected_city">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>薪资要求：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="jobMoney1" class="userMessage" placeholder={{.salary_requirements_min1}} onfocus="this.placeholder=''" onmouseout="this.placeholder={{.salary_requirements_min1}}" name="salary_requirements_min">
+                        <span>—</span>
+                        <input type="text" id="jobMoney2" class="userMessage" placeholder={{.salary_requirements_max1}} onfocus="this.placeholder=''" onmouseout="this.placeholder={{.salary_requirements_max1}}" name="salary_requirements_max">
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>
+                        <span>工作性质：</span>
+                    </td>
+                    <td>
+                        <!--<input type="button" id="jobType1" class="userMessageBtn" style="cursor: pointer" value="全职">
+                        <input type="button" id="jobType2" class="userMessageBtn" style="cursor: pointer" value="实习">
+                        <input type="button" id="jobType3" class="userMessageBtn" style="cursor: pointer" value="兼职">-->
+                        <p id="jobType1" class="userMessageBtn" style="cursor: pointer">全职<input type="checkbox" id="nature_of_job1" value="全职" name="nature_of_works"></p>
+                        <p id="jobType2" class="userMessageBtn" style="cursor: pointer">实习<input type="checkbox" id="nature_of_job2" value="实习" name="nature_of_works"></p>
+                        <p id="jobType3" class="userMessageBtn" style="cursor: pointer">兼职<input type="checkbox" id="nature_of_job3" value="兼职" name="nature_of_works"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>到岗时间：</span>
+                    </td>
+                    <td>
+                        <select id="jobTime2" class="userMessage" placeholder="请选择到岗时间" name="arrival_time">
+                            <option>一周内</option>
+                            <option>一个月内</option>
+                            <option>待定</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <button id="jobOk" class="modifyBtns">保存并更新</button>
+            <div id="jobNo" class="modifyBtnsDiv"><span>取消</span></div>
+        </div>
+
+    </div>
+
+    <!--教育经历-->
+    <div id="modifyStudy" class="modifyDiv">
+        <div id="study">
+            <p class="modifyTit">教育经历</p>
+            <div class="modifyTips" id="modifyTip2">必填</div>
+            <button class="addAll" id="addTit">+添加教育经历</button>
+            <span id="educat" name="educate"></span>
+            <div id="study1">
+                <p id="schoolName">{{.school_name1}}</p>
+                <p id="schoolMessage">{{.highest_education1}}|{{.major_studied1}}</p>
+                <button id="modifyPeopleWrite3" class="modifyPeopleWrite">编辑<input id="PeopleWrite3" type="radio" name="educate"></button>
+            </div>
+            <div id="study2">
+                <p id="schoolName2">{{.school_name2}}</p>
+                <p id="schoolMessage2">{{.highest_education2}}|{{.major_studied2}}</p>
+                <button id="modifyPeopleWrite32" class="modifyPeopleWrite">编辑<input id="PeopleWrite3" type="radio" name="educate"></button>
+            </div>
+            <div id="study3">
+                <p id="schoolName3">{{.school_name3}}</p>
+                <p id="schoolMessage3">{{.highest_education3}}|{{.major_studied3}}</p>
+                <button id="modifyPeopleWrite33" class="modifyPeopleWrite">编辑<input id="PeopleWrite3" type="radio" name="educate"></button>
+            </div>
+        </div>
+        <!--教育经历弹出修改框-->
+        <div id="popupStudy" class="modifyDiv">
+            <table>
+                <tr>
+                    <td>
+                        <span>学校名称：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="studySchoolName" class="userMessage" placeholder="请填入学校名称" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入学校名称'" name="school_name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>最高学历：</span>
+                    </td>
+                    <td>
+                        <select id="topEducation" class="userMessage" name="highest_education">
+                            <option>初中以下</option>
+                            <option>中专</option>
+                            <option>高中</option>
+                            <option>大专</option>
+                            <option>本科</option>
+                            <option>研究生</option>
+                            <option>MBA/EMBA</option>
+                            <option>博士</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>所学专业：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="studyType" class="userMessage" placeholder="请填入所学专业" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入所学专业'" name="major_studied">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>在校时间：</span>
+                    </td>
+                    <td>
+                        <input type="month" id="stydyTime1" class="userMessage" placeholder="入学时间" name="school_time_start">
+                        <span>—</span>
+                        <input type="month" id="studyTime2" class="userMessage" placeholder="毕业时间" name="school_time_end">
+                        <input type="checkbox" value="至今" id="studyCheck1" name="school_time_start_end"><p id="studyCheck2">至今</p>
+                    </td>
+                </tr>
+            </table>
+            <button id="studyOk" class="modifyBtns">保存并更新</button>
+            <div id="studyNo" class="modifyBtnsDiv"><span>取消</span></div>
+        </div>
+    </div>
+    <!--工作/实习经历-->
+    <div id="modifyWork" class="modifyDiv">
+        <div id="work">
+            <p class="modifyTit">工作/实习经历</p>
+            <div class="modifyTips" id="modifyTip3">必填</div>
+            <button class="addAll" id="addTit1">+添加工作经历</button>
+            <!--<p class="modifyTime1">xx年x月-xx年x月</p>-->
+            <div id="work1">
+                <p class="modifyTit2" id="companyName">{{.corporate_name1}}</p>
+                <p class="modifyTit3Left" id="modifyTit3Left31">职位薪水：<span>{{.current_monthly_salary1}}</span></p>
+                <p class="modifyTit3Right" id="modifyTit3Right31">所属行业：<span>{{.job_title1}}</span></p>
+                <p class="modifyTit3Left" id="modifyTit3Left32">职位名称：<span>{{.job_title1}}</span></p>
+                <p class="modifyTit3Right" id="modifyTit3Right32">工作类型：<span>{{.type_of_work1}}</span></p>
+                <p class="modifyTit3Left" id="modifyTit3Left33">工作描述：<span>{{.job_description1}}</span></p>
+                <button id="modifyPeopleWrite4" class="modifyPeopleWrite">编辑<input id="PeopleWrite4" type="radio" name="work"></button>
+            </div>
+            <div id="work2">
+                <p class="modifyTit2" id="companyName2">{{.corporate_name2}}</p>
+                <p class="modifyTit3Left" id="modifyTit3Left312">职位薪水：<span>{{.current_monthly_salary2}}</span></p>
+                <p class="modifyTit3Right" id="modifyTit3Right312">所属行业：<span>{{.job_title2}}</span></p>
+                <p class="modifyTit3Left" id="modifyTit3Left322">职位名称：<span>{{.job_title2}}</span></p>
+                <p class="modifyTit3Right" id="modifyTit3Right322">工作类型：<span>{{.type_of_work2}}</span></p>
+                <p class="modifyTit3Left" id="modifyTit3Left332">工作描述：<span>{{.job_description2}}</span></p>
+                <button id="modifyPeopleWrite42" class="modifyPeopleWrite">编辑<input id="PeopleWrite4" type="radio" name="work"></button>
+            </div>
+            <div id="work3">
+                <p class="modifyTit2" id="companyName3">{{.corporate_name3}}</p>
+                <p class="modifyTit3Left" id="modifyTit3Left313">职位薪水：<span>{{.current_monthly_salary3}}</span></p>
+                <p class="modifyTit3Right" id="modifyTit3Right313">所属行业：<span>{{.job_title3}}</span></p>
+                <p class="modifyTit3Left" id="modifyTit3Left323">职位名称：<span>{{.job_title3}}</span></p>
+                <p class="modifyTit3Right" id="modifyTit3Right323">工作类型：<span>{{.type_of_work3}}</span></p>
+                <p class="modifyTit3Left" id="modifyTit3Left333">工作描述：<span>{{.job_description3}}</span></p>
+                <button id="modifyPeopleWrite43" class="modifyPeopleWrite">编辑<input id="PeopleWrite4" type="radio" name="work"></button>
+            </div>
+        </div>
+        <!--工作/实习经历弹出修改框-->
+        <div id="popupWorek" class="modifyDiv">
+            <table>
+                <tr>
+                    <td>
+                        <span>公司名称：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="workCompanyName" class="userMessage" placeholder="请输入公司名称" onfocus="this.placeholder=''" onmouseout="this.placeholder='请输入公司名称'" name="company">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>职位名称：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="workName" class="userMessage" placeholder="请填入曾经的工作职位" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入曾经的工作职位'" name="job">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>就职时间：</span>
+                    </td>
+                    <td>
+                        <input type="month" id="workTime1" class="userMessage" placeholder="入职时间" name="inTime">
+                        <span>—</span>
+                        <input type="month" id="workTime2" class="userMessage" placeholder="离职时间" name="end_time">
+                        <input type="checkbox" value="至今" id="workCheck1" name="end_time"><p id="workCheck2">至今</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>当前月薪：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="workMoney" class="userMessage" placeholder="请填入当前月薪" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入当前月薪'" name="current_monthly_salary">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>工作类型：</span>
+                    </td>
+                    <td id="getWorkType">
+                        <p id="workType1" class="userMessageBtn1" style="cursor: pointer">全职<input type="checkbox" id="nature_of_work1" value="全职" name="workType"></p>
+                        <p id="workType2" class="userMessageBtn1" style="cursor: pointer">实习<input type="checkbox" id="nature_of_work2" value="实习" name="workType"></p>
+                        <p id="workType3" class="userMessageBtn1" style="cursor: pointer">兼职<input type="checkbox" id="nature_of_work3" value="兼职" name="workType"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="workWrong">工作描述：</span>
+                    </td>
+                    <td>
+                        <textarea id="workLike" placeholder="请填入对当时工作的描述" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入对当时工作的描述'" onkeyup="sizecontrol1()" name="describe"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <p id="popupTips1" id="workTip">最多500字</p>
+            <button id="workOk" class="modifyBtns">保存并更新</button>
+            <div id="workNo" class="modifyBtnsDiv"><span>取消</span></div>
+        </div>
+    </div>
+    <!--项目经历-->
+    <div id="modifyProject" class="modifyDiv">
+        <div id="project">
+            <p class="modifyTit">项目经历</p>
+            <button class="addAll" id="addProject">+添加项目经历</button>
+            <!--项目1-->
+            <div id="project1">
+                <p class="modifyTit2" id="projectName1">{{.project_name1}}</p>
+                <p class="modifyTit3Left" id="modifyTit3Left41">项目描述：{{.project_description1}}</p>
+                <button id="modifyPeopleWrite51" class="modifyPeopleWrite">编辑<input id="PeopleWrite5" type="radio" name="item"></button>
+                <p class="modifyTime1">{{.project_time1}}</p>
+            </div>
+            <!--项目2-->
+            <div id="project2">
+                <p class="modifyTit2" id="projectName2">{{.project_name2}}</p>
+                <p class="modifyTit3Left" id="modifyTit3Left42">项目描述：{{.project_description2}}</p>
+                <button id="modifyPeopleWrite52" class="modifyPeopleWrite">编辑<input id="PeopleWrite5" type="radio" name="item"></button>
+                <p class="modifyTime2">{{.project_time2}}</p>
+            </div>
+            <!--项目3-->
+            <div id="project3">
+                <p class="modifyTit2" id="projectName3">{{.project_name3}}</p>
+                <p class="modifyTit3Left" id="modifyTit3Left43">项目描述：{{.project_description3}}</p>
+                <button id="modifyPeopleWrite53" class="modifyPeopleWrite">编辑<input id="PeopleWrite5" type="radio" name="item"></button>
+                <p class="modifyTime3">{{.project_time3}}</p>
+            </div>
+        </div>
+        <!--项目经历弹出修改框-->
+        <div id="popupProject" class="modifyDiv">
+            <table>
+                <tr>
+                    <td>
+                        <span>项目名称：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="projectName" class="userMessage" placeholder="请填入参与项目的名称" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入参与项目的名称'" name="title">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>项目时间：</span>
+                    </td>
+                    <td>
+                        <input type="month" id="projectTime1" class="userMessage" placeholder="项目开始时间" name="inTime">
+                        <span>—</span>
+                        <input type="month" id="projectTime2" class="userMessage" placeholder="项目结束时间" name="end_time">
+                        <input type="checkbox" value="至今" id="projectCheck1"><p id="projectCheck2">至今</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>所属公司：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="projectConpany" class="userMessage" placeholder="请填入参与项目的所属公司" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入参与项目的所属公司'" name="company">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="projectWrong">项目描述：</span>
+                    </td>
+                    <td>
+                        <textarea id="projectLike" placeholder="请填入对参与项目的描述" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入对参与项目的描述'" onkeyup="sizecontrol2()" name="describe"></textarea>
+                    </td>
+                </tr>
+                <p id="popupTips2" id="projectTip">最多500字</p>
+            </table>
+            <button id="projectOk" class="modifyBtns">保存并更新</button>
+            <div id="projectNo" class="modifyBtnsDiv"><span>取消</span></div>
+        </div>
+    </div>
+    <!--校内表现-->
+    <div id="modifySchoolBehave" class="modifyDiv" >
+        <div id="schoolBehave">
+            <p class="modifyTit">校内表现</p>
+            <div id="schoolH">
+                <button class="addAll1" id="addSchoolHonor">+添加校内荣誉</button>
+                <p class="modifyTit2" id="schoolHonor">校内荣誉</p>
+            </div>
+
+            <div id="honor1">
+                <p class="modifyTit3Left" id="modifyTit3Left61">奖项：<span id="award1">{{.award1}}</span></p>
+                <button id="modifyPeopleWrite61" class="modifyPeopleWrite">编辑<input id="PeopleWrite6" type="radio" name="behave"></button>
+            </div>
+            <div id="honor2">
+                <p class="modifyTit3Left" id="modifyTit3Left62">奖项：<span id="award2">{{.award2}}</span></p>
+                <button id="modifyPeopleWrite612" class="modifyPeopleWrite">编辑<input id="PeopleWrite6" type="radio" name="behave"></button>
+            </div>
+            <div id="honor3">
+                <p class="modifyTit3Left" id="modifyTit3Left621">奖项：<span id="award3">{{.award3}}</span></p>
+                <button id="modifyPeopleWrite613" class="modifyPeopleWrite">编辑<input id="PeopleWrite6" type="radio" name="behave"></button>
+            </div>
+            <div id="schoolPost">
+                <button class="addAll2" id="addSchoolWork">+添加校内职务</button>
+                <p class="modifyTit2" id="schoolWork">校内职务</p>
+            </div>
+
+            <div id="schoolwork11">
+                <p class="modifyTit3Left" id="modifyTit3Left63">职务：<span id="post1">{{.post1}}</span></p>
+                <p class="modifyTit3Left" id="modifyTit3Left64">职务描述：<span>{{.post_description1}}</span></p>
+                <button id="modifyPeopleWrite62" class="modifyPeopleWrite">编辑<input id="PeopleWrite6" type="radio" name="behave"></button>
+            </div>
+            <div id="schoolwork12">
+                <p class="modifyTit3Left" id="modifyTit3Left65">职务：<span id="post2">{{.post2}}</span></p>
+                <p class="modifyTit3Left" id="modifyTit3Left66">职务描述：<span>{{.post_description2}}</span></p>
+                <button id="modifyPeopleWrite622" class="modifyPeopleWrite">编辑<input id="PeopleWrite6" type="radio" name="behave"></button>
+            </div>
+            <div id="schoolwork13">
+                <p class="modifyTit3Left" id="modifyTit3Left67">职务：<span id="post3">{{.post3}}</span></p>
+                <p class="modifyTit3Left" id="modifyTit3Left68">职务描述：<span>{{.post_description3}}</span></p>
+                <button id="modifyPeopleWrite623" class="modifyPeopleWrite">编辑<input id="PeopleWrite6" type="radio" name="behave"></button>
+            </div>
+            <br>
+        </div>
+        <!--校内表现弹出修改框-->
+        <div id="popupSchoolBehave" class="modifyDiv">
+            <p id="schoolHonor1" class="schoolBehaveTit">校内荣誉：</p>
+            <p id="schoolWork1" class="schoolBehaveTit">校内职务：</p>
+            <table>
+                <tr>
+                    <td>
+                        <span>奖项：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="schoolHonor2" class="userMessage" placeholder="请填入在校期间获得的奖项" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入在校期间获得的奖项'" name="award">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>职务：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="schoolWork2" class="userMessage" placeholder="请填入在校期间担任的职务" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入在校期间担任的职务'" name="post">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="schoolWorkWrong">职位描述：</span>
+                    </td>
+                    <td>
+                        <textarea id="schoolWorkLike" placeholder="请对在校期间的职务进行描述" onfocus="this.placeholder=''" onmouseout="this.placeholder='请对在校期间的职务进行描述'"  onkeyup="sizecontrol3()" name="describe"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <p id="popupTips3">最多500字</p>
+            <button id="schoolBehaveOk" class="modifyBtns">保存并更新</button>
+            <div id="schoolBehaveNo" class="modifyBtnsDiv"><span>取消</span></div>
+        </div>
+    </div>
+    <!--技能特长-->
+    <div id="modifySpecial" class="modifyDiv">
+        <div id="modifySpecialTop"><p class="modifyTit">技能特长</p></div>
+
+        <!--专业技能模块-->
+        <div id="specialSkillAll">
+            <p class="modifyTit2" id="specialSkill">专业技能</p>
+            <button class="addAll" id="addSpecialSkill">+添加专业技能</button>
+            <div id="skill1">
+                <p class="modifyTit3Left" id="skillName11">技能名称：<span id="sk1">{{.skill_name1}}</span></p>
+                <p class="modifyTit3Right" id="skillTime11">习得时长：<span>{{.skill_time1}}</span></p>
+                <button id="modifyPeopleWrite711" class="modifyPeopleWrite">编辑<input id="PeopleWrite71" type="radio" name="skill"></button>
+            </div>
+            <div id="skill2">
+                <p class="modifyTit3Left" id="skillName12">技能名称：<span id="sk2">{{.skill_name2}}</span></p>
+                <p class="modifyTit3Right" id="skillTime12">习得时长：<span>{{.skill_time2}}</span></p>
+                <button id="modifyPeopleWrite712" class="modifyPeopleWrite">编辑<input id="PeopleWrite71" type="radio" name="skill"></button>
+            </div>
+            <div id="skill3">
+                <p class="modifyTit3Left" id="skillName13">技能名称：<span id="sk3">{{.skill_name3}}</span></p>
+                <p class="modifyTit3Right" id="skillTime13">习得时长：<span>{{.skill_time3}}</span></p>
+                <button id="modifyPeopleWrite713" class="modifyPeopleWrite">编辑<input id="PeopleWrite71" type="radio" name="skill"></button>
+            </div>
+        </div>
+        <!--专业技能弹出框-->
+        <div id="popupSpecialSkillAll" class="modifyDiv">
+            <table>
+                <tr>
+                    <td>
+                        <span>技能名称：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="skillName2" class="userMessage" placeholder="请填入掌握的专业技能" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入掌握的专业技能'" name="skill">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>习得时长：</span>
+                    </td>
+                    <td>
+                        <select id="skillTime2" class="userMessage" placeholder="请选择技能掌握时长" name="inTime">
+                            <option>半年以下</option>
+                            <option>半年至一年</option>
+                            <option>一年至两年</option>
+                            <option>两年以上</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <p class="resumeWrong">x</p>
+            <button id="specialSkillOk" class="modifyBtns">保存</button>
+        </div>
+        <!--语言能力模块-->
+        <div id="languageAbilityAll">
+            <p class="modifyTit2" id="languageAbility">语言能力</p>
+            <button class="addAll" id="addLanguageAbility">+添加语言能力</button>
+            <div id="language1">
+                <p class="modifyTit3Left" id="languageType">语种：<span id="lang1">{{.language_name1}}</span></p>
+                <p class="modifyTit3Right" id="languageTime">习得时长：<span>{{.language_time1}}</span></p>
+                <button id="modifyPeopleWrite72" class="modifyPeopleWrite">编辑<input id="PeopleWrite72" type="radio" name="language"></button>
+            </div>
+            <div id="language2">
+                <p class="modifyTit3Left" id="languageType22">语种：<span id="lang2">{{.language_name2}}</span></p>
+                <p class="modifyTit3Right" id="languageTime22">习得时长：<span>{{.language_time2}}</span></p>
+                <button id="modifyPeopleWrite722" class="modifyPeopleWrite">编辑<input id="PeopleWrite72" type="radio" name="language"></button>
+            </div>
+            <div id="language3">
+                <p class="modifyTit3Left" id="languageType23">语种：<span id="lang3">{{.language_name3}}</span></p>
+                <p class="modifyTit3Right" id="languageTime23">习得时长：<span>{{.language_time3}}</span></p>
+                <button id="modifyPeopleWrite723" class="modifyPeopleWrite">编辑<input id="PeopleWrite72" type="radio" name="language"></button>
+            </div>
+        </div>
+        <!--语言能力弹出框-->
+        <div id="popupLanguageAbilityAll" class="modifyDiv">
+            <table>
+                <tr>
+                    <td>
+                        <span>语种：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="languageType2" class="userMessage" placeholder="请填入掌握的语种名称" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入掌握的语种名称'" name="languageType">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>习得时长：</span>
+                    </td>
+                    <td>
+                        <select id="languageTime2" class="userMessage" placeholder="请选择语言掌握时长" name="inTime">
+                            <option>半年以下</option>
+                            <option>半年至一年</option>
+                            <option>一年至两年</option>
+                            <option>两年以上</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <p class="resumeWrong">x</p>
+            <button id="languageAbilityOk" class="modifyBtns">保存</button>
+        </div>
+        <!--培训经历模块-->
+        <div id="trainExperienceAll">
+            <p class="modifyTit2" id="trainExperience">培训经历</p>
+            <button class="addAll" id="addTrainExperience">+添加培训经历</button>
+            <div id="train1">
+                <p class="modifyTit3Left" id="trainCompany">培训机构：<span id="tr1">{{.training_institution1}}</span></p>
+                <p class="modifyTit3Right" id="trainClass">培训课程：<span>{{.training_courses1}}</span></p>
+                <p class="modifyTit3Left" id="trainDescribe">培训描述：<span>{{.training_description1}}</span></p>
+                <button id="modifyPeopleWrite73" class="modifyPeopleWrite" name="modify" value="1">编辑<input id="PeopleWrite73" type="radio" name="train"></button>
+            </div>
+            <div id="train2">
+                <p class="modifyTit3Left" id="trainCompany32">培训机构：<span id="tr2">{{.training_institution2}}</span></p>
+                <p class="modifyTit3Right" id="trainClass32">培训课程：<span>{{.training_courses2}}</span></p>
+                <p class="modifyTit3Left" id="trainDescribe32">培训描述：<span>{{.training_description2}}</span></p>
+                <button id="modifyPeopleWrite732" class="modifyPeopleWrite" name="modify" value="2">编辑<input id="PeopleWrite73" type="radio" name="train"></button>
+            </div>
+            <div id="train3">
+                <p class="modifyTit3Left" id="trainCompany33">培训机构：<span id="tr3">{{.training_institution3}}</span></p>
+                <p class="modifyTit3Right" id="trainClass33">培训课程：<span>{{.training_courses3}}</span></p>
+                <p class="modifyTit3Left" id="trainDescribe33">培训描述：<span>{{.training_description3}}</span></p>
+                <button id="modifyPeopleWrite733" class="modifyPeopleWrite" name="modify" value="3">编辑<input id="PeopleWrite73" type="radio" name="train"></button>
+            </div>
+        </div>
+        <!--培训经历弹出修改框-->
+        <div id="popupTrainExperience" class="modifyDiv">
+            <table>
+                <tr>
+                    <td>
+                        <span>培训机构：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="trainCompany2" class="userMessage" placeholder="请填入培训机构的名称" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入培训机构的名称'" name="organization">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>培训课程：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="trainClass2" class="userMessage" placeholder="请填入培训课程的名称" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入培训课程的名称'" name="course">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>培训时间：</span>
+                    </td>
+                    <td>
+                        <select id="trainTime" class="userMessage" placeholder="请选择培训的年月" name="period">
+                            <option>半年以下</option>
+                            <option>半年至一年</option>
+                            <option>一年至两年</option>
+                            <option>两年以上</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="trainDescribeWrong">培训描述：</span>
+                    </td>
+                    <td>
+                        <textarea id="trainDescribe2" placeholder="请对培训内容进行描述" onfocus="this.placeholder=''" onmouseout="this.placeholder='请对培训内容进行描述'" onkeyup="sizecontrol4()" name="describe"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <p id="popupTips4">最多500字</p>
+            <p class="resumeWrong">x</p>
+            <button id="trainExperienceOk" class="modifyBtns">保存</button>
+        </div>
+        <!--获得证书模块-->
+        <div id="certificateAll">
+            <p class="modifyTit2" id="certificate">获得证书</p>
+            <button class="addAll" id="addCertificate">+添加证书</button>
+            <div id="certificate1">
+                <p class="modifyTit3Left" id="certificateName">证书名称：<span id="certi1">{{.certificate_name1}}</span></p>
+                <p class="modifyTit3Right" id="certificateTime">获得日期：<span>{{.acquired_date1}}</span></p>
+                <button id="modifyPeopleWrite74" class="modifyPeopleWrite" name="modify" value="1">编辑<input id="PeopleWrite74" type="radio" name="certificate"></button>
+            </div>
+            <div id="certificate2">
+                <p class="modifyTit3Left" id="certificateName42">证书名称：<span id="certi2">{{.certificate_name2}}</span></p>
+                <p class="modifyTit3Right" id="certificateTime42">获得日期：<span>{{.acquired_date2}}</span></p>
+                <button id="modifyPeopleWrite742" class="modifyPeopleWrite" name="modify" value="2">编辑<input id="PeopleWrite74" type="radio" name="certificate"></button>
+            </div>
+            <div id="certificate3">
+                <p class="modifyTit3Left" id="certificateName43">证书名称：<span id="certi3">{{.certificate_name3}}</span></p>
+                <p class="modifyTit3Right" id="certificateTime43">获得日期：<span>{{.acquired_date3}}</span></p>
+                <button id="modifyPeopleWrite743" class="modifyPeopleWrite" name="modify" value="3">编辑<input id="PeopleWrite74" type="radio" name="certificate"></button>
+            </div>
+        </div>
+        <!--获得证书弹出修改框-->
+        <div id="popupCertificate" class="modifyDiv">
+            <table>
+                <tr>
+                    <td>
+                        <span>名称：</span>
+                    </td>
+                    <td>
+                        <input type="text" id="certificateName2" class="userMessage" placeholder="请填入获得证书的名称" onfocus="this.placeholder=''" onmouseout="this.placeholder='请填入获得证书的名称'" name="certificate">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>获得日期：</span>
+                    </td>
+                    <td>
+                        <select id="certificateTime2" class="userMessage" placeholder="请填入获得证书的日期" name="obtainTime">
+                            <option>半年以下</option>
+                            <option>半年至一年</option>
+                            <option>一年至两年</option>
+                            <option>两年以上</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <p class="resumeWrong">x</p>
+            <button id="certificateOk" class="modifyBtns">保存</button>
+        </div>
+        <div id="modifyPicBox">
+            <img id="modifyPic" src="/statics/images/修改简历界面/u2439.svg">
+        </div>
+    </div>
+    <!--自我评价-->
+    <div id="selfEvaluation" class="modifyDiv">
+        <p class="modifyTit" id="selfEvaluation1">自我评价：</p>
+        <p id="evaluation" >{{.self_evaluation}}</p>
+        <a id="modifyPeopleWrite8" class="modifyPeopleWrite" href="###">编辑</a>
+    </div>
+    <!--自我评价弹出修改框-->
+    <div id="popupSelfEvaluation" class="PopupModifyDiv">
+        <span>评价内容：</span>
+        <textarea id="TxtSelfEvaluation" placeholder="请输入对自己较为详细的评价，用以加分" onfocus="this.placeholder=''" onmouseout="this.placeholder='请输入对自己较为详细的评价，用以加分'" onkeyup="sizecontrol5()" name="selfEvaluation"></textarea>
+        <button id="popupSelfEvaluationOk" class="modifyBtns">保存并更新</button>
+        <div id="popupSelfEvaluationNo" class="modifyBtnsDiv"><span>取消</span></div>
+        <p id="popupTips5">最多500字</p>
+    </div>
+    <!--底部两个按钮-->
+    <div id="modifyBtn">
+        <a><button id="modifyOk" class="modifyBtns">保存并更新</button></a>
+        <a><button id="modifyLook" class="modifyBtnsDiv"><span>预览简历</span></button></a>
+    </div>
+</div>
+<!--底部留白-->
+<div id="modifyWhide"></div>
+<!--现居住地选择-->
+<div id="userPlaceAll">
+    <div id="userPlaceMore">
+        <div id="userPlaceMore1"><p>请选择居住地：</p></div>
+        <div id="userPlaceMore2">
+            <table class="canPick" id="userPlacecanPick1">
+            </table>
+        </div>
+        <div id="userPlaceMore31" class="expectIndustryMoreAll" style="display:block;">
+            <table class="canPick" id="canPickUser21">
+            </table>
+        </div>
+        <div id="userPlaceMore32" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser22">
+            </table>
+        </div>
+        <div id="userPlaceMore33" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser23">
+            </table>
+        </div>
+        <div id="userPlaceMore34" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser24">
+            </table>
+        </div>
+        <div id="userPlaceMore35" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser25">
+
+            </table>
+        </div>
+        <div id="userPlaceMore36" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser26">
+
+            </table>
+        </div>
+        <div id="userPlaceMore37" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser27">
+
+            </table>
+        </div>
+        <div id="userPlaceMore38" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser28">
+
+            </table>
+        </div>
+        <div id="userPlaceMore39" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser29">
+
+            </table>
+        </div>
+        <div id="userPlaceMore40" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser30">
+
+            </table>
+        </div>
+        <div id="userPlaceMore41" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser31">
+
+            </table>
+        </div>
+        <div id="userPlaceMore42" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser32">
+            </table>
+        </div>
+        <div id="userPlaceMore43" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser33">
+            </table>
+        </div>
+        <div id="userPlaceMore44" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser34">
+            </table>
+        </div>
+        <div id="userPlaceMore45" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser35">
+            </table>
+        </div>
+        <div id="userPlaceMore46" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser36">
+            </table>
+        </div>
+        <div id="userPlaceMore47" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser37">
+            </table>
+        </div>
+        <div id="userPlaceMore48" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser38">
+            </table>
+        </div>
+        <div id="userPlaceMore49" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser39">
+            </table>
+        </div>
+        <div id="userPlaceMore50" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser40">
+            </table>
+        </div>
+        <div id="userPlaceMore51" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser41">
+            </table>
+        </div>
+        <div id="userPlaceMore52" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser42">
+            </table>
+        </div>
+        <div id="userPlaceMore53" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser43">
+            </table>
+        </div>
+        <div id="userPlaceMore54" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser44">
+            </table>
+        </div>
+        <div id="userPlaceMore55" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser45">
+            </table>
+        </div>
+        <div id="userPlaceMore56" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser46">
+            </table>
+        </div>
+        <div id="userPlaceMore57" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser47">
+            </table>
+        </div>
+        <div id="userPlaceMore58" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser48">
+            </table>
+        </div>
+        <div id="userPlaceMore59" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser49">
+            </table>
+        </div>
+        <div id="userPlaceMore60" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser50">
+            </table>
+        </div>
+        <div id="userPlaceMore61" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickUser51">
+            </table>
+        </div>
+    </div>
+</div>
+<!--期望城市选择-->
+<div id="expectCityAll">
+    <div id="expectCityMore">
+        <div id="expectCityMore1"><p>请选择期望城市：</p></div>
+        <div id="expectCityMore2">
+            <table class="canPick" id="expectCitycanPick1">
+            </table>
+        </div>
+        <div id="expectCityMore31" class="expectIndustryMoreAll" style="display: block">
+            <table class="canPick" id="canPickCity21">
+            </table>
+        </div>
+        <div id="expectCityMore32" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity22">
+            </table>
+        </div>
+        <div id="expectCityMore33" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity23">
+            </table>
+        </div>
+        <div id="expectCityMore34" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity24">
+            </table>
+        </div>
+        <div id="expectCityMore35" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity25">
+            </table>
+        </div>
+        <div id="expectCityMore36" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity26">
+            </table>
+        </div>
+        <div id="expectCityMore37" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity27">
+            </table>
+        </div>
+        <div id="expectCityMore38" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity28">
+            </table>
+        </div>
+        <div id="expectCityMore39" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity29">
+            </table>
+        </div>
+        <div id="expectCityMore40" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity30">
+            </table>
+        </div>
+        <div id="expectCityMore41" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity31">
+            </table>
+        </div>
+        <div id="expectCityMore42" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity32">
+            </table>
+        </div>
+        <div id="expectCityMore43" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity33">
+            </table>
+        </div>
+        <div id="expectCityMore44" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity34">
+            </table>
+        </div>
+        <div id="expectCityMore45" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity35">
+            </table>
+        </div>
+        <div id="expectCityMore46" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity36">
+            </table>
+        </div>
+        <div id="expectCityMore47" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity37">
+            </table>
+        </div>
+        <div id="expectCityMore48" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity38">
+            </table>
+        </div>
+        <div id="expectCityMore49" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity39">
+            </table>
+        </div>
+        <div id="expectCityMore50" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity40">
+            </table>
+        </div>
+        <div id="expectCityMore51" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity41">
+            </table>
+        </div>
+        <div id="expectCityMore52" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity42">
+            </table>
+        </div>
+        <div id="expectCityMore53" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity43">
+            </table>
+        </div>
+        <div id="expectCityMore54" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity44">
+            </table>
+        </div>
+        <div id="expectCityMore55" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity45">
+            </table>
+        </div>
+        <div id="expectCityMore56" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity46">
+            </table>
+        </div>
+        <div id="expectCityMore57" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity47">
+            </table>
+        </div>
+        <div id="expectCityMore58" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity48">
+            </table>
+        </div>
+        <div id="expectCityMore59" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity49">
+            </table>
+        </div>
+        <div id="expectCityMore60" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity50">
+            </table>
+        </div>
+        <div id="expectCityMore61" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPickCity51">
+            </table>
+        </div>
+    </div>
+</div>
+<!--求职意向中期望职业的弹出界面-->
+<div id="expectIndustryAll">
+    <div id="expectIndustryMore">
+        <div id="expectIndustryMore1"><p>请选择期望职业：</p></div>
+        <div id="expectIndustryMore2">
+            <table class="canPick" id="canPick1">
+                <tr><td class="canPickTex" >开发</td></tr>
+                <tr><td class="canPickTex">智能机器人</td></tr>
+                <tr><td class="canPickTex" >人工智能</td></tr>
+                <tr><td class="canPickTex">游戏</td></tr>
+                <tr><td class="canPickTex" >测试</td></tr>
+                <tr><td class="canPickTex">运维/技术支持</td></tr>
+                <tr><td class="canPickTex">大数据</td></tr>
+                <tr><td class="canPickTex">产品</td></tr>
+                <tr><td class="canPickTex">运营</td></tr>
+                <tr><td class="canPickTex">技术管理</td></tr>
+            </table>
+        </div>
+        <div id="expectIndustryMore31" class="expectIndustryMoreAll" style="display: block">
+            <table class="canPick" id="canPick21">
+            </table>
+        </div>
+        <div id="expectIndustryMore32" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick22">
+            </table>
+        </div>
+        <div id="expectIndustryMore33" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick23">
+            </table>
+        </div>
+        <div id="expectIndustryMore34" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick24">
+            </table>
+        </div>
+        <div id="expectIndustryMore35" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick25">
+            </table>
+        </div>
+        <div id="expectIndustryMore36" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick26">
+            </table>
+        </div>
+        <div id="expectIndustryMore37" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick27">
+            </table>
+        </div>
+        <div id="expectIndustryMore38" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick28">
+            </table>
+        </div>
+        <div id="expectIndustryMore39" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick29">
+            </table>
+        </div>
+        <div id="expectIndustryMore40" class="expectIndustryMoreAll">
+            <table class="canPick" id="canPick30">
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script  type="text/javascript">
+    workType1.addEventListener('click',function () {
+        workType1.className = 'resumeBtn1';
+        workType2.className = 'userMessageBtn1';
+        workType3.className = 'userMessageBtn1';
+    })
+    workType2.addEventListener('click',function () {
+        workType2.className = 'resumeBtn1';
+        workType1.className = 'userMessageBtn1';
+        workType3.className = 'userMessageBtn1';
+    })
+    workType3.addEventListener('click',function () {
+        workType3.className = 'resumeBtn1';
+        workType2.className = 'userMessageBtn1';
+        workType1.className = 'userMessageBtn1';
+    })
+    //获得pid
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+    var pid = getQueryVariable("pid")
+
+    //点击预览简介跳转预览页面
+    var modifyLook = document.getElementById("modifyLook")
+    modifyLook.addEventListener("click",function () {
+        var ID = getQueryVariable("pid")
+        $.ajax({
+            url:'/v2/resumePreview',
+            type:'post',
+            dataType:"json",
+            data:{
+                "ID":ID,
+            },
+            error:function (returnResult) {
+                var url = '/v2/resumePreview?pid=' + pid
+                window.location.href = url
+            },
+            success:function (result) {
+                var url = '/v2/resumePreview?pid=' + pid
+                window.location.href = url
+            }
+        })
+    })
+    //点击保存并更新跳转主页面
+    var modifyOk = document.getElementById("modifyOk")
+    modifyOk.addEventListener("click",function () {
+        var ID = getQueryVariable("id")
+        $.ajax({
+            url:'/v4/home',
+            type:'post',
+            dataType:"json",
+            data:{
+                "ID":ID,
+            },
+            error:function (returnResult) {
+                var url = '/v4/home?pid=' + pid
+                window.location.href = url
+            },
+            success:function (result) {
+                var url = '/v4/home?pid=' + pid
+                window.location.href = url
+            }
+        })
+    })
+
+    //教育经历
+    var schoolName = document.getElementById("schoolName")
+    var schoolName2 = document.getElementById("schoolName2")
+    var schoolName3 = document.getElementById("schoolName3")
+    //工作/实习经历
+    var companyName = document.getElementById("companyName")
+    var companyName2 = document.getElementById("companyName2")
+    var companyName3 = document.getElementById("companyName3")
+    //项目经历
+    var projectName1 = document.getElementById("projectName1")
+    var projectName2 = document.getElementById("projectName2")
+    var projectName3 = document.getElementById("projectName3")
+    //校内荣誉
+    var award1 = document.getElementById("award1")
+    var award2 = document.getElementById("award2")
+    var award3 = document.getElementById("award3")
+    //校内职务
+    var post1 = document.getElementById("post1")
+    var post2 = document.getElementById("post2")
+    var post3 = document.getElementById("post3")
+    //专业技能
+    var sk1 = document.getElementById("sk1")
+    var sk2 = document.getElementById("sk2")
+    var sk3 = document.getElementById("sk3")
+    //添加语言能力
+    var lang1 = document.getElementById("lang1")
+    var lang2 = document.getElementById("lang2")
+    var lang3 = document.getElementById("lang3")
+    //培训经历
+    var tr1 = document.getElementById("tr1")
+    var tr2 = document.getElementById("tr2")
+    var tr3 = document.getElementById("tr3")
+    //获得证书
+    var certi1 = document.getElementById("certi1")
+    var certi2 = document.getElementById("certi2")
+    var certi3= document.getElementById("certi3")
+    var resumeWrong = document.querySelector('#popupSpecialSkillAll .resumeWrong')
+    resumeWrong.addEventListener('click',function () {
+        popupSpecialSkillAll.style.display = 'none';
+    })
+    var resumeWrong3 = document.querySelector('#popupTrainExperience .resumeWrong')
+    resumeWrong3.addEventListener('click',function () {
+        popupTrainExperience.style.display = 'none';
+    })
+    var resumeWrong4 = document.querySelector('#popupCertificate .resumeWrong')
+    resumeWrong4.addEventListener('click',function () {
+        popupCertificate.style.display = 'none';
+    })
+    var resumeWrong1 = document.querySelector('#popupLanguageAbilityAll .resumeWrong')
+    resumeWrong1.addEventListener('click',function () {
+        popupLanguageAbilityAll.style.display = 'none';
+    })
+    $("#resumeModifyAll").ready(function () {
+
+        //教育经历
+        if (schoolName.innerHTML == ""){
+            document.getElementById("study1").style.display="none";
+        }
+        if (schoolName2.innerHTML == ""){
+            document.getElementById("study2").style.display="none";
+        }
+        if (schoolName3.innerHTML == ""){
+            document.getElementById("study3").style.display="none";
+        }
+
+        //工作/实习经历
+        if (companyName.innerHTML == ""){
+            document.getElementById("work1").style.display="none";
+        }
+        if (companyName2.innerHTML == ""){
+            document.getElementById("work2").style.display="none";
+        }
+        if (companyName3.innerHTML == ""){
+            document.getElementById("work3").style.display="none";
+        }
+        //项目经历
+        if (projectName1.innerHTML == ""){
+            document.getElementById("project1").style.display="none";
+        }
+        if (projectName2.innerHTML == ""){
+            document.getElementById("project2").style.display="none";
+        }
+        if (projectName3.innerHTML == ""){
+            document.getElementById("project3").style.display="none";
+        }
+        //校内荣誉
+        if (award1.innerHTML == ""){
+            document.getElementById("honor1").style.display="none";
+        }
+        if (award2.innerHTML == ""){
+            document.getElementById("honor2").style.display="none";
+        }
+        if (award3.innerHTML == ""){
+            document.getElementById("honor3").style.display="none";
+        }
+        //校内职务
+        if (post1.innerHTML == ""){
+            document.getElementById("schoolwork11").style.display="none";
+        }
+        if (post2.innerHTML == ""){
+            document.getElementById("schoolwork12").style.display="none";
+        }
+        if (post3.innerHTML == ""){
+            document.getElementById("schoolwork13").style.display="none";
+        }
+        //专业技能
+        if (sk1.innerHTML == ""){
+            document.getElementById("skill1").style.display="none";
+        }
+        if (sk2.innerHTML == ""){
+            document.getElementById("skill2").style.display="none";
+        }
+        if (sk3.innerHTML == ""){
+            document.getElementById("skill3").style.display="none";
+        }
+        //添加语言能力
+        if (lang1.innerHTML == ""){
+            document.getElementById("language1").style.display="none";
+        }
+        if (lang2.innerHTML == ""){
+            document.getElementById("language2").style.display="none";
+        }
+        if (lang3.innerHTML == ""){
+            document.getElementById("language3").style.display="none";
+        }
+        //培训经历
+        if (tr1.innerHTML == ""){
+            document.getElementById("train1").style.display="none";
+        }
+        if (tr2.innerHTML == ""){
+            document.getElementById("train2").style.display="none";
+        }
+        if (tr3.innerHTML == ""){
+            document.getElementById("train3").style.display="none";
+        }
+        //获得证书
+        if (certi1.innerHTML == ""){
+            document.getElementById("certificate1").style.display="none";
+        }
+        if (certi2.innerHTML == ""){
+            document.getElementById("certificate2").style.display="none";
+        }
+        if (certi3.innerHTML == ""){
+            document.getElementById("certificate3").style.display="none";
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+    /*两个按钮只能选其中一个*/
+    userSex1.addEventListener('click',function () {
+        userSex1.className = 'resumeBtn';
+        userSex2.className = 'userMessageBtn';
+    })
+    userSex2.addEventListener('click',function () {
+        userSex2.className = 'resumeBtn';
+        userSex1.className = 'userMessageBtn';
+    })
+    userIdent1.addEventListener('click',function () {
+        userIdent1.className = 'resumeBtn';
+        userIdent2.className = 'userMessageBtn';
+    })
+    userIdent2.addEventListener('click',function () {
+        userIdent2.className = 'resumeBtn';
+        userIdent1.className = 'userMessageBtn';
+    })
+
+
+
+
+
+
+
+
+    //按钮点击变色功能
+    btns = document.querySelectorAll(".userMessageBtn");
+    for (let index = 0; index < btns.length; index++){
+        const btn = btns[index];
+        btn.onclick = () => {
+            if (btn.className == 'userMessageBtn'){
+                btn.className = 'resumeBtn';
+            }
+            else {
+                btn.className = 'userMessageBtn';
+            }
+        }
+    }
+    //跳出居住城市界面
+    userPlace.addEventListener('click', function () {
+        if (userPlaceAll.style.display = 'none') {
+            userPlaceAll.style.display = 'block';
+        }
+    })
+    //跳出期望职业界面
+    jobName.addEventListener('click', function () {
+        if (expectIndustryAll.style.display = 'none') {
+            expectIndustryAll.style.display = 'block';
+        }
+    })
+    //跳出期望城市界面
+    expectCity.addEventListener('click', function () {
+        if (expectCityAll.style.display = 'none') {
+            expectCityAll.style.display = 'block';
+        }
+    })
+    //获取居住城市选择并且关闭弹出界面
+    function changeUserPlace(value){
+        console.log('ok')
+        console.log(value)
+        userPlaceAll.style.display = 'none';
+        document.getElementById('userPlace').value = value;
+    }
+    //获取期望城市选择并且关闭弹出界面
+    function changeExpectCity(value){
+        console.log('ok')
+        console.log(value)
+        expectCityAll.style.display = 'none';
+        document.getElementById('expectCity').value = value;
+    }
+    //获取期望职业选择并且关闭弹出界面
+    function changeExpectJob(value){
+        console.log('ok')
+        console.log(value)
+        expectIndustryAll.style.display = 'none';
+        document.getElementById('jobName').value = value;
+    }
+
+    //期望城市弹出框点击变色与跳转界面
+    var tds = document.querySelectorAll(".canPickTex");
+    var divs = document.querySelectorAll(".expectCityMoreAll")
+    for (var i = 0; i < tds.length; i++) {
+        tds[i].setAttribute('index', i);
+        tds[i].onclick = function () {
+
+            for (var i = 0; i < tds.length; i++) {
+                tds[i].className = ' ';
+            }
+            // 留下我自己
+            this.className = 'canPickTex1';
+            // 2. 下面的显示内容模块
+            var index = this.getAttribute('index');
+            // 干掉所有人 让其余的item 这些div 隐藏
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.display = 'none';
+            }
+            // 留下我自己 让对应的item 显示出来
+            divs[index].style.display = 'block';
+        }
+    }
+    var citys = ["北京","天津","河北省","山西省","内蒙古自治区","辽宁省","吉林省","黑龙江省","上海","江苏省","浙江省","安徽省","福建省","江西省","山东省","河南省","湖北省","湖南省","广东省","广西壮族自治区","海南省","重庆","四川省","贵州省","云南省","西藏自治区","陕西省","甘肃省","青海省","宁夏回族自治区","新疆维吾尔自治区"]
+    var str1 = ""
+    for (var i = 0; i < citys.length; i++){
+        str1 = "<tr><td class=\"canPickTex\" value="+citys[i]+">"+citys[i]+"</td></tr>"
+        $("#userPlacecanPick1").append(str1);
+    }// 居住城市中的值
+    var Beijing = ["东城区","西城区","朝阳区","丰台区","石景山区","海淀区","门头沟区","房山区", "通州区","顺义区","昌平区"
+        ,"大兴区", "怀柔区","平谷区", "密云区","延庆区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Beijing.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Beijing[3*i]+"')\">"+Beijing[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Beijing[3*i+1]+"')\">"+Beijing[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Beijing[3*i+2]+"')\">"+Beijing[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser21").append(str);
+    }
+    var Tianjin = ["和平区","河东区","河西区","南开区","河北区","红桥区","东丽区","西青区", "津南区","北辰区","武清区","宝坻区", "滨海新区","宁河区", "静海区","蓟州区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Tianjin.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Tianjin[3*i]+"')\">"+Tianjin[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Tianjin[3*i+1]+"')\">"+Tianjin[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Tianjin[3*i+2]+"')\">"+Tianjin[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser22").append(str);
+    }
+    var Hebei = ["石家庄市","唐山市","秦皇岛市","邯郸市","邢台市","保定市","张家口市","承德市", "沧州市","廊坊市","衡水市",""]
+    var str = ""
+    for(var i = 0 ;i < Hebei.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Hebei[3*i]+"')\">"+Hebei[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hebei[3*i+1]+"')\">"+Hebei[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hebei[3*i+2]+"')\">"+Hebei[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser23").append(str);
+    }
+    var Shanxi = ["太原市","大同市","阳泉市","长治市","晋城市","朔州市","晋中市","运城市","忻州市","临汾市","吕梁市",""]
+    var str = ""
+    for(var i = 0 ;i < Hebei.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Shanxi[3*i]+"')\">"+Shanxi[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shanxi[3*i+1]+"')\">"+Shanxi[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shanxi[3*i+2]+"')\">"+Shanxi[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser24").append(str);
+    }
+    var Neimenggu = ["呼和浩特市","包头市","乌海市","赤峰市","通辽市","鄂尔多斯市","呼伦贝尔市","巴彦淖尔市", "乌兰察布市","兴安盟","锡林郭勒盟"
+        ,"阿拉善盟"]
+    var str = ""
+    for(var i = 0 ;i < Neimenggu.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Neimenggu[3*i]+"')\">"+Neimenggu[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Neimenggu[3*i+1]+"')\">"+Neimenggu[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Neimenggu[3*i+2]+"')\">"+Neimenggu[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser25").append(str);
+    }
+    var Liaoning = ["沈阳市","大连市","鞍山市","抚顺市","本溪市","丹东市","锦州市","营口市", "阜新市","辽阳市","盘锦市","铁岭市", "朝阳市","葫芦岛市",""]
+    var str = ""
+    for(var i = 0 ;i < Liaoning.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Liaoning[3*i]+"')\">"+Liaoning[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Liaoning[3*i+1]+"')\">"+Liaoning[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Liaoning[3*i+2]+"')\">"+Liaoning[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser26").append(str);
+    }
+
+    var Jilin = ["长春市","吉林市","四平市","辽源市","通化市","白山市","松原市","白城市", "延边朝鲜族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Jilin.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Jilin[3*i]+"')\">"+Jilin[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jilin[3*i+1]+"')\">"+Jilin[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jilin[3*i+2]+"')\">"+Jilin[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser27").append(str);
+    }
+    var Heilongjiang = ["哈尔滨市","齐齐哈尔市","鸡西市","鹤岗市","双鸭山市","大庆市","伊春市","佳木斯市", "七台河市","牡丹江市","黑河市","绥化市", "大兴安岭地区","",""]
+    var str = ""
+    for(var i = 0 ;i < Heilongjiang.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Heilongjiang[3*i]+"')\">"+Heilongjiang[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Heilongjiang[3*i+1]+"')\">"+Heilongjiang[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Heilongjiang[3*i+2]+"')\">"+Heilongjiang[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser28").append(str);
+    }
+    var Shanghai = ["黄浦区","徐汇区","长宁区","静安区","普陀区","虹口区","杨浦区","闵行区", "宝山区","嘉定区","浦东新区","金山区", "松江区","青浦区", "奉贤区","崇明区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Shanghai.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Shanghai[3*i]+"')\">"+Shanghai[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shanghai[3*i+1]+"')\">"+Shanghai[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shanghai[3*i+2]+"')\">"+Shanghai[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser29").append(str);
+    }
+    var Jiangsu = ["南京市","无锡市","徐州市","常州市","苏州市","南通市","连云港市","淮安市","盐城市","扬州市","镇江市","泰州市","宿迁市","",""]
+    var str = ""
+    for(var i = 0 ;i < Jiangsu.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Jiangsu[3*i]+"')\">"+Jiangsu[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jiangsu[3*i+1]+"')\">"+Jiangsu[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jiangsu[3*i+2]+"')\">"+Jiangsu[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser30").append(str);
+    }
+    var Zhejiang = ["杭州市","宁波市","温州市","嘉兴市","湖州市","绍兴市","金华市","衢州市", "舟山市","台州市","丽水市",""]
+    var str = ""
+    for(var i = 0 ;i < Zhejiang.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Zhejiang[3*i]+"')\">"+Zhejiang[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Zhejiang[3*i+1]+"')\">"+Zhejiang[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Zhejiang[3*i+2]+"')\">"+Zhejiang[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser31").append(str);
+    }
+    var Anhui = ["合肥市","芜湖市","蚌埠市","淮南市","马鞍山市","淮北市","铜陵市","安庆市", "黄山市","滁州市","阜阳市","宿州市", "六安市","亳州市", "池州市","宣城市","",""]
+    var str = ""
+    for(var i = 0 ;i < Anhui.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Anhui[3*i]+"')\">"+Anhui[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Anhui[3*i+1]+"')\">"+Anhui[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Anhui[3*i+2]+"')\">"+Anhui[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser32").append(str);
+    }
+    var Fujian = ["福州市","厦门市",  "莆田市","三明市","泉州市","漳州市","南平市","龙岩市","宁德市"]
+    var str = ""
+    for(var i = 0 ;i < Fujian.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Fujian[3*i]+"')\">"+Fujian[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Fujian[3*i+1]+"')\">"+Fujian[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Fujian[3*i+2]+"')\">"+Fujian[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser33").append(str);
+    }
+    var Jiangxi = ["南昌市","景德镇市","萍乡市","九江市","新余市","鹰潭市","赣州市","吉安市","宜春市","抚州市","上饶市",""]
+    var str = ""
+    for(var i = 0 ;i < Jiangxi.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Jiangxi[3*i]+"')\">"+Jiangxi[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jiangxi[3*i+1]+"')\">"+Jiangxi[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Jiangxi[3*i+2]+"')\">"+Jiangxi[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser34").append(str);
+    }
+    var Shandong = ["济南市","青岛市","淄博市","枣庄市","东营市","烟台市","潍坊市","济宁市","泰安市","威海市","日照市","临沂市","德州市","聊城市","滨州市","菏泽市","",""]
+    var str = ""
+    for(var i = 0 ;i < Shandong.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Shandong[3*i]+"')\">"+Shandong[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shandong[3*i+1]+"')\">"+Shandong[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Shandong[3*i+2]+"')\">"+Shandong[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser35").append(str);
+    }
+    var Henan = ["郑州市","开封市","洛阳市","平顶山市","安阳市","鹤壁市","新乡市","焦作市","济源市","濮阳市","许昌市","漯河市","三门峡市", "南阳市","商丘市","信阳市","周口市","驻马店市"]
+    var str = ""
+    for(var i = 0 ;i < Henan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Henan[3*i]+"')\">"+Henan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Henan[3*i+1]+"')\">"+Henan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Henan[3*i+2]+"')\">"+Henan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser36").append(str);
+    }
+    var Hubei = ["武汉市","黄石市",  "十堰市","宜昌市","襄阳市","鄂州市","荆门市","孝感市","荆州市","黄冈市","咸宁市",  "随州市","恩施土家族苗族自治州","仙桃市","潜江市",  "天门市","神农架林区",""]
+    var str = ""
+    for(var i = 0 ;i < Hubei.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Hubei[3*i]+"')\">"+Hubei[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hubei[3*i+1]+"')\">"+Hubei[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hubei[3*i+2]+"')\">"+Hubei[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser37").append(str);
+    }
+    var Henan = ["长沙市","株洲市",  "湘潭市","衡阳市","邵阳市","岳阳市","常德市","张家界市",  "益阳市","郴州市","永州市",  "怀化市","娄底市","湘西土家族苗族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Henan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Henan[3*i]+"')\">"+Henan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Henan[3*i+1]+"')\">"+Henan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Henan[3*i+2]+"')\">"+Henan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser38").append(str);
+    }
+    var Guangdong = ["广州市","韶关市","深圳市","珠海市","汕头市","佛山市","江门市","湛江市","茂名市","肇庆市","惠州市","梅州市","汕尾市","河源市","阳江市","清远市","东莞市","中山市","东沙群岛","潮州市","揭阳市","云浮市","",""]
+    var str = ""
+    for(var i = 0 ;i < Guangdong.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Guangdong[3*i]+"')\">"+Guangdong[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guangdong[3*i+1]+"')\">"+Guangdong[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guangdong[3*i+2]+"')\">"+Guangdong[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser39").append(str);
+    }
+    var Guangxi = ["南宁市","柳州市","桂林市","梧州市","北海市","防城港市","钦州市","贵港市","玉林市","百色市","贺州市","河池市","来宾市","崇左市",""]
+    var str = ""
+    for(var i = 0 ;i < Guangxi.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Guangxi[3*i]+"')\">"+Guangxi[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guangxi[3*i+1]+"')\">"+Guangxi[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guangxi[3*i+2]+"')\">"+Guangxi[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser40").append(str);
+    }
+    var Hainan = ["海口市","三亚市","三沙市","五指山市","琼海市","儋州市","文昌市","万宁市","东方市","定安县","屯昌县","澄迈县","临高县","白沙黎族自治县","昌江黎族自治县","乐东黎族自治县","陵水黎族自治县","保亭黎族苗族自治县","琼中黎族苗族自治县","",""]
+    var str = ""
+    for(var i = 0 ;i < Hainan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Hainan[3*i]+"')\">"+Hainan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hainan[3*i+1]+"')\">"+Hainan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Hainan[3*i+2]+"')\">"+Hainan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser41").append(str);
+    }
+    var Chongqing = ["万州区","涪陵区","渝中区","大渡口区","江北区","沙坪坝区","九龙坡区","南岸区","北碚区","渝北区","巴南区","黔江区","长寿区","綦江区","潼南区","铜梁区","大足区","荣昌区","璧山区","梁平区","城口县","丰都县","垫江县","武隆区","忠县","开州区","云阳县","奉节县","巫山县","巫溪县","石柱土家族自治县","秀山土家族苗族自治县","酉阳土家族苗族自治县","彭水苗族土家族自治县","江津区","合川区","永川区","南川区","其它区"]
+    var str = ""
+    for(var i = 0 ;i < Chongqing.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Chongqing[3*i]+"')\">"+Chongqing[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Chongqing[3*i+1]+"')\">"+Chongqing[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Chongqing[3*i+2]+"')\">"+Chongqing[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser42").append(str);
+    }
+    var Sichuan = ["成都市","自贡市","攀枝花市","泸州市","德阳市","绵阳市","广元市","遂宁市","内江市","乐山市","南充市","眉山市","宜宾市","广安市","达州市","雅安市","巴中市","资阳市","阿坝藏族羌族自治州","甘孜藏族自治州","凉山彝族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Sichuan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Sichuan[3*i]+"')\">"+Sichuan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Sichuan[3*i+1]+"')\">"+Sichuan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Sichuan[3*i+2]+"')\">"+Sichuan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser43").append(str);
+    }
+    var Guizhou = ["贵阳市","六盘水市","遵义市","安顺市","铜仁市","黔西南布依族苗族自治州","毕节市","黔东南苗族侗族自治州","黔南布依族苗族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Guizhou.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Guizhou[3*i]+"')\">"+Guizhou[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guizhou[3*i+1]+"')\">"+Guizhou[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Guizhou[3*i+2]+"')\">"+Guizhou[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser44").append(str);
+    }
+    var Yunnan = ["昆明市","曲靖市","玉溪市","保山市","昭通市","丽江市","普洱市","临沧市","楚雄彝族自治州","红河哈尼族彝族自治州","文山壮族苗族自治州","西双版纳傣族自治州","大理白族自治州","德宏傣族景颇族自治州","怒江傈僳族自治州","迪庆藏族自治州","",""]
+    var str = ""
+    for(var i = 0 ;i < Yunnan.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Yunnan[3*i]+"')\">"+Yunnan[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Yunnan[3*i+1]+"')\">"+Yunnan[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Yunnan[3*i+2]+"')\">"+Yunnan[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser45").append(str);
+    }
+    var Xizang = ["拉萨市","昌都市","山南市","日喀则市","那曲市","阿里地区","林芝市","",""]
+    var str = ""
+    for(var i = 0 ;i < Xizang.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Xizang[3*i]+"')\">"+Xizang[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Xizang[3*i+1]+"')\">"+Xizang[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Xizang[3*i+2]+"')\">"+Xizang[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser46").append(str);
+    }
+    var shanxi2 = ["西安市","铜川市","宝鸡市","咸阳市","渭南市","延安市","汉中市","榆林市","安康市","商洛市","",""]
+    var str = ""
+    for(var i = 0 ;i < shanxi2.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+shanxi2[3*i]+"')\">"+shanxi2[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+shanxi2[3*i+1]+"')\">"+shanxi2[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+shanxi2[3*i+2]+"')\">"+shanxi2[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser47").append(str);
+    }
+    var Gansu = ["兰州市","嘉峪关市","金昌市","白银市","天水市","武威市","张掖市",  "平凉市","酒泉市","庆阳市","定西市","陇南市","临夏回族自治州","甘南藏族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Gansu.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Gansu[3*i]+"')\">"+Gansu[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Gansu[3*i+1]+"')\">"+Gansu[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Gansu[3*i+2]+"')\">"+Gansu[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser48").append(str);
+    }
+    var Qinghai = ["西宁市","海东市","海北藏族自治州","黄南藏族自治州","海南藏族自治州","果洛藏族自治州","玉树藏族自治州","海西蒙古族藏族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Qinghai.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Qinghai[3*i]+"')\">"+Qinghai[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Qinghai[3*i+1]+"')\">"+Qinghai[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Qinghai[3*i+2]+"')\">"+Qinghai[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser49").append(str);
+    }
+    var Ningxia = ["银川市","石嘴山市","吴忠市","固原市","中卫市",""]
+    var str = ""
+    for(var i = 0 ;i < Ningxia.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Ningxia[3*i]+"')\">"+Ningxia[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Ningxia[3*i+1]+"')\">"+Ningxia[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Ningxia[3*i+2]+"')\">"+Ningxia[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser50").append(str);
+    }
+    var Xinjiang = ["乌鲁木齐市","克拉玛依市","吐鲁番市","哈密市","昌吉回族自治州","博尔塔拉蒙古自治州","巴音郭楞蒙古自治州","阿克苏地区","克孜勒苏柯尔克孜自治州","喀什地区","和田地区","伊犁哈萨克自治州","塔城地区","阿勒泰地区","可克达拉市","石河子市","阿拉尔市","图木舒克市","五家渠市","北屯市","铁门关市","双河市","昆玉市",""]
+    var str = ""
+    for(var i = 0 ;i < Xinjiang.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeUserPlace('"+Xinjiang[3*i]+"')\">"+Xinjiang[3*i]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Xinjiang[3*i+1]+"')\">"+Xinjiang[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeUserPlace('"+Xinjiang[3*i+2]+"')\">"+Xinjiang[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickUser51").append(str);
+    }
+    //居住城市弹出框点击变色与跳转界面
+    var tds = document.querySelectorAll(".canPickTex");
+    var divs = document.querySelectorAll(".userPlaceMoreAll")
+    for (var i = 0; i < tds.length; i++) {
+        tds[i].setAttribute('index', i);
+        tds[i].onclick = function () {
+
+            for (var i = 0; i < tds.length; i++) {
+                tds[i].className = ' ';
+            }
+            // 留下我自己
+            this.className = 'canPickTex1';
+            // 2. 下面的显示内容模块
+            var index = this.getAttribute('index');
+            // 干掉所有人 让其余的item 这些div 隐藏
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.display = 'none';
+            }
+            // 留下我自己 让对应的item 显示出来
+            divs[index].style.display = 'block';
+        }
+    }
+    var citys2 = ["北京","天津","河北省","山西省","内蒙古自治区","辽宁省","吉林省","黑龙江省","上海","江苏省","浙江省","安徽省","福建省","江西省","山东省","河南省","湖北省","湖南省","广东省","广西壮族自治区","海南省","重庆","四川省","贵州省","云南省","西藏自治区","陕西省","甘肃省","青海省","宁夏回族自治区","新疆维吾尔自治区"]
+    var str2 = ""
+    for (var i = 0; i < citys2.length; i++){
+        str2 = "<tr><td class=\"canPickTex\" value="+citys2[i]+">"+citys2[i]+"</td></tr>"
+        $("#expectCitycanPick1").append(str2);
+    }
+    // 居住城市中的值
+    var Beijing1 = ["东城区","西城区","朝阳区","丰台区","石景山区","海淀区","门头沟区","房山区", "通州区","顺义区","昌平区"
+        ,"大兴区", "怀柔区","平谷区", "密云区","延庆区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Beijing.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Beijing1[3*i]+"')\">"+Beijing1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Beijing1[3*i+1]+"')\">"+Beijing1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Beijing1[3*i+2]+"')\">"+Beijing1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity21").append(str);
+    }
+    var Tianjin1 = ["和平区","河东区","河西区","南开区","河北区","红桥区","东丽区","西青区", "津南区","北辰区","武清区","宝坻区", "滨海新区","宁河区", "静海区","蓟州区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Tianjin1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Tianjin1[3*i]+"')\">"+Tianjin1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Tianjin1[3*i+1]+"')\">"+Tianjin1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Tianjin1[3*i+2]+"')\">"+Tianjin1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity22").append(str);
+    }
+    var Hebei1 = ["石家庄市","唐山市","秦皇岛市","邯郸市","邢台市","保定市","张家口市","承德市", "沧州市","廊坊市","衡水市",""]
+    var str = ""
+    for(var i = 0 ;i < Hebei1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Hebei1[3*i]+"')\">"+Hebei1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hebei1[3*i+1]+"')\">"+Hebei1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hebei1[3*i+2]+"')\">"+Hebei1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity23").append(str);
+    }
+    var Shanxi1 = ["太原市","大同市","阳泉市","长治市","晋城市","朔州市","晋中市","运城市","忻州市","临汾市","吕梁市",""]
+    var str = ""
+    for(var i = 0 ;i < Hebei1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Shanxi1[3*i]+"')\">"+Shanxi1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanxi1[3*i+1]+"')\">"+Shanxi1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanxi1[3*i+2]+"')\">"+Shanxi1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity24").append(str);
+    }
+    var Neimenggu1 = ["呼和浩特市","包头市","乌海市","赤峰市","通辽市","鄂尔多斯市","呼伦贝尔市","巴彦淖尔市", "乌兰察布市","兴安盟","锡林郭勒盟"
+        ,"阿拉善盟"]
+    var str = ""
+    for(var i = 0 ;i < Neimenggu1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Neimenggu1[3*i]+"')\">"+Neimenggu1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Neimenggu1[3*i+1]+"')\">"+Neimenggu1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Neimenggu1[3*i+2]+"')\">"+Neimenggu1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity25").append(str);
+    }
+    var Liaoning1 = ["沈阳市","大连市","鞍山市","抚顺市","本溪市","丹东市","锦州市","营口市", "阜新市","辽阳市","盘锦市","铁岭市", "朝阳市","葫芦岛市",""]
+    var str = ""
+    for(var i = 0 ;i < Liaoning1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Liaoning1[3*i]+"')\">"+Liaoning1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Liaoning1[3*i+1]+"')\">"+Liaoning1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Liaoning1[3*i+2]+"')\">"+Liaoning1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity26").append(str);
+    }
+
+    var Jilin11 = ["长春市","吉林市","四平市","辽源市","通化市","白山市","松原市","白城市", "延边朝鲜族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Jilin11.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Jilin11[3*i]+"')\">"+Jilin11[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jilin11[3*i+1]+"')\">"+Jilin11[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jilin11[3*i+2]+"')\">"+Jilin11[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity27").append(str);
+    }
+    var Heilongjiang1 = ["哈尔滨市","齐齐哈尔市","鸡西市","鹤岗市","双鸭山市","大庆市","伊春市","佳木斯市", "七台河市","牡丹江市","黑河市","绥化市", "大兴安岭地区","",""]
+    var str = ""
+    for(var i = 0 ;i < Heilongjiang1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Heilongjiang1[3*i]+"')\">"+Heilongjiang1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Heilongjiang1[3*i+1]+"')\">"+Heilongjiang1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Heilongjiang1[3*i+2]+"')\">"+Heilongjiang1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity28").append(str);
+    }
+    var Shanghai1 = ["黄浦区","徐汇区","长宁区","静安区","普陀区","虹口区","杨浦区","闵行区", "宝山区","嘉定区","浦东新区","金山区", "松江区","青浦区", "奉贤区","崇明区","其它区",""]
+    var str = ""
+    for(var i = 0 ;i < Shanghai1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Shanghai1[3*i]+"')\">"+Shanghai1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanghai1[3*i+1]+"')\">"+Shanghai1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanghai1[3*i+2]+"')\">"+Shanghai1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity29").append(str);
+    }
+    var Jiangsu1 = ["南京市","无锡市","徐州市","常州市","苏州市","南通市","连云港市","淮安市","盐城市","扬州市","镇江市","泰州市","宿迁市","",""]
+    var str = ""
+    for(var i = 0 ;i < Jiangsu1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Jiangsu1[3*i]+"')\">"+Jiangsu1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jiangsu1[3*i+1]+"')\">"+Jiangsu1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jiangsu1[3*i+2]+"')\">"+Jiangsu1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity30").append(str);
+    }
+    var Zhejiang1 = ["杭州市","宁波市","温州市","嘉兴市","湖州市","绍兴市","金华市","衢州市", "舟山市","台州市","丽水市",""]
+    var str = ""
+    for(var i = 0 ;i < Zhejiang1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Zhejiang1[3*i]+"')\">"+Zhejiang1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Zhejiang1[3*i+1]+"')\">"+Zhejiang1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Zhejiang1[3*i+2]+"')\">"+Zhejiang1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity31").append(str);
+    }
+    var Anhui1 = ["合肥市","芜湖市","蚌埠市","淮南市","马鞍山市","淮北市","铜陵市","安庆市", "黄山市","滁州市","阜阳市","宿州市", "六安市","亳州市", "池州市","宣城市","",""]
+    var str = ""
+    for(var i = 0 ;i < Anhui1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Anhui1[3*i]+"')\">"+Anhui1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Anhui1[3*i+1]+"')\">"+Anhui1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Anhui1[3*i+2]+"')\">"+Anhui1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity32").append(str);
+    }
+    var Fujian1 = ["福州市","厦门市",  "莆田市","三明市","泉州市","漳州市","南平市","龙岩市","宁德市"]
+    var str = ""
+    for(var i = 0 ;i < Fujian1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Fujian1[3*i]+"')\">"+Fujian1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Fujian1[3*i+1]+"')\">"+Fujian1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Fujian1[3*i+2]+"')\">"+Fujian1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity33").append(str);
+    }
+    var Jiangxi1 = ["南昌市","景德镇市","萍乡市","九江市","新余市","鹰潭市","赣州市","吉安市","宜春市","抚州市","上饶市",""]
+    var str = ""
+    for(var i = 0 ;i < Jiangxi1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Jiangxi1[3*i]+"')\">"+Jiangxi1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jiangxi1[3*i+1]+"')\">"+Jiangxi1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Jiangxi1[3*i+2]+"')\">"+Jiangxi1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity34").append(str);
+    }
+    var Shandong1 = ["济南市","青岛市","淄博市","枣庄市","东营市","烟台市","潍坊市","济宁市","泰安市","威海市","日照市","临沂市","德州市","聊城市","滨州市","菏泽市","",""]
+    var str = ""
+    for(var i = 0 ;i < Shandong1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Shandong1[3*i]+"')\">"+Shandong1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shandong1[3*i+1]+"')\">"+Shandong1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shandong1[3*i+2]+"')\">"+Shandong1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity35").append(str);
+    }
+    var Henan1 = ["郑州市","开封市","洛阳市","平顶山市","安阳市","鹤壁市","新乡市","焦作市","济源市","濮阳市","许昌市","漯河市","三门峡市", "南阳市","商丘市","信阳市","周口市","驻马店市"]
+    var str = ""
+    for(var i = 0 ;i < Henan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Henan1[3*i]+"')\">"+Henan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Henan1[3*i+1]+"')\">"+Henan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Henan1[3*i+2]+"')\">"+Henan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity36").append(str);
+    }
+    var Hubei1 = ["武汉市","黄石市",  "十堰市","宜昌市","襄阳市","鄂州市","荆门市","孝感市","荆州市","黄冈市","咸宁市",  "随州市","恩施土家族苗族自治州","仙桃市","潜江市",  "天门市","神农架林区",""]
+    var str = ""
+    for(var i = 0 ;i < Hubei1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Hubei1[3*i]+"')\">"+Hubei1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hubei1[3*i+1]+"')\">"+Hubei1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hubei1[3*i+2]+"')\">"+Hubei1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity37").append(str);
+    }
+    var Hunan1 = ["长沙市","株洲市",  "湘潭市","衡阳市","邵阳市","岳阳市","常德市","张家界市",  "益阳市","郴州市","永州市",  "怀化市","娄底市","湘西土家族苗族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Hunan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Hunan1[3*i]+"')\">"+Hunan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hunan1[3*i+1]+"')\">"+Hunan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hunan1[3*i+2]+"')\">"+Hunan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity38").append(str);
+    }
+    var Guangdong1 = ["广州市","韶关市","深圳市","珠海市","汕头市","佛山市","江门市","湛江市","茂名市","肇庆市","惠州市","梅州市","汕尾市","河源市","阳江市","清远市","东莞市","中山市","东沙群岛","潮州市","揭阳市","云浮市","",""]
+    var str = ""
+    for(var i = 0 ;i < Guangdong1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Guangdong1[3*i]+"')\">"+Guangdong1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guangdong1[3*i+1]+"')\">"+Guangdong1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guangdong1[3*i+2]+"')\">"+Guangdong1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity39").append(str);
+    }
+    var Guangxi1 = ["南宁市","柳州市","桂林市","梧州市","北海市","防城港市","钦州市","贵港市","玉林市","百色市","贺州市","河池市","来宾市","崇左市",""]
+    var str = ""
+    for(var i = 0 ;i < Guangxi1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Guangxi1[3*i]+"')\">"+Guangxi1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guangxi1[3*i+1]+"')\">"+Guangxi1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guangxi1[3*i+2]+"')\">"+Guangxi1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity40").append(str);
+    }
+    var Hainan1 = ["海口市","三亚市","三沙市","五指山市","琼海市","儋州市","文昌市","万宁市","东方市","定安县","屯昌县","澄迈县","临高县","白沙黎族自治县","昌江黎族自治县","乐东黎族自治县","陵水黎族自治县","保亭黎族苗族自治县","琼中黎族苗族自治县","",""]
+    var str = ""
+    for(var i = 0 ;i < Hainan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Hainan1[3*i]+"')\">"+Hainan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hainan1[3*i+1]+"')\">"+Hainan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Hainan1[3*i+2]+"')\">"+Hainan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity41").append(str);
+    }
+    var Chongqing1 = ["万州区","涪陵区","渝中区","大渡口区","江北区","沙坪坝区","九龙坡区","南岸区","北碚区","渝北区","巴南区","黔江区","长寿区","綦江区","潼南区","铜梁区","大足区","荣昌区","璧山区","梁平区","城口县","丰都县","垫江县","武隆区","忠县","开州区","云阳县","奉节县","巫山县","巫溪县","石柱土家族自治县","秀山土家族苗族自治县","酉阳土家族苗族自治县","彭水苗族土家族自治县","江津区","合川区","永川区","南川区","其它区"]
+    var str = ""
+    for(var i = 0 ;i < Chongqing1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Chongqing1[3*i]+"')\">"+Chongqing1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Chongqing1[3*i+1]+"')\">"+Chongqing1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Chongqing1[3*i+2]+"')\">"+Chongqing1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity42").append(str);
+    }
+    var Sichuan1 = ["成都市","自贡市","攀枝花市","泸州市","德阳市","绵阳市","广元市","遂宁市","内江市","乐山市","南充市","眉山市","宜宾市","广安市","达州市","雅安市","巴中市","资阳市","阿坝藏族羌族自治州","甘孜藏族自治州","凉山彝族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Sichuan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Sichuan1[3*i]+"')\">"+Sichuan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Sichuan1[3*i+1]+"')\">"+Sichuan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Sichuan1[3*i+2]+"')\">"+Sichuan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity43").append(str);
+    }
+    var Guizhou1 = ["贵阳市","六盘水市","遵义市","安顺市","铜仁市","黔西南布依族苗族自治州","毕节市","黔东南苗族侗族自治州","黔南布依族苗族自治州"]
+    var str = ""
+    for(var i = 0 ;i < Guizhou1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Guizhou1[3*i]+"')\">"+Guizhou1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guizhou1[3*i+1]+"')\">"+Guizhou1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Guizhou1[3*i+2]+"')\">"+Guizhou1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity44").append(str);
+    }
+    var Yunnan1 = ["昆明市","曲靖市","玉溪市","保山市","昭通市","丽江市","普洱市","临沧市","楚雄彝族自治州","红河哈尼族彝族自治州","文山壮族苗族自治州","西双版纳傣族自治州","大理白族自治州","德宏傣族景颇族自治州","怒江傈僳族自治州","迪庆藏族自治州","",""]
+    var str = ""
+    for(var i = 0 ;i < Yunnan1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Yunnan1[3*i]+"')\">"+Yunnan1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Yunnan1[3*i+1]+"')\">"+Yunnan1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Yunnan1[3*i+2]+"')\">"+Yunnan1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity45").append(str);
+    }
+    var Xizang1 = ["拉萨市","昌都市","山南市","日喀则市","那曲市","阿里地区","林芝市","",""]
+    var str = ""
+    for(var i = 0 ;i < Xizang1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Xizang1[3*i]+"')\">"+Xizang1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Xizang1[3*i+1]+"')\">"+Xizang1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Xizang1[3*i+2]+"')\">"+Xizang1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity46").append(str);
+    }
+    var Shanxi12 = ["西安市","铜川市","宝鸡市","咸阳市","渭南市","延安市","汉中市","榆林市","安康市","商洛市","",""]
+    var str = ""
+    for(var i = 0 ;i < Shanxi12.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Shanxi12[3*i]+"')\">"+Shanxi12[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanxi12[3*i+1]+"')\">"+Shanxi12[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Shanxi12[3*i+2]+"')\">"+Shanxi12[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity47").append(str);
+    }
+    var Gansu1 = ["兰州市","嘉峪关市","金昌市","白银市","天水市","武威市","张掖市",  "平凉市","酒泉市","庆阳市","定西市","陇南市","临夏回族自治州","甘南藏族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Gansu1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Gansu1[3*i]+"')\">"+Gansu1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Gansu1[3*i+1]+"')\">"+Gansu1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Gansu1[3*i+2]+"')\">"+Gansu1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity48").append(str);
+    }
+    var Qinghai1 = ["西宁市","海东市","海北藏族自治州","黄南藏族自治州","海南藏族自治州","果洛藏族自治州","玉树藏族自治州","海西蒙古族藏族自治州",""]
+    var str = ""
+    for(var i = 0 ;i < Qinghai1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Qinghai1[3*i]+"')\">"+Qinghai1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Qinghai1[3*i+1]+"')\">"+Qinghai1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Qinghai1[3*i+2]+"')\">"+Qinghai1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity49").append(str);
+    }
+    var Ningxia1 = ["银川市","石嘴山市","吴忠市","固原市","中卫市",""]
+    var str = ""
+    for(var i = 0 ;i < Ningxia1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Ningxia1[3*i]+"')\">"+Ningxia1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Ningxia1[3*i+1]+"')\">"+Ningxia1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Ningxia1[3*i+2]+"')\">"+Ningxia1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity50").append(str);
+    }
+    var Xinjiang1 = ["乌鲁木齐市","克拉玛依市","吐鲁番市","哈密市","昌吉回族自治州","博尔塔拉蒙古自治州","巴音郭楞蒙古自治州","阿克苏地区","克孜勒苏柯尔克孜自治州","喀什地区","和田地区","伊犁哈萨克自治州","塔城地区","阿勒泰地区","可克达拉市","石河子市","阿拉尔市","图木舒克市","五家渠市","北屯市","铁门关市","双河市","昆玉市",""]
+    var str = ""
+    for(var i = 0 ;i < Xinjiang1.length/3;i++){
+        str = "<tr>"+
+            "<td onClick=\"changeExpectCity('"+Xinjiang1[3*i]+"')\">"+Xinjiang1[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Xinjiang1[3*i+1]+"')\">"+Xinjiang1[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectCity('"+Xinjiang1[3*i+2]+"')\">"+Xinjiang1[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPickCity51").append(str);
+    }
+    //期望职业弹出框点击变色与跳转界面
+    var tds = document.querySelectorAll(".canPickTex");
+    var divs = document.querySelectorAll(".expectIndustryMoreAll")
+    for (var i = 0; i < tds.length; i++) {
+        tds[i].setAttribute('index', i);
+        tds[i].onclick = function () {
+            for (var i = 0; i < tds.length; i++) {
+                tds[i].className = ' ';
+            }
+            // 留下我自己
+            this.className = 'canPickTex1';
+            // 2. 下面的显示内容模块
+            var index = this.getAttribute('index');
+            // 干掉所有人 让其余的item 这些div 隐藏
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.display = 'none';
+            }
+            // 留下我自己 让对应的item 显示出来
+            divs[index].style.display = 'block';
+        }
+    }
+   /* var jobs = ["开发","智能机器人","人工智能","游戏","测试","运维/技术支持","大数据","产品","运营","技术管理"]
+    var str4 = ""
+    for (var i = 0; i < jobs.length; i++){
+        str4 = "<tr><td class=\"canPickTex\" value="+jobs[i]+">"+jobs[i]+"</td></tr>"
+        $("#canPick1").append(str4);
+    }*/
+    // 期望职位中的值
+    var exploit = ["Java开发工程师","PHP开发工程师","C/C++开发工程师", "Python开发工程师",".NET开发工程师","C#开发工程师", "Ruby开发工程师","Go开发工程师","大数据开发工程师","Hadoop工程师","爬虫开发工程师","脚本开发工程师","多媒体开发工程师","GIS工程师","全栈工程师", "ERP技术开发","区块链开发","高级软件工程师","软件工程师","系统架构设计师", "系统分析员", "技术文员/助理","技术文档工程师", "Android开发工程师","iOS开发工程师","小程序开发工程师","移动开发工程师","Web前端开发","HTML5开发工程师","其他"]
+    var str5 = ""
+    for(var i = 0 ;i < exploit.length/3;i++){
+        str5 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+exploit[3*i]+"')\">"+exploit[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+exploit[3*i+1]+"')\">"+exploit[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+exploit[3*i+2]+"')\">"+exploit[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick21").append(str5);
+    }
+    var robot = ["自动化测试工程师","硬件测试工程师","项目经理","SLAM定位导航高级算法工程师","云端UE4高级算法工程师","云端UE4高级建模工程师", "机械臂控制算法工程师","视觉算法工程师","结构工程师","IQC来料检验工程师","UE4高级3D建模工程师","高级机器人项目策划","私域增长专家","生产信息化系统工程师","BOM工程师", "IQC检验员","NPI测试工程师","工厂信息化技术","工厂产业自动化","",""]
+    var str6 = ""
+    for(var i = 0 ;i < robot.length/3;i++){
+        str6 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+robot[3*i]+"')\">"+robot[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+robot[3*i+1]+"')\">"+robot[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+robot[3*i+2]+"')\">"+robot[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick22").append(str6);
+    }
+    var ai = ["机器学习工程师","深度学习工程师","图像算法工程师","图像处理工程师","图像识别工程师","语音识别工程师","机器视觉工程师","自然语言处理(NLP)","算法工程师","推荐算法工程师","搜索算法工程师","其他"]
+    var str7 = ""
+    for(var i = 0 ;i < ai.length/3;i++){
+        str7 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+ai[3*i]+"')\">"+ai[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+ai[3*i+1]+"')\">"+ai[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+ai[3*i+2]+"')\">"+ai[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick23").append(str7);
+    }
+    var game = ["游戏策划师","游戏系统策划","游戏数值策划","游戏关卡策划","游戏文案策划/剧情策划","游戏界面设计师","游戏角色设计师","游戏特效设计师","UE4特效师","游戏动作设计师","游戏场景设计师","游戏原画师","游戏动画师","游戏开发工程师","Cocos2d-x开发工程师","Unity3d开发工程师","UE4开发工程师","游戏客户端开发工程师","游戏服务端开发工程师","游戏测试",  "游戏运营","电子竞技运营","其他",""]
+    var str8 = ""
+    for(var i = 0 ;i < game.length/3;i++){
+        str8 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+game[3*i]+"')\">"+game[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+game[3*i+1]+"')\">"+game[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+game[3*i+2]+"')\">"+game[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick24").append(str8);
+    }
+    var test = ["软件测试工程师","功能测试","性能测试","安全测试","自动化测试","移动端测试", "测试开发","测试总监","测试经理","测试主管","系统测试","标准化工程师","测试工程师","其他",""]
+    var str9 = ""
+    for(var i = 0 ;i < test.length/3;i++){
+        str9 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+test[3*i]+"')\">"+test[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+test[3*i+1]+"')\">"+test[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+test[3*i+2]+"')\">"+test[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick25").append(str9);
+    }
+    var technology = ["运维工程师","自动化运维工程师","系统工程师", "数据库工程师(DBA)","系统集成工程师","ERP实施顾问", "网络安全工程师","运维开发","网站维护工程师","技术支持/维护经理","技术支持/维护工程师","配置管理工程师","IT经理/IT主管","网络工程师(IT工程师)","网络管理(Helpdesk)","网络维修","手机维修","电脑维修","其他","",""]
+    var str10 = ""
+    for(var i = 0 ;i < technology.length/3;i++){
+        str10 = "<tr>"+
+            "<td onClick=\"technology('"+test[3*i]+"')\">"+technology[3*i]+"</td>\n" +
+            "<td onClick=\"technology('"+test[3*i+1]+"')\">"+technology[3*i+1]+"</td>\n" +
+            "<td onClick=\"technology('"+test[3*i+2]+"')\">"+technology[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick26").append(str10);
+    }
+    var bigdata = ["数据分析经理/主管","数据分析师","ETL开发工程师", "BI工程师","数据仓库工程师","数据采集工程师","数据建模工程师","数据治理工程师","数据标注师","密码技术应用员","电子数据取证分析师","其他"]
+    var str11 = ""
+    for(var i = 0 ;i < bigdata.length/3;i++){
+        str11 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+bigdata[3*i]+"')\">"+bigdata[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+bigdata[3*i+1]+"')\">"+bigdata[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+bigdata[3*i+2]+"')\">"+bigdata[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick27").append(str11);
+    }
+    var produce = ["产品总监","产品经理/主管","互联网产品经理","移动产品经理","用户产品经理","电商产品经理","产品专员","产品助理","需求工程师","其他","",""]
+    var str12 = ""
+    for(var i = 0 ;i < produce.length/3;i++){
+        str12 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+produce[3*i]+"')\">"+produce[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+produce[3*i+1]+"')\">"+produce[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+produce[3*i+2]+"')\">"+produce[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick28").append(str12);
+    }
+    var operation = ["运营总监","运营经理","运营主管","运营专员","运营助理","网站运营总监","网站运营经理/主管","网站运营专员","网络推广总监","网络推广经理/主管","网络推广专员","SEO/SEM","信息流优化师","新媒体运营","直播运营","微信运营","微博运营","用户运营","社区/社群运营","活动运营","内容运营","品类运营","数据运营","线下运营", "产品运营","网站编辑"   ,"内容审核","网站策划","其他",""]
+    var str13 = ""
+    for(var i = 0 ;i < operation.length/3;i++){
+        str13 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+operation[3*i]+"')\">"+operation[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+operation[3*i+1]+"')\">"+operation[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+operation[3*i+2]+"')\">"+operation[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick29").append(str13);
+    }
+    var management = ["首席技术执行官CTO","首席信息官CIO","技术总监/经理","项目总监","项目经理","项目主管","项目执行/协调人员","项目助理","其他"]
+    var str14 = ""
+    for(var i = 0 ;i < management.length/3;i++){
+        str14 = "<tr>"+
+            "<td onClick=\"changeExpectJob('"+management[3*i]+"')\">"+management[3*i]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+management[3*i+1]+"')\">"+management[3*i+1]+"</td>\n" +
+            "<td onClick=\"changeExpectJob('"+management[3*i+2]+"')\">"+management[3*i+2]+"</td>\n" +
+            "</tr>"
+        $("#canPick30").append(str14);
+    }
+    /*消失*/
+    //项目描述编辑
+    modifyPeopleWrite51 = document.getElementById("modifyPeopleWrite51")
+    modifyPeopleWrite52 = document.getElementById("modifyPeopleWrite52")
+    modifyPeopleWrite53 = document.getElementById("modifyPeopleWrite53")
+    PeopleWrite5 = document.getElementById("PeopleWrite5")
+    projectOk = document.getElementById("projectOk")
+    modifyPeopleWrite51.addEventListener('click',function () {
+        PeopleWrite5.value = '1';
+    })
+    modifyPeopleWrite52.addEventListener('click',function () {
+        PeopleWrite5.value = '2';
+    })
+    modifyPeopleWrite53.addEventListener('click',function () {
+        PeopleWrite5.value = '3';
+    })
+    projectOk.addEventListener('click',function () {
+        var projectName = document.getElementById("projectName").value
+        var projectTime1 = document.getElementById("projectTime1").value
+        var projectTime2 = document.getElementById("projectTime2").value
+        var projectCompany = document.getElementById("projectConpany").value
+        var projectLike = document.getElementById("projectLike").value
+        var flagren = $("input[name='school_time_start_end']:checked").val()
+        if (projectName != ''){
+            if (projectTime1 != ''){
+                if (projectTime2 != ''|flagren!='false'){
+                    if (projectCompany != ''){
+                        if (projectLike != ''){
+                            popupProject.style.display = 'none';
+                            setTimeout(function () {
+                                window.location.reload();
+                            },500);
+                            if(PeopleWrite5.value == '1'){
+                                $.ajax({
+                                    url:"/v2/resumeModify",
+                                    type: "POST",
+                                    dataType: "json",
+                                    data:{
+                                        "projectName":projectName,
+                                        "projectTime1":projectTime1,
+                                        "projectTime2":projectTime2,
+                                        "projectCompany":projectCompany,
+                                        "projectLike":projectLike,
+                                        "modifyType": "item1",
+                                        "pid":pid,
+                                    }
+                                })
+                            }else if(PeopleWrite5.value == '2'){
+                                $.ajax({
+                                    url:"/v2/resumeModify",
+                                    type: "POST",
+                                    dataType: "json",
+                                    data:{
+                                        "projectName":projectName,
+                                        "projectTime1":projectTime1,
+                                        "projectTime2":projectTime2,
+                                        "projectCompany":projectCompany,
+                                        "projectLike":projectLike,
+                                        "modifyType": "item2",
+                                        "pid":pid,
+                                    }
+                                })
+                            }else if (PeopleWrite5.value = '3'){
+                                $.ajax({
+                                    url:"/v2/resumeModify",
+                                    type: "POST",
+                                    dataType: "json",
+                                    data:{
+                                        "projectName":projectName,
+                                        "projectTime1":projectTime1,
+                                        "projectTime2":projectTime2,
+                                        "projectCompany":projectCompany,
+                                        "projectLike":projectLike,
+                                        "modifyType": "item3",
+                                        "pid":pid,
+                                    }
+                                })
+                            }
+                        }else {
+                            alert('项目描述不能为空');
+                        }
+                    }else {
+                        alert('所属公司不能为空');
+                    }
+                }else {
+                    alert('项目结束时间不能为空');
+                }
+            }else {
+                alert('项目开始时间不能为空');
+            }
+        }else {
+            alert('项目名称不能为空');
+        }
+
+    })
+    projectNo.addEventListener('click',function () {
+        popupProject.style.display = 'none';
+    })
+    /*消失*/
+    //个人基础信息编辑
+    var personOk = document.getElementById("personOk")
+    personOk.addEventListener('click',function () {
+        var userName = document.getElementById("userName").value
+        var gender = $("input[name='gender']:checked").val()
+        var identity = $("input[name='identity']:checked").val()
+        var userBirth = document.getElementById("userBirth").value
+        var userPlace = document.getElementById("userPlace").value
+        var userEmail = document.getElementById("userEmail").value
+        var userTel = document.getElementById("userTel").value
+        if (userName != ''){
+            if (userBirth != ''){
+                if (userPlace != ''){
+                    if (userTel != ''){
+                        if (userEmail != ''){
+                            personMessage.style.display = 'none';
+                            setTimeout(function () {
+                                window.location.reload();
+                            },500);
+                            $.ajax({
+                                url:"/v2/resumeModify",
+                                type: "POST",
+                                dataType: "json",
+                                data:{
+                                    "userName": userName,
+                                    "gender": gender,
+                                    "identity": identity,
+                                    "userBirth": userBirth,
+                                    "userPlace": userPlace,
+                                    "userEmail": userEmail,
+                                    "userTel": userTel,
+                                    "modifyType": "basic",
+                                    "pid":pid,
+                                },
+                            })
+                        }else {
+                            alert('电子邮箱不能为空');
+                        }
+                    }else {
+                        alert('电话号码不能为空');
+                    }
+                }else {
+                    alert('现居住地不能为空');
+                }
+            }else {
+                alert('出生年月不能为空');
+            }
+        }else {
+            alert('姓名不能为空');
+        }
+    })
+    personNo.addEventListener('click',function () {
+        personMessage.style.display = 'none';
+    })
+    /*消失*/
+    //个人求职意向编辑
+    var jobOk = document.getElementById("jobOk")
+    jobOk.addEventListener('click',function () {
+        var jobName = document.getElementById("jobName").value
+        var expectCity = document.getElementById("expectCity").value
+        var jobMoneyMin = document.getElementById("jobMoney1").value
+        var jobMoneyMax = document.getElementById("jobMoney2").value
+        var jobType = '';
+        $("input[name='nature_of_works']:checked").each(function(i) {
+            jobType += $(this).val()+'/';
+        })
+        jobType = jobType.slice(0,jobType.length-1)
+        // var jobType = $("input[name='nature_of_works']:checked").val()
+        var jobTime = document.getElementById("jobTime2").value
+        if (jobName != ''){
+            if (expectCity != ''){
+                if (jobMoneyMin != ''){
+                    if (jobMoneyMax != ''){
+                        if (jobTime != ''){
+                            popupTit.style.display = 'none';
+                            setTimeout(function () {
+                                window.location.reload();
+                            },500);
+                            $.ajax({
+                                url:"/v2/resumeModify",
+                                type: "POST",
+                                dataType: "json",
+                                data: {
+                                    "jobName":jobName,
+                                    "expectCity":expectCity,
+                                    "jobMoneyMin":jobMoneyMin,
+                                    "jobMoneyMax":jobMoneyMax,
+                                    "jobType":jobType,
+                                    "jobTime":jobTime,
+                                    "modifyType": "expectJob",
+                                    "pid":pid,
+                                }
+                            })
+                        }else {
+                            alert('到岗时间不能为空');
+                        }
+                    }else {
+                        alert('最高薪资不能为空');
+                    }
+                }else {
+                    alert('最低薪资不能为空');
+                }
+            }else {
+                alert('期望城市不能为空');
+            }
+        }else {
+            alert('期望职业不能为空');
+        }
+    })
+    jobNo.addEventListener('click',function () {
+        popupTit.style.display = 'none';
+    })
+    /*消失*/
+    //教育经历编辑
+    modifyPeopleWrite3 = document.getElementById("modifyPeopleWrite3")
+    modifyPeopleWrite32 = document.getElementById("modifyPeopleWrite32")
+    modifyPeopleWrite33 = document.getElementById("modifyPeopleWrite33")
+    PeopleWrite3 = document.getElementById("PeopleWrite3")
+    studyOk = document.getElementById("studyOk")
+    modifyPeopleWrite3.addEventListener('click',function () {
+        PeopleWrite3.value = '1';
+    })
+    modifyPeopleWrite32.addEventListener('click',function () {
+        PeopleWrite3.value = '2';
+    })
+    modifyPeopleWrite33.addEventListener('click',function () {
+        PeopleWrite3.value = '3';
+    })
+    studyOk.addEventListener('click',function () {
+        var school_name = document.getElementById("studySchoolName").value
+        var highest_education = document.getElementById("topEducation").value
+        var major_studied = document.getElementById("studyType").value
+        var school_time_start = document.getElementById("stydyTime1").value
+        var school_time_end = document.getElementById("studyTime2").value
+        var flagedu = $("input[name='school_time_start_end']:checked").val()
+        if (school_name != ''){
+            if (highest_education != ''){
+                if (major_studied != ''){
+                    if (school_time_start != ''){
+                        if (school_time_end != ''|flagedu!='false'){
+                            popupStudy.style.display = 'none';
+                            setTimeout(function () {
+                                window.location.reload();
+                            },500);
+                            if(PeopleWrite3.value == '1'){
+                                $.ajax({
+                                    url:"/v2/resumeModify",
+                                    type: "POST",
+                                    dataType: "json",
+                                    data:{
+                                        "school_name":school_name,
+                                        "highest_education":highest_education,
+                                        "major_studied":major_studied,
+                                        "school_time_start":school_time_start,
+                                        "school_time_end":school_time_end,
+                                        "modifyType": "education1",
+                                        "pid":pid,
+                                    }
+                                })
+                            }else if(PeopleWrite3.value == '2'){
+                                $.ajax({
+                                    url:"/v2/resumeModify",
+                                    type: "POST",
+                                    dataType: "json",
+                                    data:{
+                                        "school_name":school_name,
+                                        "highest_education":highest_education,
+                                        "major_studied":major_studied,
+                                        "school_time_start":school_time_start,
+                                        "school_time_end":school_time_end,
+                                        "modifyType": "education2",
+                                        "pid":pid,
+                                    }
+                                })
+                            }else if (PeopleWrite3.value = '3'){
+                                $.ajax({
+                                    url:"/v2/resumeModify",
+                                    type: "POST",
+                                    dataType: "json",
+                                    data:{
+                                        "school_name":school_name,
+                                        "highest_education":highest_education,
+                                        "major_studied":major_studied,
+                                        "school_time_start":school_time_start,
+                                        "school_time_end":school_time_end,
+                                        "modifyType": "education3",
+                                        "pid":pid,
+                                    }
+                                })
+                            }
+                        }else {
+                            alert('毕业时间不能为空');
+                        }
+                    }else {
+                        alert('入学时间不能为空');
+                    }
+                }else {
+                    alert('所学专业不能为空');
+                }
+            }else {
+                alert('最高学历不能为空');
+            }
+        }else {
+            alert('学校名称不能为空');
+        }
+    })
+    studyNo.addEventListener('click',function () {
+        popupStudy.style.display = 'none';
+    })
+    /*消失*/
+    //个人工作/实习经历编辑
+    modifyPeopleWrite4 = document.getElementById("modifyPeopleWrite4")
+    modifyPeopleWrite42 = document.getElementById("modifyPeopleWrite42")
+    modifyPeopleWrite43 = document.getElementById("modifyPeopleWrite43")
+    PeopleWrite4 = document.getElementById("PeopleWrite4")
+    workOk = document.getElementById("workOk")
+    modifyPeopleWrite4.addEventListener('click',function () {
+        PeopleWrite4.value = '1';
+    })
+    modifyPeopleWrite42.addEventListener('click',function () {
+        PeopleWrite4.value = '2';
+    })
+    modifyPeopleWrite43.addEventListener('click',function () {
+        PeopleWrite4.value = '3';
+    })
+    workOk.addEventListener('click',function () {
+        var workCompanyName = document.getElementById("workCompanyName").value
+        var workName = document.getElementById("workName").value
+        var workTime1 = document.getElementById("workTime1").value
+        var workTime2 = document.getElementById("workTime2").value
+        var workMoney = document.getElementById("workMoney").value
+        var workType = $("input[name='workType']:checked").val()
+        var workLike = document.getElementById("workLike").value
+        var flagwork = $("input[name='school_time_start_end']:checked").val()
+        if (workCompanyName != ''){
+            if (workName != ''){
+                if (workTime1 != ''){
+                    if (workTime2 != ''|flagwork!='false'){
+                        if (workMoney != ''){
+                            if (workLike != ''){
+                                popupWorek.style.display = 'none';
+                                setTimeout(function () {
+                                    window.location.reload();
+                                },500);
+                                if(PeopleWrite4.value == '1'){
+                                    $.ajax({
+                                        url:"/v2/resumeModify",
+                                        type: "POST",
+                                        dataType: "json",
+                                        data:{
+                                            "workCompanyName":workCompanyName,
+                                            "workName":workName,
+                                            "workTime1":workTime1,
+                                            "workTime2":workTime2,
+                                            "workMoney":workMoney,
+                                            "workType":workType,
+                                            "workLike":workLike,
+                                            "modifyType": "workExperience1",
+                                            "pid":pid,
+                                        }
+                                    })
+                                }else if(PeopleWrite4.value == '2'){
+                                    $.ajax({
+                                        url:"/v2/resumeModify",
+                                        type: "POST",
+                                        dataType: "json",
+                                        data:{
+                                            "workCompanyName":workCompanyName,
+                                            "workName":workName,
+                                            "workTime1":workTime1,
+                                            "workTime2":workTime2,
+                                            "workMoney":workMoney,
+                                            "workType":workType,
+                                            "workLike":workLike,
+                                            "modifyType": "workExperience2",
+                                            "pid":pid,
+                                        }
+                                    })
+                                }else if (PeopleWrite4.value = '3'){
+                                    $.ajax({
+                                        url:"/v2/resumeModify",
+                                        type: "POST",
+                                        dataType: "json",
+                                        data:{
+                                            "workCompanyName":workCompanyName,
+                                            "workName":workName,
+                                            "workTime1":workTime1,
+                                            "workTime2":workTime2,
+                                            "workMoney":workMoney,
+                                            "workType":workType,
+                                            "workLike":workLike,
+                                            "modifyType": "workExperience3",
+                                            "pid":pid,
+                                        }
+                                    })
+                                }
+                            }else {
+                                alert('工作描述不能为空');
+                            }
+                        }else {
+                            alert('当前月薪不能为空');
+                        }
+                    }else {
+                        alert('入职时间不能为空');
+                    }
+                }else {
+                    alert('离职时间不能为空');
+                }
+            }else {
+                alert('职位名称不能为空');
+            }
+        }else {
+            alert('公司名称不能为空');
+        }
+    })
+    workNo.addEventListener('click',function () {
+        popupWorek.style.display = 'none';
+    })
+    /*消失*/
+    //个人校内表现编辑
+    modifyPeopleWrite61 = document.getElementById("modifyPeopleWrite61")
+    modifyPeopleWrite612 = document.getElementById("modifyPeopleWrite612")
+    modifyPeopleWrite613 = document.getElementById("modifyPeopleWrite613")
+    PeopleWrite6 = document.getElementById("PeopleWrite6")
+    schoolBehaveOk = document.getElementById("schoolBehaveOk")
+    modifyPeopleWrite62 = document.getElementById("modifyPeopleWrite62")
+    modifyPeopleWrite622 = document.getElementById("modifyPeopleWrite622")
+    modifyPeopleWrite623 = document.getElementById("modifyPeopleWrite623")
+    modifyPeopleWrite61.addEventListener('click',function () {
+        PeopleWrite6.value = '1';
+    })
+    modifyPeopleWrite612.addEventListener('click',function () {
+        PeopleWrite6.value = '2';
+    })
+    modifyPeopleWrite613.addEventListener('click',function () {
+        PeopleWrite6.value = '3';
+    })
+    modifyPeopleWrite62.addEventListener('click',function () {
+        PeopleWrite6.value = '1';
+    })
+    modifyPeopleWrite622.addEventListener('click',function () {
+        PeopleWrite6.value = '2';
+    })
+    modifyPeopleWrite623.addEventListener('click',function () {
+        PeopleWrite6.value = '3';
+    })
+    schoolBehaveOk.addEventListener('click',function () {
+        var award = document.getElementById("schoolHonor2").value
+        var post = document.getElementById("schoolWork2").value
+        var describe = document.getElementById("schoolWorkLike").value
+        if (award != ''){
+            if (post != ''){
+                if (describe != ''){
+                    popupSchoolBehave.style.display = 'none';
+                    setTimeout(function () {
+                        window.location.reload();
+                    },500);
+                    if(PeopleWrite6.value == '1'){
+                        $.ajax({
+                            url:"/v2/resumeModify",
+                            type: "POST",
+                            dataType: "json",
+                            data:{
+                                "award":award,
+                                "post":post,
+                                "describe":describe,
+                                "modifyType": "school1",
+                                "pid":pid,
+                            }
+                        })
+                    }else if(PeopleWrite6.value == '2'){
+                        $.ajax({
+                            url:"/v2/resumeModify",
+                            type: "POST",
+                            dataType: "json",
+                            data:{
+                                "award":award,
+                                "post":post,
+                                "describe":describe,
+                                "modifyType": "school2",
+                                "pid":pid,
+                            }
+                        })
+                    }else if (PeopleWrite6.value = '3'){
+                        $.ajax({
+                            url:"/v2/resumeModify",
+                            type: "POST",
+                            dataType: "json",
+                            data:{
+                                "award":award,
+                                "post":post,
+                                "describe":describe,
+                                "modifyType": "school3",
+                                "pid":pid,
+                            }
+                        })
+                    }
+
+                }else {
+                    alert('职位描述不能为空');
+                }
+            }else {
+                alert('职务不能为空');
+            }
+        }else {
+            alert('奖项不能为空');
+        }
+    })
+    schoolBehaveNo.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'none';
+    })
+    /*消失*/
+    //个人专业技能特长编辑
+    modifyPeopleWrite711 = document.getElementById("modifyPeopleWrite711")
+    modifyPeopleWrite712 = document.getElementById("modifyPeopleWrite712")
+    modifyPeopleWrite713 = document.getElementById("modifyPeopleWrite713")
+    PeopleWrite71 = document.getElementById("PeopleWrite71")
+    specialSkillOk = document.getElementById("specialSkillOk")
+    modifyPeopleWrite711.addEventListener('click',function () {
+        PeopleWrite71.value = '1';
+    })
+    modifyPeopleWrite712.addEventListener('click',function () {
+        PeopleWrite71.value = '2';
+    })
+    modifyPeopleWrite713.addEventListener('click',function () {
+        PeopleWrite71.value = '3';
+    })
+    specialSkillOk.addEventListener('click',function () {
+        var skill = document.getElementById("skillName2").value
+        var skillTime = document.getElementById("skillTime2").value
+        if (skill != ''){
+            if (skillTime != ''){
+                popupSpecialSkillAll.style.display = 'none';
+                setTimeout(function () {
+                    window.location.reload();
+                },500);
+                if(PeopleWrite71.value == '1'){
+                    $.ajax({
+                        url:"/v2/resumeModify",
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            "skill":skill,
+                            "skillTime":skillTime,
+                            "modifyType": "special1",
+                            "pid":pid,
+                        }
+                    })
+                }else if(PeopleWrite71.value == '2'){
+                    $.ajax({
+                        url:"/v2/resumeModify",
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            "skill":skill,
+                            "skillTime":skillTime,
+                            "modifyType": "special2",
+                            "pid":pid,
+                        }
+                    })
+                }else if (PeopleWrite71.value = '3'){
+                    $.ajax({
+                        url:"/v2/resumeModify",
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            "skill":skill,
+                            "skillTime":skillTime,
+                            "modifyType": "special3",
+                            "pid":pid,
+                        }
+                    })
+                }
+            }else {
+                alert('习得时长不能为空');
+            }
+        }else {
+            alert('技能名称不能为空');
+        }
+    })
+
+    /*消失*/
+    //个人培训经历模块
+    modifyPeopleWrite73 = document.getElementById("modifyPeopleWrite73")
+    modifyPeopleWrite732 = document.getElementById("modifyPeopleWrite732")
+    modifyPeopleWrite733 = document.getElementById("modifyPeopleWrite733")
+    PeopleWrite73 = document.getElementById("PeopleWrite73")
+    trainExperienceOk = document.getElementById("trainExperienceOk")
+    modifyPeopleWrite73.addEventListener('click',function () {
+        PeopleWrite73.value = '1';
+    })
+    modifyPeopleWrite732.addEventListener('click',function () {
+        PeopleWrite73.value = '2';
+    })
+    modifyPeopleWrite733.addEventListener('click',function () {
+        PeopleWrite73.value = '3';
+    })
+
+    trainExperienceOk.addEventListener('click',function () {
+        var trainCompany = document.getElementById("trainCompany2").value
+        var trainClass = document.getElementById("trainClass2").value
+        var trainTime = document.getElementById("trainTime").value
+        var trainDescribe = document.getElementById("trainDescribe2").value
+        if (trainCompany != ''){
+            if (trainClass != ''){
+                if (trainTime != ''){
+                    if (trainDescribe != ''){
+                        popupTrainExperience.style.display = 'none';
+                        setTimeout(function () {
+                            window.location.reload();
+                        },500);
+                        if(PeopleWrite73.value == '1'){
+                            $.ajax({
+                                url:"/v2/resumeModify",
+                                type: "POST",
+                                dataType: "json",
+                                data:{
+                                    "trainCompany":trainCompany,
+                                    "trainClass":trainClass,
+                                    "trainTime":trainTime,
+                                    "trainDescribe":trainDescribe,
+                                    "modifyType": "train1",
+                                    "pid":pid,
+                                }
+                            })
+                        }else if(PeopleWrite73.value == '2'){
+                            $.ajax({
+                                url:"/v2/resumeModify",
+                                type: "POST",
+                                dataType: "json",
+                                data:{
+                                    "trainCompany":trainCompany,
+                                    "trainClass":trainClass,
+                                    "trainTime":trainTime,
+                                    "trainDescribe":trainDescribe,
+                                    "modifyType": "train2",
+                                    "pid":pid,
+                                }
+                            })
+                        }else if (PeopleWrite73.value = '3'){
+                            $.ajax({
+                                url:"/v2/resumeModify",
+                                type: "POST",
+                                dataType: "json",
+                                data:{
+                                    "trainCompany":trainCompany,
+                                    "trainClass":trainClass,
+                                    "trainTime":trainTime,
+                                    "trainDescribe":trainDescribe,
+                                    "modifyType": "train3",
+                                    "pid":pid,
+                                }
+                            })
+                        }
+
+
+                    }else {
+                        alert('培训描述不能为空');
+                    }
+                }else {
+                    alert('培训时间不能为空');
+                }
+            }else {
+                alert('培训课程不能为空');
+            }
+        }else {
+            alert('培训机构不能为空');
+        }
+    })
+
+    /*消失*/
+    //个人获得证书编辑
+    modifyPeopleWrite74 = document.getElementById("modifyPeopleWrite74")
+    modifyPeopleWrite742 = document.getElementById("modifyPeopleWrite742")
+    modifyPeopleWrite743 = document.getElementById("modifyPeopleWrite743")
+    certificateOk = document.getElementById("certificateOk")
+    PeopleWrite74 = document.getElementById("PeopleWrite74")
+    modifyPeopleWrite74.addEventListener('click',function () {
+        PeopleWrite74.value = '1';
+    })
+    modifyPeopleWrite742.addEventListener('click',function () {
+        PeopleWrite74.value = '2';
+    })
+    modifyPeopleWrite743.addEventListener('click',function () {
+        PeopleWrite74.value = '3';
+    })
+
+    certificateOk.addEventListener('click',function () {
+        var certificateName = document.getElementById("certificateName2").value
+        var certificateTime = document.getElementById("certificateTime2").value
+        if (certificateName != ''){
+            if (certificateTime != ''){
+                popupCertificate.style.display = 'none';
+                setTimeout(function () {
+                    window.location.reload();
+                },500);
+                if(PeopleWrite74.value == '1'){
+                    $.ajax({
+                        url:"/v2/resumeModify",
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            "certificateName":certificateName,
+                            "certificateTime":certificateTime,
+                            "modifyType": "certificate1",
+                            "pid":pid,
+                        }
+                    })
+                }else if(PeopleWrite74.value == '2'){
+                    $.ajax({
+                        url:"/v2/resumeModify",
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            "certificateName":certificateName,
+                            "certificateTime":certificateTime,
+                            "modifyType": "certificate2",
+                            "pid":pid,
+                        }
+                    })
+                }else if (PeopleWrite74.value = '3'){
+                    $.ajax({
+                        url:"/v2/resumeModify",
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            "certificateName":certificateName,
+                            "certificateTime":certificateTime,
+                            "modifyType": "certificate3",
+                            "pid":pid,
+                        }
+                    })
+                }
+            }else {
+                alert('获得日期不能为空');
+            }
+        }else {
+            alert('证书名称不能为空');
+        }
+    })
+
+
+    /*消失*/
+    //个人语言能力编辑
+    modifyPeopleWrite72 = document.getElementById("modifyPeopleWrite72")
+    modifyPeopleWrite722 = document.getElementById("modifyPeopleWrite722")
+    modifyPeopleWrite723 = document.getElementById("modifyPeopleWrite723")
+    PeopleWrite72 = document.getElementById("PeopleWrite72")
+    languageAbilityOk = document.getElementById("languageAbilityOk")
+    modifyPeopleWrite72.addEventListener('click',function () {
+        PeopleWrite72.value = '1';
+    })
+    modifyPeopleWrite722.addEventListener('click',function () {
+        PeopleWrite72.value = '2';
+    })
+    modifyPeopleWrite723.addEventListener('click',function () {
+        PeopleWrite72.value = '3';
+    })
+    languageAbilityOk.addEventListener('click',function () {
+        var languageType = document.getElementById("languageType2").value
+        var languageTime = document.getElementById("languageTime2").value
+        if (languageType != ''){
+            if (languageTime != ''){
+                popupLanguageAbilityAll.style.display = 'none';
+                setTimeout(function () {
+                    window.location.reload();
+                },500);
+                if(PeopleWrite72.value == '1'){
+                    $.ajax({
+                        url:"/v2/resumeModify",
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            "languageType":languageType,
+                            "languageTime":languageTime,
+                            "modifyType": "language1",
+                            "pid":pid,
+                        }
+                    })
+                }else if(PeopleWrite72.value == '2'){
+                    $.ajax({
+                        url:"/v2/resumeModify",
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            "languageType":languageType,
+                            "languageTime":languageTime,
+                            "modifyType": "language2",
+                            "pid":pid,
+                        }
+                    })
+                }else if (PeopleWrite72.value = '3'){
+                    $.ajax({
+                        url:"/v2/resumeModify",
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            "languageType":languageType,
+                            "languageTime":languageTime,
+                            "modifyType": "language3",
+                            "pid":pid,
+                        }
+                    })
+                }
+            }else {
+                alert('习得时长不能为空');
+            }
+        }else {
+            alert('语种不能为空');
+        }
+
+    })
+
+
+    /*鼠标移入div显示编辑按钮*/
+    /*个人信息*/
+    var modifyPeopleMessage = document.getElementById('modifyPeopleMessage');
+    var modifyPeopleWrite1 = document.getElementById('modifyPeopleWrite1');
+    modifyPeopleMessage.onmouseover = function () {
+        modifyPeopleWrite1.style.display = 'block';
+    }
+    modifyPeopleMessage.onmouseout = function () {
+        modifyPeopleWrite1.style.display = 'none';
+    }
+    /*求职意向*/
+    var modifySeek = document.getElementById('modifySeek');
+    var modifyPeopleWrite2 = document.getElementById('modifyPeopleWrite2');
+    modifySeek.onmouseover = function () {
+        modifyPeopleWrite2.style.display = 'block';
+    }
+    modifySeek.onmouseout = function () {
+        modifyPeopleWrite2.style.display = 'none';
+    }
+    /*教育经历*/
+    var study1 = document.getElementById('study1');
+    var study2 = document.getElementById('study2');
+    var study3 = document.getElementById('study3');
+    var modifyPeopleWrite3 = document.getElementById('modifyPeopleWrite3');
+    var modifyPeopleWrite32 = document.getElementById('modifyPeopleWrite32');
+    var modifyPeopleWrite33 = document.getElementById('modifyPeopleWrite33');
+
+
+
+
+    study1.onmouseover = function () {
+        modifyPeopleWrite3.style.display = 'block';
+    }
+    study2.onmouseover = function () {
+        modifyPeopleWrite32.style.display = 'block';
+    }
+    study3.onmouseover = function () {
+        modifyPeopleWrite33.style.display = 'block';
+    }
+    study1.onmouseout = function () {
+        modifyPeopleWrite3.style.display = 'none';
+    }
+    study2.onmouseout = function () {
+        modifyPeopleWrite32.style.display = 'none';
+    }
+    study3.onmouseout = function () {
+        modifyPeopleWrite33.style.display = 'none';
+    }
+    /*工作/实习经历*/
+    var work1 = document.getElementById('work1');
+    var work2 = document.getElementById('work2');
+    var work3 = document.getElementById('work3');
+    var modifyPeopleWrite4 = document.getElementById('modifyPeopleWrite4');
+    var modifyPeopleWrite42 = document.getElementById('modifyPeopleWrite42');
+    var modifyPeopleWrite43 = document.getElementById('modifyPeopleWrite43');
+    work1.onmouseover = function () {
+        modifyPeopleWrite4.style.display = 'block';
+    }
+    work2.onmouseover = function () {
+        modifyPeopleWrite42.style.display = 'block';
+    }
+    work3.onmouseover = function () {
+        modifyPeopleWrite43.style.display = 'block';
+    }
+    work1.onmouseout = function () {
+        modifyPeopleWrite4.style.display = 'none';
+    }
+    work2.onmouseout = function () {
+        modifyPeopleWrite42.style.display = 'none';
+    }
+    work3.onmouseout = function () {
+        modifyPeopleWrite43.style.display = 'none';
+    }
+
+    /*项目经历*/
+    var project1 = document.getElementById('project1');
+    var project2 = document.getElementById('project2');
+    var project3 = document.getElementById('project3');
+    var modifyPeopleWrite51 = document.getElementById('modifyPeopleWrite51');
+    var modifyPeopleWrite52 = document.getElementById('modifyPeopleWrite52');
+    var modifyPeopleWrite53 = document.getElementById('modifyPeopleWrite53');
+    project1.onmouseover = function () {
+        modifyPeopleWrite51.style.display = 'block';
+    }
+    project2.onmouseover = function () {
+        modifyPeopleWrite52.style.display = 'block';
+    }
+    project3.onmouseover = function () {
+        modifyPeopleWrite53.style.display = 'block';
+    }
+    project1.onmouseout = function () {
+        modifyPeopleWrite51.style.display = 'none';
+    }
+    project2.onmouseout = function () {
+        modifyPeopleWrite52.style.display = 'none';
+    }
+    project3.onmouseout = function () {
+        modifyPeopleWrite53.style.display = 'none';
+    }
+    /*校内表现*/
+    var modifySchoolBehave = document.getElementById('modifySchoolBehave');
+    var honor1 = document.getElementById('honor1');
+    var honor2 = document.getElementById('honor2');
+    var honor3 = document.getElementById('honor3');
+    var modifyPeopleWrite61 = document.getElementById('modifyPeopleWrite61');
+    var modifyPeopleWrite612 = document.getElementById('modifyPeopleWrite612');
+    var modifyPeopleWrite613 = document.getElementById('modifyPeopleWrite613');
+    var schoolwork11 = document.getElementById('schoolwork11');
+    var schoolwork12 = document.getElementById('schoolwork12');
+    var schoolwork13 = document.getElementById('schoolwork13');
+    var modifyPeopleWrite622 = document.getElementById('modifyPeopleWrite622');
+    var modifyPeopleWrite623 = document.getElementById('modifyPeopleWrite623');
+    var modifyPeopleWrite62 = document.getElementById('modifyPeopleWrite62');
+    var modifyPeopleWrite63 = document.getElementById('modifyPeopleWrite63');
+    honor1.onmouseover = function(){
+        modifyPeopleWrite61.style.display = 'block';
+    }
+    honor2.onmouseover = function(){
+        modifyPeopleWrite612.style.display = 'block';
+    }
+    honor3.onmouseover = function(){
+        modifyPeopleWrite613.style.display = 'block';
+    }
+    honor1.onmouseout = function(){
+        modifyPeopleWrite61.style.display = 'none';
+    }
+    honor2.onmouseout = function(){
+        modifyPeopleWrite612.style.display = 'none';
+    }
+    honor3.onmouseout = function(){
+        modifyPeopleWrite613.style.display = 'none';
+    }
+    schoolwork11.onmouseover = function(){
+        modifyPeopleWrite62.style.display = 'block';
+    }
+    schoolwork12.onmouseover = function(){
+        modifyPeopleWrite622.style.display = 'block';
+    }
+    schoolwork13.onmouseover = function(){
+        modifyPeopleWrite623.style.display = 'block';
+    }
+    schoolwork11.onmouseout = function(){
+        modifyPeopleWrite62.style.display = 'none';
+    }
+    schoolwork12.onmouseout = function(){
+        modifyPeopleWrite622.style.display = 'none';
+    }
+    schoolwork13.onmouseout = function(){
+        modifyPeopleWrite623.style.display = 'none';
+    }
+    /*待会要改*/
+    modifySchoolBehave.onmouseover = function () {
+        modifyPeopleWrite63.style.display = 'block';
+    }
+    modifySchoolBehave.onmouseout = function () {
+        modifyPeopleWrite61.style.display = 'none';
+        modifyPeopleWrite62.style.display = 'none';
+        modifyPeopleWrite63.style.display = 'none';
+    }
+    /*技能特长*/
+    var modifyPeopleWrite711 = document.getElementById('modifyPeopleWrite711');
+    var modifyPeopleWrite712 = document.getElementById('modifyPeopleWrite712');
+    var modifyPeopleWrite713 = document.getElementById('modifyPeopleWrite713');
+    var modifyPeopleWrite72 = document.getElementById('modifyPeopleWrite72');
+    var modifyPeopleWrite722 = document.getElementById('modifyPeopleWrite722');
+    var modifyPeopleWrite723 = document.getElementById('modifyPeopleWrite723');
+    var modifyPeopleWrite73 = document.getElementById('modifyPeopleWrite73');
+    var modifyPeopleWrite732 = document.getElementById('modifyPeopleWrite732');
+    var modifyPeopleWrite733 = document.getElementById('modifyPeopleWrite733');
+    var modifyPeopleWrite74 = document.getElementById('modifyPeopleWrite74');
+    var modifyPeopleWrite742 = document.getElementById('modifyPeopleWrite742');
+    var modifyPeopleWrite743 = document.getElementById('modifyPeopleWrite743');
+    var language1 = document.getElementById('language1');
+    var language2 = document.getElementById('language2');
+    var language3 = document.getElementById('language3');
+    var skill1 = document.getElementById('skill1');
+    var skill2 = document.getElementById('skill2');
+    var skill3 = document.getElementById('skill3');
+    var train1 = document.getElementById('train1');
+    var train2 = document.getElementById('train2');
+    var train3 = document.getElementById('train3');
+    var certificate1 = document.getElementById('certificate1');
+    var certificate2 = document.getElementById('certificate2');
+    var certificate3 = document.getElementById('certificate3');
+    skill1.onmouseover = function () {
+        modifyPeopleWrite711.style.display = 'block';
+    }
+    skill2.onmouseover = function () {
+        modifyPeopleWrite712.style.display = 'block';
+    }
+    skill3.onmouseover = function () {
+        modifyPeopleWrite713.style.display = 'block';
+    }
+    skill1.onmouseout = function () {
+        modifyPeopleWrite711.style.display = 'none';
+    }
+    skill2.onmouseout = function () {
+        modifyPeopleWrite712.style.display = 'none';
+    }
+    skill3.onmouseout = function () {
+        modifyPeopleWrite713.style.display = 'none';
+    }
+    certificate1.onmouseover = function () {
+        modifyPeopleWrite74.style.display = 'block';
+    }
+    certificate2.onmouseover = function () {
+        modifyPeopleWrite742.style.display = 'block';
+    }
+    certificate3.onmouseover = function () {
+        modifyPeopleWrite743.style.display = 'block';
+    }
+    certificate1.onmouseout = function () {
+        modifyPeopleWrite74.style.display = 'none';
+    }
+    certificate2.onmouseout = function () {
+        modifyPeopleWrite742.style.display = 'none';
+    }
+    certificate3.onmouseout = function () {
+        modifyPeopleWrite743.style.display = 'none';
+    }
+    language1.onmouseover = function () {
+        modifyPeopleWrite72.style.display = 'block';
+    }
+    language2.onmouseover = function () {
+        modifyPeopleWrite722.style.display = 'block';
+    }
+    language3.onmouseover = function () {
+        modifyPeopleWrite723.style.display = 'block';
+    }
+    language1.onmouseout = function () {
+        modifyPeopleWrite72.style.display = 'none';
+    }
+    language2.onmouseout = function () {
+        modifyPeopleWrite722.style.display = 'none';
+    }
+    language3.onmouseout = function () {
+        modifyPeopleWrite723.style.display = 'none';
+    }
+    train1.onmouseover = function () {
+        modifyPeopleWrite73.style.display = 'block';
+    }
+    train2.onmouseover = function () {
+        modifyPeopleWrite732.style.display = 'block';
+    }
+    train3.onmouseover = function () {
+        modifyPeopleWrite733.style.display = 'block';
+    }
+    train1.onmouseout = function () {
+        modifyPeopleWrite73.style.display = 'none';
+    }
+    train2.onmouseout = function () {
+        modifyPeopleWrite732.style.display = 'none';
+    }
+    train3.onmouseout = function () {
+        modifyPeopleWrite733.style.display = 'none';
+    }
+
+    /*自我评价*/
+    var selfEvaluation = document.getElementById('selfEvaluation');
+    var modifyPeopleWrite8 = document.getElementById('modifyPeopleWrite8');
+    selfEvaluation.onmouseover = function () {
+        modifyPeopleWrite8.style.display = 'block';
+    }
+    selfEvaluation.onmouseout = function () {
+        modifyPeopleWrite8.style.display = 'none';
+    }
+    var modifyPeopleWrite8 = document.getElementById('modifyPeopleWrite8');
+    var popupSelfEvaluation = document.getElementById('popupSelfEvaluation');
+    var popupSelfEvaluationNo = document.getElementById('popupSelfEvaluationNo');
+    var popupSelfEvaluationOk = document.getElementById('popupSelfEvaluationOk');
+    modifyPeopleWrite8.onclick = function () {
+        popupSelfEvaluation.style.display = 'block'
+    }
+    popupSelfEvaluationNo.onclick = function(){
+        popupSelfEvaluation.style.display = 'none'
+    }
+    //个人自我评价编辑
+    popupSelfEvaluationOk.addEventListener('click',function () {
+        var TxtSelfEvaluation = document.getElementById("TxtSelfEvaluation").value
+        if (TxtSelfEvaluation != ''){
+            popupSelfEvaluation.style.display = 'none';
+            setTimeout(function () {
+                window.location.reload();
+            },500);
+            $.ajax({
+                url:"/v2/resumeModify",
+                type: "POST",
+                dataType: "json",
+                data:{
+                    "TxtSelfEvaluation":TxtSelfEvaluation,
+                    "modifyType": "selfEvaluation",
+                    "pid":pid,
+                }
+            })
+        }else {
+            alert('评价内容不能为空');
+        }
+
+    })
+    /*点击编辑出现弹出框——个人信息*/
+    modifyPeopleWrite1.addEventListener('click',function () {
+        personMessage.style.display = 'block';
+    })
+
+    /*点击编辑出现弹出框——求职意向*/
+    modifyPeopleWrite2.addEventListener('click',function () {
+        popupTit.style.display = 'block';
+    })
+
+    /*点击编辑出现弹出框——教育经历*/
+    modifyPeopleWrite3.addEventListener('click',function () {
+        popupStudy.style.display = 'block';
+    })
+    modifyPeopleWrite32.addEventListener('click',function () {
+        popupStudy.style.display = 'block';
+    })
+    modifyPeopleWrite33.addEventListener('click',function () {
+        popupStudy.style.display = 'block';
+    })
+    /*点击编辑出现弹出框——工作实习经历*/
+    modifyPeopleWrite4.addEventListener('click',function () {
+        popupWorek.style.display = 'block';
+    })
+    modifyPeopleWrite42.addEventListener('click',function () {
+        popupWorek.style.display = 'block';
+    })
+    modifyPeopleWrite43.addEventListener('click',function () {
+        popupWorek.style.display = 'block';
+    })
+    /*添加教育经历*/
+    addTit.addEventListener('click',function () {
+        popupStudy.style.display = 'block';
+        if (schoolName.innerHTML == ""){
+            PeopleWrite3.value = '1';
+            document.getElementById("study1").style.display="none";
+        }
+        else if (schoolName2.innerHTML == ""){
+            PeopleWrite3.value = '2';
+            document.getElementById("study2").style.display="none";
+        }
+        else if (schoolName3.innerHTML == ""){
+            PeopleWrite3.value = '3';
+            document.getElementById("study3").style.display="none";
+        }else {
+            alert("最多添加三段教育经历！");
+            popupStudy.style.display = 'none';
+        }
+    })
+    /*校内表现*/
+    addSchoolHonor.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'block';
+        if (award1.innerHTML == ""){
+            PeopleWrite6.value = "1";
+            document.getElementById("honor1").style.display="none";
+        }
+        else if (award2.innerHTML == ""){
+            PeopleWrite6.value = "2";
+            document.getElementById("honor2").style.display="none";
+        }
+        else if (award3.innerHTML == ""){
+            PeopleWrite6.value = "3";
+            document.getElementById("honor3").style.display="none";
+        }else {
+            alert("最多添加三段校内荣誉！");
+            popupSchoolBehave.style.display = 'none';
+        }
+    })
+    modifyPeopleWrite622.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'block';
+    })
+    modifyPeopleWrite623.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'block';
+    })
+    modifyPeopleWrite612.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'block';
+    })
+    modifyPeopleWrite613.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'block';
+    })
+
+    /*项目经验*/
+    addProject.addEventListener('click',function () {
+        popupProject.style.display = 'block';
+        if (projectName1.innerHTML == ""){
+            PeopleWrite5.value = '1';
+            document.getElementById("project1").style.display="none";
+        }
+        else if (projectName2.innerHTML == ""){
+            PeopleWrite5.value = '2';
+            document.getElementById("project2").style.display="none";
+        }
+        else if (projectName3.innerHTML == ""){
+            PeopleWrite5.value = '3';
+            document.getElementById("project3").style.display="none";
+        }else {
+            alert("最多添加三段项目经历！");
+            popupProject.style.display = 'none';
+        }
+
+
+    })
+    /*专业技能*/
+    addSpecialSkill.addEventListener('click',function () {
+        popupSpecialSkillAll.style.display = 'block';
+        if (sk1.innerHTML == ""){
+            PeopleWrite71.value = '1';
+            document.getElementById("skill1").style.display="none";
+        }
+        else if (sk2.innerHTML == ""){
+            PeopleWrite71.value = '2';
+            document.getElementById("skill2").style.display="none";
+        }
+        else if (sk3.innerHTML == ""){
+            PeopleWrite71.value = '3';
+            document.getElementById("skill3").style.display="none";
+        }else {
+            alert("最多添加三段专业技能！");
+            popupSpecialSkillAll.style.display = 'none';
+        }
+
+    })
+    modifyPeopleWrite711.addEventListener('click',function () {
+        popupSpecialSkillAll.style.display = 'block';
+    })
+    modifyPeopleWrite712.addEventListener('click',function () {
+        popupSpecialSkillAll.style.display = 'block';
+    })
+    modifyPeopleWrite713.addEventListener('click',function () {
+        popupSpecialSkillAll.style.display = 'block';
+    })
+    /*语言能力*/
+    addLanguageAbility.addEventListener('click',function () {
+        popupLanguageAbilityAll.style.display = 'block';
+        if (lang1.innerHTML == ""){
+            PeopleWrite72.value = '1';
+            document.getElementById("language1").style.display="none";
+        }
+        else if (lang2.innerHTML == ""){
+            PeopleWrite72.value = '2';
+            document.getElementById("language2").style.display="none";
+        }
+        else if (lang3.innerHTML == ""){
+            PeopleWrite72.value = '3';
+            document.getElementById("language3").style.display="none";
+        }else {
+            alert("最多添加三段语言能力！");
+            popupLanguageAbilityAll.style.display = 'none';
+        }
+    })
+    /*培训经历*/
+    addTrainExperience.addEventListener('click',function () {
+        popupTrainExperience.style.display = 'block';
+        if (tr1.innerHTML == ""){
+            PeopleWrite73.value = '1';
+            document.getElementById("train1").style.display="none";
+        }
+        else if (tr2.innerHTML == ""){
+            PeopleWrite73.value = '2';
+            document.getElementById("train2").style.display="none";
+        }
+        else if (tr3.innerHTML == ""){
+            PeopleWrite73.value = '3';
+            document.getElementById("train3").style.display="none";
+        }else {
+            alert("最多添加三段培训经历！");
+            popupTrainExperience.style.display = 'none';
+        }
+
+
+    })
+    modifyPeopleWrite73.addEventListener('click',function () {
+        popupTrainExperience.style.display = 'block';
+    })
+    modifyPeopleWrite732.addEventListener('click',function () {
+        popupTrainExperience.style.display = 'block';
+    })
+    modifyPeopleWrite733.addEventListener('click',function () {
+        popupTrainExperience.style.display = 'block';
+    })
+    /*证书*/
+    addCertificate.addEventListener('click',function () {
+        popupCertificate.style.display = 'block';
+        if (certi1.innerHTML == ""){
+            PeopleWrite74.value = '1';
+            document.getElementById("certificate1").style.display="none";
+        }
+        else if (certi2.innerHTML == ""){
+            PeopleWrite74.value = '2';
+            document.getElementById("certificate2").style.display="none";
+        }
+        else if (certi3.innerHTML == ""){
+            PeopleWrite74.value = '3';
+            document.getElementById("certificate3").style.display="none";
+        }else {
+            alert("最多添加三段证书！");
+            popupCertificate.style.display = 'none';
+        }
+
+    })
+    addSchoolWork.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'block';
+        if (post1.innerHTML == ""){
+            PeopleWrite6.value = '1';
+            document.getElementById("schoolwork11").style.display="none";
+        }
+        else if (post2.innerHTML == ""){
+            PeopleWrite6.value = '2';
+            document.getElementById("schoolwork12").style.display="none";
+        }
+        else if (post3.innerHTML == ""){
+            PeopleWrite6.value = '3';
+            document.getElementById("schoolwork13").style.display="none";
+        }else {
+            alert("最多添加三段校内职务！");
+            popupSchoolBehave.style.display = 'none';
+        }
+
+    })
+    addTit1.addEventListener('click',function () {
+        popupWorek.style.display = 'block';
+        if (companyName.innerHTML == ""){
+            PeopleWrite4.value = '1';
+            document.getElementById("work1").style.display="none";
+        }
+        else if (companyName2.innerHTML == ""){
+            PeopleWrite4.value = '2';
+            document.getElementById("work2").style.display="none";
+        }
+        else if (companyName3.innerHTML == ""){
+            PeopleWrite4.value = '3';
+            document.getElementById("work3").style.display="none";
+        }else {
+            alert("最多添加三段工作经历！");
+            popupWorek.style.display = 'none';
+        }
+    })
+    /*语言能力*/
+    modifyPeopleWrite72.addEventListener('click',function () {
+        popupLanguageAbilityAll.style.display = 'block';
+    })
+    modifyPeopleWrite722.addEventListener('click',function () {
+        popupLanguageAbilityAll.style.display = 'block';
+    })
+    modifyPeopleWrite723.addEventListener('click',function () {
+        popupLanguageAbilityAll.style.display = 'block';
+    })
+    /*证书*/
+    modifyPeopleWrite74.addEventListener('click',function () {
+        popupCertificate.style.display = 'block';
+    })
+    modifyPeopleWrite742.addEventListener('click',function () {
+        popupCertificate.style.display = 'block';
+    })
+    modifyPeopleWrite743.addEventListener('click',function () {
+        popupCertificate.style.display = 'block';
+    })
+    /*点击编辑出现弹出框——项目经历*/
+    modifyPeopleWrite51.addEventListener('click',function () {
+        popupProject.style.display = 'block';
+    })
+    modifyPeopleWrite52.addEventListener('click',function () {
+        popupProject.style.display = 'block';
+    })
+    modifyPeopleWrite53.addEventListener('click',function () {
+        popupProject.style.display = 'block';
+    })
+
+    /*点击编辑出现弹出框——校内表现*/
+    modifyPeopleWrite61.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'block';
+    })
+    modifyPeopleWrite62.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'block';
+    })
+    modifyPeopleWrite63.addEventListener('click',function () {
+        popupSchoolBehave.style.display = 'block';
+    })
+    /*点击编辑出现弹出框——技能特长*/
+    modifyPeopleWrite71.addEventListener('click',function () {
+        popupSpecialSkillAll.style.display = 'block';
+    })
+    /*点击编辑出现弹出框——语言能力*/
+    modifyPeopleWrite72.addEventListener('click',function () {
+        popupLanguageAbilityAll.style.display = 'block';
+    })
+
+    /*点击编辑出现弹出框——培训经历*/
+    modifyPeopleWrite73.addEventListener('click',function () {
+        popupTrainExperience.style.display = 'block';
+    })
+
+    /*点击编辑出现弹出框——获得证书*/
+    modifyPeopleWrite74.addEventListener('click',function () {
+        popupCertificate.style.display = 'block';
+    })
+
+    popupSelfEvaluationNo.addEventListener('click',function () {
+        popupSelfEvaluation.style.display = 'none';
+    })
+
+    /*判断只能输入500个字之工作描述*/
+    var maxl=500//总长
+    function sizecontrol1(){
+        var s=document.getElementById("workLike").value.length;
+        if(s>maxl){
+            document.getElementById("popupTips1").innerHTML="超过字数限制";
+            popupTips1.style.color = 'red';
+        }
+        else {
+            document.getElementById("popupTips1").innerHTML="已输入："+s+"/"+maxl+" 字符";
+            popupTips1.style.color = '#B3B3B3';
+        }
+    }
+    /*判断只能输入500个字之项目描述*/
+    var maxl=500//总长
+    function sizecontrol2(){
+        var s=document.getElementById("projectLike").value.length;
+        if(s>maxl){
+            document.getElementById("popupTips2").innerHTML="超过字数限制";
+            popupTips2.style.color = 'red';
+        }
+        else {
+            document.getElementById("popupTips2").innerHTML="已输入："+s+"/"+maxl+" 字符";
+            popupTips2.style.color = '#B3B3B3';
+        }
+    }
+    /*判断只能输入500个字之职务描述*/
+    var maxl=500//总长
+    function sizecontrol3(){
+        var s=document.getElementById("schoolWorkLike").value.length;
+        if(s>maxl){
+            document.getElementById("popupTips3").innerHTML="超过字数限制";
+            popupTips3.style.color = 'red';
+        }
+        else {
+            document.getElementById("popupTips3").innerHTML="已输入："+s+"/"+maxl+" 字符";
+            popupTips3.style.color = '#B3B3B3';
+        }
+    }
+    /*判断只能输入500个字之培训描述*/
+    var maxl=500//总长
+    function sizecontrol4(){
+        var s=document.getElementById("trainDescribe2").value.length;
+        if(s>maxl){
+            document.getElementById("popupTips4").innerHTML="超过字数限制";
+            popupTips4.style.color = 'red';
+        }
+        else {
+            document.getElementById("popupTips4").innerHTML="已输入："+s+"/"+maxl+" 字符";
+            popupTips4.style.color = '#B3B3B3';
+        }
+    }
+    /*判断只能输入500个字之自我评价*/
+    var maxl=500//总长
+    function sizecontrol5(){
+        var s=document.getElementById("TxtSelfEvaluation").value.length;
+        if(s>maxl){
+            document.getElementById("popupTips5").innerHTML="超过字数限制";
+            popupTips5.style.color = 'red';
+        }
+        else {
+            document.getElementById("popupTips5").innerHTML="已输入："+s+"/"+maxl+" 字符";
+            popupTips5.style.color = '#B3B3B3';
+        }
+    }
+
+    /*网页头部文件*/
+    var user = document.getElementById("user");
+    var head_headRigth_img = document.getElementById("head_headRigth_img");
+    user.addEventListener('mouseover',function (){
+        this.style.color = "rgb(46,176,252)";
+        head_headRigth_img.src = "images/head__/u288_selected.svg";
+    })
+    user.addEventListener('mouseout',function (){
+        this.style.color = "";
+        head_headRigth_img.src = "images/head__/u288.svg";
+    })
+
+    //点击文本框提示消失
+    head_searchInput1.addEventListener('click',function () {
+        head_searchInput1.placeholder = '';
+    })
+    head_searchInput1.addEventListener('mouseout',function () {
+        head_searchInput1.placeholder = '搜索职位，公司';
+    })
+    //手机号码验证
+    function checkMobile(){
+        var _phone = $("#userTel").val();
+        if(!(/^1[3|5|6|7|8|9][0-9]\d{8}$/.test(_phone))){
+            alert("电话号码填写有误，请重新填写");
+            return false;
+        }
+    }
+    //邮箱验证
+    function checkEmail(){
+        var _email = $("#userEmail").val();
+        if(!(/^[a-zA-Z\d]+\@[a-zA-Z\d]{1,10}\.(com|cn|net)$/.test(_email))){
+            alert("电子邮箱填写有误，请重新填写");
+            return false;
+        }
+    }
+</script>
+</html>
